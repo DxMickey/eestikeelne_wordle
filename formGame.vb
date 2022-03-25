@@ -12,31 +12,17 @@
 
             stringToControl(game.inputLetter(game.intRida, game.intKast))
 
-
-
             'game.strArvatudSona = "decrease"
-
-
-
 
             game.intKast = -1
 
         End If
 
-        'Kui vajutatud nupp on Enter ja viies täht on sisestatud, uuenda värvid
+        'Kui vajutatud nupp On Enter ja viies täht On sisestatud, uuenda värvid
         If game.lastLetter = 13 And game.intKast = 5 Then
             updateColors()
-            txtDebug2.Text = txtDebug2.Text & game.redLetters
+
         End If
-
-
-
-
-
-
-
-
-
 
         If game.letterCheck(game.lastLetter) And game.intKast <> 5 Then
             game.intRida = 1
@@ -44,14 +30,12 @@
             game.strArvatudSona = UCase(Chr(game.lastLetter))
             'Stringi textboxi control-iks muutmine
             stringToControl(game.inputLetter(game.intRida, game.intKast))
+
             If isLetterInWord(game.strSona) = False Then
-                game.redLetters = game.redLetters & UCase(Chr(game.lastLetter))
+                game.lettersHolder = UCase(Chr(game.lastLetter))
+
             End If
         End If
-
-
-
-
 
         'Kui vajutatud nupp on Enter
         If game.lastLetter = 13 Then
@@ -68,16 +52,14 @@
                 newForm.Show()
                 Me.Close()
             End If
+            txtDebug2.Text = game.lettersHolder
+            game.redLetters = game.lettersHolder
+            game.lettersHolder = Nothing
             game.strArvatudSona = Nothing
 
         End If
 
-
     End Sub
-
-
-
-
 
     Private Sub updateColors()
         Dim game As IGame
@@ -85,7 +67,7 @@
 
         Dim i As Integer = 0
 
-        While i <5
+        While i < 5
             Dim misVarv As Integer
 
             misVarv = game.wordChecker(game.strArvatudSona(i), i)
@@ -94,15 +76,15 @@
             If Me.Controls.Find(a, True).Count = 1 Then
                 Dim box As TextBox = Me.Controls.Find(a, True)(0)
 
-                If misVarv = 2 Then
+                If misVarv = 2 And box.BackColor <> Color.Green Then
                     box.BackColor = Color.Green
 
-                ElseIf misVarv = 1 Then
+                ElseIf misVarv = 1 And box.BackColor <> Color.Yellow Then
                     box.BackColor = Color.Yellow
                 ElseIf misVarv = 0 Then
                     Dim f As String = box.Text
                     disableKey(f)
-                    ' game.redLetters = game.redLetters & game.strArvatudSona(i)
+                    game.redLetters = game.strArvatudSona(i)
 
                 End If
             End If
@@ -112,20 +94,21 @@
 
     End Sub
 
-
     Private Sub disableKey(ByVal value As String)
 
         Dim a As String = "txt" & value
 
         If Me.Controls.Find(a, True).Count = 1 Then
             Dim box As TextBox = Me.Controls.Find(a, True)(0)
-            box.BackColor = Color.Red
+            If box.BackColor <> Color.Red Then
+
+                box.BackColor = Color.Red
+            End If
+
 
         End If
 
     End Sub
-
-
 
     Private Sub formGame_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim game As IGame
@@ -150,7 +133,6 @@
 
             End If
 
-
         End If
     End Sub
 
@@ -165,15 +147,17 @@
             End If
 
         Next
+        If game.lettersHolder <> Nothing Then
+            For i = 0 To game.lettersHolder.Length - 1
+                If UCase(Chr(game.lastLetter)) = game.lettersHolder(i) Then
+                    a = True
+                End If
 
-
+            Next
+        End If
 
         Return a
 
-
-
     End Function
-
-
 
 End Class

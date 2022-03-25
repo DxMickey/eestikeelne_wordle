@@ -7,6 +7,7 @@
     Shared strArvatudSonaSymbol As String
     Shared intLastLetter As Integer
     Shared strRedLetters As String
+    Shared strLettersHolder
 
     Public Property lastLetter As Integer Implements IGame.lastLetter
         Get
@@ -23,6 +24,20 @@
         End Get
         Set(ByVal value As String)
             strRedLetters = strRedLetters & value
+        End Set
+    End Property
+
+    Public Property lettersHolder As String Implements IGame.lettersHolder
+        Get
+            Return strLettersHolder
+        End Get
+        Set(ByVal value As String)
+            If value = Nothing Then
+                strLettersHolder = Nothing
+            Else
+                strLettersHolder = lettersHolder & value
+            End If
+
         End Set
     End Property
 

@@ -5,6 +5,9 @@
     Property lastLetter As Integer
     Property redLetters As String
 
+    Property lettersHolder As String
+
+
 
 
     Property strArvatudSona As String
