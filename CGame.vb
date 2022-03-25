@@ -7,7 +7,8 @@
     Shared strArvatudSonaSymbol As String
     Shared intLastLetter As Integer
     Shared strRedLetters As String
-    Shared strLettersHolder
+    Shared strLettersHolder As String
+    Shared intWinOrLose As Integer
 
     Public Property lastLetter As Integer Implements IGame.lastLetter
         Get
@@ -38,6 +39,15 @@
                 strLettersHolder = lettersHolder & value
             End If
 
+        End Set
+    End Property
+
+    Public Property winOrLose As Integer Implements IGame.winOrLose
+        Get
+            Return intWinOrLose
+        End Get
+        Set(ByVal value As Integer)
+            intWinOrLose = value
         End Set
     End Property
 
@@ -148,6 +158,7 @@
         Dim over As Boolean
         If strSona = strArvatudSona Then
             over = True
+            winOrLose = 1
         End If
         Return over
     End Function

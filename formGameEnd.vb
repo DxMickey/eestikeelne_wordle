@@ -14,4 +14,8 @@
         newForm.Show()
         Me.Close()
     End Sub
+
+    Private Sub formGameEnd_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+    End Sub
 End Class

@@ -1,11 +1,25 @@
-﻿Public Class formGame
+﻿
+
+Public Class formGame
+
+
+
 
     'Listen for any keypress
     Private Sub formGame_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         Dim game As IGame
         game = New CGame
 
+        Dim data As IDatabase
+        data = New CDatabase
+
+        'Dim SQLitecnStr As String = "Data Source=MyPath\wordleDB.db; Integrated Security=true"
+
+
         'Salvesta vajutatud nupu ascii kood muutujasse lastLetter
+
+        txtDebug.Text = game.strSona
+
         game.lastLetter = Asc(e.KeyChar)
 
         If game.lastLetter = 8 And game.intKast <> 0 Then
@@ -44,6 +58,9 @@
 
             'Mängu resettimine ja mängu lõpu ekraanile liikumine
             If game.gameOver() = True Then
+
+                Randomize()
+                newWord()
                 game.intKast = Nothing
                 game.intRida = Nothing
                 Dim position = Me.Bounds
@@ -113,8 +130,12 @@
     Private Sub formGame_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim game As IGame
         game = New CGame
+        Dim data As IDatabase
+        data = New CDatabase
+        Randomize()
         Me.KeyPreview = True
-        game.strSona = (UCase("ämber"))
+        newWord()
+
 
     End Sub
 
@@ -159,5 +180,18 @@
         Return a
 
     End Function
+
+    Private Sub newWord()
+        Dim game As IGame
+        game = New CGame
+        Dim data As IDatabase
+        data = New CDatabase
+
+        game.strSona = UCase(Data.getSona(Int((3000 * Rnd()) + 1)))
+        While game.strSona = Nothing
+            game.strSona = UCase(Data.getSona(Int((3000 * Rnd()) + 1)))
+        End While
+    End Sub
+
 
 End Class

@@ -7,6 +7,11 @@
 
     Property lettersHolder As String
 
+    Property winOrLose As Integer
+
+
+
+
 
 
 

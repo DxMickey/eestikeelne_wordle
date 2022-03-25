@@ -870,9 +870,9 @@ Partial Class formGame
         '
         'txtDebug
         '
-        Me.txtDebug.Location = New System.Drawing.Point(82, -2)
+        Me.txtDebug.Location = New System.Drawing.Point(33, -2)
         Me.txtDebug.Name = "txtDebug"
-        Me.txtDebug.Size = New System.Drawing.Size(210, 20)
+        Me.txtDebug.Size = New System.Drawing.Size(316, 20)
         Me.txtDebug.TabIndex = 62
         '
         'txtDebug2
