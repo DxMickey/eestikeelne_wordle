@@ -82,8 +82,6 @@ Partial Class formGame
         Me.txtC = New System.Windows.Forms.TextBox()
         Me.txtX = New System.Windows.Forms.TextBox()
         Me.txtZ = New System.Windows.Forms.TextBox()
-        Me.txtDelete = New System.Windows.Forms.TextBox()
-        Me.txtEnter = New System.Windows.Forms.TextBox()
         Me.txtDebug = New System.Windows.Forms.TextBox()
         Me.txtDebug2 = New System.Windows.Forms.TextBox()
         Me.HScrollBar1 = New System.Windows.Forms.HScrollBar()
@@ -466,6 +464,7 @@ Partial Class formGame
         '
         'txtW
         '
+        Me.txtW.Enabled = False
         Me.txtW.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtW.Location = New System.Drawing.Point(66, 479)
         Me.txtW.MinimumSize = New System.Drawing.Size(20, 35)
@@ -479,6 +478,7 @@ Partial Class formGame
         '
         'txtE
         '
+        Me.txtE.Enabled = False
         Me.txtE.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtE.Location = New System.Drawing.Point(93, 479)
         Me.txtE.MinimumSize = New System.Drawing.Size(20, 35)
@@ -492,6 +492,7 @@ Partial Class formGame
         '
         'txtR
         '
+        Me.txtR.Enabled = False
         Me.txtR.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtR.Location = New System.Drawing.Point(119, 479)
         Me.txtR.MinimumSize = New System.Drawing.Size(20, 35)
@@ -505,6 +506,7 @@ Partial Class formGame
         '
         'txtT
         '
+        Me.txtT.Enabled = False
         Me.txtT.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtT.Location = New System.Drawing.Point(145, 479)
         Me.txtT.MinimumSize = New System.Drawing.Size(20, 35)
@@ -518,6 +520,7 @@ Partial Class formGame
         '
         'txtY
         '
+        Me.txtY.Enabled = False
         Me.txtY.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtY.Location = New System.Drawing.Point(171, 479)
         Me.txtY.MinimumSize = New System.Drawing.Size(20, 35)
@@ -531,6 +534,7 @@ Partial Class formGame
         '
         'txtU
         '
+        Me.txtU.Enabled = False
         Me.txtU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtU.Location = New System.Drawing.Point(197, 479)
         Me.txtU.MinimumSize = New System.Drawing.Size(20, 35)
@@ -544,6 +548,7 @@ Partial Class formGame
         '
         'txtI
         '
+        Me.txtI.Enabled = False
         Me.txtI.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtI.Location = New System.Drawing.Point(225, 479)
         Me.txtI.MinimumSize = New System.Drawing.Size(20, 35)
@@ -557,6 +562,7 @@ Partial Class formGame
         '
         'txtO
         '
+        Me.txtO.Enabled = False
         Me.txtO.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtO.Location = New System.Drawing.Point(251, 479)
         Me.txtO.MinimumSize = New System.Drawing.Size(20, 35)
@@ -570,6 +576,7 @@ Partial Class formGame
         '
         'txtP
         '
+        Me.txtP.Enabled = False
         Me.txtP.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtP.Location = New System.Drawing.Point(277, 479)
         Me.txtP.MinimumSize = New System.Drawing.Size(20, 35)
@@ -583,6 +590,7 @@ Partial Class formGame
         '
         'txtÜ
         '
+        Me.txtÜ.Enabled = False
         Me.txtÜ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtÜ.Location = New System.Drawing.Point(303, 479)
         Me.txtÜ.MinimumSize = New System.Drawing.Size(20, 35)
@@ -596,6 +604,7 @@ Partial Class formGame
         '
         'txtÕ
         '
+        Me.txtÕ.Enabled = False
         Me.txtÕ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtÕ.Location = New System.Drawing.Point(329, 479)
         Me.txtÕ.MinimumSize = New System.Drawing.Size(20, 35)
@@ -609,6 +618,7 @@ Partial Class formGame
         '
         'txtÄ
         '
+        Me.txtÄ.Enabled = False
         Me.txtÄ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtÄ.Location = New System.Drawing.Point(316, 520)
         Me.txtÄ.MinimumSize = New System.Drawing.Size(20, 35)
@@ -622,6 +632,7 @@ Partial Class formGame
         '
         'txtÖ
         '
+        Me.txtÖ.Enabled = False
         Me.txtÖ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtÖ.Location = New System.Drawing.Point(290, 520)
         Me.txtÖ.MinimumSize = New System.Drawing.Size(20, 35)
@@ -635,6 +646,7 @@ Partial Class formGame
         '
         'txtL
         '
+        Me.txtL.Enabled = False
         Me.txtL.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtL.Location = New System.Drawing.Point(264, 520)
         Me.txtL.MinimumSize = New System.Drawing.Size(20, 35)
@@ -648,6 +660,7 @@ Partial Class formGame
         '
         'txtK
         '
+        Me.txtK.Enabled = False
         Me.txtK.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtK.Location = New System.Drawing.Point(238, 520)
         Me.txtK.MinimumSize = New System.Drawing.Size(20, 35)
@@ -661,6 +674,7 @@ Partial Class formGame
         '
         'txtJ
         '
+        Me.txtJ.Enabled = False
         Me.txtJ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtJ.Location = New System.Drawing.Point(210, 520)
         Me.txtJ.MinimumSize = New System.Drawing.Size(20, 35)
@@ -674,6 +688,7 @@ Partial Class formGame
         '
         'txtH
         '
+        Me.txtH.Enabled = False
         Me.txtH.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtH.Location = New System.Drawing.Point(184, 520)
         Me.txtH.MinimumSize = New System.Drawing.Size(20, 35)
@@ -687,6 +702,7 @@ Partial Class formGame
         '
         'txtG
         '
+        Me.txtG.Enabled = False
         Me.txtG.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtG.Location = New System.Drawing.Point(158, 520)
         Me.txtG.MinimumSize = New System.Drawing.Size(20, 35)
@@ -700,6 +716,7 @@ Partial Class formGame
         '
         'txtF
         '
+        Me.txtF.Enabled = False
         Me.txtF.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtF.Location = New System.Drawing.Point(132, 520)
         Me.txtF.MinimumSize = New System.Drawing.Size(20, 35)
@@ -713,6 +730,7 @@ Partial Class formGame
         '
         'txtD
         '
+        Me.txtD.Enabled = False
         Me.txtD.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtD.Location = New System.Drawing.Point(106, 520)
         Me.txtD.MinimumSize = New System.Drawing.Size(20, 35)
@@ -726,6 +744,7 @@ Partial Class formGame
         '
         'txtS
         '
+        Me.txtS.Enabled = False
         Me.txtS.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtS.Location = New System.Drawing.Point(79, 520)
         Me.txtS.MinimumSize = New System.Drawing.Size(20, 35)
@@ -739,6 +758,7 @@ Partial Class formGame
         '
         'txtA
         '
+        Me.txtA.Enabled = False
         Me.txtA.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtA.Location = New System.Drawing.Point(53, 520)
         Me.txtA.MinimumSize = New System.Drawing.Size(20, 35)
@@ -752,6 +772,7 @@ Partial Class formGame
         '
         'txtM
         '
+        Me.txtM.Enabled = False
         Me.txtM.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtM.Location = New System.Drawing.Point(258, 561)
         Me.txtM.MinimumSize = New System.Drawing.Size(20, 35)
@@ -765,6 +786,7 @@ Partial Class formGame
         '
         'txtN
         '
+        Me.txtN.Enabled = False
         Me.txtN.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtN.Location = New System.Drawing.Point(232, 561)
         Me.txtN.MinimumSize = New System.Drawing.Size(20, 35)
@@ -778,6 +800,7 @@ Partial Class formGame
         '
         'txtB
         '
+        Me.txtB.Enabled = False
         Me.txtB.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtB.Location = New System.Drawing.Point(206, 561)
         Me.txtB.MinimumSize = New System.Drawing.Size(20, 35)
@@ -791,6 +814,7 @@ Partial Class formGame
         '
         'txtV
         '
+        Me.txtV.Enabled = False
         Me.txtV.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtV.Location = New System.Drawing.Point(180, 561)
         Me.txtV.MinimumSize = New System.Drawing.Size(20, 35)
@@ -804,6 +828,7 @@ Partial Class formGame
         '
         'txtC
         '
+        Me.txtC.Enabled = False
         Me.txtC.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtC.Location = New System.Drawing.Point(154, 561)
         Me.txtC.MinimumSize = New System.Drawing.Size(20, 35)
@@ -817,6 +842,7 @@ Partial Class formGame
         '
         'txtX
         '
+        Me.txtX.Enabled = False
         Me.txtX.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtX.Location = New System.Drawing.Point(127, 561)
         Me.txtX.MinimumSize = New System.Drawing.Size(20, 35)
@@ -830,6 +856,7 @@ Partial Class formGame
         '
         'txtZ
         '
+        Me.txtZ.Enabled = False
         Me.txtZ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.txtZ.Location = New System.Drawing.Point(101, 561)
         Me.txtZ.MinimumSize = New System.Drawing.Size(20, 35)
@@ -840,32 +867,6 @@ Partial Class formGame
         Me.txtZ.TabIndex = 53
         Me.txtZ.Text = "Z"
         Me.txtZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtDelete
-        '
-        Me.txtDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtDelete.Location = New System.Drawing.Point(284, 561)
-        Me.txtDelete.MinimumSize = New System.Drawing.Size(20, 35)
-        Me.txtDelete.Multiline = True
-        Me.txtDelete.Name = "txtDelete"
-        Me.txtDelete.ReadOnly = True
-        Me.txtDelete.Size = New System.Drawing.Size(65, 35)
-        Me.txtDelete.TabIndex = 60
-        Me.txtDelete.Text = "DELETE"
-        Me.txtDelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtEnter
-        '
-        Me.txtEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtEnter.Location = New System.Drawing.Point(29, 561)
-        Me.txtEnter.MinimumSize = New System.Drawing.Size(20, 35)
-        Me.txtEnter.Multiline = True
-        Me.txtEnter.Name = "txtEnter"
-        Me.txtEnter.ReadOnly = True
-        Me.txtEnter.Size = New System.Drawing.Size(65, 35)
-        Me.txtEnter.TabIndex = 61
-        Me.txtEnter.Text = "ENTER"
-        Me.txtEnter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtDebug
         '
@@ -896,8 +897,6 @@ Partial Class formGame
         Me.Controls.Add(Me.HScrollBar1)
         Me.Controls.Add(Me.txtDebug2)
         Me.Controls.Add(Me.txtDebug)
-        Me.Controls.Add(Me.txtEnter)
-        Me.Controls.Add(Me.txtDelete)
         Me.Controls.Add(Me.txtM)
         Me.Controls.Add(Me.txtN)
         Me.Controls.Add(Me.txtB)
@@ -1025,8 +1024,6 @@ Partial Class formGame
     Friend WithEvents txtC As TextBox
     Friend WithEvents txtX As TextBox
     Friend WithEvents txtZ As TextBox
-    Friend WithEvents txtDelete As TextBox
-    Friend WithEvents txtEnter As TextBox
     Friend WithEvents txtDebug As TextBox
     Friend WithEvents txtDebug2 As TextBox
     Friend WithEvents HScrollBar1 As HScrollBar

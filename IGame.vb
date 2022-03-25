@@ -2,6 +2,9 @@
     Property strSona As String
     Property intRida As Integer
     Property intKast As Integer
+    Property lastLetter As Integer
+    Property redLetters As String
+
 
 
     Property strArvatudSona As String
@@ -12,6 +15,8 @@
     Function wordChecker(ByVal value As String, ByVal index As Integer)
 
     Function inputKeyboard(ByVal value As String) As String
+
+    Function letterCheck(ByVal value As Integer) As Boolean
 
     Function gameOver() As Boolean
 
