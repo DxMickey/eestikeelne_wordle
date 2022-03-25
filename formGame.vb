@@ -52,27 +52,31 @@ Public Class formGame
 
         'Kui vajutatud nupp on Enter
         If game.lastLetter = 13 And game.intKast = 5 Then
-            game.intRida = 1
-            game.intKast = 2
+
+
+
+
 
             'Mängu resettimine ja mängu lõpu ekraanile liikumine
             If game.gameOver() = True Then
 
-                Randomize()
-                newWord()
-                game.intKast = Nothing
-                game.intRida = Nothing
+                'Randomize()
+                'newWord()
+
                 Dim position = Me.Bounds
                 Dim newForm As New formGameEnd
                 AddHandler newForm.Load, Sub() newForm.Bounds = position
                 newForm.Show()
                 Me.Close()
             End If
+            game.intRida = 1
+            game.intKast = 2
             txtDebug2.Text = game.lettersHolder
             game.redLetters = game.lettersHolder
             game.lettersHolder = Nothing
             game.strArvatudSona = Nothing
-            game.redLetters = Nothing
+
+
 
 
         End If
@@ -128,17 +132,19 @@ Public Class formGame
 
     End Sub
 
-    Private Sub formGame_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Dim game As IGame
-        game = New CGame
-        Dim data As IDatabase
-        data = New CDatabase
-        Randomize()
-        Me.KeyPreview = True
-        newWord()
+    ' Private Sub formGame_Load(sender As Object, e As EventArgs) Handles Me.Load
+    'Dim game As IGame
+    ' game = New CGame
+    'Dim data As IDatabase
+    ' data = New CDatabase
+    ' Randomize()
+    'Me.KeyPreview = True
+    '  newWord()
 
 
-    End Sub
+    '  End Sub
+
+
 
     Private Sub stringToControl(ByVal value As String)
         Dim game As IGame
@@ -190,11 +196,26 @@ Public Class formGame
         game.intRida = 1
 
 
-        game.strSona = UCase(Data.getSona(Int((3000 * Rnd()) + 1)))
+        game.strSona = UCase(data.getSona(Int((3000 * Rnd()) + 1)))
         While game.strSona = Nothing
-            game.strSona = UCase(Data.getSona(Int((3000 * Rnd()) + 1)))
+            game.strSona = UCase(data.getSona(Int((3000 * Rnd()) + 1)))
         End While
     End Sub
 
+    Private Sub formGame_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Dim game As IGame
+        game = New CGame
+        Dim data As IDatabase
+        data = New CDatabase
+        game.intKast = Nothing
+        game.intRida = Nothing
+        game.lettersHolder = Nothing
+        game.strArvatudSona = Nothing
+        game.redLetters = Nothing
 
+        Randomize()
+        Me.KeyPreview = True
+        newWord()
+
+    End Sub
 End Class

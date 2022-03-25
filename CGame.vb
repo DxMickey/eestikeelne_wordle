@@ -161,6 +161,9 @@
         If strSona = strArvatudSona Then
             over = True
             winOrLose = 1
+        ElseIf intRida = 6 Then
+            over = True
+
         End If
         Return over
     End Function

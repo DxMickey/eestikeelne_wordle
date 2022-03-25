@@ -15,7 +15,18 @@
         Me.Close()
     End Sub
 
-    Private Sub formGameEnd_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub formGameEnd_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Dim game As IGame
+        game = New CGame
+        Dim data As IDatabase
+        data = New CDatabase
 
+        If game.winOrLose = 1 Then
+            lblResult.Text = "Sa arvasid sõna ära!"
+        Else
+            lblResult.Text = "Sa ei suutnud sõna ära arvata!"
+        End If
+
+        lblSona.Text = game.strSona
     End Sub
 End Class
