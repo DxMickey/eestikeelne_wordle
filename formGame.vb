@@ -39,7 +39,6 @@ Public Class formGame
         End If
 
         If game.letterCheck(game.lastLetter) And game.intKast <> 5 Then
-            game.intRida = 1
             game.intKast = 1
             game.strArvatudSona = UCase(Chr(game.lastLetter))
             'Stringi textboxi control-iks muutmine
@@ -52,9 +51,9 @@ Public Class formGame
         End If
 
         'Kui vajutatud nupp on Enter
-        If game.lastLetter = 13 Then
+        If game.lastLetter = 13 And game.intKast = 5 Then
             game.intRida = 1
-            game.intKast = 1
+            game.intKast = 2
 
             'Mängu resettimine ja mängu lõpu ekraanile liikumine
             If game.gameOver() = True Then
@@ -73,6 +72,8 @@ Public Class formGame
             game.redLetters = game.lettersHolder
             game.lettersHolder = Nothing
             game.strArvatudSona = Nothing
+            game.redLetters = Nothing
+
 
         End If
 
@@ -186,6 +187,8 @@ Public Class formGame
         game = New CGame
         Dim data As IDatabase
         data = New CDatabase
+        game.intRida = 1
+
 
         game.strSona = UCase(Data.getSona(Int((3000 * Rnd()) + 1)))
         While game.strSona = Nothing

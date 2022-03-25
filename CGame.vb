@@ -24,7 +24,12 @@
             Return strRedLetters
         End Get
         Set(ByVal value As String)
-            strRedLetters = strRedLetters & value
+            If value = Nothing Then
+                strRedLetters = Nothing
+            Else
+                strRedLetters = strRedLetters & value
+            End If
+
         End Set
     End Property
 
@@ -94,11 +99,8 @@
             Return intRidaSymbol
         End Get
         Set(ByVal value As Integer)
-            If intKast = 5 Then
-                intRidaSymbol = intRida + value
-            End If
-            If intRida = 0 Then
-                intRidaSymbol = value
+            If value = 1 Then
+                intRidaSymbol = intRida + 1
             End If
             If value = Nothing Then
                 intRidaSymbol = 0
@@ -114,9 +116,9 @@
             Return intKastSymbol
         End Get
         Set(ByVal value As Integer)
-            If intKast = 5 And intLastLetter <> 8 Then
+            If value = 2 And intLastLetter <> 8 Then
                 intKastSymbol = 0
-            ElseIf intLastLetter <> 8 Then
+            ElseIf intLastLetter <> 8 And intKast <> 5 Then
                 intKastSymbol = intKast + value
             End If
             If value = Nothing Then
