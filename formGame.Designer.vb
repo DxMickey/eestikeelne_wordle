@@ -86,6 +86,7 @@ Partial Class formGame
         Me.txtEnter = New System.Windows.Forms.TextBox()
         Me.txtDebug = New System.Windows.Forms.TextBox()
         Me.txtDebug2 = New System.Windows.Forms.TextBox()
+        Me.HScrollBar1 = New System.Windows.Forms.HScrollBar()
         Me.SuspendLayout()
         '
         'txtRida1Kast1
@@ -880,11 +881,19 @@ Partial Class formGame
         Me.txtDebug2.Size = New System.Drawing.Size(233, 20)
         Me.txtDebug2.TabIndex = 63
         '
+        'HScrollBar1
+        '
+        Me.HScrollBar1.Location = New System.Drawing.Point(374, 500)
+        Me.HScrollBar1.Name = "HScrollBar1"
+        Me.HScrollBar1.Size = New System.Drawing.Size(80, 17)
+        Me.HScrollBar1.TabIndex = 64
+        '
         'formGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(391, 623)
+        Me.Controls.Add(Me.HScrollBar1)
         Me.Controls.Add(Me.txtDebug2)
         Me.Controls.Add(Me.txtDebug)
         Me.Controls.Add(Me.txtEnter)
@@ -1020,4 +1029,5 @@ Partial Class formGame
     Friend WithEvents txtEnter As TextBox
     Friend WithEvents txtDebug As TextBox
     Friend WithEvents txtDebug2 As TextBox
+    Friend WithEvents HScrollBar1 As HScrollBar
 End Class

@@ -1,14 +1,15 @@
 ﻿Public Class formGame
 
+    'Listen for any keypress
     Private Sub formGame_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
-
         Dim letter As IGame
         letter = New CGame
 
-
+        'Salvesta vajutatud nupu ascii kood muutujasse pressedKey
         Dim pressedKey As Integer
         pressedKey = Asc(e.KeyChar)
 
+        'Kui vajutatud nupp on Enter ja viies täht on sisestatud, uuenda värvid
         If pressedKey = 13 And letter.intKast = 5 Then
             updateColors()
         End If
@@ -16,18 +17,19 @@
 
 
 
+        'Kui viis tähte pole sisestatud või vajutatud nupp on Enter
         If letter.intKast <> 5 Or pressedKey = 13 Then
 
-
+            'Suurenda rea ja kasti arvu
             letter.intRida = 1
             letter.intKast = 1
 
-
+            'Saa funktsioonilt inputLetter textboxi nimi stringina
             Dim a = letter.inputLetter(letter.intRida, letter.intKast)
 
 
-
             If pressedKey >= 65 And pressedKey <= 90 Or pressedKey >= 97 And pressedKey <= 122 Or pressedKey = 132 Or pressedKey = 142 Or pressedKey = 148 Or pressedKey = 153 Or pressedKey = 154 Or pressedKey = 229 Or pressedKey = 228 Or pressedKey = 129 Then
+                'Stringi textboxi control-iks muutmine
                 'https://stackoverflow.com/questions/47243351/how-to-obtain-a-control-using-its-name-in-visual-basic-net
                 If Me.Controls.Find(a, True).Count = 1 Then
                     Dim box As TextBox = Me.Controls.Find(a, True)(0)
@@ -36,12 +38,11 @@
                     'txtDebug2.Text = letter.strArvatudSona
 
                 End If
+
+
+
+
             End If
-
-
-
-
-
 
 
         End If
@@ -50,9 +51,10 @@
 
 
 
-
+        'Kui vajutatud nupp on Enter
         If pressedKey = 13 Then
 
+            'Mängu resettimine ja mängu lõpu ekraanile liikumine
             If letter.gameOver() = True Then
                 letter.intKast = Nothing
                 letter.intRida = Nothing
@@ -82,8 +84,6 @@
 
         While i < 5
             Dim misVarv As Integer
-
-
 
 
             misVarv = letter.wordChecker(letter.strArvatudSona(i), i)
@@ -136,13 +136,6 @@
 
 
     End Sub
-
-
-
-
-
-
-
 
 
 
