@@ -23,22 +23,33 @@ Partial Class formMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnPlay = New System.Windows.Forms.Button()
+        Me.btnHistory = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnPlay
         '
-        Me.btnPlay.Location = New System.Drawing.Point(154, 195)
+        Me.btnPlay.Location = New System.Drawing.Point(263, 186)
         Me.btnPlay.Name = "btnPlay"
         Me.btnPlay.Size = New System.Drawing.Size(75, 23)
         Me.btnPlay.TabIndex = 0
         Me.btnPlay.Text = "Mängi"
         Me.btnPlay.UseVisualStyleBackColor = True
         '
+        'btnHistory
+        '
+        Me.btnHistory.Location = New System.Drawing.Point(263, 241)
+        Me.btnHistory.Name = "btnHistory"
+        Me.btnHistory.Size = New System.Drawing.Size(75, 23)
+        Me.btnHistory.TabIndex = 1
+        Me.btnHistory.Text = "Ajalugu"
+        Me.btnHistory.UseVisualStyleBackColor = True
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(391, 623)
+        Me.ClientSize = New System.Drawing.Size(637, 744)
+        Me.Controls.Add(Me.btnHistory)
         Me.Controls.Add(Me.btnPlay)
         Me.Name = "formMenu"
         Me.Text = "Form1"
@@ -47,4 +58,5 @@ Partial Class formMenu
     End Sub
 
     Friend WithEvents btnPlay As Button
+    Friend WithEvents btnHistory As Button
 End Class

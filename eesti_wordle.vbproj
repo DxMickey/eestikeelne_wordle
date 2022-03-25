@@ -94,6 +94,12 @@
   <ItemGroup>
     <Compile Include="CGame.vb" />
     <Compile Include="CDatabase.vb" />
+    <Compile Include="formHistory.Designer.vb">
+      <DependentUpon>formHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formGameEnd.Designer.vb">
       <DependentUpon>formGameEnd.vb</DependentUpon>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formGameEnd.resx">
       <DependentUpon>formGameEnd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formHistory.resx">
+      <DependentUpon>formHistory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.vb</DependentUpon>
