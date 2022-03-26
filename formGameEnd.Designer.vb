@@ -22,20 +22,21 @@ Partial Class formGameEnd
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblResult = New System.Windows.Forms.Label()
         Me.btbPlayAgain = New System.Windows.Forms.Button()
         Me.btbToMenu = New System.Windows.Forms.Button()
+        Me.lblSona = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblResult
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.Label1.Location = New System.Drawing.Point(66, 140)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(248, 31)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "WORD GUESSED!"
+        Me.lblResult.AutoSize = True
+        Me.lblResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.lblResult.Location = New System.Drawing.Point(86, 138)
+        Me.lblResult.Name = "lblResult"
+        Me.lblResult.Size = New System.Drawing.Size(192, 25)
+        Me.lblResult.TabIndex = 0
+        Me.lblResult.Text = "WORD GUESSED!"
         '
         'btbPlayAgain
         '
@@ -55,14 +56,25 @@ Partial Class formGameEnd
         Me.btbToMenu.Text = "Menüüsse"
         Me.btbToMenu.UseVisualStyleBackColor = True
         '
+        'lblSona
+        '
+        Me.lblSona.AutoSize = True
+        Me.lblSona.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.25!)
+        Me.lblSona.Location = New System.Drawing.Point(150, 187)
+        Me.lblSona.Name = "lblSona"
+        Me.lblSona.Size = New System.Drawing.Size(77, 26)
+        Me.lblSona.TabIndex = 3
+        Me.lblSona.Text = "Label1"
+        '
         'formGameEnd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(391, 623)
+        Me.Controls.Add(Me.lblSona)
         Me.Controls.Add(Me.btbToMenu)
         Me.Controls.Add(Me.btbPlayAgain)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblResult)
         Me.Name = "formGameEnd"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -70,7 +82,8 @@ Partial Class formGameEnd
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblResult As Label
     Friend WithEvents btbPlayAgain As Button
     Friend WithEvents btbToMenu As Button
+    Friend WithEvents lblSona As Label
 End Class
