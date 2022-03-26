@@ -14,6 +14,10 @@
 
     Property kestvus As Integer
 
+    Property gameMode As String
+
+    Property maxKast As Integer
+
     Function getBoxName(ByVal value1 As Integer, ByVal value2 As Integer) As String
 
     Function wordChecker(ByVal value As String, ByVal index As Integer)
@@ -24,5 +28,8 @@
     Function gameOver() As Boolean
 
     Function isLetterInWord(ByVal value As String) As Boolean
+
+    Sub deleteLastKey()
+
 
 End Interface

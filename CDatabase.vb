@@ -1,7 +1,7 @@
 ﻿Public Class CDatabase
     Implements IDatabase
 
-    Public Sub insertHistory(value1 As Integer, value2 As Integer, value3 As String, value4 As String) Implements IDatabase.insertHistory
+    Public Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String) Implements IDatabase.insertHistory
         Dim SQLconnect As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -10,7 +10,7 @@
 
         SQLcommand = SQLconnect.CreateCommand
 
-        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ", " & value2 & ", '" & value3 & "', '" & value4 & "')"
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ", '" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "')"
         SQLcommand.ExecuteNonQuery()
         SQLconnect.Close()
     End Sub
@@ -80,13 +80,25 @@
     Private Function getSona(value As Integer) As String Implements IDatabase.getSona
         Dim SQLconnect As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
+        Dim game As IGame
+        game = New CGame
+        Dim millineList As String
+
+        If game.gameMode = "Kerge" Then
+            millineList = "sonadeListEasy"
+        ElseIf game.gameMode = "Tavaline" Then
+            millineList = "sonadeList"
+        Else
+            millineList = "sonadeListHard"
+
+        End If
 
         SQLconnect.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
         SQLconnect.Open()
 
         SQLcommand = SQLconnect.CreateCommand
 
-        SQLcommand.CommandText = "SELECT * FROM sonadeList WHERE sonaID = " & value
+        SQLcommand.CommandText = "SELECT * FROM '" & millineList & "' WHERE sonaID = " & value
         Dim sqlResponse As String = SQLcommand.ExecuteScalar()
         SQLconnect.Close()
         Return sqlResponse

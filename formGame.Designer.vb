@@ -86,6 +86,12 @@ Partial Class formGame
         Me.txtDebug = New System.Windows.Forms.TextBox()
         Me.txtDebug2 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.txtRida6Kast6 = New System.Windows.Forms.TextBox()
+        Me.txtRida5Kast6 = New System.Windows.Forms.TextBox()
+        Me.txtRida4Kast6 = New System.Windows.Forms.TextBox()
+        Me.txtRida3Kast6 = New System.Windows.Forms.TextBox()
+        Me.txtRida2Kast6 = New System.Windows.Forms.TextBox()
+        Me.txtRida1Kast6 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txtRida1Kast1
@@ -887,11 +893,89 @@ Partial Class formGame
         '
         Me.Timer1.Interval = 1000
         '
+        'txtRida6Kast6
+        '
+        Me.txtRida6Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRida6Kast6.Location = New System.Drawing.Point(506, 476)
+        Me.txtRida6Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.txtRida6Kast6.Multiline = True
+        Me.txtRida6Kast6.Name = "txtRida6Kast6"
+        Me.txtRida6Kast6.ReadOnly = True
+        Me.txtRida6Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.txtRida6Kast6.TabIndex = 69
+        Me.txtRida6Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtRida5Kast6
+        '
+        Me.txtRida5Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRida5Kast6.Location = New System.Drawing.Point(506, 410)
+        Me.txtRida5Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.txtRida5Kast6.Multiline = True
+        Me.txtRida5Kast6.Name = "txtRida5Kast6"
+        Me.txtRida5Kast6.ReadOnly = True
+        Me.txtRida5Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.txtRida5Kast6.TabIndex = 68
+        Me.txtRida5Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtRida4Kast6
+        '
+        Me.txtRida4Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRida4Kast6.Location = New System.Drawing.Point(506, 344)
+        Me.txtRida4Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.txtRida4Kast6.Multiline = True
+        Me.txtRida4Kast6.Name = "txtRida4Kast6"
+        Me.txtRida4Kast6.ReadOnly = True
+        Me.txtRida4Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.txtRida4Kast6.TabIndex = 67
+        Me.txtRida4Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtRida3Kast6
+        '
+        Me.txtRida3Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRida3Kast6.Location = New System.Drawing.Point(506, 278)
+        Me.txtRida3Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.txtRida3Kast6.Multiline = True
+        Me.txtRida3Kast6.Name = "txtRida3Kast6"
+        Me.txtRida3Kast6.ReadOnly = True
+        Me.txtRida3Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.txtRida3Kast6.TabIndex = 66
+        Me.txtRida3Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtRida2Kast6
+        '
+        Me.txtRida2Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRida2Kast6.Location = New System.Drawing.Point(506, 212)
+        Me.txtRida2Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.txtRida2Kast6.Multiline = True
+        Me.txtRida2Kast6.Name = "txtRida2Kast6"
+        Me.txtRida2Kast6.ReadOnly = True
+        Me.txtRida2Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.txtRida2Kast6.TabIndex = 65
+        Me.txtRida2Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtRida1Kast6
+        '
+        Me.txtRida1Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRida1Kast6.Location = New System.Drawing.Point(506, 146)
+        Me.txtRida1Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.txtRida1Kast6.Multiline = True
+        Me.txtRida1Kast6.Name = "txtRida1Kast6"
+        Me.txtRida1Kast6.ReadOnly = True
+        Me.txtRida1Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.txtRida1Kast6.TabIndex = 64
+        Me.txtRida1Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'formGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.txtRida6Kast6)
+        Me.Controls.Add(Me.txtRida5Kast6)
+        Me.Controls.Add(Me.txtRida4Kast6)
+        Me.Controls.Add(Me.txtRida3Kast6)
+        Me.Controls.Add(Me.txtRida2Kast6)
+        Me.Controls.Add(Me.txtRida1Kast6)
         Me.Controls.Add(Me.txtDebug2)
         Me.Controls.Add(Me.txtDebug)
         Me.Controls.Add(Me.txtM)
@@ -1024,4 +1108,10 @@ Partial Class formGame
     Friend WithEvents txtDebug As TextBox
     Friend WithEvents txtDebug2 As TextBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents txtRida6Kast6 As TextBox
+    Friend WithEvents txtRida5Kast6 As TextBox
+    Friend WithEvents txtRida4Kast6 As TextBox
+    Friend WithEvents txtRida3Kast6 As TextBox
+    Friend WithEvents txtRida2Kast6 As TextBox
+    Friend WithEvents txtRida1Kast6 As TextBox
 End Class

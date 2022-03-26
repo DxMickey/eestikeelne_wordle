@@ -10,8 +10,10 @@
     Shared strRedLettersHolder As String
     Shared intWinOrLose As Integer
     Shared intKestvus As Integer
+    Shared strGameMode As String
+    Shared intMaxKast As Integer
 
-    Public Property kestvus As Integer Implements IGame.kestvus
+    Private Property kestvus As Integer Implements IGame.kestvus
         Get
             Return intKestvus
         End Get
@@ -22,6 +24,24 @@
                 intKestvus = kestvus + value
             End If
 
+        End Set
+    End Property
+
+    Private Property gameMode As String Implements IGame.gameMode
+        Get
+            Return strGameMode
+        End Get
+        Set(ByVal value As String)
+            strGameMode = value
+        End Set
+    End Property
+
+    Private Property maxKast As Integer Implements IGame.maxKast
+        Get
+            Return intMaxKast
+        End Get
+        Set(ByVal value As Integer)
+            intMaxKast = value
         End Set
     End Property
 
@@ -120,7 +140,7 @@
         Set(ByVal value As Integer)
             If value = 2 And intLastLetter <> 8 Then
                 intKastSymbol = 0
-            ElseIf intLastLetter <> 8 And intKast <> 5 Then
+            ElseIf intLastLetter <> 8 And intKast <> maxKast Then
                 intKastSymbol = intKast + value
             End If
             If value = Nothing Then
@@ -129,9 +149,24 @@
             If value = -1 Then
                 intKastSymbol = intKastSymbol - 1
             End If
-
         End Set
     End Property
+
+    Public Sub deleteLastKey() Implements IGame.deleteLastKey
+        Dim oldArvatud As String = ArvatudSona
+        ArvatudSona = Nothing
+
+        For i As Integer = 0 To Len(oldArvatud) - 1
+            ArvatudSona = oldArvatud(i)
+
+        Next
+
+        If intKast = 1 Then
+            ArvatudSona = Nothing
+        End If
+
+
+    End Sub
 
     'Kontrollib kas viimane vajutatud täht on otsitavas sõnas ning kas on juba salvestatud punaste tähtede hoidjasse
     'input = otsitav sõna 
@@ -164,11 +199,14 @@
     '         1 kui täht on olemas arvatavas sõnas aga mitte samas kohas
     '         0 kui tähte pole arvatavas sõnas
     Private Function wordChecker(ByVal value As String, ByVal index As Integer) Implements IGame.wordChecker
+        Dim game As IGame
+        game = New CGame
+
         Dim tulemus As Integer = 0
         Dim i As Integer = 0
 
 
-        While i < 5
+        While i < game.maxKast
 
             If strSona(i) = value And i = index Then
                 tulemus = 2
