@@ -94,6 +94,12 @@
   <ItemGroup>
     <Compile Include="CGame.vb" />
     <Compile Include="CDatabase.vb" />
+    <Compile Include="formStatistika.Designer.vb">
+      <DependentUpon>formStatistika.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formStatistika.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formHistory.Designer.vb">
       <DependentUpon>formHistory.vb</DependentUpon>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formStatistika.resx">
+      <DependentUpon>formStatistika.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

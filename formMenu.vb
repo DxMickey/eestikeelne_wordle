@@ -14,4 +14,12 @@
         newForm.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnStats_Click(sender As Object, e As EventArgs) Handles btnStats.Click
+        Dim position = Me.Bounds
+        Dim newForm As New formStatistika
+        AddHandler newForm.Load, Sub() newForm.Bounds = position
+        newForm.Show()
+        Me.Close()
+    End Sub
 End Class
