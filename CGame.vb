@@ -9,6 +9,21 @@
     Shared strRedLetters As String
     Shared strRedLettersHolder As String
     Shared intWinOrLose As Integer
+    Shared intKestvus As Integer
+
+    Public Property kestvus As Integer Implements IGame.kestvus
+        Get
+            Return intKestvus
+        End Get
+        Set(ByVal value As Integer)
+            If value = Nothing Then
+                intKestvus = 0
+            Else
+                intKestvus = kestvus + value
+            End If
+
+        End Set
+    End Property
 
     Private Property lastLetter As Integer Implements IGame.lastLetter
         Get

@@ -1,9 +1,7 @@
 ﻿Public Class CDatabase
     Implements IDatabase
 
-    'Statistikas mängitud mängude arvu suurendamine
-    'input = uus mängitud mängude kogus
-    Private Sub updateGamesCount(value As Integer) Implements IDatabase.updateGamesCount
+    Public Sub insertHistory(value1 As Integer, value2 As Integer, value3 As String, value4 As String) Implements IDatabase.insertHistory
         Dim SQLconnect As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -12,7 +10,25 @@
 
         SQLcommand = SQLconnect.CreateCommand
 
-        SQLcommand.CommandText = "INSERT or REPLACE INTO Statistika VALUES(1, " & value & ")"
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ", " & value2 & ", '" & value3 & "', '" & value4 & "')"
+        SQLcommand.ExecuteNonQuery()
+        SQLconnect.Close()
+    End Sub
+
+
+
+    'Statistikas mängitud mängude arvu suurendamine
+    'input = uus mängitud mängude kogus
+    Private Sub updateStats(value1 As Integer, value2 As Integer, value3 As Integer) Implements IDatabase.updateStats
+        Dim SQLconnect As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnect.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnect.Open()
+
+        SQLcommand = SQLconnect.CreateCommand
+
+        SQLcommand.CommandText = "INSERT or REPLACE INTO Statistika VALUES(1, " & value1 & ", " & value2 & ", " & value3 & ")"
         SQLcommand.ExecuteNonQuery()
         SQLconnect.Close()
 
@@ -43,7 +59,7 @@
 
     'Mängitud mängude arvu lugemine andmebaasist
     'output = tagastab mängitud mängude arvu
-    Private Function getGamesCount() As Integer Implements IDatabase.getGamesCount
+    Private Function getStat(ByVal value As String) As Integer Implements IDatabase.getStat
         Dim SQLconnect As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -52,7 +68,7 @@
 
         SQLcommand = SQLconnect.CreateCommand
 
-        SQLcommand.CommandText = "SELECT GamesPlayed FROM statistika WHERE ID = 1"
+        SQLcommand.CommandText = "SELECT " & value & " FROM statistika WHERE ID = 1"
         Dim sqlResponse As String = SQLcommand.ExecuteScalar()
         SQLconnect.Close()
         Return sqlResponse

@@ -32,7 +32,7 @@ Partial Class formGameEnd
         '
         Me.lblResult.AutoSize = True
         Me.lblResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
-        Me.lblResult.Location = New System.Drawing.Point(86, 138)
+        Me.lblResult.Location = New System.Drawing.Point(223, 144)
         Me.lblResult.Name = "lblResult"
         Me.lblResult.Size = New System.Drawing.Size(192, 25)
         Me.lblResult.TabIndex = 0
@@ -40,7 +40,7 @@ Partial Class formGameEnd
         '
         'btbPlayAgain
         '
-        Me.btbPlayAgain.Location = New System.Drawing.Point(152, 233)
+        Me.btbPlayAgain.Location = New System.Drawing.Point(281, 310)
         Me.btbPlayAgain.Name = "btbPlayAgain"
         Me.btbPlayAgain.Size = New System.Drawing.Size(75, 23)
         Me.btbPlayAgain.TabIndex = 1
@@ -49,7 +49,7 @@ Partial Class formGameEnd
         '
         'btbToMenu
         '
-        Me.btbToMenu.Location = New System.Drawing.Point(152, 310)
+        Me.btbToMenu.Location = New System.Drawing.Point(281, 386)
         Me.btbToMenu.Name = "btbToMenu"
         Me.btbToMenu.Size = New System.Drawing.Size(75, 23)
         Me.btbToMenu.TabIndex = 2
@@ -60,7 +60,7 @@ Partial Class formGameEnd
         '
         Me.lblSona.AutoSize = True
         Me.lblSona.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.25!)
-        Me.lblSona.Location = New System.Drawing.Point(150, 187)
+        Me.lblSona.Location = New System.Drawing.Point(279, 202)
         Me.lblSona.Name = "lblSona"
         Me.lblSona.Size = New System.Drawing.Size(77, 26)
         Me.lblSona.TabIndex = 3
@@ -70,7 +70,7 @@ Partial Class formGameEnd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(391, 623)
+        Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.lblSona)
         Me.Controls.Add(Me.btbToMenu)
         Me.Controls.Add(Me.btbPlayAgain)
