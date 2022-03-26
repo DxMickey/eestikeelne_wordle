@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class formGame
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class formGame
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.txtRida1Kast1 = New System.Windows.Forms.TextBox()
         Me.txtRida1Kast2 = New System.Windows.Forms.TextBox()
@@ -82,17 +82,14 @@ Partial Class formGame
         Me.txtC = New System.Windows.Forms.TextBox()
         Me.txtX = New System.Windows.Forms.TextBox()
         Me.txtZ = New System.Windows.Forms.TextBox()
-        Me.txtDelete = New System.Windows.Forms.TextBox()
-        Me.txtEnter = New System.Windows.Forms.TextBox()
         Me.txtDebug = New System.Windows.Forms.TextBox()
         Me.txtDebug2 = New System.Windows.Forms.TextBox()
-        Me.HScrollBar1 = New System.Windows.Forms.HScrollBar()
         Me.SuspendLayout()
         '
         'txtRida1Kast1
         '
         Me.txtRida1Kast1.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida1Kast1.Location = New System.Drawing.Point(34, 54)
+        Me.txtRida1Kast1.Location = New System.Drawing.Point(140, 94)
         Me.txtRida1Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida1Kast1.Multiline = True
         Me.txtRida1Kast1.Name = "txtRida1Kast1"
@@ -104,7 +101,7 @@ Partial Class formGame
         'txtRida1Kast2
         '
         Me.txtRida1Kast2.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida1Kast2.Location = New System.Drawing.Point(100, 54)
+        Me.txtRida1Kast2.Location = New System.Drawing.Point(206, 94)
         Me.txtRida1Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida1Kast2.Multiline = True
         Me.txtRida1Kast2.Name = "txtRida1Kast2"
@@ -116,7 +113,7 @@ Partial Class formGame
         'txtRida1Kast3
         '
         Me.txtRida1Kast3.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida1Kast3.Location = New System.Drawing.Point(166, 54)
+        Me.txtRida1Kast3.Location = New System.Drawing.Point(272, 94)
         Me.txtRida1Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida1Kast3.Multiline = True
         Me.txtRida1Kast3.Name = "txtRida1Kast3"
@@ -128,7 +125,7 @@ Partial Class formGame
         'txtRida1Kast4
         '
         Me.txtRida1Kast4.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida1Kast4.Location = New System.Drawing.Point(232, 54)
+        Me.txtRida1Kast4.Location = New System.Drawing.Point(338, 94)
         Me.txtRida1Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida1Kast4.Multiline = True
         Me.txtRida1Kast4.Name = "txtRida1Kast4"
@@ -140,7 +137,7 @@ Partial Class formGame
         'txtRida1Kast5
         '
         Me.txtRida1Kast5.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida1Kast5.Location = New System.Drawing.Point(298, 54)
+        Me.txtRida1Kast5.Location = New System.Drawing.Point(404, 94)
         Me.txtRida1Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida1Kast5.Multiline = True
         Me.txtRida1Kast5.Name = "txtRida1Kast5"
@@ -152,7 +149,7 @@ Partial Class formGame
         'txtRida2Kast5
         '
         Me.txtRida2Kast5.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida2Kast5.Location = New System.Drawing.Point(298, 120)
+        Me.txtRida2Kast5.Location = New System.Drawing.Point(404, 160)
         Me.txtRida2Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida2Kast5.Multiline = True
         Me.txtRida2Kast5.Name = "txtRida2Kast5"
@@ -164,7 +161,7 @@ Partial Class formGame
         'txtRida2Kast4
         '
         Me.txtRida2Kast4.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida2Kast4.Location = New System.Drawing.Point(232, 120)
+        Me.txtRida2Kast4.Location = New System.Drawing.Point(338, 160)
         Me.txtRida2Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida2Kast4.Multiline = True
         Me.txtRida2Kast4.Name = "txtRida2Kast4"
@@ -176,7 +173,7 @@ Partial Class formGame
         'txtRida2Kast3
         '
         Me.txtRida2Kast3.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida2Kast3.Location = New System.Drawing.Point(166, 120)
+        Me.txtRida2Kast3.Location = New System.Drawing.Point(272, 160)
         Me.txtRida2Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida2Kast3.Multiline = True
         Me.txtRida2Kast3.Name = "txtRida2Kast3"
@@ -188,7 +185,7 @@ Partial Class formGame
         'txtRida2Kast2
         '
         Me.txtRida2Kast2.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida2Kast2.Location = New System.Drawing.Point(100, 120)
+        Me.txtRida2Kast2.Location = New System.Drawing.Point(206, 160)
         Me.txtRida2Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida2Kast2.Multiline = True
         Me.txtRida2Kast2.Name = "txtRida2Kast2"
@@ -200,7 +197,7 @@ Partial Class formGame
         'txtRida2Kast1
         '
         Me.txtRida2Kast1.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida2Kast1.Location = New System.Drawing.Point(34, 120)
+        Me.txtRida2Kast1.Location = New System.Drawing.Point(140, 160)
         Me.txtRida2Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida2Kast1.Multiline = True
         Me.txtRida2Kast1.Name = "txtRida2Kast1"
@@ -212,7 +209,7 @@ Partial Class formGame
         'txtRida3Kast5
         '
         Me.txtRida3Kast5.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida3Kast5.Location = New System.Drawing.Point(298, 186)
+        Me.txtRida3Kast5.Location = New System.Drawing.Point(404, 226)
         Me.txtRida3Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida3Kast5.Multiline = True
         Me.txtRida3Kast5.Name = "txtRida3Kast5"
@@ -224,7 +221,7 @@ Partial Class formGame
         'txtRida3Kast4
         '
         Me.txtRida3Kast4.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida3Kast4.Location = New System.Drawing.Point(232, 186)
+        Me.txtRida3Kast4.Location = New System.Drawing.Point(338, 226)
         Me.txtRida3Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida3Kast4.Multiline = True
         Me.txtRida3Kast4.Name = "txtRida3Kast4"
@@ -236,7 +233,7 @@ Partial Class formGame
         'txtRida3Kast3
         '
         Me.txtRida3Kast3.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida3Kast3.Location = New System.Drawing.Point(166, 186)
+        Me.txtRida3Kast3.Location = New System.Drawing.Point(272, 226)
         Me.txtRida3Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida3Kast3.Multiline = True
         Me.txtRida3Kast3.Name = "txtRida3Kast3"
@@ -248,7 +245,7 @@ Partial Class formGame
         'txtRida3Kast2
         '
         Me.txtRida3Kast2.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida3Kast2.Location = New System.Drawing.Point(100, 186)
+        Me.txtRida3Kast2.Location = New System.Drawing.Point(206, 226)
         Me.txtRida3Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida3Kast2.Multiline = True
         Me.txtRida3Kast2.Name = "txtRida3Kast2"
@@ -260,7 +257,7 @@ Partial Class formGame
         'txtRida3Kast1
         '
         Me.txtRida3Kast1.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida3Kast1.Location = New System.Drawing.Point(34, 186)
+        Me.txtRida3Kast1.Location = New System.Drawing.Point(140, 226)
         Me.txtRida3Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida3Kast1.Multiline = True
         Me.txtRida3Kast1.Name = "txtRida3Kast1"
@@ -272,7 +269,7 @@ Partial Class formGame
         'txtRida4Kast5
         '
         Me.txtRida4Kast5.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida4Kast5.Location = New System.Drawing.Point(298, 252)
+        Me.txtRida4Kast5.Location = New System.Drawing.Point(404, 292)
         Me.txtRida4Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida4Kast5.Multiline = True
         Me.txtRida4Kast5.Name = "txtRida4Kast5"
@@ -284,7 +281,7 @@ Partial Class formGame
         'txtRida4Kast4
         '
         Me.txtRida4Kast4.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida4Kast4.Location = New System.Drawing.Point(232, 252)
+        Me.txtRida4Kast4.Location = New System.Drawing.Point(338, 292)
         Me.txtRida4Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida4Kast4.Multiline = True
         Me.txtRida4Kast4.Name = "txtRida4Kast4"
@@ -296,7 +293,7 @@ Partial Class formGame
         'txtRida4Kast3
         '
         Me.txtRida4Kast3.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida4Kast3.Location = New System.Drawing.Point(166, 252)
+        Me.txtRida4Kast3.Location = New System.Drawing.Point(272, 292)
         Me.txtRida4Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida4Kast3.Multiline = True
         Me.txtRida4Kast3.Name = "txtRida4Kast3"
@@ -308,7 +305,7 @@ Partial Class formGame
         'txtRida4Kast2
         '
         Me.txtRida4Kast2.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida4Kast2.Location = New System.Drawing.Point(100, 252)
+        Me.txtRida4Kast2.Location = New System.Drawing.Point(206, 292)
         Me.txtRida4Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida4Kast2.Multiline = True
         Me.txtRida4Kast2.Name = "txtRida4Kast2"
@@ -320,7 +317,7 @@ Partial Class formGame
         'txtRida4Kast1
         '
         Me.txtRida4Kast1.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida4Kast1.Location = New System.Drawing.Point(34, 252)
+        Me.txtRida4Kast1.Location = New System.Drawing.Point(140, 292)
         Me.txtRida4Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida4Kast1.Multiline = True
         Me.txtRida4Kast1.Name = "txtRida4Kast1"
@@ -332,7 +329,7 @@ Partial Class formGame
         'txtRida5Kast5
         '
         Me.txtRida5Kast5.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida5Kast5.Location = New System.Drawing.Point(298, 318)
+        Me.txtRida5Kast5.Location = New System.Drawing.Point(404, 358)
         Me.txtRida5Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida5Kast5.Multiline = True
         Me.txtRida5Kast5.Name = "txtRida5Kast5"
@@ -344,7 +341,7 @@ Partial Class formGame
         'txtRida5Kast4
         '
         Me.txtRida5Kast4.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida5Kast4.Location = New System.Drawing.Point(232, 318)
+        Me.txtRida5Kast4.Location = New System.Drawing.Point(338, 358)
         Me.txtRida5Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida5Kast4.Multiline = True
         Me.txtRida5Kast4.Name = "txtRida5Kast4"
@@ -356,7 +353,7 @@ Partial Class formGame
         'txtRida5Kast3
         '
         Me.txtRida5Kast3.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida5Kast3.Location = New System.Drawing.Point(166, 318)
+        Me.txtRida5Kast3.Location = New System.Drawing.Point(272, 358)
         Me.txtRida5Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida5Kast3.Multiline = True
         Me.txtRida5Kast3.Name = "txtRida5Kast3"
@@ -368,7 +365,7 @@ Partial Class formGame
         'txtRida5Kast2
         '
         Me.txtRida5Kast2.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida5Kast2.Location = New System.Drawing.Point(100, 318)
+        Me.txtRida5Kast2.Location = New System.Drawing.Point(206, 358)
         Me.txtRida5Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida5Kast2.Multiline = True
         Me.txtRida5Kast2.Name = "txtRida5Kast2"
@@ -380,7 +377,7 @@ Partial Class formGame
         'txtRida5Kast1
         '
         Me.txtRida5Kast1.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida5Kast1.Location = New System.Drawing.Point(34, 318)
+        Me.txtRida5Kast1.Location = New System.Drawing.Point(140, 358)
         Me.txtRida5Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida5Kast1.Multiline = True
         Me.txtRida5Kast1.Name = "txtRida5Kast1"
@@ -392,7 +389,7 @@ Partial Class formGame
         'txtRida6Kast5
         '
         Me.txtRida6Kast5.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida6Kast5.Location = New System.Drawing.Point(298, 384)
+        Me.txtRida6Kast5.Location = New System.Drawing.Point(404, 424)
         Me.txtRida6Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida6Kast5.Multiline = True
         Me.txtRida6Kast5.Name = "txtRida6Kast5"
@@ -404,7 +401,7 @@ Partial Class formGame
         'txtRida6Kast4
         '
         Me.txtRida6Kast4.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida6Kast4.Location = New System.Drawing.Point(232, 384)
+        Me.txtRida6Kast4.Location = New System.Drawing.Point(338, 424)
         Me.txtRida6Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida6Kast4.Multiline = True
         Me.txtRida6Kast4.Name = "txtRida6Kast4"
@@ -416,7 +413,7 @@ Partial Class formGame
         'txtRida6Kast3
         '
         Me.txtRida6Kast3.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida6Kast3.Location = New System.Drawing.Point(166, 384)
+        Me.txtRida6Kast3.Location = New System.Drawing.Point(272, 424)
         Me.txtRida6Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida6Kast3.Multiline = True
         Me.txtRida6Kast3.Name = "txtRida6Kast3"
@@ -428,7 +425,7 @@ Partial Class formGame
         'txtRida6Kast2
         '
         Me.txtRida6Kast2.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida6Kast2.Location = New System.Drawing.Point(100, 384)
+        Me.txtRida6Kast2.Location = New System.Drawing.Point(206, 424)
         Me.txtRida6Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida6Kast2.Multiline = True
         Me.txtRida6Kast2.Name = "txtRida6Kast2"
@@ -440,7 +437,7 @@ Partial Class formGame
         'txtRida6Kast1
         '
         Me.txtRida6Kast1.Font = New System.Drawing.Font("Microsoft Sans Serif", 38.25!)
-        Me.txtRida6Kast1.Location = New System.Drawing.Point(34, 384)
+        Me.txtRida6Kast1.Location = New System.Drawing.Point(140, 424)
         Me.txtRida6Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.txtRida6Kast1.Multiline = True
         Me.txtRida6Kast1.Name = "txtRida6Kast1"
@@ -454,7 +451,7 @@ Partial Class formGame
         Me.txtQ.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtQ.Enabled = False
         Me.txtQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtQ.Location = New System.Drawing.Point(40, 479)
+        Me.txtQ.Location = New System.Drawing.Point(146, 519)
         Me.txtQ.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtQ.Multiline = True
         Me.txtQ.Name = "txtQ"
@@ -466,8 +463,9 @@ Partial Class formGame
         '
         'txtW
         '
+        Me.txtW.Enabled = False
         Me.txtW.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtW.Location = New System.Drawing.Point(66, 479)
+        Me.txtW.Location = New System.Drawing.Point(172, 519)
         Me.txtW.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtW.Multiline = True
         Me.txtW.Name = "txtW"
@@ -479,8 +477,9 @@ Partial Class formGame
         '
         'txtE
         '
+        Me.txtE.Enabled = False
         Me.txtE.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtE.Location = New System.Drawing.Point(93, 479)
+        Me.txtE.Location = New System.Drawing.Point(199, 519)
         Me.txtE.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtE.Multiline = True
         Me.txtE.Name = "txtE"
@@ -492,8 +491,9 @@ Partial Class formGame
         '
         'txtR
         '
+        Me.txtR.Enabled = False
         Me.txtR.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtR.Location = New System.Drawing.Point(119, 479)
+        Me.txtR.Location = New System.Drawing.Point(225, 519)
         Me.txtR.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtR.Multiline = True
         Me.txtR.Name = "txtR"
@@ -505,8 +505,9 @@ Partial Class formGame
         '
         'txtT
         '
+        Me.txtT.Enabled = False
         Me.txtT.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtT.Location = New System.Drawing.Point(145, 479)
+        Me.txtT.Location = New System.Drawing.Point(251, 519)
         Me.txtT.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtT.Multiline = True
         Me.txtT.Name = "txtT"
@@ -518,8 +519,9 @@ Partial Class formGame
         '
         'txtY
         '
+        Me.txtY.Enabled = False
         Me.txtY.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtY.Location = New System.Drawing.Point(171, 479)
+        Me.txtY.Location = New System.Drawing.Point(277, 519)
         Me.txtY.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtY.Multiline = True
         Me.txtY.Name = "txtY"
@@ -531,8 +533,9 @@ Partial Class formGame
         '
         'txtU
         '
+        Me.txtU.Enabled = False
         Me.txtU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtU.Location = New System.Drawing.Point(197, 479)
+        Me.txtU.Location = New System.Drawing.Point(303, 519)
         Me.txtU.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtU.Multiline = True
         Me.txtU.Name = "txtU"
@@ -544,8 +547,9 @@ Partial Class formGame
         '
         'txtI
         '
+        Me.txtI.Enabled = False
         Me.txtI.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtI.Location = New System.Drawing.Point(225, 479)
+        Me.txtI.Location = New System.Drawing.Point(331, 519)
         Me.txtI.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtI.Multiline = True
         Me.txtI.Name = "txtI"
@@ -557,8 +561,9 @@ Partial Class formGame
         '
         'txtO
         '
+        Me.txtO.Enabled = False
         Me.txtO.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtO.Location = New System.Drawing.Point(251, 479)
+        Me.txtO.Location = New System.Drawing.Point(357, 519)
         Me.txtO.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtO.Multiline = True
         Me.txtO.Name = "txtO"
@@ -570,8 +575,9 @@ Partial Class formGame
         '
         'txtP
         '
+        Me.txtP.Enabled = False
         Me.txtP.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtP.Location = New System.Drawing.Point(277, 479)
+        Me.txtP.Location = New System.Drawing.Point(383, 519)
         Me.txtP.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtP.Multiline = True
         Me.txtP.Name = "txtP"
@@ -583,8 +589,9 @@ Partial Class formGame
         '
         'txtÜ
         '
+        Me.txtÜ.Enabled = False
         Me.txtÜ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtÜ.Location = New System.Drawing.Point(303, 479)
+        Me.txtÜ.Location = New System.Drawing.Point(409, 519)
         Me.txtÜ.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtÜ.Multiline = True
         Me.txtÜ.Name = "txtÜ"
@@ -596,8 +603,9 @@ Partial Class formGame
         '
         'txtÕ
         '
+        Me.txtÕ.Enabled = False
         Me.txtÕ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtÕ.Location = New System.Drawing.Point(329, 479)
+        Me.txtÕ.Location = New System.Drawing.Point(435, 519)
         Me.txtÕ.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtÕ.Multiline = True
         Me.txtÕ.Name = "txtÕ"
@@ -609,8 +617,9 @@ Partial Class formGame
         '
         'txtÄ
         '
+        Me.txtÄ.Enabled = False
         Me.txtÄ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtÄ.Location = New System.Drawing.Point(316, 520)
+        Me.txtÄ.Location = New System.Drawing.Point(422, 560)
         Me.txtÄ.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtÄ.Multiline = True
         Me.txtÄ.Name = "txtÄ"
@@ -622,8 +631,9 @@ Partial Class formGame
         '
         'txtÖ
         '
+        Me.txtÖ.Enabled = False
         Me.txtÖ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtÖ.Location = New System.Drawing.Point(290, 520)
+        Me.txtÖ.Location = New System.Drawing.Point(396, 560)
         Me.txtÖ.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtÖ.Multiline = True
         Me.txtÖ.Name = "txtÖ"
@@ -635,8 +645,9 @@ Partial Class formGame
         '
         'txtL
         '
+        Me.txtL.Enabled = False
         Me.txtL.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtL.Location = New System.Drawing.Point(264, 520)
+        Me.txtL.Location = New System.Drawing.Point(370, 560)
         Me.txtL.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtL.Multiline = True
         Me.txtL.Name = "txtL"
@@ -648,8 +659,9 @@ Partial Class formGame
         '
         'txtK
         '
+        Me.txtK.Enabled = False
         Me.txtK.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtK.Location = New System.Drawing.Point(238, 520)
+        Me.txtK.Location = New System.Drawing.Point(344, 560)
         Me.txtK.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtK.Multiline = True
         Me.txtK.Name = "txtK"
@@ -661,8 +673,9 @@ Partial Class formGame
         '
         'txtJ
         '
+        Me.txtJ.Enabled = False
         Me.txtJ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtJ.Location = New System.Drawing.Point(210, 520)
+        Me.txtJ.Location = New System.Drawing.Point(316, 560)
         Me.txtJ.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtJ.Multiline = True
         Me.txtJ.Name = "txtJ"
@@ -674,8 +687,9 @@ Partial Class formGame
         '
         'txtH
         '
+        Me.txtH.Enabled = False
         Me.txtH.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtH.Location = New System.Drawing.Point(184, 520)
+        Me.txtH.Location = New System.Drawing.Point(290, 560)
         Me.txtH.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtH.Multiline = True
         Me.txtH.Name = "txtH"
@@ -687,8 +701,9 @@ Partial Class formGame
         '
         'txtG
         '
+        Me.txtG.Enabled = False
         Me.txtG.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtG.Location = New System.Drawing.Point(158, 520)
+        Me.txtG.Location = New System.Drawing.Point(264, 560)
         Me.txtG.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtG.Multiline = True
         Me.txtG.Name = "txtG"
@@ -700,8 +715,9 @@ Partial Class formGame
         '
         'txtF
         '
+        Me.txtF.Enabled = False
         Me.txtF.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtF.Location = New System.Drawing.Point(132, 520)
+        Me.txtF.Location = New System.Drawing.Point(238, 560)
         Me.txtF.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtF.Multiline = True
         Me.txtF.Name = "txtF"
@@ -713,8 +729,9 @@ Partial Class formGame
         '
         'txtD
         '
+        Me.txtD.Enabled = False
         Me.txtD.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtD.Location = New System.Drawing.Point(106, 520)
+        Me.txtD.Location = New System.Drawing.Point(212, 560)
         Me.txtD.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtD.Multiline = True
         Me.txtD.Name = "txtD"
@@ -726,8 +743,9 @@ Partial Class formGame
         '
         'txtS
         '
+        Me.txtS.Enabled = False
         Me.txtS.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtS.Location = New System.Drawing.Point(79, 520)
+        Me.txtS.Location = New System.Drawing.Point(185, 560)
         Me.txtS.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtS.Multiline = True
         Me.txtS.Name = "txtS"
@@ -739,8 +757,9 @@ Partial Class formGame
         '
         'txtA
         '
+        Me.txtA.Enabled = False
         Me.txtA.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtA.Location = New System.Drawing.Point(53, 520)
+        Me.txtA.Location = New System.Drawing.Point(159, 560)
         Me.txtA.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtA.Multiline = True
         Me.txtA.Name = "txtA"
@@ -752,8 +771,9 @@ Partial Class formGame
         '
         'txtM
         '
+        Me.txtM.Enabled = False
         Me.txtM.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtM.Location = New System.Drawing.Point(258, 561)
+        Me.txtM.Location = New System.Drawing.Point(364, 601)
         Me.txtM.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtM.Multiline = True
         Me.txtM.Name = "txtM"
@@ -765,8 +785,9 @@ Partial Class formGame
         '
         'txtN
         '
+        Me.txtN.Enabled = False
         Me.txtN.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtN.Location = New System.Drawing.Point(232, 561)
+        Me.txtN.Location = New System.Drawing.Point(338, 601)
         Me.txtN.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtN.Multiline = True
         Me.txtN.Name = "txtN"
@@ -778,8 +799,9 @@ Partial Class formGame
         '
         'txtB
         '
+        Me.txtB.Enabled = False
         Me.txtB.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtB.Location = New System.Drawing.Point(206, 561)
+        Me.txtB.Location = New System.Drawing.Point(312, 601)
         Me.txtB.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtB.Multiline = True
         Me.txtB.Name = "txtB"
@@ -791,8 +813,9 @@ Partial Class formGame
         '
         'txtV
         '
+        Me.txtV.Enabled = False
         Me.txtV.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtV.Location = New System.Drawing.Point(180, 561)
+        Me.txtV.Location = New System.Drawing.Point(286, 601)
         Me.txtV.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtV.Multiline = True
         Me.txtV.Name = "txtV"
@@ -804,8 +827,9 @@ Partial Class formGame
         '
         'txtC
         '
+        Me.txtC.Enabled = False
         Me.txtC.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtC.Location = New System.Drawing.Point(154, 561)
+        Me.txtC.Location = New System.Drawing.Point(260, 601)
         Me.txtC.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtC.Multiline = True
         Me.txtC.Name = "txtC"
@@ -817,8 +841,9 @@ Partial Class formGame
         '
         'txtX
         '
+        Me.txtX.Enabled = False
         Me.txtX.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtX.Location = New System.Drawing.Point(127, 561)
+        Me.txtX.Location = New System.Drawing.Point(233, 601)
         Me.txtX.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtX.Multiline = True
         Me.txtX.Name = "txtX"
@@ -830,8 +855,9 @@ Partial Class formGame
         '
         'txtZ
         '
+        Me.txtZ.Enabled = False
         Me.txtZ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtZ.Location = New System.Drawing.Point(101, 561)
+        Me.txtZ.Location = New System.Drawing.Point(207, 601)
         Me.txtZ.MinimumSize = New System.Drawing.Size(20, 35)
         Me.txtZ.Multiline = True
         Me.txtZ.Name = "txtZ"
@@ -841,63 +867,27 @@ Partial Class formGame
         Me.txtZ.Text = "Z"
         Me.txtZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'txtDelete
-        '
-        Me.txtDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtDelete.Location = New System.Drawing.Point(284, 561)
-        Me.txtDelete.MinimumSize = New System.Drawing.Size(20, 35)
-        Me.txtDelete.Multiline = True
-        Me.txtDelete.Name = "txtDelete"
-        Me.txtDelete.ReadOnly = True
-        Me.txtDelete.Size = New System.Drawing.Size(65, 35)
-        Me.txtDelete.TabIndex = 60
-        Me.txtDelete.Text = "DELETE"
-        Me.txtDelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtEnter
-        '
-        Me.txtEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtEnter.Location = New System.Drawing.Point(29, 561)
-        Me.txtEnter.MinimumSize = New System.Drawing.Size(20, 35)
-        Me.txtEnter.Multiline = True
-        Me.txtEnter.Name = "txtEnter"
-        Me.txtEnter.ReadOnly = True
-        Me.txtEnter.Size = New System.Drawing.Size(65, 35)
-        Me.txtEnter.TabIndex = 61
-        Me.txtEnter.Text = "ENTER"
-        Me.txtEnter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'txtDebug
         '
-        Me.txtDebug.Location = New System.Drawing.Point(82, -2)
+        Me.txtDebug.Location = New System.Drawing.Point(139, 38)
         Me.txtDebug.Name = "txtDebug"
-        Me.txtDebug.Size = New System.Drawing.Size(210, 20)
+        Me.txtDebug.Size = New System.Drawing.Size(316, 20)
         Me.txtDebug.TabIndex = 62
         '
         'txtDebug2
         '
-        Me.txtDebug2.Location = New System.Drawing.Point(66, 24)
+        Me.txtDebug2.Location = New System.Drawing.Point(172, 64)
         Me.txtDebug2.Name = "txtDebug2"
         Me.txtDebug2.Size = New System.Drawing.Size(233, 20)
         Me.txtDebug2.TabIndex = 63
-        '
-        'HScrollBar1
-        '
-        Me.HScrollBar1.Location = New System.Drawing.Point(374, 500)
-        Me.HScrollBar1.Name = "HScrollBar1"
-        Me.HScrollBar1.Size = New System.Drawing.Size(80, 17)
-        Me.HScrollBar1.TabIndex = 64
         '
         'formGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(391, 623)
-        Me.Controls.Add(Me.HScrollBar1)
+        Me.ClientSize = New System.Drawing.Size(637, 744)
         Me.Controls.Add(Me.txtDebug2)
         Me.Controls.Add(Me.txtDebug)
-        Me.Controls.Add(Me.txtEnter)
-        Me.Controls.Add(Me.txtDelete)
         Me.Controls.Add(Me.txtM)
         Me.Controls.Add(Me.txtN)
         Me.Controls.Add(Me.txtB)
@@ -1025,9 +1015,6 @@ Partial Class formGame
     Friend WithEvents txtC As TextBox
     Friend WithEvents txtX As TextBox
     Friend WithEvents txtZ As TextBox
-    Friend WithEvents txtDelete As TextBox
-    Friend WithEvents txtEnter As TextBox
     Friend WithEvents txtDebug As TextBox
     Friend WithEvents txtDebug2 As TextBox
-    Friend WithEvents HScrollBar1 As HScrollBar
 End Class

@@ -1,152 +1,195 @@
-﻿Public Class formGame
+﻿
+Public Class formGame
 
     'Listen for any keypress
     Private Sub formGame_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
-        Dim letter As IGame
-        letter = New CGame
+        Dim game As IGame
+        game = New CGame
 
-        'Salvesta vajutatud nupu ascii kood muutujasse pressedKey
-        Dim pressedKey As Integer
-        pressedKey = Asc(e.KeyChar)
+        Dim data As IDatabase
+        data = New CDatabase
 
-        'Kui vajutatud nupp on Enter ja viies täht on sisestatud, uuenda värvid
-        If pressedKey = 13 And letter.intKast = 5 Then
-            updateColors()
+        'Salvesta vajutatud nupu ascii kood muutujasse lastLetter
+        game.lastLetter = Asc(e.KeyChar)
+
+        'Kui vajutatud klahv on Backspace ja Kasti arv pole 0
+        If game.lastLetter = 8 And game.intKast <> 0 Then
+
+            stringToControl(game.getBoxName(game.intRida, game.intKast))
+            game.intKast = -1
+
         End If
 
+        'Kui vajutatud nupp On Enter ja viies täht On sisestatud, uuenda värve
+        If game.lastLetter = 13 And game.intKast = 5 Then
+            updateColors()
 
+        End If
 
+        'Kui letterCheck tagastab True ja Kasti arv pole 5
+        If game.letterCheck(game.lastLetter) And game.intKast <> 5 Then
+            game.intKast = 1
+            'ArvatudSona-le viimase tähe lisamine
+            game.ArvatudSona = UCase(Chr(game.lastLetter))
+            'Textboxi nime control-iks muutmine
+            stringToControl(game.getBoxName(game.intRida, game.intKast))
 
-        'Kui viis tähte pole sisestatud või vajutatud nupp on Enter
-        If letter.intKast <> 5 Or pressedKey = 13 Then
-
-            'Suurenda rea ja kasti arvu
-            letter.intRida = 1
-            letter.intKast = 1
-
-            'Saa funktsioonilt inputLetter textboxi nimi stringina
-            Dim a = letter.inputLetter(letter.intRida, letter.intKast)
-
-
-            If pressedKey >= 65 And pressedKey <= 90 Or pressedKey >= 97 And pressedKey <= 122 Or pressedKey = 132 Or pressedKey = 142 Or pressedKey = 148 Or pressedKey = 153 Or pressedKey = 154 Or pressedKey = 229 Or pressedKey = 228 Or pressedKey = 129 Then
-                'Stringi textboxi control-iks muutmine
-                'https://stackoverflow.com/questions/47243351/how-to-obtain-a-control-using-its-name-in-visual-basic-net
-                If Me.Controls.Find(a, True).Count = 1 Then
-                    Dim box As TextBox = Me.Controls.Find(a, True)(0)
-                    box.Text = UCase(Chr(pressedKey))
-                    letter.strArvatudSona = UCase(Chr(pressedKey))
-                    'txtDebug2.Text = letter.strArvatudSona
-
-                End If
-
-
-
+            If game.isLetterInWord(game.strSona) = False Then
+                game.redLettersHolder = UCase(Chr(game.lastLetter))
 
             End If
-
-
         End If
 
-
-
-
-
-        'Kui vajutatud nupp on Enter
-        If pressedKey = 13 Then
+        'Kui vajutatud nupp on Enter ja Kasti number on 5
+        If game.lastLetter = 13 And game.intKast = 5 Then
 
             'Mängu resettimine ja mängu lõpu ekraanile liikumine
-            If letter.gameOver() = True Then
-                letter.intKast = Nothing
-                letter.intRida = Nothing
-                Dim position = Me.Bounds
-                Dim newForm As New formGameEnd
-                AddHandler newForm.Load, Sub() newForm.Bounds = position
-                newForm.Show()
-                Me.Close()
+            If game.gameOver() = True Then
+                finishGame()
+            Else
+                game.intRida = 1
+                game.intKast = 2
+                txtDebug2.Text = game.redLettersHolder
+                game.redLetters = game.redLettersHolder
+                game.redLettersHolder = Nothing
+                game.ArvatudSona = Nothing
+
             End If
-            letter.strArvatudSona = Nothing
+
 
         End If
-
 
     End Sub
 
-
-
-
-
+    'Sub kastide värvide uuendamiseks
     Private Sub updateColors()
-        Dim letter As IGame
-        letter = New CGame
+        Dim game As IGame
+        game = New CGame
 
         Dim i As Integer = 0
-
 
         While i < 5
             Dim misVarv As Integer
 
-
-            misVarv = letter.wordChecker(letter.strArvatudSona(i), i)
-            Dim a As String = letter.inputLetter(letter.intRida, i + 1)
+            misVarv = game.wordChecker(game.ArvatudSona(i), i)
+            Dim a As String = game.getBoxName(game.intRida, i + 1)
 
             If Me.Controls.Find(a, True).Count = 1 Then
                 Dim box As TextBox = Me.Controls.Find(a, True)(0)
 
-
-                If misVarv = 2 Then
+                'Kui wordChecker tagastas 2, siis on õige täht vastavas kastis, ehk kast tehakse roheliseks
+                If misVarv = 2 And box.BackColor <> Color.Green Then
                     box.BackColor = Color.Green
 
-
-
-                ElseIf misVarv = 1 Then
+                    'Kui wordChecker tagastas 1, siis täht on sõnas olemas, aga vales kastis, seega kast tehakse kollaseks
+                ElseIf misVarv = 1 And box.BackColor <> Color.Yellow Then
                     box.BackColor = Color.Yellow
+
+                    'Kui wordChecker tagastas 0, siis tähte pole sõnas, ehk klaviatuuril tehakse täht punaseks ja täht lisatakse redLetters stringi
                 ElseIf misVarv = 0 Then
                     Dim f As String = box.Text
-                    disableKey(f)
+                    makeKeyRed(f)
+                    game.redLetters = game.ArvatudSona(i)
+
                 End If
-
-
-
             End If
-
 
             i = i + 1
         End While
 
     End Sub
 
-
-    Private Sub disableKey(ByVal value As String)
+    'Klaviatuuril tähe punaseks muutmine
+    'input = stringi kujul täht
+    Private Sub makeKeyRed(ByVal value As String)
 
         Dim a As String = "txt" & value
 
         If Me.Controls.Find(a, True).Count = 1 Then
             Dim box As TextBox = Me.Controls.Find(a, True)(0)
+            If box.BackColor <> Color.Red Then
 
-
-
-            box.BackColor = Color.Red
-
-
-
-
-
+                box.BackColor = Color.Red
+            End If
 
         End If
 
-
     End Sub
 
+    'Textboxi nime muutmine control-iks ja controli kasutades viimase vajutatud tähe sisestamine Textboxi
+    'input = stringina Textboxi nimi
+    Private Sub stringToControl(ByVal value As String)
+        Dim game As IGame
+        game = New CGame
 
+        'https://stackoverflow.com/questions/47243351/how-to-obtain-a-control-using-its-name-in-visual-basic-net
+        If Me.Controls.Find(value, True).Count = 1 Then
+            'Kui viimane vajutatud klahv on Backspace siis Textboxi sisu tühjendatakse
+            If game.lastLetter = 8 Then
+                Dim box As TextBox = Me.Controls.Find(value, True)(0)
+                box.Text = ""
+            Else
+                Dim box As TextBox = Me.Controls.Find(value, True)(0)
+                box.Text = UCase(Chr(game.lastLetter))
 
-    Private Sub formGame_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Dim letter As IGame
-        letter = New CGame
+            End If
+
+        End If
+    End Sub
+
+    'Uue sõna hankimine sõnade listist
+    Private Sub newWord()
+        Dim game As IGame
+        game = New CGame
+        Dim data As IDatabase
+        data = New CDatabase
+
+        game.strSona = UCase(data.getSona(Int((3000 * Rnd()) + 1)))
+        'Hetkel on sõnade tekstifailis tühimikus, seega kui tuleb tühimik, tuleb uus sõna valida
+        While game.strSona = Nothing
+            game.strSona = UCase(data.getSona(Int((3000 * Rnd()) + 1)))
+        End While
+    End Sub
+
+    'Sub, mis töötab iga kord kui form avatakse
+    Private Sub formGame_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Dim game As IGame
+        game = New CGame
+        Dim data As IDatabase
+        data = New CDatabase
+
+        'Väärtuste taastamine algandmetele
+        game.intKast = Nothing
+        game.intRida = Nothing
+        game.redLettersHolder = Nothing
+        game.ArvatudSona = Nothing
+        game.redLetters = Nothing
+
+        'Randomize() tuleb kasutada, et juhusliku sõna leiaks newWord(), vastasel juhul leiab Rnd() iga kord sama random numbri
+        Randomize()
+        'Peab olema true, et klahvivajutusi oleks võimalik jälgida
         Me.KeyPreview = True
-        letter.strSona = (UCase("ämber"))
+        newWord()
+        txtDebug.Text = game.strSona
 
     End Sub
 
+    'Mängu lõpetamine, andmete edastamine, uue formi avamine
+    Private Sub finishGame()
+        Dim game As IGame
+        game = New CGame
 
+        Dim data As IDatabase
+        data = New CDatabase
 
+        'Mängude koguse uuendamine
+        data.updateGamesCount(data.getGamesCount() + 1)
+
+        'Uue formi avamine
+        Dim position = Me.Bounds
+        Dim newForm As New formGameEnd
+        AddHandler newForm.Load, Sub() newForm.Bounds = position
+        newForm.Show()
+        Me.Close()
+    End Sub
 End Class
