@@ -166,6 +166,8 @@ Public Class formGame
         game.redLetters = Nothing
         game.kestvus = Nothing
         hideTextboxes()
+        game.timeLeft = game.timeSetting
+        lblTimeLeft.Text = game.timeSetting
 
 
         'Randomize() tuleb kasutada, et juhusliku sõna leiaks newWord(), vastasel juhul leiab Rnd() iga kord sama random numbri
@@ -175,7 +177,8 @@ Public Class formGame
         newWord()
         txtDebug.Text = game.strSona
         Timer1.Enabled = True
-
+        Timer2.Enabled = True
+        game.timeLeft = game.timeSetting
     End Sub
 
     'Mängu lõpetamine, andmete edastamine, uue formi avamine
@@ -187,7 +190,7 @@ Public Class formGame
         data = New CDatabase
 
         Timer1.Enabled = False
-
+        Timer2.Enabled = False
 
         Dim avgTime As Integer = 0
         If data.getStat("GamesPlayed") <> 0 Then
@@ -264,5 +267,17 @@ Public Class formGame
             Next
         Next
 
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Dim game As IGame
+        game = New CGame
+
+        If game.timeLeft <= 0 Then
+            finishGame()
+
+        End If
+        game.timeLeft = (game.timeLeft - 1)
+        lblTimeLeft.Text = game.timeLeft
     End Sub
 End Class

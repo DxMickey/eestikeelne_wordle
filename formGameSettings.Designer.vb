@@ -25,11 +25,13 @@ Partial Class formGameSettings
         Me.btnEasy = New System.Windows.Forms.Button()
         Me.btnNormal = New System.Windows.Forms.Button()
         Me.btnHard = New System.Windows.Forms.Button()
+        Me.btnNoTime = New System.Windows.Forms.Button()
+        Me.btnTimed = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnEasy
         '
-        Me.btnEasy.Location = New System.Drawing.Point(112, 187)
+        Me.btnEasy.Location = New System.Drawing.Point(155, 187)
         Me.btnEasy.Name = "btnEasy"
         Me.btnEasy.Size = New System.Drawing.Size(75, 23)
         Me.btnEasy.TabIndex = 0
@@ -38,7 +40,7 @@ Partial Class formGameSettings
         '
         'btnNormal
         '
-        Me.btnNormal.Location = New System.Drawing.Point(304, 187)
+        Me.btnNormal.Location = New System.Drawing.Point(317, 187)
         Me.btnNormal.Name = "btnNormal"
         Me.btnNormal.Size = New System.Drawing.Size(75, 23)
         Me.btnNormal.TabIndex = 1
@@ -47,18 +49,38 @@ Partial Class formGameSettings
         '
         'btnHard
         '
-        Me.btnHard.Location = New System.Drawing.Point(513, 187)
+        Me.btnHard.Location = New System.Drawing.Point(479, 187)
         Me.btnHard.Name = "btnHard"
         Me.btnHard.Size = New System.Drawing.Size(75, 23)
         Me.btnHard.TabIndex = 2
         Me.btnHard.Text = "Raske"
         Me.btnHard.UseVisualStyleBackColor = True
         '
+        'btnNoTime
+        '
+        Me.btnNoTime.Location = New System.Drawing.Point(236, 187)
+        Me.btnNoTime.Name = "btnNoTime"
+        Me.btnNoTime.Size = New System.Drawing.Size(75, 23)
+        Me.btnNoTime.TabIndex = 3
+        Me.btnNoTime.Text = "Ilma ajata"
+        Me.btnNoTime.UseVisualStyleBackColor = True
+        '
+        'btnTimed
+        '
+        Me.btnTimed.Location = New System.Drawing.Point(398, 187)
+        Me.btnTimed.Name = "btnTimed"
+        Me.btnTimed.Size = New System.Drawing.Size(75, 23)
+        Me.btnTimed.TabIndex = 4
+        Me.btnTimed.Text = "Ajaline"
+        Me.btnTimed.UseVisualStyleBackColor = True
+        '
         'formGameSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnTimed)
+        Me.Controls.Add(Me.btnNoTime)
         Me.Controls.Add(Me.btnHard)
         Me.Controls.Add(Me.btnNormal)
         Me.Controls.Add(Me.btnEasy)
@@ -71,4 +93,6 @@ Partial Class formGameSettings
     Friend WithEvents btnEasy As Button
     Friend WithEvents btnNormal As Button
     Friend WithEvents btnHard As Button
+    Friend WithEvents btnNoTime As Button
+    Friend WithEvents btnTimed As Button
 End Class

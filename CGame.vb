@@ -12,6 +12,36 @@
     Shared intKestvus As Integer
     Shared strGameMode As String
     Shared intMaxKast As Integer
+    Shared intTimeLeft As Integer
+    Shared intTimeSetting As Integer
+    Shared boolKasTimed As Boolean
+
+    Public Property kasTimed As Boolean Implements IGame.kasTimed
+        Get
+            Return boolKasTimed
+        End Get
+        Set(ByVal value As Boolean)
+            boolKasTimed = value
+        End Set
+    End Property
+
+    Private Property timeSetting As Integer Implements IGame.timeSetting
+        Get
+            Return intTimeSetting
+        End Get
+        Set(ByVal value As Integer)
+            intTimeSetting = value
+        End Set
+    End Property
+
+    Private Property timeLeft As Integer Implements IGame.timeLeft
+        Get
+            Return intTimeLeft
+        End Get
+        Set(ByVal value As Integer)
+            intTimeLeft = value
+        End Set
+    End Property
 
     Private Property kestvus As Integer Implements IGame.kestvus
         Get

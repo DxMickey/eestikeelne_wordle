@@ -92,6 +92,9 @@ Partial Class formGame
         Me.txtRida3Kast6 = New System.Windows.Forms.TextBox()
         Me.txtRida2Kast6 = New System.Windows.Forms.TextBox()
         Me.txtRida1Kast6 = New System.Windows.Forms.TextBox()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblTimeLeft = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtRida1Kast1
@@ -877,14 +880,14 @@ Partial Class formGame
         '
         'txtDebug
         '
-        Me.txtDebug.Location = New System.Drawing.Point(184, 12)
+        Me.txtDebug.Location = New System.Drawing.Point(195, 62)
         Me.txtDebug.Name = "txtDebug"
         Me.txtDebug.Size = New System.Drawing.Size(316, 20)
         Me.txtDebug.TabIndex = 62
         '
         'txtDebug2
         '
-        Me.txtDebug2.Location = New System.Drawing.Point(221, 38)
+        Me.txtDebug2.Location = New System.Drawing.Point(242, 88)
         Me.txtDebug2.Name = "txtDebug2"
         Me.txtDebug2.Size = New System.Drawing.Size(233, 20)
         Me.txtDebug2.TabIndex = 63
@@ -965,11 +968,37 @@ Partial Class formGame
         Me.txtRida1Kast6.TabIndex = 64
         Me.txtRida1Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'Timer2
+        '
+        Me.Timer2.Interval = 1000
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(173, 31)
+        Me.Label1.TabIndex = 70
+        Me.Label1.Text = "Aega jäänud:"
+        '
+        'lblTimeLeft
+        '
+        Me.lblTimeLeft.AutoSize = True
+        Me.lblTimeLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
+        Me.lblTimeLeft.Location = New System.Drawing.Point(176, 9)
+        Me.lblTimeLeft.Name = "lblTimeLeft"
+        Me.lblTimeLeft.Size = New System.Drawing.Size(29, 31)
+        Me.lblTimeLeft.TabIndex = 71
+        Me.lblTimeLeft.Text = "0"
+        '
         'formGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.lblTimeLeft)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtRida6Kast6)
         Me.Controls.Add(Me.txtRida5Kast6)
         Me.Controls.Add(Me.txtRida4Kast6)
@@ -1114,4 +1143,7 @@ Partial Class formGame
     Friend WithEvents txtRida3Kast6 As TextBox
     Friend WithEvents txtRida2Kast6 As TextBox
     Friend WithEvents txtRida1Kast6 As TextBox
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblTimeLeft As Label
 End Class

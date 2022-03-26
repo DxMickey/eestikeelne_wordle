@@ -18,6 +18,12 @@
 
     Property maxKast As Integer
 
+    Property timeLeft As Integer
+
+    Property timeSetting As Integer
+
+    Property kasTimed As Boolean
+
     Function getBoxName(ByVal value1 As Integer, ByVal value2 As Integer) As String
 
     Function wordChecker(ByVal value As String, ByVal index As Integer)
