@@ -1,6 +1,20 @@
 ﻿Public Class CDatabase
     Implements IDatabase
 
+    Public Sub insertHistory(value1 As Integer, value2 As Integer, value3 As String, value4 As String) Implements IDatabase.insertHistory
+        Dim SQLconnect As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnect.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnect.Open()
+
+        SQLcommand = SQLconnect.CreateCommand
+
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ", " & value2 & ", '" & value3 & "', '" & value4 & "')"
+        SQLcommand.ExecuteNonQuery()
+        SQLconnect.Close()
+    End Sub
+
 
 
     'Statistikas mängitud mängude arvu suurendamine

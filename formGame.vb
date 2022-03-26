@@ -197,6 +197,14 @@ Public Class formGame
         'Mängude statistika uuendamine
         data.updateStats(data.getStat("GamesPlayed") + 1, data.getStat("TimePlayed") + game.kestvus, avgTime)
 
+        Dim kasArvatud As String
+        If game.winOrLose = 1 Then
+            kasArvatud = "jah"
+        Else
+            kasArvatud = "ei"
+        End If
+        data.insertHistory(data.getStat("GamesPlayed"), game.kestvus, game.strSona, kasArvatud)
+
 
         'Uue formi avamine
         Dim position = Me.Bounds

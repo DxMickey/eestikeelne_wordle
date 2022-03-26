@@ -8,6 +8,8 @@
 
     Sub updateStats(value1 As Integer, value2 As Integer, value3 As Integer)
 
+    Sub insertHistory(value1 As Integer, value2 As Integer, value3 As String, value4 As String)
+
 
 
 
