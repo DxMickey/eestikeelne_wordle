@@ -38,14 +38,14 @@ Partial Class formHistory
         'dtgDatagrid
         '
         Me.dtgDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgDatagrid.Location = New System.Drawing.Point(13, 9)
+        Me.dtgDatagrid.Location = New System.Drawing.Point(35, 12)
         Me.dtgDatagrid.Name = "dtgDatagrid"
-        Me.dtgDatagrid.Size = New System.Drawing.Size(612, 591)
+        Me.dtgDatagrid.Size = New System.Drawing.Size(612, 669)
         Me.dtgDatagrid.TabIndex = 1
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(276, 622)
+        Me.btnBack.Location = New System.Drawing.Point(287, 706)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(75, 23)
         Me.btnBack.TabIndex = 2
@@ -56,7 +56,7 @@ Partial Class formHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(637, 744)
+        Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.dtgDatagrid)
         Me.Controls.Add(Me.VScrollBar1)

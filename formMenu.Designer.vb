@@ -25,11 +25,12 @@ Partial Class formMenu
         Me.btnPlay = New System.Windows.Forms.Button()
         Me.btnHistory = New System.Windows.Forms.Button()
         Me.btnStats = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnPlay
         '
-        Me.btnPlay.Location = New System.Drawing.Point(263, 186)
+        Me.btnPlay.Location = New System.Drawing.Point(303, 230)
         Me.btnPlay.Name = "btnPlay"
         Me.btnPlay.Size = New System.Drawing.Size(75, 23)
         Me.btnPlay.TabIndex = 0
@@ -38,7 +39,7 @@ Partial Class formMenu
         '
         'btnHistory
         '
-        Me.btnHistory.Location = New System.Drawing.Point(263, 288)
+        Me.btnHistory.Location = New System.Drawing.Point(303, 361)
         Me.btnHistory.Name = "btnHistory"
         Me.btnHistory.Size = New System.Drawing.Size(75, 23)
         Me.btnHistory.TabIndex = 1
@@ -47,28 +48,41 @@ Partial Class formMenu
         '
         'btnStats
         '
-        Me.btnStats.Location = New System.Drawing.Point(263, 235)
+        Me.btnStats.Location = New System.Drawing.Point(303, 319)
         Me.btnStats.Name = "btnStats"
         Me.btnStats.Size = New System.Drawing.Size(75, 23)
         Me.btnStats.TabIndex = 2
         Me.btnStats.Text = "Statistika"
         Me.btnStats.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Stencil", 40.75!)
+        Me.Label1.Location = New System.Drawing.Point(36, 57)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(609, 65)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Eestikeelne Wordle"
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(637, 744)
+        Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnStats)
         Me.Controls.Add(Me.btnHistory)
         Me.Controls.Add(Me.btnPlay)
         Me.Name = "formMenu"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents btnPlay As Button
     Friend WithEvents btnHistory As Button
     Friend WithEvents btnStats As Button
+    Friend WithEvents Label1 As Label
 End Class

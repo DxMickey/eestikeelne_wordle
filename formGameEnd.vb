@@ -29,4 +29,8 @@
 
         lblSona.Text = game.strSona
     End Sub
+
+    Private Sub lblResult_Click(sender As Object, e As EventArgs) Handles lblResult.Click
+
+    End Sub
 End Class

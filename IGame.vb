@@ -12,6 +12,8 @@
 
     Property ArvatudSona As String
 
+    Property kestvus As Integer
+
     Function getBoxName(ByVal value1 As Integer, ByVal value2 As Integer) As String
 
     Function wordChecker(ByVal value As String, ByVal index As Integer)

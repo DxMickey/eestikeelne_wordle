@@ -49,7 +49,6 @@ Public Class formGame
             Else
                 game.intRida = 1
                 game.intKast = 2
-                txtDebug2.Text = game.redLettersHolder
                 game.redLetters = game.redLettersHolder
                 game.redLettersHolder = Nothing
                 game.ArvatudSona = Nothing
@@ -164,6 +163,8 @@ Public Class formGame
         game.redLettersHolder = Nothing
         game.ArvatudSona = Nothing
         game.redLetters = Nothing
+        game.kestvus = Nothing
+
 
         'Randomize() tuleb kasutada, et juhusliku sõna leiaks newWord(), vastasel juhul leiab Rnd() iga kord sama random numbri
         Randomize()
@@ -171,6 +172,7 @@ Public Class formGame
         Me.KeyPreview = True
         newWord()
         txtDebug.Text = game.strSona
+        Timer1.Enabled = True
 
     End Sub
 
@@ -182,8 +184,19 @@ Public Class formGame
         Dim data As IDatabase
         data = New CDatabase
 
-        'Mängude koguse uuendamine
-        data.updateGamesCount(data.getGamesCount() + 1)
+        Timer1.Enabled = False
+
+
+        Dim avgTime As Integer = 0
+        If data.getStat("GamesPlayed") <> 0 Then
+            avgTime = (data.getStat("TimePlayed") + game.kestvus) / (data.getStat("GamesPlayed") + 1)
+        ElseIf data.getStat("GamesPlayed") = 0 Then
+            avgTime = game.kestvus
+        End If
+
+        'Mängude statistika uuendamine
+        data.updateStats(data.getStat("GamesPlayed") + 1, data.getStat("TimePlayed") + game.kestvus, avgTime)
+
 
         'Uue formi avamine
         Dim position = Me.Bounds
@@ -191,5 +204,16 @@ Public Class formGame
         AddHandler newForm.Load, Sub() newForm.Bounds = position
         newForm.Show()
         Me.Close()
+    End Sub
+
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim game As IGame
+        game = New CGame
+
+        game.kestvus = 1
+
+        txtDebug2.Text = game.kestvus
+
     End Sub
 End Class
