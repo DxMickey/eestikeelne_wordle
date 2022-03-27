@@ -15,19 +15,20 @@ Public Class formGame
         'Kui vajutatud klahv on Backspace ja Kasti arv pole 0
         If game.lastLetter = 8 And game.intKast <> 0 Then
 
+            game.deleteLastKey()
             stringToControl(game.getBoxName(game.intRida, game.intKast))
             game.intKast = -1
 
         End If
 
-        'Kui vajutatud nupp On Enter ja viies täht On sisestatud, uuenda värve
-        If game.lastLetter = 13 And game.intKast = 5 Then
+        'Kui vajutatud nupp On Enter ja viimane täht On sisestatud, uuenda värve
+        If game.lastLetter = 13 And game.intKast = game.maxKast Then
             updateColors()
 
         End If
 
-        'Kui letterCheck tagastab True ja Kasti arv pole 5
-        If game.letterCheck(game.lastLetter) And game.intKast <> 5 Then
+        'Kui letterCheck tagastab True ja Kasti arv pole max kasti arv
+        If game.letterCheck(game.lastLetter) And game.intKast <> game.maxKast Then
             game.intKast = 1
             'ArvatudSona-le viimase tähe lisamine
             game.ArvatudSona = UCase(Chr(game.lastLetter))
@@ -40,8 +41,8 @@ Public Class formGame
             End If
         End If
 
-        'Kui vajutatud nupp on Enter ja Kasti number on 5
-        If game.lastLetter = 13 And game.intKast = 5 Then
+        'Kui vajutatud nupp on Enter ja Kasti number on max
+        If game.lastLetter = 13 And game.intKast = game.maxKast Then
 
             'Mängu resettimine ja mängu lõpu ekraanile liikumine
             If game.gameOver() = True Then
@@ -67,7 +68,7 @@ Public Class formGame
 
         Dim i As Integer = 0
 
-        While i < 5
+        While i < game.maxKast
             Dim misVarv As Integer
 
             misVarv = game.wordChecker(game.ArvatudSona(i), i)
@@ -164,6 +165,9 @@ Public Class formGame
         game.ArvatudSona = Nothing
         game.redLetters = Nothing
         game.kestvus = Nothing
+        hideTextboxes()
+        game.timeLeft = game.timeSetting
+        lblTimeLeft.Text = game.timeSetting
 
 
         'Randomize() tuleb kasutada, et juhusliku sõna leiaks newWord(), vastasel juhul leiab Rnd() iga kord sama random numbri
@@ -173,7 +177,8 @@ Public Class formGame
         newWord()
         txtDebug.Text = game.strSona
         Timer1.Enabled = True
-
+        Timer2.Enabled = True
+        game.timeLeft = game.timeSetting
     End Sub
 
     'Mängu lõpetamine, andmete edastamine, uue formi avamine
@@ -185,7 +190,7 @@ Public Class formGame
         data = New CDatabase
 
         Timer1.Enabled = False
-
+        Timer2.Enabled = False
 
         Dim avgTime As Integer = 0
         If data.getStat("GamesPlayed") <> 0 Then
@@ -203,8 +208,9 @@ Public Class formGame
         Else
             kasArvatud = "ei"
         End If
-        data.insertHistory(data.getStat("GamesPlayed"), game.kestvus, game.strSona, kasArvatud)
+        data.insertHistory(data.getStat("GamesPlayed"), game.gameMode, game.kestvus, game.strSona, kasArvatud)
 
+        enableAllTextBoxes()
 
         'Uue formi avamine
         Dim position = Me.Bounds
@@ -223,5 +229,55 @@ Public Class formGame
 
         txtDebug2.Text = game.kestvus
 
+    End Sub
+
+    Private Sub hideTextboxes()
+        Dim game As IGame
+        game = New CGame
+
+        If game.gameMode = "Kerge" Then
+            For i As Integer = 5 To 6
+                For j As Integer = 1 To 6
+                    hideThisTextBox("txtRida" & j & "Kast" & i, False)
+                Next
+            Next
+        ElseIf game.gameMode = "Tavaline" Then
+            For i As Integer = 1 To 6
+
+                hideThisTextBox("txtRida" & i & "Kast6", False)
+            Next
+
+        End If
+    End Sub
+
+    Private Sub hideThisTextBox(ByVal value1 As String, ByVal value2 As Boolean)
+
+        If Me.Controls.Find(value1, True).Count = 1 Then
+            Dim box As TextBox = Me.Controls.Find(value1, True)(0)
+            box.Visible = False
+
+
+        End If
+    End Sub
+
+    Private Sub enableAllTextBoxes()
+        For i As Integer = 5 To 6
+            For j As Integer = 1 To 6
+                hideThisTextBox("txtRida" & j & "Kast" & i, True)
+            Next
+        Next
+
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Dim game As IGame
+        game = New CGame
+
+        If game.timeLeft <= 0 Then
+            finishGame()
+
+        End If
+        game.timeLeft = (game.timeLeft - 1)
+        lblTimeLeft.Text = game.timeLeft
     End Sub
 End Class
