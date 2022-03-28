@@ -26,6 +26,9 @@ Partial Class formGameEnd
         Me.btbPlayAgain = New System.Windows.Forms.Button()
         Me.btbToMenu = New System.Windows.Forms.Button()
         Me.lblSona = New System.Windows.Forms.Label()
+        Me.txtTranslation = New System.Windows.Forms.TextBox()
+        Me.btnTranslate = New System.Windows.Forms.Button()
+        Me.cmbLanguage = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lblResult
@@ -40,7 +43,7 @@ Partial Class formGameEnd
         '
         'btbPlayAgain
         '
-        Me.btbPlayAgain.Location = New System.Drawing.Point(281, 310)
+        Me.btbPlayAgain.Location = New System.Drawing.Point(284, 366)
         Me.btbPlayAgain.Name = "btbPlayAgain"
         Me.btbPlayAgain.Size = New System.Drawing.Size(75, 23)
         Me.btbPlayAgain.TabIndex = 1
@@ -49,7 +52,7 @@ Partial Class formGameEnd
         '
         'btbToMenu
         '
-        Me.btbToMenu.Location = New System.Drawing.Point(281, 386)
+        Me.btbToMenu.Location = New System.Drawing.Point(284, 414)
         Me.btbToMenu.Name = "btbToMenu"
         Me.btbToMenu.Size = New System.Drawing.Size(75, 23)
         Me.btbToMenu.TabIndex = 2
@@ -66,11 +69,38 @@ Partial Class formGameEnd
         Me.lblSona.TabIndex = 3
         Me.lblSona.Text = "Label1"
         '
+        'txtTranslation
+        '
+        Me.txtTranslation.Location = New System.Drawing.Point(365, 298)
+        Me.txtTranslation.Name = "txtTranslation"
+        Me.txtTranslation.Size = New System.Drawing.Size(100, 20)
+        Me.txtTranslation.TabIndex = 4
+        '
+        'btnTranslate
+        '
+        Me.btnTranslate.Location = New System.Drawing.Point(284, 296)
+        Me.btnTranslate.Name = "btnTranslate"
+        Me.btnTranslate.Size = New System.Drawing.Size(75, 23)
+        Me.btnTranslate.TabIndex = 5
+        Me.btnTranslate.Text = "Tõlgi"
+        Me.btnTranslate.UseVisualStyleBackColor = True
+        '
+        'cmbLanguage
+        '
+        Me.cmbLanguage.FormattingEnabled = True
+        Me.cmbLanguage.Location = New System.Drawing.Point(157, 297)
+        Me.cmbLanguage.Name = "cmbLanguage"
+        Me.cmbLanguage.Size = New System.Drawing.Size(121, 21)
+        Me.cmbLanguage.TabIndex = 6
+        '
         'formGameEnd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.cmbLanguage)
+        Me.Controls.Add(Me.btnTranslate)
+        Me.Controls.Add(Me.txtTranslation)
         Me.Controls.Add(Me.lblSona)
         Me.Controls.Add(Me.btbToMenu)
         Me.Controls.Add(Me.btbPlayAgain)
@@ -86,4 +116,7 @@ Partial Class formGameEnd
     Friend WithEvents btbPlayAgain As Button
     Friend WithEvents btbToMenu As Button
     Friend WithEvents lblSona As Label
+    Friend WithEvents txtTranslation As TextBox
+    Friend WithEvents btnTranslate As Button
+    Friend WithEvents cmbLanguage As ComboBox
 End Class

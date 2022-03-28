@@ -9,6 +9,7 @@ Public Class formGame
         Dim data As IDatabase
         data = New CDatabase
 
+
         'Salvesta vajutatud nupu ascii kood muutujasse lastLetter
         game.lastLetter = Asc(e.KeyChar)
 
@@ -29,9 +30,13 @@ Public Class formGame
 
         'Kui letterCheck tagastab True ja Kasti arv pole max kasti arv
         If game.letterCheck(game.lastLetter) And game.intKast <> game.maxKast Then
-            game.intKast = 1
+
             'ArvatudSona-le viimase tähe lisamine
             game.ArvatudSona = UCase(Chr(game.lastLetter))
+
+
+            game.intKast = 1
+
             'Textboxi nime control-iks muutmine
             stringToControl(game.getBoxName(game.intRida, game.intKast))
 
@@ -58,7 +63,7 @@ Public Class formGame
 
 
         End If
-
+        txtDebug2.Text = game.ArvatudSona
     End Sub
 
     'Sub kastide värvide uuendamiseks
@@ -96,6 +101,7 @@ Public Class formGame
 
             i = i + 1
         End While
+
 
     End Sub
 
@@ -226,8 +232,6 @@ Public Class formGame
         game = New CGame
 
         game.kestvus = 1
-
-        txtDebug2.Text = game.kestvus
 
     End Sub
 

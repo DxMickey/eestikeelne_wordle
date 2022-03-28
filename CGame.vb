@@ -186,15 +186,9 @@
         Dim oldArvatud As String = ArvatudSona
         ArvatudSona = Nothing
 
-        For i As Integer = 0 To Len(oldArvatud) - 1
-            ArvatudSona = oldArvatud(i)
-
-        Next
-
-        If intKast = 1 Then
-            ArvatudSona = Nothing
+        If oldArvatud.Length <> 0 Then
+            ArvatudSona = oldArvatud.Substring(0, oldArvatud.Length - 1)
         End If
-
 
     End Sub
 
