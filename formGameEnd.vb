@@ -23,6 +23,7 @@ Public Class formGameEnd
         Dim data As IDatabase
         data = New CDatabase
 
+
         cmbLanguage.Items.Add("en")
         cmbLanguage.Items.Add("ru")
         cmbLanguage.Items.Add("fi")

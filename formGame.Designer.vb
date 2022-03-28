@@ -93,7 +93,7 @@ Partial Class formGame
         Me.txtRida2Kast6 = New System.Windows.Forms.TextBox()
         Me.txtRida1Kast6 = New System.Windows.Forms.TextBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblTimeText = New System.Windows.Forms.Label()
         Me.lblTimeLeft = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -972,15 +972,15 @@ Partial Class formGame
         '
         Me.Timer2.Interval = 1000
         '
-        'Label1
+        'lblTimeText
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(173, 31)
-        Me.Label1.TabIndex = 70
-        Me.Label1.Text = "Aega jäänud:"
+        Me.lblTimeText.AutoSize = True
+        Me.lblTimeText.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
+        Me.lblTimeText.Location = New System.Drawing.Point(12, 9)
+        Me.lblTimeText.Name = "lblTimeText"
+        Me.lblTimeText.Size = New System.Drawing.Size(173, 31)
+        Me.lblTimeText.TabIndex = 70
+        Me.lblTimeText.Text = "Aega jäänud:"
         '
         'lblTimeLeft
         '
@@ -998,7 +998,7 @@ Partial Class formGame
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.lblTimeLeft)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblTimeText)
         Me.Controls.Add(Me.txtRida6Kast6)
         Me.Controls.Add(Me.txtRida5Kast6)
         Me.Controls.Add(Me.txtRida4Kast6)
@@ -1144,6 +1144,6 @@ Partial Class formGame
     Friend WithEvents txtRida2Kast6 As TextBox
     Friend WithEvents txtRida1Kast6 As TextBox
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblTimeText As Label
     Friend WithEvents lblTimeLeft As Label
 End Class

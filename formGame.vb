@@ -92,6 +92,7 @@ Public Class formGame
 
                     'Kui wordChecker tagastas 0, siis tähte pole sõnas, ehk klaviatuuril tehakse täht punaseks ja täht lisatakse redLetters stringi
                 ElseIf misVarv = 0 Then
+                    box.BackColor = Color.Red
                     Dim f As String = box.Text
                     makeKeyRed(f)
                     game.redLetters = game.ArvatudSona(i)
@@ -183,8 +184,18 @@ Public Class formGame
         newWord()
         txtDebug.Text = game.strSona
         Timer1.Enabled = True
-        Timer2.Enabled = True
-        game.timeLeft = game.timeSetting
+        If game.kasTimed Then
+            Timer2.Enabled = True
+            game.timeLeft = game.timeSetting
+            lblTimeLeft.Visible = True
+            lblTimeText.Visible = True
+
+        Else
+            lblTimeLeft.Visible = False
+            lblTimeText.Visible = False
+        End If
+
+
     End Sub
 
     'Mängu lõpetamine, andmete edastamine, uue formi avamine
