@@ -18,13 +18,24 @@
 
         If value1 = "Kerge" Then
             game.maxKast = 4
-            game.timeSetting = 360
-        ElseIf value1 = "Tavaline" Then
+            If game.kasTimed Then
+                game.timeSetting = 360
+            End If
+
+        End If
+
+        If value1 = "Tavaline" Then
             game.maxKast = 5
-            game.timeSetting = 200
-        Else
+            If game.kasTimed Then
+                game.timeSetting = 200
+            End If
+        End If
+
+        If value1 = "Raske" Then
             game.maxKast = 6
-            game.timeSetting = 120
+            If game.kasTimed Then
+                game.timeSetting = 120
+            End If
 
         End If
 
