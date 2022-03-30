@@ -16,7 +16,7 @@
     Shared intTimeSetting As Integer
     Shared boolKasTimed As Boolean
 
-    Public Property kasTimed As Boolean Implements IGame.kasTimed
+    Private Property kasTimed As Boolean Implements IGame.kasTimed
         Get
             Return boolKasTimed
         End Get
@@ -51,6 +51,7 @@
             If value = Nothing Then
                 intKestvus = 0
             Else
+                'intKestvusele väärtuse value lisamine
                 intKestvus = kestvus + value
             End If
 
@@ -92,6 +93,7 @@
             If value = Nothing Then
                 strRedLetters = Nothing
             Else
+                'Väärtuse value lisamine stringile strRedLetters
                 strRedLetters = strRedLetters & value
             End If
 
@@ -106,6 +108,7 @@
             If value = Nothing Then
                 strRedLettersHolder = Nothing
             Else
+                'Väärtuse value lisamine stringile redLettersHolder
                 strRedLettersHolder = redLettersHolder & value
             End If
 
@@ -128,10 +131,10 @@
         Set(ByVal value As String)
             If value = Nothing Then
                 strArvatudSona = Nothing
-            End If
-
-            If strArvatudSona = Nothing Then
+                'Kui ArvatudSona-l pole väärtust, siis on ArvatudSona uueks väärtuseks value
+            ElseIf strArvatudSona = Nothing Then
                 strArvatudSona = value
+                'Kui vajutatud klahv ei ole Backspace siis value väärtus lisatakse stringile strArvatudSona
             ElseIf lastLetter <> 8 Then
                 strArvatudSona = strArvatudSona & value
             End If
@@ -153,10 +156,11 @@
             Return intRidaSymbol
         End Get
         Set(ByVal value As Integer)
+            'Kui value on 1, siis lisatakse ridade arvule 1
             If value = 1 Then
                 intRidaSymbol = intRida + 1
-            End If
-            If value = Nothing Then
+                'Kui value on Nothing, siis toimub ridade algasendisse taastamine ehk ridade arv on 1
+            ElseIf value = Nothing Then
                 intRidaSymbol = 1
             End If
 
@@ -168,21 +172,23 @@
             Return intKastSymbol
         End Get
         Set(ByVal value As Integer)
-            If value = 2 And intLastLetter <> 8 Then
-                intKastSymbol = 0
-            ElseIf intLastLetter <> 8 And intKast <> maxKast Then
-                intKastSymbol = intKast + value
-            End If
+
+            'Kui value on Nothing siis taastatakse Kastide väärtus tagasi 0-i
             If value = Nothing Then
                 intKastSymbol = 0
-            End If
-            If value = -1 Then
+
+                'Kui viimane vajutad klahv ei ole Backspace ning Kastide väärtus pole maksimaalne, siis suurendatakse Kastide väärtust ühe võrra
+            ElseIf intLastLetter <> 8 And intKast <> maxKast Then
+                intKastSymbol = intKast + 1
+                'Kui value on -1, siis vähendatakse Kastide väärtust ühe võrra
+            ElseIf value = -1 Then
                 intKastSymbol = intKastSymbol - 1
             End If
         End Set
     End Property
 
-    Public Sub deleteLastKey() Implements IGame.deleteLastKey
+    'ArvatudSona-st viimase tähe kustutamine
+    Private Sub deleteLastKey() Implements IGame.deleteLastKey
         Dim oldArvatud As String = ArvatudSona
         ArvatudSona = Nothing
 
@@ -193,28 +199,30 @@
     End Sub
 
     'Kontrollib kas viimane vajutatud täht on otsitavas sõnas ning kas on juba salvestatud punaste tähtede hoidjasse
-    'input = otsitav sõna 
+    'input = otsitav sõna
     'output = True kui viimane vajutatud täht on otsitavas sõnas või on juba olemas punaste tähtede hoidjas
     '         False kui viimane vajutatud täht ei ole otsitavas sõnas ja ei ole juba olemas punaste tähtede hoidjas
     Private Function isLetterInWord(value As String) As Boolean Implements IGame.isLetterInWord
-        Dim a As Boolean = False
+        Dim letterInWord As Boolean = False
 
+        'Kontrollimine kas viimane vajutatud täht eksisteerib otsitavas sõnas, kui jah siis letterInWord on True
         For i = 0 To value.Length - 1
             If UCase(Chr(lastLetter)) = value(i) Then
-                a = True
+                letterInWord = True
             End If
 
         Next
+        'Kui redLettersHolder ei ole tühi, kontrollitakse ega viimane vajutatud täht juba ei ole olemas otsitavas sõnas mitte eksisteerivate tähtede stringis. Kui on siis letterInWord on True
         If redLettersHolder <> Nothing Then
             For i = 0 To redLettersHolder.Length - 1
                 If UCase(Chr(lastLetter)) = redLettersHolder(i) Then
-                    a = True
+                    letterInWord = True
                 End If
 
             Next
         End If
 
-        Return a
+        Return letterInWord
     End Function
 
     'Sisestatud tähtede võrdlemine otsitava sõnaga
@@ -228,7 +236,6 @@
 
         Dim tulemus As Integer = 0
         Dim i As Integer = 0
-
 
         While i < game.maxKast
 
@@ -245,8 +252,6 @@
         Return tulemus
 
     End Function
-
-
 
     'Kontrollib kas arvatud sõna on otsitav sõna
     'output = True kui otsitav sõna = arvatud sõna
@@ -268,24 +273,25 @@
     'output = True kui vajutatud klahv on täht ning ei kuulu punaste tähtede hulka
     '         False kui vajutatud klahv ei ole täht või kuulub punaste tähtede hulka
     Private Function letterCheck(value As Integer) As Boolean Implements IGame.letterCheck
-        Dim a As Boolean = False
+        Dim letterIsCorrect As Boolean = False
         Dim i As Integer
 
+        'Kontrollimine kas viimase vajutatud klahvi ascii kood vastab korrektsete klahvide koodiga.
         If value >= 65 And value <= 90 Or value >= 97 And value <= 122 Or value = 196 Or value = 213 Or value = 214 Or value = 220 Or value = 228 Or value = 245 Or value = 246 Or value = 252 Then
-            a = True
+            letterIsCorrect = True
         End If
 
-        'Punaste tähtede kontrollimine
+        'Punaste tähtede kontrollimine, kui on punane täht, siis pole korrektne klahv.
         If intRidaSymbol > 1 Then
 
             For i = 0 To Len(strRedLetters) - 1
                 If UCase(Chr(value)) = strRedLetters(i) Then
-                    a = False
+                    letterIsCorrect = False
                 End If
             Next
         End If
 
-        Return a
+        Return letterIsCorrect
     End Function
 
     'Funktsioon textboxi nime saamiseks

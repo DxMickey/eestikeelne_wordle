@@ -28,7 +28,6 @@
 
     Function wordChecker(ByVal value As String, ByVal index As Integer)
 
-
     Function letterCheck(ByVal value As Integer) As Boolean
 
     Function gameOver() As Boolean
@@ -36,6 +35,5 @@
     Function isLetterInWord(ByVal value As String) As Boolean
 
     Sub deleteLastKey()
-
 
 End Interface
