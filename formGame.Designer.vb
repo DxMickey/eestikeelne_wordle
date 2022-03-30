@@ -95,10 +95,13 @@ Partial Class formGame
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.lblTimeText = New System.Windows.Forms.Label()
         Me.lblTimeLeft = New System.Windows.Forms.Label()
+        Me.btnEnter = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtRida1Kast1
         '
+        Me.txtRida1Kast1.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida1Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida1Kast1.Location = New System.Drawing.Point(176, 146)
         Me.txtRida1Kast1.MinimumSize = New System.Drawing.Size(60, 60)
@@ -111,6 +114,7 @@ Partial Class formGame
         '
         'txtRida1Kast2
         '
+        Me.txtRida1Kast2.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida1Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida1Kast2.Location = New System.Drawing.Point(242, 146)
         Me.txtRida1Kast2.MinimumSize = New System.Drawing.Size(60, 60)
@@ -123,6 +127,7 @@ Partial Class formGame
         '
         'txtRida1Kast3
         '
+        Me.txtRida1Kast3.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida1Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida1Kast3.Location = New System.Drawing.Point(308, 146)
         Me.txtRida1Kast3.MinimumSize = New System.Drawing.Size(60, 60)
@@ -135,6 +140,7 @@ Partial Class formGame
         '
         'txtRida1Kast4
         '
+        Me.txtRida1Kast4.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida1Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida1Kast4.Location = New System.Drawing.Point(374, 146)
         Me.txtRida1Kast4.MinimumSize = New System.Drawing.Size(60, 60)
@@ -147,6 +153,7 @@ Partial Class formGame
         '
         'txtRida1Kast5
         '
+        Me.txtRida1Kast5.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida1Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida1Kast5.Location = New System.Drawing.Point(440, 146)
         Me.txtRida1Kast5.MinimumSize = New System.Drawing.Size(60, 60)
@@ -159,6 +166,7 @@ Partial Class formGame
         '
         'txtRida2Kast5
         '
+        Me.txtRida2Kast5.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida2Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida2Kast5.Location = New System.Drawing.Point(440, 212)
         Me.txtRida2Kast5.MinimumSize = New System.Drawing.Size(60, 60)
@@ -171,6 +179,7 @@ Partial Class formGame
         '
         'txtRida2Kast4
         '
+        Me.txtRida2Kast4.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida2Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida2Kast4.Location = New System.Drawing.Point(374, 212)
         Me.txtRida2Kast4.MinimumSize = New System.Drawing.Size(60, 60)
@@ -183,6 +192,7 @@ Partial Class formGame
         '
         'txtRida2Kast3
         '
+        Me.txtRida2Kast3.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida2Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida2Kast3.Location = New System.Drawing.Point(308, 212)
         Me.txtRida2Kast3.MinimumSize = New System.Drawing.Size(60, 60)
@@ -195,6 +205,7 @@ Partial Class formGame
         '
         'txtRida2Kast2
         '
+        Me.txtRida2Kast2.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida2Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida2Kast2.Location = New System.Drawing.Point(242, 212)
         Me.txtRida2Kast2.MinimumSize = New System.Drawing.Size(60, 60)
@@ -207,6 +218,7 @@ Partial Class formGame
         '
         'txtRida2Kast1
         '
+        Me.txtRida2Kast1.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida2Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida2Kast1.Location = New System.Drawing.Point(176, 212)
         Me.txtRida2Kast1.MinimumSize = New System.Drawing.Size(60, 60)
@@ -219,6 +231,7 @@ Partial Class formGame
         '
         'txtRida3Kast5
         '
+        Me.txtRida3Kast5.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida3Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida3Kast5.Location = New System.Drawing.Point(440, 278)
         Me.txtRida3Kast5.MinimumSize = New System.Drawing.Size(60, 60)
@@ -231,6 +244,7 @@ Partial Class formGame
         '
         'txtRida3Kast4
         '
+        Me.txtRida3Kast4.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida3Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida3Kast4.Location = New System.Drawing.Point(374, 278)
         Me.txtRida3Kast4.MinimumSize = New System.Drawing.Size(60, 60)
@@ -243,6 +257,7 @@ Partial Class formGame
         '
         'txtRida3Kast3
         '
+        Me.txtRida3Kast3.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida3Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida3Kast3.Location = New System.Drawing.Point(308, 278)
         Me.txtRida3Kast3.MinimumSize = New System.Drawing.Size(60, 60)
@@ -255,6 +270,7 @@ Partial Class formGame
         '
         'txtRida3Kast2
         '
+        Me.txtRida3Kast2.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida3Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida3Kast2.Location = New System.Drawing.Point(242, 278)
         Me.txtRida3Kast2.MinimumSize = New System.Drawing.Size(60, 60)
@@ -267,6 +283,7 @@ Partial Class formGame
         '
         'txtRida3Kast1
         '
+        Me.txtRida3Kast1.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida3Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida3Kast1.Location = New System.Drawing.Point(176, 278)
         Me.txtRida3Kast1.MinimumSize = New System.Drawing.Size(60, 60)
@@ -279,6 +296,7 @@ Partial Class formGame
         '
         'txtRida4Kast5
         '
+        Me.txtRida4Kast5.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida4Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida4Kast5.Location = New System.Drawing.Point(440, 344)
         Me.txtRida4Kast5.MinimumSize = New System.Drawing.Size(60, 60)
@@ -291,6 +309,7 @@ Partial Class formGame
         '
         'txtRida4Kast4
         '
+        Me.txtRida4Kast4.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida4Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida4Kast4.Location = New System.Drawing.Point(374, 344)
         Me.txtRida4Kast4.MinimumSize = New System.Drawing.Size(60, 60)
@@ -303,6 +322,7 @@ Partial Class formGame
         '
         'txtRida4Kast3
         '
+        Me.txtRida4Kast3.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida4Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida4Kast3.Location = New System.Drawing.Point(308, 344)
         Me.txtRida4Kast3.MinimumSize = New System.Drawing.Size(60, 60)
@@ -315,6 +335,7 @@ Partial Class formGame
         '
         'txtRida4Kast2
         '
+        Me.txtRida4Kast2.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida4Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida4Kast2.Location = New System.Drawing.Point(242, 344)
         Me.txtRida4Kast2.MinimumSize = New System.Drawing.Size(60, 60)
@@ -327,6 +348,7 @@ Partial Class formGame
         '
         'txtRida4Kast1
         '
+        Me.txtRida4Kast1.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida4Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida4Kast1.Location = New System.Drawing.Point(176, 344)
         Me.txtRida4Kast1.MinimumSize = New System.Drawing.Size(60, 60)
@@ -339,6 +361,7 @@ Partial Class formGame
         '
         'txtRida5Kast5
         '
+        Me.txtRida5Kast5.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida5Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida5Kast5.Location = New System.Drawing.Point(440, 410)
         Me.txtRida5Kast5.MinimumSize = New System.Drawing.Size(60, 60)
@@ -351,6 +374,7 @@ Partial Class formGame
         '
         'txtRida5Kast4
         '
+        Me.txtRida5Kast4.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida5Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida5Kast4.Location = New System.Drawing.Point(374, 410)
         Me.txtRida5Kast4.MinimumSize = New System.Drawing.Size(60, 60)
@@ -363,6 +387,7 @@ Partial Class formGame
         '
         'txtRida5Kast3
         '
+        Me.txtRida5Kast3.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida5Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida5Kast3.Location = New System.Drawing.Point(308, 410)
         Me.txtRida5Kast3.MinimumSize = New System.Drawing.Size(60, 60)
@@ -375,6 +400,7 @@ Partial Class formGame
         '
         'txtRida5Kast2
         '
+        Me.txtRida5Kast2.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida5Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida5Kast2.Location = New System.Drawing.Point(242, 410)
         Me.txtRida5Kast2.MinimumSize = New System.Drawing.Size(60, 60)
@@ -387,6 +413,7 @@ Partial Class formGame
         '
         'txtRida5Kast1
         '
+        Me.txtRida5Kast1.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida5Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida5Kast1.Location = New System.Drawing.Point(176, 410)
         Me.txtRida5Kast1.MinimumSize = New System.Drawing.Size(60, 60)
@@ -399,6 +426,7 @@ Partial Class formGame
         '
         'txtRida6Kast5
         '
+        Me.txtRida6Kast5.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida6Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida6Kast5.Location = New System.Drawing.Point(440, 476)
         Me.txtRida6Kast5.MinimumSize = New System.Drawing.Size(60, 60)
@@ -411,6 +439,7 @@ Partial Class formGame
         '
         'txtRida6Kast4
         '
+        Me.txtRida6Kast4.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida6Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida6Kast4.Location = New System.Drawing.Point(374, 476)
         Me.txtRida6Kast4.MinimumSize = New System.Drawing.Size(60, 60)
@@ -423,6 +452,7 @@ Partial Class formGame
         '
         'txtRida6Kast3
         '
+        Me.txtRida6Kast3.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida6Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida6Kast3.Location = New System.Drawing.Point(308, 476)
         Me.txtRida6Kast3.MinimumSize = New System.Drawing.Size(60, 60)
@@ -435,6 +465,7 @@ Partial Class formGame
         '
         'txtRida6Kast2
         '
+        Me.txtRida6Kast2.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida6Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida6Kast2.Location = New System.Drawing.Point(242, 476)
         Me.txtRida6Kast2.MinimumSize = New System.Drawing.Size(60, 60)
@@ -447,6 +478,7 @@ Partial Class formGame
         '
         'txtRida6Kast1
         '
+        Me.txtRida6Kast1.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida6Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida6Kast1.Location = New System.Drawing.Point(176, 476)
         Me.txtRida6Kast1.MinimumSize = New System.Drawing.Size(60, 60)
@@ -460,420 +492,419 @@ Partial Class formGame
         'txtQ
         '
         Me.txtQ.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtQ.Enabled = False
-        Me.txtQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtQ.Location = New System.Drawing.Point(182, 571)
-        Me.txtQ.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtQ.Location = New System.Drawing.Point(159, 564)
+        Me.txtQ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtQ.Multiline = True
         Me.txtQ.Name = "txtQ"
         Me.txtQ.ReadOnly = True
-        Me.txtQ.Size = New System.Drawing.Size(20, 35)
+        Me.txtQ.Size = New System.Drawing.Size(30, 30)
         Me.txtQ.TabIndex = 30
         Me.txtQ.Text = "Q"
         Me.txtQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtW
         '
-        Me.txtW.Enabled = False
-        Me.txtW.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtW.Location = New System.Drawing.Point(208, 571)
-        Me.txtW.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtW.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtW.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtW.Location = New System.Drawing.Point(195, 564)
+        Me.txtW.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtW.Multiline = True
         Me.txtW.Name = "txtW"
         Me.txtW.ReadOnly = True
-        Me.txtW.Size = New System.Drawing.Size(20, 35)
+        Me.txtW.Size = New System.Drawing.Size(30, 30)
         Me.txtW.TabIndex = 31
         Me.txtW.Text = "W"
         Me.txtW.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtE
         '
-        Me.txtE.Enabled = False
-        Me.txtE.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtE.Location = New System.Drawing.Point(235, 571)
-        Me.txtE.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtE.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtE.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtE.Location = New System.Drawing.Point(231, 564)
+        Me.txtE.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtE.Multiline = True
         Me.txtE.Name = "txtE"
         Me.txtE.ReadOnly = True
-        Me.txtE.Size = New System.Drawing.Size(20, 35)
+        Me.txtE.Size = New System.Drawing.Size(30, 30)
         Me.txtE.TabIndex = 32
         Me.txtE.Text = "E"
         Me.txtE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtR
         '
-        Me.txtR.Enabled = False
-        Me.txtR.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtR.Location = New System.Drawing.Point(261, 571)
-        Me.txtR.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtR.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtR.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtR.Location = New System.Drawing.Point(267, 564)
+        Me.txtR.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtR.Multiline = True
         Me.txtR.Name = "txtR"
         Me.txtR.ReadOnly = True
-        Me.txtR.Size = New System.Drawing.Size(20, 35)
+        Me.txtR.Size = New System.Drawing.Size(30, 30)
         Me.txtR.TabIndex = 33
         Me.txtR.Text = "R"
         Me.txtR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtT
         '
-        Me.txtT.Enabled = False
-        Me.txtT.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtT.Location = New System.Drawing.Point(287, 571)
-        Me.txtT.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtT.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtT.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtT.Location = New System.Drawing.Point(303, 564)
+        Me.txtT.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtT.Multiline = True
         Me.txtT.Name = "txtT"
         Me.txtT.ReadOnly = True
-        Me.txtT.Size = New System.Drawing.Size(20, 35)
+        Me.txtT.Size = New System.Drawing.Size(30, 30)
         Me.txtT.TabIndex = 34
         Me.txtT.Text = "T"
         Me.txtT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtY
         '
-        Me.txtY.Enabled = False
-        Me.txtY.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtY.Location = New System.Drawing.Point(313, 571)
-        Me.txtY.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtY.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtY.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtY.Location = New System.Drawing.Point(339, 564)
+        Me.txtY.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtY.Multiline = True
         Me.txtY.Name = "txtY"
         Me.txtY.ReadOnly = True
-        Me.txtY.Size = New System.Drawing.Size(20, 35)
+        Me.txtY.Size = New System.Drawing.Size(30, 30)
         Me.txtY.TabIndex = 35
         Me.txtY.Text = "Y"
         Me.txtY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtU
         '
-        Me.txtU.Enabled = False
-        Me.txtU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtU.Location = New System.Drawing.Point(339, 571)
-        Me.txtU.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtU.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtU.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtU.Location = New System.Drawing.Point(375, 564)
+        Me.txtU.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtU.Multiline = True
         Me.txtU.Name = "txtU"
         Me.txtU.ReadOnly = True
-        Me.txtU.Size = New System.Drawing.Size(20, 35)
+        Me.txtU.Size = New System.Drawing.Size(30, 30)
         Me.txtU.TabIndex = 36
         Me.txtU.Text = "U"
         Me.txtU.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtI
         '
-        Me.txtI.Enabled = False
-        Me.txtI.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtI.Location = New System.Drawing.Point(367, 571)
-        Me.txtI.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtI.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtI.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtI.Location = New System.Drawing.Point(411, 564)
+        Me.txtI.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtI.Multiline = True
         Me.txtI.Name = "txtI"
         Me.txtI.ReadOnly = True
-        Me.txtI.Size = New System.Drawing.Size(20, 35)
+        Me.txtI.Size = New System.Drawing.Size(30, 30)
         Me.txtI.TabIndex = 37
         Me.txtI.Text = "I"
         Me.txtI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtO
         '
-        Me.txtO.Enabled = False
-        Me.txtO.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtO.Location = New System.Drawing.Point(393, 571)
-        Me.txtO.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtO.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtO.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtO.Location = New System.Drawing.Point(447, 564)
+        Me.txtO.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtO.Multiline = True
         Me.txtO.Name = "txtO"
         Me.txtO.ReadOnly = True
-        Me.txtO.Size = New System.Drawing.Size(20, 35)
+        Me.txtO.Size = New System.Drawing.Size(30, 30)
         Me.txtO.TabIndex = 38
         Me.txtO.Text = "O"
         Me.txtO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtP
         '
-        Me.txtP.Enabled = False
-        Me.txtP.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtP.Location = New System.Drawing.Point(419, 571)
-        Me.txtP.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtP.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtP.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtP.Location = New System.Drawing.Point(483, 564)
+        Me.txtP.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtP.Multiline = True
         Me.txtP.Name = "txtP"
         Me.txtP.ReadOnly = True
-        Me.txtP.Size = New System.Drawing.Size(20, 35)
+        Me.txtP.Size = New System.Drawing.Size(30, 30)
         Me.txtP.TabIndex = 39
         Me.txtP.Text = "P"
         Me.txtP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtÜ
         '
-        Me.txtÜ.Enabled = False
-        Me.txtÜ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtÜ.Location = New System.Drawing.Point(445, 571)
-        Me.txtÜ.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtÜ.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtÜ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtÜ.Location = New System.Drawing.Point(519, 564)
+        Me.txtÜ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtÜ.Multiline = True
         Me.txtÜ.Name = "txtÜ"
         Me.txtÜ.ReadOnly = True
-        Me.txtÜ.Size = New System.Drawing.Size(20, 35)
+        Me.txtÜ.Size = New System.Drawing.Size(30, 30)
         Me.txtÜ.TabIndex = 40
         Me.txtÜ.Text = "Ü"
         Me.txtÜ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtÕ
         '
-        Me.txtÕ.Enabled = False
-        Me.txtÕ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtÕ.Location = New System.Drawing.Point(471, 571)
-        Me.txtÕ.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtÕ.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtÕ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtÕ.Location = New System.Drawing.Point(555, 564)
+        Me.txtÕ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtÕ.Multiline = True
         Me.txtÕ.Name = "txtÕ"
         Me.txtÕ.ReadOnly = True
-        Me.txtÕ.Size = New System.Drawing.Size(20, 35)
+        Me.txtÕ.Size = New System.Drawing.Size(30, 30)
         Me.txtÕ.TabIndex = 41
         Me.txtÕ.Text = "Õ"
         Me.txtÕ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtÄ
         '
-        Me.txtÄ.Enabled = False
-        Me.txtÄ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtÄ.Location = New System.Drawing.Point(458, 612)
-        Me.txtÄ.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtÄ.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtÄ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtÄ.Location = New System.Drawing.Point(536, 600)
+        Me.txtÄ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtÄ.Multiline = True
         Me.txtÄ.Name = "txtÄ"
         Me.txtÄ.ReadOnly = True
-        Me.txtÄ.Size = New System.Drawing.Size(20, 35)
+        Me.txtÄ.Size = New System.Drawing.Size(30, 30)
         Me.txtÄ.TabIndex = 52
         Me.txtÄ.Text = "Ä"
         Me.txtÄ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtÖ
         '
-        Me.txtÖ.Enabled = False
-        Me.txtÖ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtÖ.Location = New System.Drawing.Point(432, 612)
-        Me.txtÖ.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtÖ.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtÖ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtÖ.Location = New System.Drawing.Point(500, 600)
+        Me.txtÖ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtÖ.Multiline = True
         Me.txtÖ.Name = "txtÖ"
         Me.txtÖ.ReadOnly = True
-        Me.txtÖ.Size = New System.Drawing.Size(20, 35)
+        Me.txtÖ.Size = New System.Drawing.Size(30, 30)
         Me.txtÖ.TabIndex = 51
         Me.txtÖ.Text = "Ö"
         Me.txtÖ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtL
         '
-        Me.txtL.Enabled = False
-        Me.txtL.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtL.Location = New System.Drawing.Point(406, 612)
-        Me.txtL.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtL.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtL.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtL.Location = New System.Drawing.Point(464, 600)
+        Me.txtL.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtL.Multiline = True
         Me.txtL.Name = "txtL"
         Me.txtL.ReadOnly = True
-        Me.txtL.Size = New System.Drawing.Size(20, 35)
+        Me.txtL.Size = New System.Drawing.Size(30, 30)
         Me.txtL.TabIndex = 50
         Me.txtL.Text = "L"
         Me.txtL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtK
         '
-        Me.txtK.Enabled = False
-        Me.txtK.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtK.Location = New System.Drawing.Point(380, 612)
-        Me.txtK.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtK.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtK.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtK.Location = New System.Drawing.Point(428, 600)
+        Me.txtK.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtK.Multiline = True
         Me.txtK.Name = "txtK"
         Me.txtK.ReadOnly = True
-        Me.txtK.Size = New System.Drawing.Size(20, 35)
+        Me.txtK.Size = New System.Drawing.Size(30, 30)
         Me.txtK.TabIndex = 49
         Me.txtK.Text = "K"
         Me.txtK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtJ
         '
-        Me.txtJ.Enabled = False
-        Me.txtJ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtJ.Location = New System.Drawing.Point(352, 612)
-        Me.txtJ.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtJ.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtJ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtJ.Location = New System.Drawing.Point(392, 600)
+        Me.txtJ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtJ.Multiline = True
         Me.txtJ.Name = "txtJ"
         Me.txtJ.ReadOnly = True
-        Me.txtJ.Size = New System.Drawing.Size(20, 35)
+        Me.txtJ.Size = New System.Drawing.Size(30, 30)
         Me.txtJ.TabIndex = 48
         Me.txtJ.Text = "J"
         Me.txtJ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtH
         '
-        Me.txtH.Enabled = False
-        Me.txtH.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtH.Location = New System.Drawing.Point(326, 612)
-        Me.txtH.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtH.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtH.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtH.Location = New System.Drawing.Point(356, 600)
+        Me.txtH.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtH.Multiline = True
         Me.txtH.Name = "txtH"
         Me.txtH.ReadOnly = True
-        Me.txtH.Size = New System.Drawing.Size(20, 35)
+        Me.txtH.Size = New System.Drawing.Size(30, 30)
         Me.txtH.TabIndex = 47
         Me.txtH.Text = "H"
         Me.txtH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtG
         '
-        Me.txtG.Enabled = False
-        Me.txtG.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtG.Location = New System.Drawing.Point(300, 612)
-        Me.txtG.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtG.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtG.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtG.Location = New System.Drawing.Point(320, 600)
+        Me.txtG.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtG.Multiline = True
         Me.txtG.Name = "txtG"
         Me.txtG.ReadOnly = True
-        Me.txtG.Size = New System.Drawing.Size(20, 35)
+        Me.txtG.Size = New System.Drawing.Size(30, 30)
         Me.txtG.TabIndex = 46
         Me.txtG.Text = "G"
         Me.txtG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtF
         '
-        Me.txtF.Enabled = False
-        Me.txtF.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtF.Location = New System.Drawing.Point(274, 612)
-        Me.txtF.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtF.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtF.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtF.Location = New System.Drawing.Point(284, 600)
+        Me.txtF.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtF.Multiline = True
         Me.txtF.Name = "txtF"
         Me.txtF.ReadOnly = True
-        Me.txtF.Size = New System.Drawing.Size(20, 35)
+        Me.txtF.Size = New System.Drawing.Size(30, 30)
         Me.txtF.TabIndex = 45
         Me.txtF.Text = "F"
         Me.txtF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtD
         '
-        Me.txtD.Enabled = False
-        Me.txtD.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtD.Location = New System.Drawing.Point(248, 612)
-        Me.txtD.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtD.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtD.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtD.Location = New System.Drawing.Point(248, 600)
+        Me.txtD.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtD.Multiline = True
         Me.txtD.Name = "txtD"
         Me.txtD.ReadOnly = True
-        Me.txtD.Size = New System.Drawing.Size(20, 35)
+        Me.txtD.Size = New System.Drawing.Size(30, 30)
         Me.txtD.TabIndex = 44
         Me.txtD.Text = "D"
         Me.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtS
         '
-        Me.txtS.Enabled = False
-        Me.txtS.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtS.Location = New System.Drawing.Point(221, 612)
-        Me.txtS.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtS.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtS.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtS.Location = New System.Drawing.Point(212, 600)
+        Me.txtS.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtS.Multiline = True
         Me.txtS.Name = "txtS"
         Me.txtS.ReadOnly = True
-        Me.txtS.Size = New System.Drawing.Size(20, 35)
+        Me.txtS.Size = New System.Drawing.Size(30, 30)
         Me.txtS.TabIndex = 43
         Me.txtS.Text = "S"
         Me.txtS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtA
         '
-        Me.txtA.Enabled = False
-        Me.txtA.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtA.Location = New System.Drawing.Point(195, 612)
-        Me.txtA.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtA.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtA.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtA.Location = New System.Drawing.Point(176, 600)
+        Me.txtA.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtA.Multiline = True
         Me.txtA.Name = "txtA"
         Me.txtA.ReadOnly = True
-        Me.txtA.Size = New System.Drawing.Size(20, 35)
+        Me.txtA.Size = New System.Drawing.Size(30, 30)
         Me.txtA.TabIndex = 42
         Me.txtA.Text = "A"
         Me.txtA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtM
         '
-        Me.txtM.Enabled = False
-        Me.txtM.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtM.Location = New System.Drawing.Point(400, 653)
-        Me.txtM.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtM.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtM.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtM.Location = New System.Drawing.Point(464, 636)
+        Me.txtM.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtM.Multiline = True
         Me.txtM.Name = "txtM"
         Me.txtM.ReadOnly = True
-        Me.txtM.Size = New System.Drawing.Size(20, 35)
+        Me.txtM.Size = New System.Drawing.Size(30, 30)
         Me.txtM.TabIndex = 59
         Me.txtM.Text = "M"
         Me.txtM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtN
         '
-        Me.txtN.Enabled = False
-        Me.txtN.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtN.Location = New System.Drawing.Point(374, 653)
-        Me.txtN.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtN.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtN.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtN.Location = New System.Drawing.Point(428, 636)
+        Me.txtN.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtN.Multiline = True
         Me.txtN.Name = "txtN"
         Me.txtN.ReadOnly = True
-        Me.txtN.Size = New System.Drawing.Size(20, 35)
+        Me.txtN.Size = New System.Drawing.Size(30, 30)
         Me.txtN.TabIndex = 58
         Me.txtN.Text = "N"
         Me.txtN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtB
         '
-        Me.txtB.Enabled = False
-        Me.txtB.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtB.Location = New System.Drawing.Point(348, 653)
-        Me.txtB.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtB.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtB.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtB.Location = New System.Drawing.Point(392, 636)
+        Me.txtB.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtB.Multiline = True
         Me.txtB.Name = "txtB"
         Me.txtB.ReadOnly = True
-        Me.txtB.Size = New System.Drawing.Size(20, 35)
+        Me.txtB.Size = New System.Drawing.Size(30, 30)
         Me.txtB.TabIndex = 57
         Me.txtB.Text = "B"
         Me.txtB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtV
         '
-        Me.txtV.Enabled = False
-        Me.txtV.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtV.Location = New System.Drawing.Point(322, 653)
-        Me.txtV.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtV.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtV.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtV.Location = New System.Drawing.Point(356, 636)
+        Me.txtV.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtV.Multiline = True
         Me.txtV.Name = "txtV"
         Me.txtV.ReadOnly = True
-        Me.txtV.Size = New System.Drawing.Size(20, 35)
+        Me.txtV.Size = New System.Drawing.Size(30, 30)
         Me.txtV.TabIndex = 56
         Me.txtV.Text = "V"
         Me.txtV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtC
         '
-        Me.txtC.Enabled = False
-        Me.txtC.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtC.Location = New System.Drawing.Point(296, 653)
-        Me.txtC.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtC.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtC.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtC.Location = New System.Drawing.Point(320, 636)
+        Me.txtC.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtC.Multiline = True
         Me.txtC.Name = "txtC"
         Me.txtC.ReadOnly = True
-        Me.txtC.Size = New System.Drawing.Size(20, 35)
+        Me.txtC.Size = New System.Drawing.Size(30, 30)
         Me.txtC.TabIndex = 55
         Me.txtC.Text = "C"
         Me.txtC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtX
         '
-        Me.txtX.Enabled = False
-        Me.txtX.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtX.Location = New System.Drawing.Point(269, 653)
-        Me.txtX.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtX.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtX.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtX.Location = New System.Drawing.Point(284, 636)
+        Me.txtX.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtX.Multiline = True
         Me.txtX.Name = "txtX"
         Me.txtX.ReadOnly = True
-        Me.txtX.Size = New System.Drawing.Size(20, 35)
+        Me.txtX.Size = New System.Drawing.Size(30, 30)
         Me.txtX.TabIndex = 54
         Me.txtX.Text = "X"
         Me.txtX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtZ
         '
-        Me.txtZ.Enabled = False
-        Me.txtZ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.txtZ.Location = New System.Drawing.Point(243, 653)
-        Me.txtZ.MinimumSize = New System.Drawing.Size(20, 35)
+        Me.txtZ.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtZ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
+        Me.txtZ.Location = New System.Drawing.Point(248, 636)
+        Me.txtZ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtZ.Multiline = True
         Me.txtZ.Name = "txtZ"
         Me.txtZ.ReadOnly = True
-        Me.txtZ.Size = New System.Drawing.Size(20, 35)
+        Me.txtZ.Size = New System.Drawing.Size(30, 30)
         Me.txtZ.TabIndex = 53
         Me.txtZ.Text = "Z"
         Me.txtZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -898,6 +929,7 @@ Partial Class formGame
         '
         'txtRida6Kast6
         '
+        Me.txtRida6Kast6.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida6Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida6Kast6.Location = New System.Drawing.Point(506, 476)
         Me.txtRida6Kast6.MinimumSize = New System.Drawing.Size(60, 60)
@@ -910,6 +942,7 @@ Partial Class formGame
         '
         'txtRida5Kast6
         '
+        Me.txtRida5Kast6.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida5Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida5Kast6.Location = New System.Drawing.Point(506, 410)
         Me.txtRida5Kast6.MinimumSize = New System.Drawing.Size(60, 60)
@@ -922,6 +955,7 @@ Partial Class formGame
         '
         'txtRida4Kast6
         '
+        Me.txtRida4Kast6.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida4Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida4Kast6.Location = New System.Drawing.Point(506, 344)
         Me.txtRida4Kast6.MinimumSize = New System.Drawing.Size(60, 60)
@@ -934,6 +968,7 @@ Partial Class formGame
         '
         'txtRida3Kast6
         '
+        Me.txtRida3Kast6.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida3Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida3Kast6.Location = New System.Drawing.Point(506, 278)
         Me.txtRida3Kast6.MinimumSize = New System.Drawing.Size(60, 60)
@@ -946,6 +981,7 @@ Partial Class formGame
         '
         'txtRida2Kast6
         '
+        Me.txtRida2Kast6.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida2Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida2Kast6.Location = New System.Drawing.Point(506, 212)
         Me.txtRida2Kast6.MinimumSize = New System.Drawing.Size(60, 60)
@@ -958,6 +994,7 @@ Partial Class formGame
         '
         'txtRida1Kast6
         '
+        Me.txtRida1Kast6.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtRida1Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRida1Kast6.Location = New System.Drawing.Point(506, 146)
         Me.txtRida1Kast6.MinimumSize = New System.Drawing.Size(60, 60)
@@ -992,11 +1029,33 @@ Partial Class formGame
         Me.lblTimeLeft.TabIndex = 71
         Me.lblTimeLeft.Text = "0"
         '
+        'btnEnter
+        '
+        Me.btnEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!)
+        Me.btnEnter.Location = New System.Drawing.Point(161, 636)
+        Me.btnEnter.Name = "btnEnter"
+        Me.btnEnter.Size = New System.Drawing.Size(81, 30)
+        Me.btnEnter.TabIndex = 72
+        Me.btnEnter.Text = "ENTER"
+        Me.btnEnter.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!)
+        Me.btnDelete.Location = New System.Drawing.Point(500, 636)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(109, 30)
+        Me.btnDelete.TabIndex = 73
+        Me.btnDelete.Text = "KUSTUTA"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
         'formGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnEnter)
         Me.Controls.Add(Me.lblTimeLeft)
         Me.Controls.Add(Me.lblTimeText)
         Me.Controls.Add(Me.txtRida6Kast6)
@@ -1146,4 +1205,6 @@ Partial Class formGame
     Friend WithEvents Timer2 As Timer
     Friend WithEvents lblTimeText As Label
     Friend WithEvents lblTimeLeft As Label
+    Friend WithEvents btnEnter As Button
+    Friend WithEvents btnDelete As Button
 End Class

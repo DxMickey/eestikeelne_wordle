@@ -5,13 +5,23 @@ Public Class formGame
     Private Sub formGame_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         Dim game As IGame
         game = New CGame
-
         Dim data As IDatabase
         data = New CDatabase
 
-
         'Salvesta vajutatud nupu ascii kood muutujasse lastLetter
         game.lastLetter = Asc(e.KeyChar)
+
+        gameEngine()
+
+
+    End Sub
+
+    Private Sub gameEngine()
+        Dim game As IGame
+        game = New CGame
+
+        Dim data As IDatabase
+        data = New CDatabase
 
         'Kui vajutatud klahv on Backspace ja Kasti arv pole 0
         If game.lastLetter = 8 And game.intKast <> 0 Then
@@ -294,5 +304,23 @@ Public Class formGame
         End If
         game.timeLeft = (game.timeLeft - 1)
         lblTimeLeft.Text = game.timeLeft
+    End Sub
+
+    Private Sub txtA_Click(sender As Object, e As EventArgs) Handles txtA.Click, txtZ.Click, txtY.Click, txtX.Click, txtW.Click, txtV.Click, txtÜ.Click, txtU.Click, txtT.Click, txtS.Click, txtR.Click, txtQ.Click, txtP.Click, txtÕ.Click, txtÖ.Click, txtO.Click, txtN.Click, txtM.Click, txtL.Click, txtK.Click, txtJ.Click, txtI.Click, txtH.Click, txtG.Click, txtF.Click, txtE.Click, txtD.Click, txtC.Click, txtB.Click, txtÄ.Click, btnEnter.Click, btnDelete.Click
+        Dim game As IGame
+        game = New CGame
+
+        If sender.Text = "ENTER" Then
+            game.lastLetter = 13
+        ElseIf sender.Text = "KUSTUTA" Then
+            game.lastLetter = 8
+        Else
+            game.lastLetter = Asc(sender.Text)
+
+        End If
+
+        gameEngine()
+
+        txtDebug2.Text = sender.Text
     End Sub
 End Class
