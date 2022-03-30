@@ -1,84 +1,85 @@
 ﻿Public Class CDatabase
     Implements IDatabase
 
-    Public Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String) Implements IDatabase.insertHistory
-        Dim SQLconnect As New SQLite.SQLiteConnection()
+    'Mängu andmete lisamine ajaloo tabelisse andmebaasis
+    'input = kõik ajaloo tabelis olevad andmete tulbad
+    Private Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String) Implements IDatabase.insertHistory
+        Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
-        SQLconnect.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-        SQLconnect.Open()
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
 
-        SQLcommand = SQLconnect.CreateCommand
+        SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ", '" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "')"
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",        '" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "')"
         SQLcommand.ExecuteNonQuery()
-        SQLconnect.Close()
+        SQLconnection.Close()
     End Sub
 
-
-
     'Statistikas mängitud mängude arvu suurendamine
-    'input = uus mängitud mängude kogus
+    'Ajutine, uus lahendus on andmebaasis triggeritega sama asi lahendada
     Private Sub updateStats(value1 As Integer, value2 As Integer, value3 As Integer) Implements IDatabase.updateStats
-        Dim SQLconnect As New SQLite.SQLiteConnection()
+        Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
-        SQLconnect.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-        SQLconnect.Open()
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
 
-        SQLcommand = SQLconnect.CreateCommand
+        SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "INSERT or REPLACE INTO Statistika VALUES(1, " & value1 & ", " & value2 & ", " & value3 & ")"
+        SQLcommand.CommandText = "INSERT Or REPLACE INTO Statistika VALUES(1, " & value1 & ", " & value2 & ", " & value3 & ")"
         SQLcommand.ExecuteNonQuery()
-        SQLconnect.Close()
+        SQLconnection.Close()
 
     End Sub
 
     'Ajaloo uuendamine history_view viewist
     'output = tabel, kuhu on laetud history_view
     Private Function getHistory() Implements IDatabase.getHistory
-        Dim SQLconnect As New SQLite.SQLiteConnection()
+        Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
-        SQLconnect.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-        SQLconnect.Open()
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
 
-        SQLcommand = SQLconnect.CreateCommand
+        SQLcommand = SQLconnection.CreateCommand
 
         SQLcommand.CommandText = "SELECT * FROM history_view"
         Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
         SQLite_Data_Reader = SQLcommand.ExecuteReader
 
-        Dim table As New DataTable
-        table.Load(SQLite_Data_Reader)
+        Dim tabel As New DataTable
+        tabel.Load(SQLite_Data_Reader)
 
-        SQLconnect.Close()
+        SQLconnection.Close()
 
-        Return table
+        Return tabel
     End Function
 
-    'Mängitud mängude arvu lugemine andmebaasist
+    'Statistika tagastamine andmebaasist
+    'input = soovitud stati nimi
     'output = tagastab mängitud mängude arvu
     Private Function getStat(ByVal value As String) As Integer Implements IDatabase.getStat
-        Dim SQLconnect As New SQLite.SQLiteConnection()
+        Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
-        SQLconnect.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-        SQLconnect.Open()
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
 
-        SQLcommand = SQLconnect.CreateCommand
+        SQLcommand = SQLconnection.CreateCommand
 
         SQLcommand.CommandText = "SELECT " & value & " FROM statistika WHERE ID = 1"
         Dim sqlResponse As String = SQLcommand.ExecuteScalar()
-        SQLconnect.Close()
+        SQLconnection.Close()
         Return sqlResponse
     End Function
 
     'Vastava ID-ga sõna tagastamine sõnade listist andmebaasis
-    'input = soovitud ID integer
+    'input = soovitud ID arv
     'output = tagastab vastava ID-ga sõna
     Private Function getSona(value As Integer) As String Implements IDatabase.getSona
-        Dim SQLconnect As New SQLite.SQLiteConnection()
+        Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
         Dim game As IGame
         game = New CGame
@@ -93,14 +94,14 @@
 
         End If
 
-        SQLconnect.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-        SQLconnect.Open()
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
 
-        SQLcommand = SQLconnect.CreateCommand
+        SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT * FROM '" & millineList & "' WHERE sonaID = " & value
+        SQLcommand.CommandText = "SELECT * FROM        '" & millineList & "' WHERE sonaID = " & value
         Dim sqlResponse As String = SQLcommand.ExecuteScalar()
-        SQLconnect.Close()
+        SQLconnection.Close()
         Return sqlResponse
     End Function
 End Class

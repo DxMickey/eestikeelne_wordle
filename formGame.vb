@@ -5,15 +5,25 @@ Public Class formGame
     Private Sub formGame_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         Dim game As IGame
         game = New CGame
-
         Dim data As IDatabase
         data = New CDatabase
-
 
         'Salvesta vajutatud nupu ascii kood muutujasse lastLetter
         game.lastLetter = Asc(e.KeyChar)
 
-        'Kui vajutatud klahv on Backspace ja Kasti arv pole 0
+        gameEngine()
+
+    End Sub
+
+    'Siin toimub kogu mäng
+    Private Sub gameEngine()
+        Dim game As IGame
+        game = New CGame
+
+        Dim data As IDatabase
+        data = New CDatabase
+
+        'Kui vajutatud klahv on Backspace ja Kasti arv pole 0, siis kustutakse viimane nupuvajutus ja kasti arvu vähendatakse
         If game.lastLetter = 8 And game.intKast <> 0 Then
 
             game.deleteLastKey()
@@ -34,53 +44,56 @@ Public Class formGame
             'ArvatudSona-le viimase tähe lisamine
             game.ArvatudSona = UCase(Chr(game.lastLetter))
 
-
+            'Kasti väärtuse suurendamine ühe võrra
             game.intKast = 1
 
             'Textboxi nime control-iks muutmine
             stringToControl(game.getBoxName(game.intRida, game.intKast))
 
+            'Kui täht ei eksisteeri otsitavas sõnas ning ei ole juba olemas punaste tähtede stringis, siis lisa täht holderisse
             If game.isLetterInWord(game.strSona) = False Then
                 game.redLettersHolder = UCase(Chr(game.lastLetter))
 
             End If
         End If
 
-        'Kui vajutatud nupp on Enter ja Kasti number on max
+        'Kui vajutatud nupp on Enter ja Kasti number on maksimaalne
         If game.lastLetter = 13 And game.intKast = game.maxKast Then
 
-            'Mängu resettimine ja mängu lõpu ekraanile liikumine
+            'Kui sõna on arvatud, või read on otsa saanud, lõpeta mäng
             If game.gameOver() = True Then
                 finishGame()
+                'Vastasel juhul väärtuste taastamine uue rea jaoks ja rea suurendamine ühe võrra
             Else
                 game.intRida = 1
-                game.intKast = 2
+                game.intKast = Nothing
+                'Holderi tõstmine ümber punaste tähtede stringi ja Holderi tühjaks tegemine
                 game.redLetters = game.redLettersHolder
                 game.redLettersHolder = Nothing
                 game.ArvatudSona = Nothing
 
             End If
 
-
         End If
         txtDebug2.Text = game.ArvatudSona
     End Sub
 
-    'Sub kastide värvide uuendamiseks
+    'Meetod kastide värvide uuendamiseks
     Private Sub updateColors()
         Dim game As IGame
         game = New CGame
 
         Dim i As Integer = 0
 
+        'Loop mis käib läbi kõikide kastide
         While i < game.maxKast
             Dim misVarv As Integer
 
             misVarv = game.wordChecker(game.ArvatudSona(i), i)
-            Dim a As String = game.getBoxName(game.intRida, i + 1)
+            Dim boxName As String = game.getBoxName(game.intRida, i + 1)
 
-            If Me.Controls.Find(a, True).Count = 1 Then
-                Dim box As TextBox = Me.Controls.Find(a, True)(0)
+            If Me.Controls.Find(boxName, True).Count = 1 Then
+                Dim box As TextBox = Me.Controls.Find(boxName, True)(0)
 
                 'Kui wordChecker tagastas 2, siis on õige täht vastavas kastis, ehk kast tehakse roheliseks
                 If misVarv = 2 And box.BackColor <> Color.Green Then
@@ -93,8 +106,8 @@ Public Class formGame
                     'Kui wordChecker tagastas 0, siis tähte pole sõnas, ehk klaviatuuril tehakse täht punaseks ja täht lisatakse redLetters stringi
                 ElseIf misVarv = 0 Then
                     box.BackColor = Color.Red
-                    Dim f As String = box.Text
-                    makeKeyRed(f)
+                    Dim boxText As String = box.Text
+                    makeKeyRed(boxText)
                     game.redLetters = game.ArvatudSona(i)
 
                 End If
@@ -103,17 +116,16 @@ Public Class formGame
             i = i + 1
         End While
 
-
     End Sub
 
     'Klaviatuuril tähe punaseks muutmine
     'input = stringi kujul täht
     Private Sub makeKeyRed(ByVal value As String)
 
-        Dim a As String = "txt" & value
+        Dim boxName As String = "txt" & value
 
-        If Me.Controls.Find(a, True).Count = 1 Then
-            Dim box As TextBox = Me.Controls.Find(a, True)(0)
+        If Me.Controls.Find(boxName, True).Count = 1 Then
+            Dim box As TextBox = Me.Controls.Find(boxName, True)(0)
             If box.BackColor <> Color.Red Then
 
                 box.BackColor = Color.Red
@@ -135,6 +147,7 @@ Public Class formGame
             If game.lastLetter = 8 Then
                 Dim box As TextBox = Me.Controls.Find(value, True)(0)
                 box.Text = ""
+                'Vastasel juhul sisestatakse Kasti väärtuseks viimasena vajutatud täht
             Else
                 Dim box As TextBox = Me.Controls.Find(value, True)(0)
                 box.Text = UCase(Chr(game.lastLetter))
@@ -158,14 +171,14 @@ Public Class formGame
         End While
     End Sub
 
-    'Sub, mis töötab iga kord kui form avatakse
+    'Meetod, mis töötab iga kord kui form avatakse
     Private Sub formGame_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dim game As IGame
         game = New CGame
         Dim data As IDatabase
         data = New CDatabase
 
-        'Väärtuste taastamine algandmetele
+        'Väärtuste taastamine algväärtustele uue mängu jaoks
         game.intKast = Nothing
         game.intRida = Nothing
         game.redLettersHolder = Nothing
@@ -175,7 +188,6 @@ Public Class formGame
         hideTextboxes()
         game.timeLeft = game.timeSetting
         lblTimeLeft.Text = game.timeSetting
-
 
         'Randomize() tuleb kasutada, et juhusliku sõna leiaks newWord(), vastasel juhul leiab Rnd() iga kord sama random numbri
         Randomize()
@@ -195,7 +207,6 @@ Public Class formGame
             lblTimeText.Visible = False
         End If
 
-
     End Sub
 
     'Mängu lõpetamine, andmete edastamine, uue formi avamine
@@ -209,6 +220,7 @@ Public Class formGame
         Timer1.Enabled = False
         Timer2.Enabled = False
 
+        'Ajutine, tulevikus ei ole see koodis vaid andmebaasis triggeri kujul
         Dim avgTime As Integer = 0
         If data.getStat("GamesPlayed") <> 0 Then
             avgTime = (data.getStat("TimePlayed") + game.kestvus) / (data.getStat("GamesPlayed") + 1)
@@ -217,6 +229,7 @@ Public Class formGame
         End If
 
         'Mängude statistika uuendamine
+        'Ajutine, tulevikus ei ole see koodis vaid andmebaasis triggeri kujul
         data.updateStats(data.getStat("GamesPlayed") + 1, data.getStat("TimePlayed") + game.kestvus, avgTime)
 
         Dim kasArvatud As String
@@ -225,6 +238,7 @@ Public Class formGame
         Else
             kasArvatud = "ei"
         End If
+        'Mängu andmete sisestamine ajaloosse andmebaasis
         data.insertHistory(data.getStat("GamesPlayed"), game.gameMode, game.kestvus, game.strSona, kasArvatud)
 
         enableAllTextBoxes()
@@ -237,7 +251,6 @@ Public Class formGame
         Me.Close()
     End Sub
 
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim game As IGame
         game = New CGame
@@ -246,6 +259,9 @@ Public Class formGame
 
     End Sub
 
+    'Vastavalt raskusastmetele, vastava arvu kastide peitmine
+    'Kui Kerge siis 2 viimase rea peitmine
+    'Kui Tavaline siis 1 viimase rea peitmine
     Private Sub hideTextboxes()
         Dim game As IGame
         game = New CGame
@@ -265,16 +281,18 @@ Public Class formGame
         End If
     End Sub
 
+    'Meetod Kasti nähtamatuks tegemiseks
+    'input = value1 on textboxi nimi; value2 on boolean väärtus, kui False siis kast muudetakse nähtamatuks, kui True siis nähtavaks
     Private Sub hideThisTextBox(ByVal value1 As String, ByVal value2 As Boolean)
 
         If Me.Controls.Find(value1, True).Count = 1 Then
             Dim box As TextBox = Me.Controls.Find(value1, True)(0)
-            box.Visible = False
-
+            box.Visible = value2
 
         End If
     End Sub
 
+    'Kõikide kastide nähtavaks tegemine
     Private Sub enableAllTextBoxes()
         For i As Integer = 5 To 6
             For j As Integer = 1 To 6
@@ -294,5 +312,25 @@ Public Class formGame
         End If
         game.timeLeft = (game.timeLeft - 1)
         lblTimeLeft.Text = game.timeLeft
+    End Sub
+
+    'Listen for any click on on-screen keyboard
+    Private Sub txtA_Click(sender As Object, e As EventArgs) Handles txtA.Click, txtZ.Click, txtY.Click, txtX.Click, txtW.Click, txtV.Click, txtÜ.Click, txtU.Click, txtT.Click, txtS.Click, txtR.Click, txtQ.Click, txtP.Click, txtÕ.Click, txtÖ.Click, txtO.Click, txtN.Click, txtM.Click, txtL.Click, txtK.Click, txtJ.Click, txtI.Click, txtH.Click, txtG.Click, txtF.Click, txtE.Click, txtD.Click, txtC.Click, txtB.Click, txtÄ.Click, btnEnter.Click, btnDelete.Click
+        Dim game As IGame
+        game = New CGame
+
+        If sender.Text = "ENTER" Then
+            game.lastLetter = 13
+        ElseIf sender.Text = "KUSTUTA" Then
+            game.lastLetter = 8
+        Else
+            'viimase klahvi ascii koodi salvestamine lastLetterisse
+            game.lastLetter = Asc(sender.Text)
+
+        End If
+
+        gameEngine()
+
+        txtDebug2.Text = sender.Text
     End Sub
 End Class
