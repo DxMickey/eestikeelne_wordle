@@ -3,7 +3,7 @@
 
     'Mängu andmete lisamine ajaloo tabelisse andmebaasis
     'input = kõik ajaloo tabelis olevad andmete tulbad
-    Private Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String) Implements IDatabase.insertHistory
+    Private Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String) Implements IDatabase.insertHistory
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -12,26 +12,9 @@
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",        '" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "')"
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ")"
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
-    End Sub
-
-    'Statistikas mängitud mängude arvu suurendamine
-    'Ajutine, uus lahendus on andmebaasis triggeritega sama asi lahendada
-    Private Sub updateStats(value1 As Integer, value2 As Integer, value3 As Integer) Implements IDatabase.updateStats
-        Dim SQLconnection As New SQLite.SQLiteConnection()
-        Dim SQLcommand As SQLite.SQLiteCommand
-
-        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-        SQLconnection.Open()
-
-        SQLcommand = SQLconnection.CreateCommand
-
-        SQLcommand.CommandText = "INSERT Or REPLACE INTO Statistika VALUES(1, " & value1 & ", " & value2 & ", " & value3 & ")"
-        SQLcommand.ExecuteNonQuery()
-        SQLconnection.Close()
-
     End Sub
 
     'Ajaloo uuendamine history_view viewist
@@ -69,7 +52,7 @@
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT " & value & " FROM statistika WHERE ID = 1"
+        SQLcommand.CommandText = "SELECT " & value & " FROM statistika"
         Dim sqlResponse As String = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
         Return sqlResponse
