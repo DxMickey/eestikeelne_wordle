@@ -75,6 +75,7 @@ Partial Class formMenu
         Me.Controls.Add(Me.btnHistory)
         Me.Controls.Add(Me.btnPlay)
         Me.Name = "formMenu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()

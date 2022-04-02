@@ -190,11 +190,26 @@
     'ArvatudSona-st viimase tähe kustutamine
     Private Sub deleteLastKey() Implements IGame.deleteLastKey
         Dim oldArvatud As String = ArvatudSona
+        Dim redLetters As String = redLettersHolder
+
         ArvatudSona = Nothing
+
 
         If oldArvatud.Length <> 0 Then
             ArvatudSona = oldArvatud.Substring(0, oldArvatud.Length - 1)
         End If
+
+        If redLetters <> Nothing Then
+            Dim charAtRedIndex As String = redLetters.Chars(redLetters.Length - 1)
+            Dim charAtArvatudIndex As String = oldArvatud.Chars(oldArvatud.Length - 1)
+
+            If charAtRedIndex = charAtArvatudIndex Then
+                redLettersHolder = Nothing
+                redLettersHolder = redLetters.Substring(0, redLetters.Length - 1)
+            End If
+        End If
+
+
 
     End Sub
 

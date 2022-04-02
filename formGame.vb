@@ -32,11 +32,6 @@ Public Class formGame
 
         End If
 
-        'Kui vajutatud nupp On Enter ja viimane täht On sisestatud, uuenda värve
-        If game.lastLetter = 13 And game.intKast = game.maxKast Then
-            updateColors()
-
-        End If
 
         'Kui letterCheck tagastab True ja Kasti arv pole max kasti arv
         If game.letterCheck(game.lastLetter) And game.intKast <> game.maxKast Then
@@ -60,22 +55,33 @@ Public Class formGame
         'Kui vajutatud nupp on Enter ja Kasti number on maksimaalne
         If game.lastLetter = 13 And game.intKast = game.maxKast Then
 
-            'Kui sõna on arvatud, või read on otsa saanud, lõpeta mäng
-            If game.gameOver() = True Then
-                finishGame()
-                'Vastasel juhul väärtuste taastamine uue rea jaoks ja rea suurendamine ühe võrra
+
+            If data.isWordInList(game.ArvatudSona) > 0 Then
+
+
+
+                'Kui sõna on arvatud, või read on otsa saanud, lõpeta mäng
+                If game.gameOver() = True Then
+                    finishGame()
+                    'Vastasel juhul väärtuste taastamine uue rea jaoks ja rea suurendamine ühe võrra
+                Else
+                    updateColors()
+                    game.intRida = 1
+                    game.intKast = Nothing
+                    'Holderi tõstmine ümber punaste tähtede stringi ja Holderi tühjaks tegemine
+                    game.redLetters = game.redLettersHolder
+                    game.redLettersHolder = Nothing
+                    game.ArvatudSona = Nothing
+
+                End If
             Else
-                game.intRida = 1
-                game.intKast = Nothing
-                'Holderi tõstmine ümber punaste tähtede stringi ja Holderi tühjaks tegemine
-                game.redLetters = game.redLettersHolder
-                game.redLettersHolder = Nothing
-                game.ArvatudSona = Nothing
+
+                MessageBox.Show("Sellist sõna pole listis")
 
             End If
 
         End If
-        txtDebug2.Text = game.ArvatudSona
+
     End Sub
 
     'Meetod kastide värvide uuendamiseks

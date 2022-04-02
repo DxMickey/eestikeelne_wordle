@@ -34,6 +34,40 @@
 
     End Sub
 
+    Private Function isWordInList(value As String) As Object Implements IDatabase.isWordInList
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+        Dim game As IGame
+        game = New CGame
+        Dim millineList As String
+        Dim number As Integer = 0
+
+        If game.gameMode = "Kerge" Then
+            millineList = "sonadeListEasy"
+        ElseIf game.gameMode = "Tavaline" Then
+            millineList = "sonadeList"
+        Else
+            millineList = "sonadeListHard"
+
+        End If
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "SELECT sonaID FROM '" & millineList & "' WHERE sona = '" & LCase(value) & "'"
+        Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
+        SQLconnection.Close()
+        If sqlResponse = 0 Then
+            Return 0
+        Else
+            Return 1
+        End If
+
+
+    End Function
+
     'Ajaloo uuendamine history_view viewist
     'output = tabel, kuhu on laetud history_view
     Private Function getHistory() Implements IDatabase.getHistory
