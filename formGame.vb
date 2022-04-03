@@ -31,12 +31,7 @@ Public Class formGame
             game.intKast = -1
 
         End If
-
-        'Kui vajutatud nupp On Enter ja viimane täht On sisestatud, uuenda värve
-        If game.lastLetter = 13 And game.intKast = game.maxKast Then
-            updateColors()
-
-        End If
+        txtDebug2.Text = data.howManyWords()
 
         'Kui letterCheck tagastab True ja Kasti arv pole max kasti arv
         If game.letterCheck(game.lastLetter) And game.intKast <> game.maxKast Then
@@ -60,22 +55,33 @@ Public Class formGame
         'Kui vajutatud nupp on Enter ja Kasti number on maksimaalne
         If game.lastLetter = 13 And game.intKast = game.maxKast Then
 
-            'Kui sõna on arvatud, või read on otsa saanud, lõpeta mäng
-            If game.gameOver() = True Then
-                finishGame()
-                'Vastasel juhul väärtuste taastamine uue rea jaoks ja rea suurendamine ühe võrra
+
+            If data.isWordInList(game.ArvatudSona) > 0 Then
+
+
+
+                'Kui sõna on arvatud, või read on otsa saanud, lõpeta mäng
+                If game.gameOver() = True Then
+                    finishGame()
+                    'Vastasel juhul väärtuste taastamine uue rea jaoks ja rea suurendamine ühe võrra
+                Else
+                    updateColors()
+                    game.intRida = 1
+                    game.intKast = Nothing
+                    'Holderi tõstmine ümber punaste tähtede stringi ja Holderi tühjaks tegemine
+                    game.redLetters = game.redLettersHolder
+                    game.redLettersHolder = Nothing
+                    game.ArvatudSona = Nothing
+
+                End If
             Else
-                game.intRida = 1
-                game.intKast = Nothing
-                'Holderi tõstmine ümber punaste tähtede stringi ja Holderi tühjaks tegemine
-                game.redLetters = game.redLettersHolder
-                game.redLettersHolder = Nothing
-                game.ArvatudSona = Nothing
+
+                MessageBox.Show("Sellist sõna pole listis")
 
             End If
 
         End If
-        txtDebug2.Text = game.ArvatudSona
+
     End Sub
 
     'Meetod kastide värvide uuendamiseks
@@ -164,10 +170,10 @@ Public Class formGame
         Dim data As IDatabase
         data = New CDatabase
 
-        game.strSona = UCase(data.getSona(Int((3000 * Rnd()) + 1)))
+        game.strSona = UCase(data.getSona(Int((data.howManyWords() * Rnd()) + 1)))
         'Hetkel on sõnade tekstifailis tühimikus, seega kui tuleb tühimik, tuleb uus sõna valida
         While game.strSona = Nothing
-            game.strSona = UCase(data.getSona(Int((3000 * Rnd()) + 1)))
+            game.strSona = UCase(data.getSona(Int((data.howManyWords() * Rnd()) + 1)))
         End While
     End Sub
 
@@ -193,7 +199,18 @@ Public Class formGame
         Randomize()
         'Peab olema true, et klahvivajutusi oleks võimalik jälgida
         Me.KeyPreview = True
-        newWord()
+
+        If game.kasPiiramatu = False Then
+            If game.misKuupaev <> Date.Today Then
+                game.misKuupaev = Date.Today
+                newWord()
+            End If
+        Else
+            newWord()
+        End If
+
+
+
         txtDebug.Text = game.strSona
         Timer1.Enabled = True
         If game.kasTimed Then
@@ -334,6 +351,6 @@ Public Class formGame
 
         gameEngine()
 
-        txtDebug2.Text = sender.Text
+
     End Sub
 End Class

@@ -493,7 +493,7 @@ Partial Class formGame
         '
         Me.txtQ.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtQ.Location = New System.Drawing.Point(159, 564)
+        Me.txtQ.Location = New System.Drawing.Point(151, 559)
         Me.txtQ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtQ.Multiline = True
         Me.txtQ.Name = "txtQ"
@@ -507,7 +507,7 @@ Partial Class formGame
         '
         Me.txtW.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtW.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtW.Location = New System.Drawing.Point(195, 564)
+        Me.txtW.Location = New System.Drawing.Point(187, 559)
         Me.txtW.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtW.Multiline = True
         Me.txtW.Name = "txtW"
@@ -521,7 +521,7 @@ Partial Class formGame
         '
         Me.txtE.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtE.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtE.Location = New System.Drawing.Point(231, 564)
+        Me.txtE.Location = New System.Drawing.Point(223, 559)
         Me.txtE.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtE.Multiline = True
         Me.txtE.Name = "txtE"
@@ -535,7 +535,7 @@ Partial Class formGame
         '
         Me.txtR.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtR.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtR.Location = New System.Drawing.Point(267, 564)
+        Me.txtR.Location = New System.Drawing.Point(259, 559)
         Me.txtR.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtR.Multiline = True
         Me.txtR.Name = "txtR"
@@ -549,7 +549,7 @@ Partial Class formGame
         '
         Me.txtT.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtT.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtT.Location = New System.Drawing.Point(303, 564)
+        Me.txtT.Location = New System.Drawing.Point(295, 559)
         Me.txtT.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtT.Multiline = True
         Me.txtT.Name = "txtT"
@@ -563,7 +563,7 @@ Partial Class formGame
         '
         Me.txtY.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtY.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtY.Location = New System.Drawing.Point(339, 564)
+        Me.txtY.Location = New System.Drawing.Point(331, 559)
         Me.txtY.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtY.Multiline = True
         Me.txtY.Name = "txtY"
@@ -577,7 +577,7 @@ Partial Class formGame
         '
         Me.txtU.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtU.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtU.Location = New System.Drawing.Point(375, 564)
+        Me.txtU.Location = New System.Drawing.Point(367, 559)
         Me.txtU.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtU.Multiline = True
         Me.txtU.Name = "txtU"
@@ -591,7 +591,7 @@ Partial Class formGame
         '
         Me.txtI.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtI.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtI.Location = New System.Drawing.Point(411, 564)
+        Me.txtI.Location = New System.Drawing.Point(403, 559)
         Me.txtI.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtI.Multiline = True
         Me.txtI.Name = "txtI"
@@ -605,7 +605,7 @@ Partial Class formGame
         '
         Me.txtO.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtO.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtO.Location = New System.Drawing.Point(447, 564)
+        Me.txtO.Location = New System.Drawing.Point(439, 559)
         Me.txtO.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtO.Multiline = True
         Me.txtO.Name = "txtO"
@@ -619,7 +619,7 @@ Partial Class formGame
         '
         Me.txtP.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtP.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtP.Location = New System.Drawing.Point(483, 564)
+        Me.txtP.Location = New System.Drawing.Point(475, 559)
         Me.txtP.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtP.Multiline = True
         Me.txtP.Name = "txtP"
@@ -633,7 +633,7 @@ Partial Class formGame
         '
         Me.txtÜ.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtÜ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtÜ.Location = New System.Drawing.Point(519, 564)
+        Me.txtÜ.Location = New System.Drawing.Point(511, 559)
         Me.txtÜ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtÜ.Multiline = True
         Me.txtÜ.Name = "txtÜ"
@@ -647,7 +647,7 @@ Partial Class formGame
         '
         Me.txtÕ.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtÕ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtÕ.Location = New System.Drawing.Point(555, 564)
+        Me.txtÕ.Location = New System.Drawing.Point(547, 559)
         Me.txtÕ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtÕ.Multiline = True
         Me.txtÕ.Name = "txtÕ"
@@ -661,7 +661,7 @@ Partial Class formGame
         '
         Me.txtÄ.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtÄ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtÄ.Location = New System.Drawing.Point(536, 600)
+        Me.txtÄ.Location = New System.Drawing.Point(528, 595)
         Me.txtÄ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtÄ.Multiline = True
         Me.txtÄ.Name = "txtÄ"
@@ -675,7 +675,7 @@ Partial Class formGame
         '
         Me.txtÖ.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtÖ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtÖ.Location = New System.Drawing.Point(500, 600)
+        Me.txtÖ.Location = New System.Drawing.Point(492, 595)
         Me.txtÖ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtÖ.Multiline = True
         Me.txtÖ.Name = "txtÖ"
@@ -689,7 +689,7 @@ Partial Class formGame
         '
         Me.txtL.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtL.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtL.Location = New System.Drawing.Point(464, 600)
+        Me.txtL.Location = New System.Drawing.Point(456, 595)
         Me.txtL.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtL.Multiline = True
         Me.txtL.Name = "txtL"
@@ -703,7 +703,7 @@ Partial Class formGame
         '
         Me.txtK.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtK.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtK.Location = New System.Drawing.Point(428, 600)
+        Me.txtK.Location = New System.Drawing.Point(420, 595)
         Me.txtK.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtK.Multiline = True
         Me.txtK.Name = "txtK"
@@ -717,7 +717,7 @@ Partial Class formGame
         '
         Me.txtJ.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtJ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtJ.Location = New System.Drawing.Point(392, 600)
+        Me.txtJ.Location = New System.Drawing.Point(384, 595)
         Me.txtJ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtJ.Multiline = True
         Me.txtJ.Name = "txtJ"
@@ -731,7 +731,7 @@ Partial Class formGame
         '
         Me.txtH.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtH.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtH.Location = New System.Drawing.Point(356, 600)
+        Me.txtH.Location = New System.Drawing.Point(348, 595)
         Me.txtH.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtH.Multiline = True
         Me.txtH.Name = "txtH"
@@ -745,7 +745,7 @@ Partial Class formGame
         '
         Me.txtG.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtG.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtG.Location = New System.Drawing.Point(320, 600)
+        Me.txtG.Location = New System.Drawing.Point(312, 595)
         Me.txtG.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtG.Multiline = True
         Me.txtG.Name = "txtG"
@@ -759,7 +759,7 @@ Partial Class formGame
         '
         Me.txtF.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtF.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtF.Location = New System.Drawing.Point(284, 600)
+        Me.txtF.Location = New System.Drawing.Point(276, 595)
         Me.txtF.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtF.Multiline = True
         Me.txtF.Name = "txtF"
@@ -773,7 +773,7 @@ Partial Class formGame
         '
         Me.txtD.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtD.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtD.Location = New System.Drawing.Point(248, 600)
+        Me.txtD.Location = New System.Drawing.Point(240, 595)
         Me.txtD.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtD.Multiline = True
         Me.txtD.Name = "txtD"
@@ -787,7 +787,7 @@ Partial Class formGame
         '
         Me.txtS.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtS.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtS.Location = New System.Drawing.Point(212, 600)
+        Me.txtS.Location = New System.Drawing.Point(204, 595)
         Me.txtS.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtS.Multiline = True
         Me.txtS.Name = "txtS"
@@ -801,7 +801,7 @@ Partial Class formGame
         '
         Me.txtA.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtA.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtA.Location = New System.Drawing.Point(176, 600)
+        Me.txtA.Location = New System.Drawing.Point(168, 595)
         Me.txtA.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtA.Multiline = True
         Me.txtA.Name = "txtA"
@@ -815,7 +815,7 @@ Partial Class formGame
         '
         Me.txtM.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtM.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtM.Location = New System.Drawing.Point(464, 636)
+        Me.txtM.Location = New System.Drawing.Point(456, 631)
         Me.txtM.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtM.Multiline = True
         Me.txtM.Name = "txtM"
@@ -829,7 +829,7 @@ Partial Class formGame
         '
         Me.txtN.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtN.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtN.Location = New System.Drawing.Point(428, 636)
+        Me.txtN.Location = New System.Drawing.Point(420, 631)
         Me.txtN.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtN.Multiline = True
         Me.txtN.Name = "txtN"
@@ -843,7 +843,7 @@ Partial Class formGame
         '
         Me.txtB.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtB.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtB.Location = New System.Drawing.Point(392, 636)
+        Me.txtB.Location = New System.Drawing.Point(384, 631)
         Me.txtB.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtB.Multiline = True
         Me.txtB.Name = "txtB"
@@ -857,7 +857,7 @@ Partial Class formGame
         '
         Me.txtV.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtV.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtV.Location = New System.Drawing.Point(356, 636)
+        Me.txtV.Location = New System.Drawing.Point(348, 631)
         Me.txtV.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtV.Multiline = True
         Me.txtV.Name = "txtV"
@@ -871,7 +871,7 @@ Partial Class formGame
         '
         Me.txtC.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtC.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtC.Location = New System.Drawing.Point(320, 636)
+        Me.txtC.Location = New System.Drawing.Point(312, 631)
         Me.txtC.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtC.Multiline = True
         Me.txtC.Name = "txtC"
@@ -885,7 +885,7 @@ Partial Class formGame
         '
         Me.txtX.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtX.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtX.Location = New System.Drawing.Point(284, 636)
+        Me.txtX.Location = New System.Drawing.Point(276, 631)
         Me.txtX.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtX.Multiline = True
         Me.txtX.Name = "txtX"
@@ -899,7 +899,7 @@ Partial Class formGame
         '
         Me.txtZ.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtZ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtZ.Location = New System.Drawing.Point(248, 636)
+        Me.txtZ.Location = New System.Drawing.Point(240, 631)
         Me.txtZ.MinimumSize = New System.Drawing.Size(30, 30)
         Me.txtZ.Multiline = True
         Me.txtZ.Name = "txtZ"
@@ -1032,7 +1032,7 @@ Partial Class formGame
         'btnEnter
         '
         Me.btnEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!)
-        Me.btnEnter.Location = New System.Drawing.Point(161, 636)
+        Me.btnEnter.Location = New System.Drawing.Point(153, 631)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(81, 30)
         Me.btnEnter.TabIndex = 72
@@ -1042,7 +1042,7 @@ Partial Class formGame
         'btnDelete
         '
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!)
-        Me.btnDelete.Location = New System.Drawing.Point(500, 636)
+        Me.btnDelete.Location = New System.Drawing.Point(492, 631)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(109, 30)
         Me.btnDelete.TabIndex = 73

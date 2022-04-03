@@ -1,5 +1,10 @@
 ﻿Public Class formMenu
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
+        Dim game As IGame
+        game = New CGame
+
+        game.kasPiiramatu = True
+
         Dim position = Me.Bounds
         Dim newForm As New formGameSettings
         AddHandler newForm.Load, Sub() newForm.Bounds = position
@@ -31,6 +36,25 @@
         newForm.Show()
         Me.Close()
     End Sub
+
+ jannoBranch
+    Private Sub btnClassic_Click(sender As Object, e As EventArgs) Handles btnClassic.Click
+        Dim game As IGame
+        game = New CGame
+
+        game.kasPiiramatu = False
+        'Väärtuste taastamine algseadetele
+        game.kasTimed = False
+        game.gameMode = "Tavaline"
+        game.maxKast = 5
+
+        Dim position = Me.Bounds
+        Dim newForm As New formGame
+        AddHandler newForm.Load, Sub() newForm.Bounds = position
+        newForm.Show()
+        Me.Close()
+    End Sub
+End Class
 
     Private Sub btnGraphics_Click(sender As Object, e As EventArgs) Handles btnGraphics.Click
         Dim position = Me.Bounds
@@ -166,3 +190,4 @@
     End Sub
 
 End Class
+ master
