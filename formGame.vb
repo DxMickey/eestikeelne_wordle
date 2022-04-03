@@ -237,26 +237,14 @@ Public Class formGame
         Timer1.Enabled = False
         Timer2.Enabled = False
 
-        'Ajutine, tulevikus ei ole see koodis vaid andmebaasis triggeri kujul
-        Dim avgTime As Integer = 0
-        If data.getStat("GamesPlayed") <> 0 Then
-            avgTime = (data.getStat("TimePlayed") + game.kestvus) / (data.getStat("GamesPlayed") + 1)
-        ElseIf data.getStat("GamesPlayed") = 0 Then
-            avgTime = game.kestvus
-        End If
-
-        'Mängude statistika uuendamine
-        'Ajutine, tulevikus ei ole see koodis vaid andmebaasis triggeri kujul
-        data.updateStats(data.getStat("GamesPlayed") + 1, data.getStat("TimePlayed") + game.kestvus, avgTime)
-
         Dim kasArvatud As String
         If game.winOrLose = 1 Then
-            kasArvatud = "jah"
+            kasArvatud = "Jah"
         Else
-            kasArvatud = "ei"
+            kasArvatud = "Ei"
         End If
         'Mängu andmete sisestamine ajaloosse andmebaasis
-        data.insertHistory(data.getStat("GamesPlayed"), game.gameMode, game.kestvus, game.strSona, kasArvatud)
+        data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida)
 
         enableAllTextBoxes()
 

@@ -6,9 +6,7 @@
 
     Function getHistory()
 
-    Sub updateStats(value1 As Integer, value2 As Integer, value3 As Integer)
-
-    Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String)
+    Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String)
 
     Function isWordInList(value As String)
 
