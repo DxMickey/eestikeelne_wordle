@@ -5,6 +5,8 @@
     Property intKast As Integer
     Property lastLetter As Integer
     Property redLetters As String
+    Property kasPiiramatu As Boolean
+    Property misKuupaev As Date
 
     Property redLettersHolder As String
 

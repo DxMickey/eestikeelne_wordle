@@ -15,6 +15,26 @@
     Shared intTimeLeft As Integer
     Shared intTimeSetting As Integer
     Shared boolKasTimed As Boolean
+    Shared boolKasPiiramatu As Boolean
+    Shared intMisKuupaev As Date
+
+    Public Property misKuupaev As Date Implements IGame.misKuupaev
+        Get
+            Return intMisKuupaev
+        End Get
+        Set(ByVal value As Date)
+            intMisKuupaev = value
+        End Set
+    End Property
+
+    Private Property kasPiiramatu As Boolean Implements IGame.kasPiiramatu
+        Get
+            Return boolKasPiiramatu
+        End Get
+        Set(ByVal value As Boolean)
+            boolKasPiiramatu = value
+        End Set
+    End Property
 
     Private Property kasTimed As Boolean Implements IGame.kasTimed
         Get
@@ -190,11 +210,26 @@
     'ArvatudSona-st viimase tähe kustutamine
     Private Sub deleteLastKey() Implements IGame.deleteLastKey
         Dim oldArvatud As String = ArvatudSona
+        Dim redLetters As String = redLettersHolder
+
         ArvatudSona = Nothing
+
 
         If oldArvatud.Length <> 0 Then
             ArvatudSona = oldArvatud.Substring(0, oldArvatud.Length - 1)
         End If
+
+        If redLetters <> Nothing Then
+            Dim charAtRedIndex As String = redLetters.Chars(redLetters.Length - 1)
+            Dim charAtArvatudIndex As String = oldArvatud.Chars(oldArvatud.Length - 1)
+
+            If charAtRedIndex = charAtArvatudIndex Then
+                redLettersHolder = Nothing
+                redLettersHolder = redLetters.Substring(0, redLetters.Length - 1)
+            End If
+        End If
+
+
 
     End Sub
 

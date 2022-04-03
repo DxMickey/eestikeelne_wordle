@@ -8,6 +8,10 @@
 
     Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String)
 
+    Function isWordInList(value As String)
+
+    Function howManyWords()
+
 
 
 
