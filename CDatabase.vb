@@ -18,23 +18,6 @@
     End Sub
 
 
-    'Statistikas mängitud mängude arvu suurendamine
-    'Ajutine, uus lahendus on andmebaasis triggeritega sama asi lahendada
-    Private Sub updateStats(value1 As Integer, value2 As Integer, value3 As Integer) Implements IDatabase.updateStats
-        Dim SQLconnection As New SQLite.SQLiteConnection()
-        Dim SQLcommand As SQLite.SQLiteCommand
-
-        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-        SQLconnection.Open()
-
-        SQLcommand = SQLconnection.CreateCommand
-
-        SQLcommand.CommandText = "INSERT Or REPLACE INTO Statistika VALUES(1, " & value1 & ", " & value2 & ", " & value3 & ")"
-        SQLcommand.ExecuteNonQuery()
-        SQLconnection.Close()
-
-    End Sub
-
     Public Function howManyWords() As Object Implements IDatabase.howManyWords
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
