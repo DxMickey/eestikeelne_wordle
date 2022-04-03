@@ -37,7 +37,7 @@
         Me.Close()
     End Sub
 
- jannoBranch
+
     Private Sub btnClassic_Click(sender As Object, e As EventArgs) Handles btnClassic.Click
         Dim game As IGame
         game = New CGame
@@ -54,7 +54,7 @@
         newForm.Show()
         Me.Close()
     End Sub
-End Class
+
 
     Private Sub btnGraphics_Click(sender As Object, e As EventArgs) Handles btnGraphics.Click
         Dim position = Me.Bounds
@@ -190,4 +190,3 @@ End Class
     End Sub
 
 End Class
- master
