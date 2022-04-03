@@ -12,6 +12,8 @@
 
     Function isWordInList(value As String)
 
+    Function howManyWords()
+
 
 
 

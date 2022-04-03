@@ -15,6 +15,26 @@
     Shared intTimeLeft As Integer
     Shared intTimeSetting As Integer
     Shared boolKasTimed As Boolean
+    Shared boolKasPiiramatu As Boolean
+    Shared intMisKuupaev As Date
+
+    Public Property misKuupaev As Date Implements IGame.misKuupaev
+        Get
+            Return intMisKuupaev
+        End Get
+        Set(ByVal value As Date)
+            intMisKuupaev = value
+        End Set
+    End Property
+
+    Private Property kasPiiramatu As Boolean Implements IGame.kasPiiramatu
+        Get
+            Return boolKasPiiramatu
+        End Get
+        Set(ByVal value As Boolean)
+            boolKasPiiramatu = value
+        End Set
+    End Property
 
     Private Property kasTimed As Boolean Implements IGame.kasTimed
         Get

@@ -31,7 +31,7 @@ Public Class formGame
             game.intKast = -1
 
         End If
-
+        txtDebug2.Text = data.howManyWords()
 
         'Kui letterCheck tagastab True ja Kasti arv pole max kasti arv
         If game.letterCheck(game.lastLetter) And game.intKast <> game.maxKast Then
@@ -170,10 +170,10 @@ Public Class formGame
         Dim data As IDatabase
         data = New CDatabase
 
-        game.strSona = UCase(data.getSona(Int((3000 * Rnd()) + 1)))
+        game.strSona = UCase(data.getSona(Int((data.howManyWords() * Rnd()) + 1)))
         'Hetkel on sõnade tekstifailis tühimikus, seega kui tuleb tühimik, tuleb uus sõna valida
         While game.strSona = Nothing
-            game.strSona = UCase(data.getSona(Int((3000 * Rnd()) + 1)))
+            game.strSona = UCase(data.getSona(Int((data.howManyWords() * Rnd()) + 1)))
         End While
     End Sub
 
@@ -199,7 +199,18 @@ Public Class formGame
         Randomize()
         'Peab olema true, et klahvivajutusi oleks võimalik jälgida
         Me.KeyPreview = True
-        newWord()
+
+        If game.kasPiiramatu = False Then
+            If game.misKuupaev <> Date.Today Then
+                game.misKuupaev = Date.Today
+                newWord()
+            End If
+        Else
+            newWord()
+        End If
+
+
+
         txtDebug.Text = game.strSona
         Timer1.Enabled = True
         If game.kasTimed Then

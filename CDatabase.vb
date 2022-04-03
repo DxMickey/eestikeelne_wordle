@@ -34,6 +34,35 @@
 
     End Sub
 
+    Public Function howManyWords() As Object Implements IDatabase.howManyWords
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+        Dim game As IGame
+        game = New CGame
+        Dim millineList As String
+
+        If game.gameMode = "Kerge" Then
+            millineList = "sonadeListEasy"
+        ElseIf game.gameMode = "Tavaline" Then
+            millineList = "sonadeList"
+        Else
+            millineList = "sonadeListHard"
+
+        End If
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "SELECT Count(sonaID) FROM '" & millineList & "'"
+        Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
+        SQLconnection.Close()
+
+        Return sqlResponse
+
+    End Function
+
     Private Function isWordInList(value As String) As Object Implements IDatabase.isWordInList
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand

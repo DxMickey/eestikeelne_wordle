@@ -26,20 +26,21 @@ Partial Class formMenu
         Me.btnHistory = New System.Windows.Forms.Button()
         Me.btnStats = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnClassic = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnPlay
         '
-        Me.btnPlay.Location = New System.Drawing.Point(303, 230)
+        Me.btnPlay.Location = New System.Drawing.Point(356, 229)
         Me.btnPlay.Name = "btnPlay"
         Me.btnPlay.Size = New System.Drawing.Size(75, 23)
         Me.btnPlay.TabIndex = 0
-        Me.btnPlay.Text = "Mängi"
+        Me.btnPlay.Text = "Piiramatu"
         Me.btnPlay.UseVisualStyleBackColor = True
         '
         'btnHistory
         '
-        Me.btnHistory.Location = New System.Drawing.Point(303, 361)
+        Me.btnHistory.Location = New System.Drawing.Point(303, 331)
         Me.btnHistory.Name = "btnHistory"
         Me.btnHistory.Size = New System.Drawing.Size(75, 23)
         Me.btnHistory.TabIndex = 1
@@ -48,7 +49,7 @@ Partial Class formMenu
         '
         'btnStats
         '
-        Me.btnStats.Location = New System.Drawing.Point(303, 319)
+        Me.btnStats.Location = New System.Drawing.Point(303, 283)
         Me.btnStats.Name = "btnStats"
         Me.btnStats.Size = New System.Drawing.Size(75, 23)
         Me.btnStats.TabIndex = 2
@@ -65,11 +66,21 @@ Partial Class formMenu
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Eestikeelne Wordle"
         '
+        'btnClassic
+        '
+        Me.btnClassic.Location = New System.Drawing.Point(254, 229)
+        Me.btnClassic.Name = "btnClassic"
+        Me.btnClassic.Size = New System.Drawing.Size(75, 23)
+        Me.btnClassic.TabIndex = 4
+        Me.btnClassic.Text = "Klassikaline"
+        Me.btnClassic.UseVisualStyleBackColor = True
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.btnClassic)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnStats)
         Me.Controls.Add(Me.btnHistory)
@@ -86,4 +97,5 @@ Partial Class formMenu
     Friend WithEvents btnHistory As Button
     Friend WithEvents btnStats As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnClassic As Button
 End Class
