@@ -348,6 +348,6 @@ Public Class formGame
 
         gameEngine()
 
-        txtDebug2.Text = sender.Text
+
     End Sub
 End Class
