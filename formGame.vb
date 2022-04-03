@@ -264,6 +264,9 @@ Public Class formGame
         Dim position = Me.Bounds
         Dim newForm As New formGameEnd
         AddHandler newForm.Load, Sub() newForm.Bounds = position
+        Dim colors As IGraphics
+        colors = New CGraphics
+        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
         newForm.Show()
         Me.Close()
     End Sub
