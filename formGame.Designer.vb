@@ -23,987 +23,101 @@ Partial Class formGame
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.txtRida1Kast1 = New System.Windows.Forms.TextBox()
-        Me.txtRida1Kast2 = New System.Windows.Forms.TextBox()
-        Me.txtRida1Kast3 = New System.Windows.Forms.TextBox()
-        Me.txtRida1Kast4 = New System.Windows.Forms.TextBox()
-        Me.txtRida1Kast5 = New System.Windows.Forms.TextBox()
-        Me.txtRida2Kast5 = New System.Windows.Forms.TextBox()
-        Me.txtRida2Kast4 = New System.Windows.Forms.TextBox()
-        Me.txtRida2Kast3 = New System.Windows.Forms.TextBox()
-        Me.txtRida2Kast2 = New System.Windows.Forms.TextBox()
-        Me.txtRida2Kast1 = New System.Windows.Forms.TextBox()
-        Me.txtRida3Kast5 = New System.Windows.Forms.TextBox()
-        Me.txtRida3Kast4 = New System.Windows.Forms.TextBox()
-        Me.txtRida3Kast3 = New System.Windows.Forms.TextBox()
-        Me.txtRida3Kast2 = New System.Windows.Forms.TextBox()
-        Me.txtRida3Kast1 = New System.Windows.Forms.TextBox()
-        Me.txtRida4Kast5 = New System.Windows.Forms.TextBox()
-        Me.txtRida4Kast4 = New System.Windows.Forms.TextBox()
-        Me.txtRida4Kast3 = New System.Windows.Forms.TextBox()
-        Me.txtRida4Kast2 = New System.Windows.Forms.TextBox()
-        Me.txtRida4Kast1 = New System.Windows.Forms.TextBox()
-        Me.txtRida5Kast5 = New System.Windows.Forms.TextBox()
-        Me.txtRida5Kast4 = New System.Windows.Forms.TextBox()
-        Me.txtRida5Kast3 = New System.Windows.Forms.TextBox()
-        Me.txtRida5Kast2 = New System.Windows.Forms.TextBox()
-        Me.txtRida5Kast1 = New System.Windows.Forms.TextBox()
-        Me.txtRida6Kast5 = New System.Windows.Forms.TextBox()
-        Me.txtRida6Kast4 = New System.Windows.Forms.TextBox()
-        Me.txtRida6Kast3 = New System.Windows.Forms.TextBox()
-        Me.txtRida6Kast2 = New System.Windows.Forms.TextBox()
-        Me.txtRida6Kast1 = New System.Windows.Forms.TextBox()
-        Me.txtQ = New System.Windows.Forms.TextBox()
-        Me.txtW = New System.Windows.Forms.TextBox()
-        Me.txtE = New System.Windows.Forms.TextBox()
-        Me.txtR = New System.Windows.Forms.TextBox()
-        Me.txtT = New System.Windows.Forms.TextBox()
-        Me.txtY = New System.Windows.Forms.TextBox()
-        Me.txtU = New System.Windows.Forms.TextBox()
-        Me.txtI = New System.Windows.Forms.TextBox()
-        Me.txtO = New System.Windows.Forms.TextBox()
-        Me.txtP = New System.Windows.Forms.TextBox()
-        Me.txtÜ = New System.Windows.Forms.TextBox()
-        Me.txtÕ = New System.Windows.Forms.TextBox()
-        Me.txtÄ = New System.Windows.Forms.TextBox()
-        Me.txtÖ = New System.Windows.Forms.TextBox()
-        Me.txtL = New System.Windows.Forms.TextBox()
-        Me.txtK = New System.Windows.Forms.TextBox()
-        Me.txtJ = New System.Windows.Forms.TextBox()
-        Me.txtH = New System.Windows.Forms.TextBox()
-        Me.txtG = New System.Windows.Forms.TextBox()
-        Me.txtF = New System.Windows.Forms.TextBox()
-        Me.txtD = New System.Windows.Forms.TextBox()
-        Me.txtS = New System.Windows.Forms.TextBox()
-        Me.txtA = New System.Windows.Forms.TextBox()
-        Me.txtM = New System.Windows.Forms.TextBox()
-        Me.txtN = New System.Windows.Forms.TextBox()
-        Me.txtB = New System.Windows.Forms.TextBox()
-        Me.txtV = New System.Windows.Forms.TextBox()
-        Me.txtC = New System.Windows.Forms.TextBox()
-        Me.txtX = New System.Windows.Forms.TextBox()
-        Me.txtZ = New System.Windows.Forms.TextBox()
         Me.txtDebug = New System.Windows.Forms.TextBox()
         Me.txtDebug2 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.txtRida6Kast6 = New System.Windows.Forms.TextBox()
-        Me.txtRida5Kast6 = New System.Windows.Forms.TextBox()
-        Me.txtRida4Kast6 = New System.Windows.Forms.TextBox()
-        Me.txtRida3Kast6 = New System.Windows.Forms.TextBox()
-        Me.txtRida2Kast6 = New System.Windows.Forms.TextBox()
-        Me.txtRida1Kast6 = New System.Windows.Forms.TextBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.lblTimeText = New System.Windows.Forms.Label()
         Me.lblTimeLeft = New System.Windows.Forms.Label()
-        Me.btnEnter = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.lblRida1Kast1 = New System.Windows.Forms.Label()
+        Me.lblRida1Kast2 = New System.Windows.Forms.Label()
+        Me.lblRida1Kast3 = New System.Windows.Forms.Label()
+        Me.lblRida1Kast4 = New System.Windows.Forms.Label()
+        Me.lblRida1Kast5 = New System.Windows.Forms.Label()
+        Me.lblRida1Kast6 = New System.Windows.Forms.Label()
+        Me.lblRida2Kast6 = New System.Windows.Forms.Label()
+        Me.lblRida2Kast5 = New System.Windows.Forms.Label()
+        Me.lblRida2Kast4 = New System.Windows.Forms.Label()
+        Me.lblRida2Kast3 = New System.Windows.Forms.Label()
+        Me.lblRida2Kast2 = New System.Windows.Forms.Label()
+        Me.lblRida2Kast1 = New System.Windows.Forms.Label()
+        Me.lblRida3Kast6 = New System.Windows.Forms.Label()
+        Me.lblRida3Kast5 = New System.Windows.Forms.Label()
+        Me.lblRida3Kast4 = New System.Windows.Forms.Label()
+        Me.lblRida3Kast3 = New System.Windows.Forms.Label()
+        Me.lblRida3Kast2 = New System.Windows.Forms.Label()
+        Me.lblRida3Kast1 = New System.Windows.Forms.Label()
+        Me.lblRida4Kast6 = New System.Windows.Forms.Label()
+        Me.lblRida4Kast5 = New System.Windows.Forms.Label()
+        Me.lblRida4Kast4 = New System.Windows.Forms.Label()
+        Me.lblRida4Kast3 = New System.Windows.Forms.Label()
+        Me.lblRida4Kast2 = New System.Windows.Forms.Label()
+        Me.lblRida4Kast1 = New System.Windows.Forms.Label()
+        Me.lblRida5Kast6 = New System.Windows.Forms.Label()
+        Me.lblRida5Kast5 = New System.Windows.Forms.Label()
+        Me.lblRida5Kast4 = New System.Windows.Forms.Label()
+        Me.lblRida5Kast3 = New System.Windows.Forms.Label()
+        Me.lblRida5Kast2 = New System.Windows.Forms.Label()
+        Me.lblRida5Kast1 = New System.Windows.Forms.Label()
+        Me.lblRida6Kast6 = New System.Windows.Forms.Label()
+        Me.lblRida6Kast5 = New System.Windows.Forms.Label()
+        Me.lblRida6Kast4 = New System.Windows.Forms.Label()
+        Me.lblRida6Kast3 = New System.Windows.Forms.Label()
+        Me.lblRida6Kast2 = New System.Windows.Forms.Label()
+        Me.lblRida6Kast1 = New System.Windows.Forms.Label()
+        Me.lblQ = New System.Windows.Forms.Label()
+        Me.lblW = New System.Windows.Forms.Label()
+        Me.lblR = New System.Windows.Forms.Label()
+        Me.lblE = New System.Windows.Forms.Label()
+        Me.lblI = New System.Windows.Forms.Label()
+        Me.lblU = New System.Windows.Forms.Label()
+        Me.lblY = New System.Windows.Forms.Label()
+        Me.lblT = New System.Windows.Forms.Label()
+        Me.lblÕ = New System.Windows.Forms.Label()
+        Me.lblÜ = New System.Windows.Forms.Label()
+        Me.lblP = New System.Windows.Forms.Label()
+        Me.lblO = New System.Windows.Forms.Label()
+        Me.lblS = New System.Windows.Forms.Label()
+        Me.lblA = New System.Windows.Forms.Label()
+        Me.lblD = New System.Windows.Forms.Label()
+        Me.lblF = New System.Windows.Forms.Label()
+        Me.lblG = New System.Windows.Forms.Label()
+        Me.lblH = New System.Windows.Forms.Label()
+        Me.lblJ = New System.Windows.Forms.Label()
+        Me.lblK = New System.Windows.Forms.Label()
+        Me.lblL = New System.Windows.Forms.Label()
+        Me.lblÖ = New System.Windows.Forms.Label()
+        Me.lblÄ = New System.Windows.Forms.Label()
+        Me.lblM = New System.Windows.Forms.Label()
+        Me.lblN = New System.Windows.Forms.Label()
+        Me.lblB = New System.Windows.Forms.Label()
+        Me.lblV = New System.Windows.Forms.Label()
+        Me.lblC = New System.Windows.Forms.Label()
+        Me.lblX = New System.Windows.Forms.Label()
+        Me.lblZ = New System.Windows.Forms.Label()
+        Me.lblEnter = New System.Windows.Forms.Label()
+        Me.lblBackspace = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'txtRida1Kast1
-        '
-        Me.txtRida1Kast1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida1Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida1Kast1.Location = New System.Drawing.Point(176, 146)
-        Me.txtRida1Kast1.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast1.Multiline = True
-        Me.txtRida1Kast1.Name = "txtRida1Kast1"
-        Me.txtRida1Kast1.ReadOnly = True
-        Me.txtRida1Kast1.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast1.TabIndex = 0
-        Me.txtRida1Kast1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida1Kast2
-        '
-        Me.txtRida1Kast2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida1Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida1Kast2.Location = New System.Drawing.Point(242, 146)
-        Me.txtRida1Kast2.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast2.Multiline = True
-        Me.txtRida1Kast2.Name = "txtRida1Kast2"
-        Me.txtRida1Kast2.ReadOnly = True
-        Me.txtRida1Kast2.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast2.TabIndex = 1
-        Me.txtRida1Kast2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida1Kast3
-        '
-        Me.txtRida1Kast3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida1Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida1Kast3.Location = New System.Drawing.Point(308, 146)
-        Me.txtRida1Kast3.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast3.Multiline = True
-        Me.txtRida1Kast3.Name = "txtRida1Kast3"
-        Me.txtRida1Kast3.ReadOnly = True
-        Me.txtRida1Kast3.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast3.TabIndex = 2
-        Me.txtRida1Kast3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida1Kast4
-        '
-        Me.txtRida1Kast4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida1Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida1Kast4.Location = New System.Drawing.Point(374, 146)
-        Me.txtRida1Kast4.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast4.Multiline = True
-        Me.txtRida1Kast4.Name = "txtRida1Kast4"
-        Me.txtRida1Kast4.ReadOnly = True
-        Me.txtRida1Kast4.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast4.TabIndex = 3
-        Me.txtRida1Kast4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida1Kast5
-        '
-        Me.txtRida1Kast5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida1Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida1Kast5.Location = New System.Drawing.Point(440, 146)
-        Me.txtRida1Kast5.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast5.Multiline = True
-        Me.txtRida1Kast5.Name = "txtRida1Kast5"
-        Me.txtRida1Kast5.ReadOnly = True
-        Me.txtRida1Kast5.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast5.TabIndex = 4
-        Me.txtRida1Kast5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida2Kast5
-        '
-        Me.txtRida2Kast5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida2Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida2Kast5.Location = New System.Drawing.Point(440, 212)
-        Me.txtRida2Kast5.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast5.Multiline = True
-        Me.txtRida2Kast5.Name = "txtRida2Kast5"
-        Me.txtRida2Kast5.ReadOnly = True
-        Me.txtRida2Kast5.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast5.TabIndex = 9
-        Me.txtRida2Kast5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida2Kast4
-        '
-        Me.txtRida2Kast4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida2Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida2Kast4.Location = New System.Drawing.Point(374, 212)
-        Me.txtRida2Kast4.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast4.Multiline = True
-        Me.txtRida2Kast4.Name = "txtRida2Kast4"
-        Me.txtRida2Kast4.ReadOnly = True
-        Me.txtRida2Kast4.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast4.TabIndex = 8
-        Me.txtRida2Kast4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida2Kast3
-        '
-        Me.txtRida2Kast3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida2Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida2Kast3.Location = New System.Drawing.Point(308, 212)
-        Me.txtRida2Kast3.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast3.Multiline = True
-        Me.txtRida2Kast3.Name = "txtRida2Kast3"
-        Me.txtRida2Kast3.ReadOnly = True
-        Me.txtRida2Kast3.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast3.TabIndex = 7
-        Me.txtRida2Kast3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida2Kast2
-        '
-        Me.txtRida2Kast2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida2Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida2Kast2.Location = New System.Drawing.Point(242, 212)
-        Me.txtRida2Kast2.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast2.Multiline = True
-        Me.txtRida2Kast2.Name = "txtRida2Kast2"
-        Me.txtRida2Kast2.ReadOnly = True
-        Me.txtRida2Kast2.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast2.TabIndex = 6
-        Me.txtRida2Kast2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida2Kast1
-        '
-        Me.txtRida2Kast1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida2Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida2Kast1.Location = New System.Drawing.Point(176, 212)
-        Me.txtRida2Kast1.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast1.Multiline = True
-        Me.txtRida2Kast1.Name = "txtRida2Kast1"
-        Me.txtRida2Kast1.ReadOnly = True
-        Me.txtRida2Kast1.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast1.TabIndex = 5
-        Me.txtRida2Kast1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida3Kast5
-        '
-        Me.txtRida3Kast5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida3Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida3Kast5.Location = New System.Drawing.Point(440, 278)
-        Me.txtRida3Kast5.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast5.Multiline = True
-        Me.txtRida3Kast5.Name = "txtRida3Kast5"
-        Me.txtRida3Kast5.ReadOnly = True
-        Me.txtRida3Kast5.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast5.TabIndex = 14
-        Me.txtRida3Kast5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida3Kast4
-        '
-        Me.txtRida3Kast4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida3Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida3Kast4.Location = New System.Drawing.Point(374, 278)
-        Me.txtRida3Kast4.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast4.Multiline = True
-        Me.txtRida3Kast4.Name = "txtRida3Kast4"
-        Me.txtRida3Kast4.ReadOnly = True
-        Me.txtRida3Kast4.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast4.TabIndex = 13
-        Me.txtRida3Kast4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida3Kast3
-        '
-        Me.txtRida3Kast3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida3Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida3Kast3.Location = New System.Drawing.Point(308, 278)
-        Me.txtRida3Kast3.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast3.Multiline = True
-        Me.txtRida3Kast3.Name = "txtRida3Kast3"
-        Me.txtRida3Kast3.ReadOnly = True
-        Me.txtRida3Kast3.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast3.TabIndex = 12
-        Me.txtRida3Kast3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida3Kast2
-        '
-        Me.txtRida3Kast2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida3Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida3Kast2.Location = New System.Drawing.Point(242, 278)
-        Me.txtRida3Kast2.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast2.Multiline = True
-        Me.txtRida3Kast2.Name = "txtRida3Kast2"
-        Me.txtRida3Kast2.ReadOnly = True
-        Me.txtRida3Kast2.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast2.TabIndex = 11
-        Me.txtRida3Kast2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida3Kast1
-        '
-        Me.txtRida3Kast1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida3Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida3Kast1.Location = New System.Drawing.Point(176, 278)
-        Me.txtRida3Kast1.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast1.Multiline = True
-        Me.txtRida3Kast1.Name = "txtRida3Kast1"
-        Me.txtRida3Kast1.ReadOnly = True
-        Me.txtRida3Kast1.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast1.TabIndex = 10
-        Me.txtRida3Kast1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida4Kast5
-        '
-        Me.txtRida4Kast5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida4Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida4Kast5.Location = New System.Drawing.Point(440, 344)
-        Me.txtRida4Kast5.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast5.Multiline = True
-        Me.txtRida4Kast5.Name = "txtRida4Kast5"
-        Me.txtRida4Kast5.ReadOnly = True
-        Me.txtRida4Kast5.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast5.TabIndex = 19
-        Me.txtRida4Kast5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida4Kast4
-        '
-        Me.txtRida4Kast4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida4Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida4Kast4.Location = New System.Drawing.Point(374, 344)
-        Me.txtRida4Kast4.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast4.Multiline = True
-        Me.txtRida4Kast4.Name = "txtRida4Kast4"
-        Me.txtRida4Kast4.ReadOnly = True
-        Me.txtRida4Kast4.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast4.TabIndex = 18
-        Me.txtRida4Kast4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida4Kast3
-        '
-        Me.txtRida4Kast3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida4Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida4Kast3.Location = New System.Drawing.Point(308, 344)
-        Me.txtRida4Kast3.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast3.Multiline = True
-        Me.txtRida4Kast3.Name = "txtRida4Kast3"
-        Me.txtRida4Kast3.ReadOnly = True
-        Me.txtRida4Kast3.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast3.TabIndex = 17
-        Me.txtRida4Kast3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida4Kast2
-        '
-        Me.txtRida4Kast2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida4Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida4Kast2.Location = New System.Drawing.Point(242, 344)
-        Me.txtRida4Kast2.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast2.Multiline = True
-        Me.txtRida4Kast2.Name = "txtRida4Kast2"
-        Me.txtRida4Kast2.ReadOnly = True
-        Me.txtRida4Kast2.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast2.TabIndex = 16
-        Me.txtRida4Kast2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida4Kast1
-        '
-        Me.txtRida4Kast1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida4Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida4Kast1.Location = New System.Drawing.Point(176, 344)
-        Me.txtRida4Kast1.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast1.Multiline = True
-        Me.txtRida4Kast1.Name = "txtRida4Kast1"
-        Me.txtRida4Kast1.ReadOnly = True
-        Me.txtRida4Kast1.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast1.TabIndex = 15
-        Me.txtRida4Kast1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida5Kast5
-        '
-        Me.txtRida5Kast5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida5Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida5Kast5.Location = New System.Drawing.Point(440, 410)
-        Me.txtRida5Kast5.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast5.Multiline = True
-        Me.txtRida5Kast5.Name = "txtRida5Kast5"
-        Me.txtRida5Kast5.ReadOnly = True
-        Me.txtRida5Kast5.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast5.TabIndex = 24
-        Me.txtRida5Kast5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida5Kast4
-        '
-        Me.txtRida5Kast4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida5Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida5Kast4.Location = New System.Drawing.Point(374, 410)
-        Me.txtRida5Kast4.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast4.Multiline = True
-        Me.txtRida5Kast4.Name = "txtRida5Kast4"
-        Me.txtRida5Kast4.ReadOnly = True
-        Me.txtRida5Kast4.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast4.TabIndex = 23
-        Me.txtRida5Kast4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida5Kast3
-        '
-        Me.txtRida5Kast3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida5Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida5Kast3.Location = New System.Drawing.Point(308, 410)
-        Me.txtRida5Kast3.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast3.Multiline = True
-        Me.txtRida5Kast3.Name = "txtRida5Kast3"
-        Me.txtRida5Kast3.ReadOnly = True
-        Me.txtRida5Kast3.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast3.TabIndex = 22
-        Me.txtRida5Kast3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida5Kast2
-        '
-        Me.txtRida5Kast2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida5Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida5Kast2.Location = New System.Drawing.Point(242, 410)
-        Me.txtRida5Kast2.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast2.Multiline = True
-        Me.txtRida5Kast2.Name = "txtRida5Kast2"
-        Me.txtRida5Kast2.ReadOnly = True
-        Me.txtRida5Kast2.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast2.TabIndex = 21
-        Me.txtRida5Kast2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida5Kast1
-        '
-        Me.txtRida5Kast1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida5Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida5Kast1.Location = New System.Drawing.Point(176, 410)
-        Me.txtRida5Kast1.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast1.Multiline = True
-        Me.txtRida5Kast1.Name = "txtRida5Kast1"
-        Me.txtRida5Kast1.ReadOnly = True
-        Me.txtRida5Kast1.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast1.TabIndex = 20
-        Me.txtRida5Kast1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida6Kast5
-        '
-        Me.txtRida6Kast5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida6Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida6Kast5.Location = New System.Drawing.Point(440, 476)
-        Me.txtRida6Kast5.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast5.Multiline = True
-        Me.txtRida6Kast5.Name = "txtRida6Kast5"
-        Me.txtRida6Kast5.ReadOnly = True
-        Me.txtRida6Kast5.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast5.TabIndex = 29
-        Me.txtRida6Kast5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida6Kast4
-        '
-        Me.txtRida6Kast4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida6Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida6Kast4.Location = New System.Drawing.Point(374, 476)
-        Me.txtRida6Kast4.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast4.Multiline = True
-        Me.txtRida6Kast4.Name = "txtRida6Kast4"
-        Me.txtRida6Kast4.ReadOnly = True
-        Me.txtRida6Kast4.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast4.TabIndex = 28
-        Me.txtRida6Kast4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida6Kast3
-        '
-        Me.txtRida6Kast3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida6Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida6Kast3.Location = New System.Drawing.Point(308, 476)
-        Me.txtRida6Kast3.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast3.Multiline = True
-        Me.txtRida6Kast3.Name = "txtRida6Kast3"
-        Me.txtRida6Kast3.ReadOnly = True
-        Me.txtRida6Kast3.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast3.TabIndex = 27
-        Me.txtRida6Kast3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida6Kast2
-        '
-        Me.txtRida6Kast2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida6Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida6Kast2.Location = New System.Drawing.Point(242, 476)
-        Me.txtRida6Kast2.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast2.Multiline = True
-        Me.txtRida6Kast2.Name = "txtRida6Kast2"
-        Me.txtRida6Kast2.ReadOnly = True
-        Me.txtRida6Kast2.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast2.TabIndex = 26
-        Me.txtRida6Kast2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida6Kast1
-        '
-        Me.txtRida6Kast1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida6Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida6Kast1.Location = New System.Drawing.Point(176, 476)
-        Me.txtRida6Kast1.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast1.Multiline = True
-        Me.txtRida6Kast1.Name = "txtRida6Kast1"
-        Me.txtRida6Kast1.ReadOnly = True
-        Me.txtRida6Kast1.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast1.TabIndex = 25
-        Me.txtRida6Kast1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtQ
-        '
-        Me.txtQ.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtQ.Location = New System.Drawing.Point(151, 559)
-        Me.txtQ.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtQ.Multiline = True
-        Me.txtQ.Name = "txtQ"
-        Me.txtQ.ReadOnly = True
-        Me.txtQ.Size = New System.Drawing.Size(30, 30)
-        Me.txtQ.TabIndex = 30
-        Me.txtQ.Text = "Q"
-        Me.txtQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtW
-        '
-        Me.txtW.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtW.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtW.Location = New System.Drawing.Point(187, 559)
-        Me.txtW.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtW.Multiline = True
-        Me.txtW.Name = "txtW"
-        Me.txtW.ReadOnly = True
-        Me.txtW.Size = New System.Drawing.Size(30, 30)
-        Me.txtW.TabIndex = 31
-        Me.txtW.Text = "W"
-        Me.txtW.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtE
-        '
-        Me.txtE.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtE.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtE.Location = New System.Drawing.Point(223, 559)
-        Me.txtE.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtE.Multiline = True
-        Me.txtE.Name = "txtE"
-        Me.txtE.ReadOnly = True
-        Me.txtE.Size = New System.Drawing.Size(30, 30)
-        Me.txtE.TabIndex = 32
-        Me.txtE.Text = "E"
-        Me.txtE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtR
-        '
-        Me.txtR.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtR.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtR.Location = New System.Drawing.Point(259, 559)
-        Me.txtR.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtR.Multiline = True
-        Me.txtR.Name = "txtR"
-        Me.txtR.ReadOnly = True
-        Me.txtR.Size = New System.Drawing.Size(30, 30)
-        Me.txtR.TabIndex = 33
-        Me.txtR.Text = "R"
-        Me.txtR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtT
-        '
-        Me.txtT.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtT.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtT.Location = New System.Drawing.Point(295, 559)
-        Me.txtT.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtT.Multiline = True
-        Me.txtT.Name = "txtT"
-        Me.txtT.ReadOnly = True
-        Me.txtT.Size = New System.Drawing.Size(30, 30)
-        Me.txtT.TabIndex = 34
-        Me.txtT.Text = "T"
-        Me.txtT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtY
-        '
-        Me.txtY.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtY.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtY.Location = New System.Drawing.Point(331, 559)
-        Me.txtY.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtY.Multiline = True
-        Me.txtY.Name = "txtY"
-        Me.txtY.ReadOnly = True
-        Me.txtY.Size = New System.Drawing.Size(30, 30)
-        Me.txtY.TabIndex = 35
-        Me.txtY.Text = "Y"
-        Me.txtY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtU
-        '
-        Me.txtU.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtU.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtU.Location = New System.Drawing.Point(367, 559)
-        Me.txtU.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtU.Multiline = True
-        Me.txtU.Name = "txtU"
-        Me.txtU.ReadOnly = True
-        Me.txtU.Size = New System.Drawing.Size(30, 30)
-        Me.txtU.TabIndex = 36
-        Me.txtU.Text = "U"
-        Me.txtU.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtI
-        '
-        Me.txtI.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtI.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtI.Location = New System.Drawing.Point(403, 559)
-        Me.txtI.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtI.Multiline = True
-        Me.txtI.Name = "txtI"
-        Me.txtI.ReadOnly = True
-        Me.txtI.Size = New System.Drawing.Size(30, 30)
-        Me.txtI.TabIndex = 37
-        Me.txtI.Text = "I"
-        Me.txtI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtO
-        '
-        Me.txtO.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtO.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtO.Location = New System.Drawing.Point(439, 559)
-        Me.txtO.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtO.Multiline = True
-        Me.txtO.Name = "txtO"
-        Me.txtO.ReadOnly = True
-        Me.txtO.Size = New System.Drawing.Size(30, 30)
-        Me.txtO.TabIndex = 38
-        Me.txtO.Text = "O"
-        Me.txtO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtP
-        '
-        Me.txtP.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtP.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtP.Location = New System.Drawing.Point(475, 559)
-        Me.txtP.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtP.Multiline = True
-        Me.txtP.Name = "txtP"
-        Me.txtP.ReadOnly = True
-        Me.txtP.Size = New System.Drawing.Size(30, 30)
-        Me.txtP.TabIndex = 39
-        Me.txtP.Text = "P"
-        Me.txtP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtÜ
-        '
-        Me.txtÜ.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtÜ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtÜ.Location = New System.Drawing.Point(511, 559)
-        Me.txtÜ.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtÜ.Multiline = True
-        Me.txtÜ.Name = "txtÜ"
-        Me.txtÜ.ReadOnly = True
-        Me.txtÜ.Size = New System.Drawing.Size(30, 30)
-        Me.txtÜ.TabIndex = 40
-        Me.txtÜ.Text = "Ü"
-        Me.txtÜ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtÕ
-        '
-        Me.txtÕ.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtÕ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtÕ.Location = New System.Drawing.Point(547, 559)
-        Me.txtÕ.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtÕ.Multiline = True
-        Me.txtÕ.Name = "txtÕ"
-        Me.txtÕ.ReadOnly = True
-        Me.txtÕ.Size = New System.Drawing.Size(30, 30)
-        Me.txtÕ.TabIndex = 41
-        Me.txtÕ.Text = "Õ"
-        Me.txtÕ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtÄ
-        '
-        Me.txtÄ.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtÄ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtÄ.Location = New System.Drawing.Point(528, 595)
-        Me.txtÄ.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtÄ.Multiline = True
-        Me.txtÄ.Name = "txtÄ"
-        Me.txtÄ.ReadOnly = True
-        Me.txtÄ.Size = New System.Drawing.Size(30, 30)
-        Me.txtÄ.TabIndex = 52
-        Me.txtÄ.Text = "Ä"
-        Me.txtÄ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtÖ
-        '
-        Me.txtÖ.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtÖ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtÖ.Location = New System.Drawing.Point(492, 595)
-        Me.txtÖ.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtÖ.Multiline = True
-        Me.txtÖ.Name = "txtÖ"
-        Me.txtÖ.ReadOnly = True
-        Me.txtÖ.Size = New System.Drawing.Size(30, 30)
-        Me.txtÖ.TabIndex = 51
-        Me.txtÖ.Text = "Ö"
-        Me.txtÖ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtL
-        '
-        Me.txtL.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtL.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtL.Location = New System.Drawing.Point(456, 595)
-        Me.txtL.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtL.Multiline = True
-        Me.txtL.Name = "txtL"
-        Me.txtL.ReadOnly = True
-        Me.txtL.Size = New System.Drawing.Size(30, 30)
-        Me.txtL.TabIndex = 50
-        Me.txtL.Text = "L"
-        Me.txtL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtK
-        '
-        Me.txtK.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtK.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtK.Location = New System.Drawing.Point(420, 595)
-        Me.txtK.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtK.Multiline = True
-        Me.txtK.Name = "txtK"
-        Me.txtK.ReadOnly = True
-        Me.txtK.Size = New System.Drawing.Size(30, 30)
-        Me.txtK.TabIndex = 49
-        Me.txtK.Text = "K"
-        Me.txtK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtJ
-        '
-        Me.txtJ.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtJ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtJ.Location = New System.Drawing.Point(384, 595)
-        Me.txtJ.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtJ.Multiline = True
-        Me.txtJ.Name = "txtJ"
-        Me.txtJ.ReadOnly = True
-        Me.txtJ.Size = New System.Drawing.Size(30, 30)
-        Me.txtJ.TabIndex = 48
-        Me.txtJ.Text = "J"
-        Me.txtJ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtH
-        '
-        Me.txtH.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtH.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtH.Location = New System.Drawing.Point(348, 595)
-        Me.txtH.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtH.Multiline = True
-        Me.txtH.Name = "txtH"
-        Me.txtH.ReadOnly = True
-        Me.txtH.Size = New System.Drawing.Size(30, 30)
-        Me.txtH.TabIndex = 47
-        Me.txtH.Text = "H"
-        Me.txtH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtG
-        '
-        Me.txtG.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtG.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtG.Location = New System.Drawing.Point(312, 595)
-        Me.txtG.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtG.Multiline = True
-        Me.txtG.Name = "txtG"
-        Me.txtG.ReadOnly = True
-        Me.txtG.Size = New System.Drawing.Size(30, 30)
-        Me.txtG.TabIndex = 46
-        Me.txtG.Text = "G"
-        Me.txtG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtF
-        '
-        Me.txtF.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtF.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtF.Location = New System.Drawing.Point(276, 595)
-        Me.txtF.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtF.Multiline = True
-        Me.txtF.Name = "txtF"
-        Me.txtF.ReadOnly = True
-        Me.txtF.Size = New System.Drawing.Size(30, 30)
-        Me.txtF.TabIndex = 45
-        Me.txtF.Text = "F"
-        Me.txtF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtD
-        '
-        Me.txtD.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtD.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtD.Location = New System.Drawing.Point(240, 595)
-        Me.txtD.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtD.Multiline = True
-        Me.txtD.Name = "txtD"
-        Me.txtD.ReadOnly = True
-        Me.txtD.Size = New System.Drawing.Size(30, 30)
-        Me.txtD.TabIndex = 44
-        Me.txtD.Text = "D"
-        Me.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtS
-        '
-        Me.txtS.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtS.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtS.Location = New System.Drawing.Point(204, 595)
-        Me.txtS.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtS.Multiline = True
-        Me.txtS.Name = "txtS"
-        Me.txtS.ReadOnly = True
-        Me.txtS.Size = New System.Drawing.Size(30, 30)
-        Me.txtS.TabIndex = 43
-        Me.txtS.Text = "S"
-        Me.txtS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtA
-        '
-        Me.txtA.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtA.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtA.Location = New System.Drawing.Point(168, 595)
-        Me.txtA.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtA.Multiline = True
-        Me.txtA.Name = "txtA"
-        Me.txtA.ReadOnly = True
-        Me.txtA.Size = New System.Drawing.Size(30, 30)
-        Me.txtA.TabIndex = 42
-        Me.txtA.Text = "A"
-        Me.txtA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtM
-        '
-        Me.txtM.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtM.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtM.Location = New System.Drawing.Point(456, 631)
-        Me.txtM.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtM.Multiline = True
-        Me.txtM.Name = "txtM"
-        Me.txtM.ReadOnly = True
-        Me.txtM.Size = New System.Drawing.Size(30, 30)
-        Me.txtM.TabIndex = 59
-        Me.txtM.Text = "M"
-        Me.txtM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtN
-        '
-        Me.txtN.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtN.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtN.Location = New System.Drawing.Point(420, 631)
-        Me.txtN.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtN.Multiline = True
-        Me.txtN.Name = "txtN"
-        Me.txtN.ReadOnly = True
-        Me.txtN.Size = New System.Drawing.Size(30, 30)
-        Me.txtN.TabIndex = 58
-        Me.txtN.Text = "N"
-        Me.txtN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtB
-        '
-        Me.txtB.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtB.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtB.Location = New System.Drawing.Point(384, 631)
-        Me.txtB.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtB.Multiline = True
-        Me.txtB.Name = "txtB"
-        Me.txtB.ReadOnly = True
-        Me.txtB.Size = New System.Drawing.Size(30, 30)
-        Me.txtB.TabIndex = 57
-        Me.txtB.Text = "B"
-        Me.txtB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtV
-        '
-        Me.txtV.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtV.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtV.Location = New System.Drawing.Point(348, 631)
-        Me.txtV.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtV.Multiline = True
-        Me.txtV.Name = "txtV"
-        Me.txtV.ReadOnly = True
-        Me.txtV.Size = New System.Drawing.Size(30, 30)
-        Me.txtV.TabIndex = 56
-        Me.txtV.Text = "V"
-        Me.txtV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtC
-        '
-        Me.txtC.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtC.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtC.Location = New System.Drawing.Point(312, 631)
-        Me.txtC.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtC.Multiline = True
-        Me.txtC.Name = "txtC"
-        Me.txtC.ReadOnly = True
-        Me.txtC.Size = New System.Drawing.Size(30, 30)
-        Me.txtC.TabIndex = 55
-        Me.txtC.Text = "C"
-        Me.txtC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtX
-        '
-        Me.txtX.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtX.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtX.Location = New System.Drawing.Point(276, 631)
-        Me.txtX.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtX.Multiline = True
-        Me.txtX.Name = "txtX"
-        Me.txtX.ReadOnly = True
-        Me.txtX.Size = New System.Drawing.Size(30, 30)
-        Me.txtX.TabIndex = 54
-        Me.txtX.Text = "X"
-        Me.txtX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtZ
-        '
-        Me.txtZ.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtZ.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!)
-        Me.txtZ.Location = New System.Drawing.Point(240, 631)
-        Me.txtZ.MinimumSize = New System.Drawing.Size(30, 30)
-        Me.txtZ.Multiline = True
-        Me.txtZ.Name = "txtZ"
-        Me.txtZ.ReadOnly = True
-        Me.txtZ.Size = New System.Drawing.Size(30, 30)
-        Me.txtZ.TabIndex = 53
-        Me.txtZ.Text = "Z"
-        Me.txtZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtDebug
         '
-        Me.txtDebug.Location = New System.Drawing.Point(195, 62)
+        Me.txtDebug.Location = New System.Drawing.Point(225, 62)
         Me.txtDebug.Name = "txtDebug"
+        Me.txtDebug.ReadOnly = True
         Me.txtDebug.Size = New System.Drawing.Size(316, 20)
         Me.txtDebug.TabIndex = 62
         '
         'txtDebug2
         '
-        Me.txtDebug2.Location = New System.Drawing.Point(242, 88)
+        Me.txtDebug2.Location = New System.Drawing.Point(276, 88)
         Me.txtDebug2.Name = "txtDebug2"
+        Me.txtDebug2.ReadOnly = True
         Me.txtDebug2.Size = New System.Drawing.Size(233, 20)
         Me.txtDebug2.TabIndex = 63
         '
         'Timer1
         '
         Me.Timer1.Interval = 1000
-        '
-        'txtRida6Kast6
-        '
-        Me.txtRida6Kast6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida6Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida6Kast6.Location = New System.Drawing.Point(506, 476)
-        Me.txtRida6Kast6.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast6.Multiline = True
-        Me.txtRida6Kast6.Name = "txtRida6Kast6"
-        Me.txtRida6Kast6.ReadOnly = True
-        Me.txtRida6Kast6.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida6Kast6.TabIndex = 69
-        Me.txtRida6Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida5Kast6
-        '
-        Me.txtRida5Kast6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida5Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida5Kast6.Location = New System.Drawing.Point(506, 410)
-        Me.txtRida5Kast6.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast6.Multiline = True
-        Me.txtRida5Kast6.Name = "txtRida5Kast6"
-        Me.txtRida5Kast6.ReadOnly = True
-        Me.txtRida5Kast6.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida5Kast6.TabIndex = 68
-        Me.txtRida5Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida4Kast6
-        '
-        Me.txtRida4Kast6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida4Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida4Kast6.Location = New System.Drawing.Point(506, 344)
-        Me.txtRida4Kast6.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast6.Multiline = True
-        Me.txtRida4Kast6.Name = "txtRida4Kast6"
-        Me.txtRida4Kast6.ReadOnly = True
-        Me.txtRida4Kast6.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida4Kast6.TabIndex = 67
-        Me.txtRida4Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida3Kast6
-        '
-        Me.txtRida3Kast6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida3Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida3Kast6.Location = New System.Drawing.Point(506, 278)
-        Me.txtRida3Kast6.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast6.Multiline = True
-        Me.txtRida3Kast6.Name = "txtRida3Kast6"
-        Me.txtRida3Kast6.ReadOnly = True
-        Me.txtRida3Kast6.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida3Kast6.TabIndex = 66
-        Me.txtRida3Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida2Kast6
-        '
-        Me.txtRida2Kast6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida2Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida2Kast6.Location = New System.Drawing.Point(506, 212)
-        Me.txtRida2Kast6.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast6.Multiline = True
-        Me.txtRida2Kast6.Name = "txtRida2Kast6"
-        Me.txtRida2Kast6.ReadOnly = True
-        Me.txtRida2Kast6.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida2Kast6.TabIndex = 65
-        Me.txtRida2Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtRida1Kast6
-        '
-        Me.txtRida1Kast6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txtRida1Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRida1Kast6.Location = New System.Drawing.Point(506, 146)
-        Me.txtRida1Kast6.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast6.Multiline = True
-        Me.txtRida1Kast6.Name = "txtRida1Kast6"
-        Me.txtRida1Kast6.ReadOnly = True
-        Me.txtRida1Kast6.Size = New System.Drawing.Size(60, 60)
-        Me.txtRida1Kast6.TabIndex = 64
-        Me.txtRida1Kast6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Timer2
         '
@@ -1029,182 +143,1077 @@ Partial Class formGame
         Me.lblTimeLeft.TabIndex = 71
         Me.lblTimeLeft.Text = "0"
         '
-        'btnEnter
+        'lblRida1Kast1
         '
-        Me.btnEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!)
-        Me.btnEnter.Location = New System.Drawing.Point(153, 631)
-        Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(81, 30)
-        Me.btnEnter.TabIndex = 72
-        Me.btnEnter.Text = "ENTER"
-        Me.btnEnter.UseVisualStyleBackColor = True
+        Me.lblRida1Kast1.BackColor = System.Drawing.Color.White
+        Me.lblRida1Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida1Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida1Kast1.Location = New System.Drawing.Point(187, 122)
+        Me.lblRida1Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast1.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast1.Name = "lblRida1Kast1"
+        Me.lblRida1Kast1.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast1.TabIndex = 74
+        Me.lblRida1Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnDelete
+        'lblRida1Kast2
         '
-        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!)
-        Me.btnDelete.Location = New System.Drawing.Point(492, 631)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(109, 30)
-        Me.btnDelete.TabIndex = 73
-        Me.btnDelete.Text = "KUSTUTA"
-        Me.btnDelete.UseVisualStyleBackColor = True
+        Me.lblRida1Kast2.BackColor = System.Drawing.Color.White
+        Me.lblRida1Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida1Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida1Kast2.Location = New System.Drawing.Point(253, 122)
+        Me.lblRida1Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast2.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast2.Name = "lblRida1Kast2"
+        Me.lblRida1Kast2.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast2.TabIndex = 75
+        Me.lblRida1Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida1Kast3
+        '
+        Me.lblRida1Kast3.BackColor = System.Drawing.Color.White
+        Me.lblRida1Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida1Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida1Kast3.Location = New System.Drawing.Point(319, 122)
+        Me.lblRida1Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast3.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast3.Name = "lblRida1Kast3"
+        Me.lblRida1Kast3.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast3.TabIndex = 76
+        Me.lblRida1Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida1Kast4
+        '
+        Me.lblRida1Kast4.BackColor = System.Drawing.Color.White
+        Me.lblRida1Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida1Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida1Kast4.Location = New System.Drawing.Point(385, 122)
+        Me.lblRida1Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast4.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast4.Name = "lblRida1Kast4"
+        Me.lblRida1Kast4.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast4.TabIndex = 77
+        Me.lblRida1Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida1Kast5
+        '
+        Me.lblRida1Kast5.BackColor = System.Drawing.Color.White
+        Me.lblRida1Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida1Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida1Kast5.Location = New System.Drawing.Point(451, 122)
+        Me.lblRida1Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast5.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast5.Name = "lblRida1Kast5"
+        Me.lblRida1Kast5.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast5.TabIndex = 78
+        Me.lblRida1Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida1Kast6
+        '
+        Me.lblRida1Kast6.BackColor = System.Drawing.Color.White
+        Me.lblRida1Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida1Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida1Kast6.Location = New System.Drawing.Point(517, 122)
+        Me.lblRida1Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast6.Name = "lblRida1Kast6"
+        Me.lblRida1Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast6.TabIndex = 79
+        Me.lblRida1Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida2Kast6
+        '
+        Me.lblRida2Kast6.BackColor = System.Drawing.Color.White
+        Me.lblRida2Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida2Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida2Kast6.Location = New System.Drawing.Point(517, 192)
+        Me.lblRida2Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast6.Name = "lblRida2Kast6"
+        Me.lblRida2Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast6.TabIndex = 85
+        Me.lblRida2Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida2Kast5
+        '
+        Me.lblRida2Kast5.BackColor = System.Drawing.Color.White
+        Me.lblRida2Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida2Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida2Kast5.Location = New System.Drawing.Point(451, 192)
+        Me.lblRida2Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast5.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast5.Name = "lblRida2Kast5"
+        Me.lblRida2Kast5.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast5.TabIndex = 84
+        Me.lblRida2Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida2Kast4
+        '
+        Me.lblRida2Kast4.BackColor = System.Drawing.Color.White
+        Me.lblRida2Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida2Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida2Kast4.Location = New System.Drawing.Point(385, 192)
+        Me.lblRida2Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast4.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast4.Name = "lblRida2Kast4"
+        Me.lblRida2Kast4.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast4.TabIndex = 83
+        Me.lblRida2Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida2Kast3
+        '
+        Me.lblRida2Kast3.BackColor = System.Drawing.Color.White
+        Me.lblRida2Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida2Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida2Kast3.Location = New System.Drawing.Point(319, 192)
+        Me.lblRida2Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast3.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast3.Name = "lblRida2Kast3"
+        Me.lblRida2Kast3.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast3.TabIndex = 82
+        Me.lblRida2Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida2Kast2
+        '
+        Me.lblRida2Kast2.BackColor = System.Drawing.Color.White
+        Me.lblRida2Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida2Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida2Kast2.Location = New System.Drawing.Point(253, 192)
+        Me.lblRida2Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast2.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast2.Name = "lblRida2Kast2"
+        Me.lblRida2Kast2.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast2.TabIndex = 81
+        Me.lblRida2Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida2Kast1
+        '
+        Me.lblRida2Kast1.BackColor = System.Drawing.Color.White
+        Me.lblRida2Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida2Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida2Kast1.Location = New System.Drawing.Point(187, 192)
+        Me.lblRida2Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast1.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast1.Name = "lblRida2Kast1"
+        Me.lblRida2Kast1.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast1.TabIndex = 80
+        Me.lblRida2Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida3Kast6
+        '
+        Me.lblRida3Kast6.BackColor = System.Drawing.Color.White
+        Me.lblRida3Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida3Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida3Kast6.Location = New System.Drawing.Point(517, 261)
+        Me.lblRida3Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast6.Name = "lblRida3Kast6"
+        Me.lblRida3Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast6.TabIndex = 91
+        Me.lblRida3Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida3Kast5
+        '
+        Me.lblRida3Kast5.BackColor = System.Drawing.Color.White
+        Me.lblRida3Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida3Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida3Kast5.Location = New System.Drawing.Point(451, 261)
+        Me.lblRida3Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast5.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast5.Name = "lblRida3Kast5"
+        Me.lblRida3Kast5.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast5.TabIndex = 90
+        Me.lblRida3Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida3Kast4
+        '
+        Me.lblRida3Kast4.BackColor = System.Drawing.Color.White
+        Me.lblRida3Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida3Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida3Kast4.Location = New System.Drawing.Point(385, 261)
+        Me.lblRida3Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast4.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast4.Name = "lblRida3Kast4"
+        Me.lblRida3Kast4.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast4.TabIndex = 89
+        Me.lblRida3Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida3Kast3
+        '
+        Me.lblRida3Kast3.BackColor = System.Drawing.Color.White
+        Me.lblRida3Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida3Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida3Kast3.Location = New System.Drawing.Point(319, 261)
+        Me.lblRida3Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast3.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast3.Name = "lblRida3Kast3"
+        Me.lblRida3Kast3.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast3.TabIndex = 88
+        Me.lblRida3Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida3Kast2
+        '
+        Me.lblRida3Kast2.BackColor = System.Drawing.Color.White
+        Me.lblRida3Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida3Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida3Kast2.Location = New System.Drawing.Point(253, 261)
+        Me.lblRida3Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast2.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast2.Name = "lblRida3Kast2"
+        Me.lblRida3Kast2.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast2.TabIndex = 87
+        Me.lblRida3Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida3Kast1
+        '
+        Me.lblRida3Kast1.BackColor = System.Drawing.Color.White
+        Me.lblRida3Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida3Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida3Kast1.Location = New System.Drawing.Point(187, 261)
+        Me.lblRida3Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast1.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast1.Name = "lblRida3Kast1"
+        Me.lblRida3Kast1.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast1.TabIndex = 86
+        Me.lblRida3Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida4Kast6
+        '
+        Me.lblRida4Kast6.BackColor = System.Drawing.Color.White
+        Me.lblRida4Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida4Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida4Kast6.Location = New System.Drawing.Point(517, 331)
+        Me.lblRida4Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast6.Name = "lblRida4Kast6"
+        Me.lblRida4Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast6.TabIndex = 97
+        Me.lblRida4Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida4Kast5
+        '
+        Me.lblRida4Kast5.BackColor = System.Drawing.Color.White
+        Me.lblRida4Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida4Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida4Kast5.Location = New System.Drawing.Point(451, 331)
+        Me.lblRida4Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast5.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast5.Name = "lblRida4Kast5"
+        Me.lblRida4Kast5.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast5.TabIndex = 96
+        Me.lblRida4Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida4Kast4
+        '
+        Me.lblRida4Kast4.BackColor = System.Drawing.Color.White
+        Me.lblRida4Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida4Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida4Kast4.Location = New System.Drawing.Point(385, 331)
+        Me.lblRida4Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast4.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast4.Name = "lblRida4Kast4"
+        Me.lblRida4Kast4.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast4.TabIndex = 95
+        Me.lblRida4Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida4Kast3
+        '
+        Me.lblRida4Kast3.BackColor = System.Drawing.Color.White
+        Me.lblRida4Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida4Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida4Kast3.Location = New System.Drawing.Point(319, 331)
+        Me.lblRida4Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast3.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast3.Name = "lblRida4Kast3"
+        Me.lblRida4Kast3.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast3.TabIndex = 94
+        Me.lblRida4Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida4Kast2
+        '
+        Me.lblRida4Kast2.BackColor = System.Drawing.Color.White
+        Me.lblRida4Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida4Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida4Kast2.Location = New System.Drawing.Point(253, 331)
+        Me.lblRida4Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast2.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast2.Name = "lblRida4Kast2"
+        Me.lblRida4Kast2.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast2.TabIndex = 93
+        Me.lblRida4Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida4Kast1
+        '
+        Me.lblRida4Kast1.BackColor = System.Drawing.Color.White
+        Me.lblRida4Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida4Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida4Kast1.Location = New System.Drawing.Point(187, 331)
+        Me.lblRida4Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast1.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast1.Name = "lblRida4Kast1"
+        Me.lblRida4Kast1.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast1.TabIndex = 92
+        Me.lblRida4Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida5Kast6
+        '
+        Me.lblRida5Kast6.BackColor = System.Drawing.Color.White
+        Me.lblRida5Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida5Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida5Kast6.Location = New System.Drawing.Point(517, 400)
+        Me.lblRida5Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast6.Name = "lblRida5Kast6"
+        Me.lblRida5Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast6.TabIndex = 103
+        Me.lblRida5Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida5Kast5
+        '
+        Me.lblRida5Kast5.BackColor = System.Drawing.Color.White
+        Me.lblRida5Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida5Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida5Kast5.Location = New System.Drawing.Point(451, 400)
+        Me.lblRida5Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast5.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast5.Name = "lblRida5Kast5"
+        Me.lblRida5Kast5.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast5.TabIndex = 102
+        Me.lblRida5Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida5Kast4
+        '
+        Me.lblRida5Kast4.BackColor = System.Drawing.Color.White
+        Me.lblRida5Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida5Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida5Kast4.Location = New System.Drawing.Point(385, 400)
+        Me.lblRida5Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast4.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast4.Name = "lblRida5Kast4"
+        Me.lblRida5Kast4.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast4.TabIndex = 101
+        Me.lblRida5Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida5Kast3
+        '
+        Me.lblRida5Kast3.BackColor = System.Drawing.Color.White
+        Me.lblRida5Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida5Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida5Kast3.Location = New System.Drawing.Point(319, 400)
+        Me.lblRida5Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast3.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast3.Name = "lblRida5Kast3"
+        Me.lblRida5Kast3.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast3.TabIndex = 100
+        Me.lblRida5Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida5Kast2
+        '
+        Me.lblRida5Kast2.BackColor = System.Drawing.Color.White
+        Me.lblRida5Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida5Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida5Kast2.Location = New System.Drawing.Point(253, 400)
+        Me.lblRida5Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast2.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast2.Name = "lblRida5Kast2"
+        Me.lblRida5Kast2.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast2.TabIndex = 99
+        Me.lblRida5Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida5Kast1
+        '
+        Me.lblRida5Kast1.BackColor = System.Drawing.Color.White
+        Me.lblRida5Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida5Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida5Kast1.Location = New System.Drawing.Point(187, 400)
+        Me.lblRida5Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast1.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast1.Name = "lblRida5Kast1"
+        Me.lblRida5Kast1.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast1.TabIndex = 98
+        Me.lblRida5Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida6Kast6
+        '
+        Me.lblRida6Kast6.BackColor = System.Drawing.Color.White
+        Me.lblRida6Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida6Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida6Kast6.Location = New System.Drawing.Point(517, 469)
+        Me.lblRida6Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast6.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast6.Name = "lblRida6Kast6"
+        Me.lblRida6Kast6.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast6.TabIndex = 109
+        Me.lblRida6Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida6Kast5
+        '
+        Me.lblRida6Kast5.BackColor = System.Drawing.Color.White
+        Me.lblRida6Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida6Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida6Kast5.Location = New System.Drawing.Point(451, 469)
+        Me.lblRida6Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast5.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast5.Name = "lblRida6Kast5"
+        Me.lblRida6Kast5.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast5.TabIndex = 108
+        Me.lblRida6Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida6Kast4
+        '
+        Me.lblRida6Kast4.BackColor = System.Drawing.Color.White
+        Me.lblRida6Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida6Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida6Kast4.Location = New System.Drawing.Point(385, 469)
+        Me.lblRida6Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast4.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast4.Name = "lblRida6Kast4"
+        Me.lblRida6Kast4.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast4.TabIndex = 107
+        Me.lblRida6Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida6Kast3
+        '
+        Me.lblRida6Kast3.BackColor = System.Drawing.Color.White
+        Me.lblRida6Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida6Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida6Kast3.Location = New System.Drawing.Point(319, 469)
+        Me.lblRida6Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast3.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast3.Name = "lblRida6Kast3"
+        Me.lblRida6Kast3.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast3.TabIndex = 106
+        Me.lblRida6Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida6Kast2
+        '
+        Me.lblRida6Kast2.BackColor = System.Drawing.Color.White
+        Me.lblRida6Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida6Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida6Kast2.Location = New System.Drawing.Point(253, 469)
+        Me.lblRida6Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast2.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast2.Name = "lblRida6Kast2"
+        Me.lblRida6Kast2.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast2.TabIndex = 105
+        Me.lblRida6Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblRida6Kast1
+        '
+        Me.lblRida6Kast1.BackColor = System.Drawing.Color.White
+        Me.lblRida6Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblRida6Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRida6Kast1.Location = New System.Drawing.Point(187, 469)
+        Me.lblRida6Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast1.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast1.Name = "lblRida6Kast1"
+        Me.lblRida6Kast1.Size = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast1.TabIndex = 104
+        Me.lblRida6Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblQ
+        '
+        Me.lblQ.BackColor = System.Drawing.Color.White
+        Me.lblQ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblQ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblQ.Location = New System.Drawing.Point(126, 577)
+        Me.lblQ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblQ.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblQ.Name = "lblQ"
+        Me.lblQ.Size = New System.Drawing.Size(35, 35)
+        Me.lblQ.TabIndex = 110
+        Me.lblQ.Text = "Q"
+        Me.lblQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblW
+        '
+        Me.lblW.BackColor = System.Drawing.Color.White
+        Me.lblW.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblW.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblW.Location = New System.Drawing.Point(167, 577)
+        Me.lblW.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblW.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblW.Name = "lblW"
+        Me.lblW.Size = New System.Drawing.Size(35, 35)
+        Me.lblW.TabIndex = 111
+        Me.lblW.Text = "W"
+        Me.lblW.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblR
+        '
+        Me.lblR.BackColor = System.Drawing.Color.White
+        Me.lblR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblR.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblR.Location = New System.Drawing.Point(249, 577)
+        Me.lblR.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblR.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblR.Name = "lblR"
+        Me.lblR.Size = New System.Drawing.Size(35, 35)
+        Me.lblR.TabIndex = 113
+        Me.lblR.Text = "R"
+        Me.lblR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblE
+        '
+        Me.lblE.BackColor = System.Drawing.Color.White
+        Me.lblE.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblE.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblE.Location = New System.Drawing.Point(208, 577)
+        Me.lblE.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblE.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblE.Name = "lblE"
+        Me.lblE.Size = New System.Drawing.Size(35, 35)
+        Me.lblE.TabIndex = 112
+        Me.lblE.Text = "E"
+        Me.lblE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblI
+        '
+        Me.lblI.BackColor = System.Drawing.Color.White
+        Me.lblI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblI.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblI.Location = New System.Drawing.Point(411, 577)
+        Me.lblI.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblI.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblI.Name = "lblI"
+        Me.lblI.Size = New System.Drawing.Size(35, 35)
+        Me.lblI.TabIndex = 117
+        Me.lblI.Text = "I"
+        Me.lblI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblU
+        '
+        Me.lblU.BackColor = System.Drawing.Color.White
+        Me.lblU.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblU.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblU.Location = New System.Drawing.Point(370, 577)
+        Me.lblU.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblU.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblU.Name = "lblU"
+        Me.lblU.Size = New System.Drawing.Size(35, 35)
+        Me.lblU.TabIndex = 116
+        Me.lblU.Text = "U"
+        Me.lblU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblY
+        '
+        Me.lblY.BackColor = System.Drawing.Color.White
+        Me.lblY.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblY.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblY.Location = New System.Drawing.Point(329, 577)
+        Me.lblY.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblY.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblY.Name = "lblY"
+        Me.lblY.Size = New System.Drawing.Size(35, 35)
+        Me.lblY.TabIndex = 115
+        Me.lblY.Text = "Y"
+        Me.lblY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblT
+        '
+        Me.lblT.BackColor = System.Drawing.Color.White
+        Me.lblT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblT.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblT.Location = New System.Drawing.Point(288, 577)
+        Me.lblT.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblT.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblT.Name = "lblT"
+        Me.lblT.Size = New System.Drawing.Size(35, 35)
+        Me.lblT.TabIndex = 114
+        Me.lblT.Text = "T"
+        Me.lblT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblÕ
+        '
+        Me.lblÕ.BackColor = System.Drawing.Color.White
+        Me.lblÕ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblÕ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblÕ.Location = New System.Drawing.Point(575, 577)
+        Me.lblÕ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblÕ.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblÕ.Name = "lblÕ"
+        Me.lblÕ.Size = New System.Drawing.Size(35, 35)
+        Me.lblÕ.TabIndex = 121
+        Me.lblÕ.Text = "Õ"
+        Me.lblÕ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblÜ
+        '
+        Me.lblÜ.BackColor = System.Drawing.Color.White
+        Me.lblÜ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblÜ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblÜ.Location = New System.Drawing.Point(534, 577)
+        Me.lblÜ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblÜ.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblÜ.Name = "lblÜ"
+        Me.lblÜ.Size = New System.Drawing.Size(35, 35)
+        Me.lblÜ.TabIndex = 120
+        Me.lblÜ.Text = "Ü"
+        Me.lblÜ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblP
+        '
+        Me.lblP.BackColor = System.Drawing.Color.White
+        Me.lblP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblP.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblP.Location = New System.Drawing.Point(493, 577)
+        Me.lblP.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblP.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblP.Name = "lblP"
+        Me.lblP.Size = New System.Drawing.Size(35, 35)
+        Me.lblP.TabIndex = 119
+        Me.lblP.Text = "P"
+        Me.lblP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblO
+        '
+        Me.lblO.BackColor = System.Drawing.Color.White
+        Me.lblO.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblO.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblO.Location = New System.Drawing.Point(452, 577)
+        Me.lblO.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblO.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblO.Name = "lblO"
+        Me.lblO.Size = New System.Drawing.Size(35, 35)
+        Me.lblO.TabIndex = 118
+        Me.lblO.Text = "O"
+        Me.lblO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblS
+        '
+        Me.lblS.BackColor = System.Drawing.Color.White
+        Me.lblS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblS.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblS.Location = New System.Drawing.Point(188, 622)
+        Me.lblS.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblS.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblS.Name = "lblS"
+        Me.lblS.Size = New System.Drawing.Size(35, 35)
+        Me.lblS.TabIndex = 124
+        Me.lblS.Text = "S"
+        Me.lblS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblA
+        '
+        Me.lblA.BackColor = System.Drawing.Color.White
+        Me.lblA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblA.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblA.Location = New System.Drawing.Point(147, 622)
+        Me.lblA.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblA.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblA.Name = "lblA"
+        Me.lblA.Size = New System.Drawing.Size(35, 35)
+        Me.lblA.TabIndex = 123
+        Me.lblA.Text = "A"
+        Me.lblA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblD
+        '
+        Me.lblD.BackColor = System.Drawing.Color.White
+        Me.lblD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblD.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblD.Location = New System.Drawing.Point(229, 622)
+        Me.lblD.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblD.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblD.Name = "lblD"
+        Me.lblD.Size = New System.Drawing.Size(35, 35)
+        Me.lblD.TabIndex = 125
+        Me.lblD.Text = "D"
+        Me.lblD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblF
+        '
+        Me.lblF.BackColor = System.Drawing.Color.White
+        Me.lblF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblF.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblF.Location = New System.Drawing.Point(268, 622)
+        Me.lblF.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblF.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblF.Name = "lblF"
+        Me.lblF.Size = New System.Drawing.Size(35, 35)
+        Me.lblF.TabIndex = 126
+        Me.lblF.Text = "F"
+        Me.lblF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblG
+        '
+        Me.lblG.BackColor = System.Drawing.Color.White
+        Me.lblG.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblG.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblG.Location = New System.Drawing.Point(309, 622)
+        Me.lblG.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblG.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblG.Name = "lblG"
+        Me.lblG.Size = New System.Drawing.Size(35, 35)
+        Me.lblG.TabIndex = 127
+        Me.lblG.Text = "G"
+        Me.lblG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblH
+        '
+        Me.lblH.BackColor = System.Drawing.Color.White
+        Me.lblH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblH.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblH.Location = New System.Drawing.Point(350, 622)
+        Me.lblH.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblH.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblH.Name = "lblH"
+        Me.lblH.Size = New System.Drawing.Size(35, 35)
+        Me.lblH.TabIndex = 128
+        Me.lblH.Text = "H"
+        Me.lblH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblJ
+        '
+        Me.lblJ.BackColor = System.Drawing.Color.White
+        Me.lblJ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblJ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblJ.Location = New System.Drawing.Point(391, 622)
+        Me.lblJ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblJ.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblJ.Name = "lblJ"
+        Me.lblJ.Size = New System.Drawing.Size(35, 35)
+        Me.lblJ.TabIndex = 129
+        Me.lblJ.Text = "J"
+        Me.lblJ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblK
+        '
+        Me.lblK.BackColor = System.Drawing.Color.White
+        Me.lblK.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblK.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblK.Location = New System.Drawing.Point(432, 622)
+        Me.lblK.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblK.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblK.Name = "lblK"
+        Me.lblK.Size = New System.Drawing.Size(35, 35)
+        Me.lblK.TabIndex = 130
+        Me.lblK.Text = "K"
+        Me.lblK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblL
+        '
+        Me.lblL.BackColor = System.Drawing.Color.White
+        Me.lblL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblL.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblL.Location = New System.Drawing.Point(473, 622)
+        Me.lblL.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblL.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblL.Name = "lblL"
+        Me.lblL.Size = New System.Drawing.Size(35, 35)
+        Me.lblL.TabIndex = 131
+        Me.lblL.Text = "L"
+        Me.lblL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblÖ
+        '
+        Me.lblÖ.BackColor = System.Drawing.Color.White
+        Me.lblÖ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblÖ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblÖ.Location = New System.Drawing.Point(514, 622)
+        Me.lblÖ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblÖ.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblÖ.Name = "lblÖ"
+        Me.lblÖ.Size = New System.Drawing.Size(35, 35)
+        Me.lblÖ.TabIndex = 132
+        Me.lblÖ.Text = "Ö"
+        Me.lblÖ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblÄ
+        '
+        Me.lblÄ.BackColor = System.Drawing.Color.White
+        Me.lblÄ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblÄ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblÄ.Location = New System.Drawing.Point(555, 622)
+        Me.lblÄ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblÄ.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblÄ.Name = "lblÄ"
+        Me.lblÄ.Size = New System.Drawing.Size(35, 35)
+        Me.lblÄ.TabIndex = 133
+        Me.lblÄ.Text = "Ä"
+        Me.lblÄ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblM
+        '
+        Me.lblM.BackColor = System.Drawing.Color.White
+        Me.lblM.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblM.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblM.Location = New System.Drawing.Point(491, 667)
+        Me.lblM.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblM.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblM.Name = "lblM"
+        Me.lblM.Size = New System.Drawing.Size(35, 35)
+        Me.lblM.TabIndex = 140
+        Me.lblM.Text = "M"
+        Me.lblM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblN
+        '
+        Me.lblN.BackColor = System.Drawing.Color.White
+        Me.lblN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblN.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblN.Location = New System.Drawing.Point(450, 667)
+        Me.lblN.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblN.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblN.Name = "lblN"
+        Me.lblN.Size = New System.Drawing.Size(35, 35)
+        Me.lblN.TabIndex = 139
+        Me.lblN.Text = "N"
+        Me.lblN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblB
+        '
+        Me.lblB.BackColor = System.Drawing.Color.White
+        Me.lblB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblB.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblB.Location = New System.Drawing.Point(409, 667)
+        Me.lblB.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblB.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblB.Name = "lblB"
+        Me.lblB.Size = New System.Drawing.Size(35, 35)
+        Me.lblB.TabIndex = 138
+        Me.lblB.Text = "B"
+        Me.lblB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblV
+        '
+        Me.lblV.BackColor = System.Drawing.Color.White
+        Me.lblV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblV.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblV.Location = New System.Drawing.Point(368, 667)
+        Me.lblV.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblV.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblV.Name = "lblV"
+        Me.lblV.Size = New System.Drawing.Size(35, 35)
+        Me.lblV.TabIndex = 137
+        Me.lblV.Text = "V"
+        Me.lblV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblC
+        '
+        Me.lblC.BackColor = System.Drawing.Color.White
+        Me.lblC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblC.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblC.Location = New System.Drawing.Point(329, 667)
+        Me.lblC.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblC.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblC.Name = "lblC"
+        Me.lblC.Size = New System.Drawing.Size(35, 35)
+        Me.lblC.TabIndex = 136
+        Me.lblC.Text = "C"
+        Me.lblC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblX
+        '
+        Me.lblX.BackColor = System.Drawing.Color.White
+        Me.lblX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblX.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblX.Location = New System.Drawing.Point(288, 667)
+        Me.lblX.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblX.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblX.Name = "lblX"
+        Me.lblX.Size = New System.Drawing.Size(35, 35)
+        Me.lblX.TabIndex = 135
+        Me.lblX.Text = "X"
+        Me.lblX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblZ
+        '
+        Me.lblZ.BackColor = System.Drawing.Color.White
+        Me.lblZ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblZ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
+        Me.lblZ.Location = New System.Drawing.Point(247, 667)
+        Me.lblZ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblZ.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.lblZ.Name = "lblZ"
+        Me.lblZ.Size = New System.Drawing.Size(35, 35)
+        Me.lblZ.TabIndex = 134
+        Me.lblZ.Text = "Z"
+        Me.lblZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblEnter
+        '
+        Me.lblEnter.BackColor = System.Drawing.Color.White
+        Me.lblEnter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblEnter.Font = New System.Drawing.Font("Poor Richard", 16.25!, System.Drawing.FontStyle.Bold)
+        Me.lblEnter.Location = New System.Drawing.Point(161, 667)
+        Me.lblEnter.MaximumSize = New System.Drawing.Size(80, 35)
+        Me.lblEnter.MinimumSize = New System.Drawing.Size(80, 35)
+        Me.lblEnter.Name = "lblEnter"
+        Me.lblEnter.Size = New System.Drawing.Size(80, 35)
+        Me.lblEnter.TabIndex = 141
+        Me.lblEnter.Text = "ENTER"
+        Me.lblEnter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblBackspace
+        '
+        Me.lblBackspace.BackColor = System.Drawing.Color.White
+        Me.lblBackspace.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblBackspace.Font = New System.Drawing.Font("Poor Richard", 12.25!, System.Drawing.FontStyle.Bold)
+        Me.lblBackspace.Location = New System.Drawing.Point(534, 667)
+        Me.lblBackspace.MaximumSize = New System.Drawing.Size(90, 35)
+        Me.lblBackspace.MinimumSize = New System.Drawing.Size(90, 35)
+        Me.lblBackspace.Name = "lblBackspace"
+        Me.lblBackspace.Size = New System.Drawing.Size(90, 35)
+        Me.lblBackspace.TabIndex = 142
+        Me.lblBackspace.Text = "KUSTUTA"
+        Me.lblBackspace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'formGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
-        Me.Controls.Add(Me.btnDelete)
-        Me.Controls.Add(Me.btnEnter)
+        Me.Controls.Add(Me.lblBackspace)
+        Me.Controls.Add(Me.lblEnter)
+        Me.Controls.Add(Me.lblM)
+        Me.Controls.Add(Me.lblN)
+        Me.Controls.Add(Me.lblB)
+        Me.Controls.Add(Me.lblV)
+        Me.Controls.Add(Me.lblC)
+        Me.Controls.Add(Me.lblX)
+        Me.Controls.Add(Me.lblZ)
+        Me.Controls.Add(Me.lblÄ)
+        Me.Controls.Add(Me.lblÖ)
+        Me.Controls.Add(Me.lblL)
+        Me.Controls.Add(Me.lblK)
+        Me.Controls.Add(Me.lblJ)
+        Me.Controls.Add(Me.lblH)
+        Me.Controls.Add(Me.lblG)
+        Me.Controls.Add(Me.lblF)
+        Me.Controls.Add(Me.lblD)
+        Me.Controls.Add(Me.lblS)
+        Me.Controls.Add(Me.lblA)
+        Me.Controls.Add(Me.lblÕ)
+        Me.Controls.Add(Me.lblÜ)
+        Me.Controls.Add(Me.lblP)
+        Me.Controls.Add(Me.lblO)
+        Me.Controls.Add(Me.lblI)
+        Me.Controls.Add(Me.lblU)
+        Me.Controls.Add(Me.lblY)
+        Me.Controls.Add(Me.lblT)
+        Me.Controls.Add(Me.lblR)
+        Me.Controls.Add(Me.lblE)
+        Me.Controls.Add(Me.lblW)
+        Me.Controls.Add(Me.lblQ)
+        Me.Controls.Add(Me.lblRida6Kast6)
+        Me.Controls.Add(Me.lblRida6Kast5)
+        Me.Controls.Add(Me.lblRida6Kast4)
+        Me.Controls.Add(Me.lblRida6Kast3)
+        Me.Controls.Add(Me.lblRida6Kast2)
+        Me.Controls.Add(Me.lblRida6Kast1)
+        Me.Controls.Add(Me.lblRida5Kast6)
+        Me.Controls.Add(Me.lblRida5Kast5)
+        Me.Controls.Add(Me.lblRida5Kast4)
+        Me.Controls.Add(Me.lblRida5Kast3)
+        Me.Controls.Add(Me.lblRida5Kast2)
+        Me.Controls.Add(Me.lblRida5Kast1)
+        Me.Controls.Add(Me.lblRida4Kast6)
+        Me.Controls.Add(Me.lblRida4Kast5)
+        Me.Controls.Add(Me.lblRida4Kast4)
+        Me.Controls.Add(Me.lblRida4Kast3)
+        Me.Controls.Add(Me.lblRida4Kast2)
+        Me.Controls.Add(Me.lblRida4Kast1)
+        Me.Controls.Add(Me.lblRida3Kast6)
+        Me.Controls.Add(Me.lblRida3Kast5)
+        Me.Controls.Add(Me.lblRida3Kast4)
+        Me.Controls.Add(Me.lblRida3Kast3)
+        Me.Controls.Add(Me.lblRida3Kast2)
+        Me.Controls.Add(Me.lblRida3Kast1)
+        Me.Controls.Add(Me.lblRida2Kast6)
+        Me.Controls.Add(Me.lblRida2Kast5)
+        Me.Controls.Add(Me.lblRida2Kast4)
+        Me.Controls.Add(Me.lblRida2Kast3)
+        Me.Controls.Add(Me.lblRida2Kast2)
+        Me.Controls.Add(Me.lblRida2Kast1)
+        Me.Controls.Add(Me.lblRida1Kast6)
+        Me.Controls.Add(Me.lblRida1Kast5)
+        Me.Controls.Add(Me.lblRida1Kast4)
+        Me.Controls.Add(Me.lblRida1Kast3)
+        Me.Controls.Add(Me.lblRida1Kast2)
+        Me.Controls.Add(Me.lblRida1Kast1)
         Me.Controls.Add(Me.lblTimeLeft)
         Me.Controls.Add(Me.lblTimeText)
-        Me.Controls.Add(Me.txtRida6Kast6)
-        Me.Controls.Add(Me.txtRida5Kast6)
-        Me.Controls.Add(Me.txtRida4Kast6)
-        Me.Controls.Add(Me.txtRida3Kast6)
-        Me.Controls.Add(Me.txtRida2Kast6)
-        Me.Controls.Add(Me.txtRida1Kast6)
         Me.Controls.Add(Me.txtDebug2)
         Me.Controls.Add(Me.txtDebug)
-        Me.Controls.Add(Me.txtM)
-        Me.Controls.Add(Me.txtN)
-        Me.Controls.Add(Me.txtB)
-        Me.Controls.Add(Me.txtV)
-        Me.Controls.Add(Me.txtC)
-        Me.Controls.Add(Me.txtX)
-        Me.Controls.Add(Me.txtZ)
-        Me.Controls.Add(Me.txtÄ)
-        Me.Controls.Add(Me.txtÖ)
-        Me.Controls.Add(Me.txtL)
-        Me.Controls.Add(Me.txtK)
-        Me.Controls.Add(Me.txtJ)
-        Me.Controls.Add(Me.txtH)
-        Me.Controls.Add(Me.txtG)
-        Me.Controls.Add(Me.txtF)
-        Me.Controls.Add(Me.txtD)
-        Me.Controls.Add(Me.txtS)
-        Me.Controls.Add(Me.txtA)
-        Me.Controls.Add(Me.txtÕ)
-        Me.Controls.Add(Me.txtÜ)
-        Me.Controls.Add(Me.txtP)
-        Me.Controls.Add(Me.txtO)
-        Me.Controls.Add(Me.txtI)
-        Me.Controls.Add(Me.txtU)
-        Me.Controls.Add(Me.txtY)
-        Me.Controls.Add(Me.txtT)
-        Me.Controls.Add(Me.txtR)
-        Me.Controls.Add(Me.txtE)
-        Me.Controls.Add(Me.txtW)
-        Me.Controls.Add(Me.txtQ)
-        Me.Controls.Add(Me.txtRida6Kast5)
-        Me.Controls.Add(Me.txtRida6Kast4)
-        Me.Controls.Add(Me.txtRida6Kast3)
-        Me.Controls.Add(Me.txtRida6Kast2)
-        Me.Controls.Add(Me.txtRida6Kast1)
-        Me.Controls.Add(Me.txtRida5Kast5)
-        Me.Controls.Add(Me.txtRida5Kast4)
-        Me.Controls.Add(Me.txtRida5Kast3)
-        Me.Controls.Add(Me.txtRida5Kast2)
-        Me.Controls.Add(Me.txtRida5Kast1)
-        Me.Controls.Add(Me.txtRida4Kast5)
-        Me.Controls.Add(Me.txtRida4Kast4)
-        Me.Controls.Add(Me.txtRida4Kast3)
-        Me.Controls.Add(Me.txtRida4Kast2)
-        Me.Controls.Add(Me.txtRida4Kast1)
-        Me.Controls.Add(Me.txtRida3Kast5)
-        Me.Controls.Add(Me.txtRida3Kast4)
-        Me.Controls.Add(Me.txtRida3Kast3)
-        Me.Controls.Add(Me.txtRida3Kast2)
-        Me.Controls.Add(Me.txtRida3Kast1)
-        Me.Controls.Add(Me.txtRida2Kast5)
-        Me.Controls.Add(Me.txtRida2Kast4)
-        Me.Controls.Add(Me.txtRida2Kast3)
-        Me.Controls.Add(Me.txtRida2Kast2)
-        Me.Controls.Add(Me.txtRida2Kast1)
-        Me.Controls.Add(Me.txtRida1Kast5)
-        Me.Controls.Add(Me.txtRida1Kast4)
-        Me.Controls.Add(Me.txtRida1Kast3)
-        Me.Controls.Add(Me.txtRida1Kast2)
-        Me.Controls.Add(Me.txtRida1Kast1)
         Me.Name = "formGame"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents txtRida1Kast1 As TextBox
-    Friend WithEvents txtRida1Kast2 As TextBox
-    Friend WithEvents txtRida1Kast3 As TextBox
-    Friend WithEvents txtRida1Kast4 As TextBox
-    Friend WithEvents txtRida1Kast5 As TextBox
-    Friend WithEvents txtRida2Kast5 As TextBox
-    Friend WithEvents txtRida2Kast4 As TextBox
-    Friend WithEvents txtRida2Kast3 As TextBox
-    Friend WithEvents txtRida2Kast2 As TextBox
-    Friend WithEvents txtRida2Kast1 As TextBox
-    Friend WithEvents txtRida3Kast5 As TextBox
-    Friend WithEvents txtRida3Kast4 As TextBox
-    Friend WithEvents txtRida3Kast3 As TextBox
-    Friend WithEvents txtRida3Kast2 As TextBox
-    Friend WithEvents txtRida3Kast1 As TextBox
-    Friend WithEvents txtRida4Kast5 As TextBox
-    Friend WithEvents txtRida4Kast4 As TextBox
-    Friend WithEvents txtRida4Kast3 As TextBox
-    Friend WithEvents txtRida4Kast2 As TextBox
-    Friend WithEvents txtRida4Kast1 As TextBox
-    Friend WithEvents txtRida5Kast5 As TextBox
-    Friend WithEvents txtRida5Kast4 As TextBox
-    Friend WithEvents txtRida5Kast3 As TextBox
-    Friend WithEvents txtRida5Kast2 As TextBox
-    Friend WithEvents txtRida5Kast1 As TextBox
-    Friend WithEvents txtRida6Kast5 As TextBox
-    Friend WithEvents txtRida6Kast4 As TextBox
-    Friend WithEvents txtRida6Kast3 As TextBox
-    Friend WithEvents txtRida6Kast2 As TextBox
-    Friend WithEvents txtRida6Kast1 As TextBox
-    Friend WithEvents txtQ As TextBox
-    Friend WithEvents txtW As TextBox
-    Friend WithEvents txtE As TextBox
-    Friend WithEvents txtR As TextBox
-    Friend WithEvents txtT As TextBox
-    Friend WithEvents txtY As TextBox
-    Friend WithEvents txtU As TextBox
-    Friend WithEvents txtI As TextBox
-    Friend WithEvents txtO As TextBox
-    Friend WithEvents txtP As TextBox
-    Friend WithEvents txtÜ As TextBox
-    Friend WithEvents txtÕ As TextBox
-    Friend WithEvents txtÄ As TextBox
-    Friend WithEvents txtÖ As TextBox
-    Friend WithEvents txtL As TextBox
-    Friend WithEvents txtK As TextBox
-    Friend WithEvents txtJ As TextBox
-    Friend WithEvents txtH As TextBox
-    Friend WithEvents txtG As TextBox
-    Friend WithEvents txtF As TextBox
-    Friend WithEvents txtD As TextBox
-    Friend WithEvents txtS As TextBox
-    Friend WithEvents txtA As TextBox
-    Friend WithEvents txtM As TextBox
-    Friend WithEvents txtN As TextBox
-    Friend WithEvents txtB As TextBox
-    Friend WithEvents txtV As TextBox
-    Friend WithEvents txtC As TextBox
-    Friend WithEvents txtX As TextBox
-    Friend WithEvents txtZ As TextBox
     Friend WithEvents txtDebug As TextBox
     Friend WithEvents txtDebug2 As TextBox
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents txtRida6Kast6 As TextBox
-    Friend WithEvents txtRida5Kast6 As TextBox
-    Friend WithEvents txtRida4Kast6 As TextBox
-    Friend WithEvents txtRida3Kast6 As TextBox
-    Friend WithEvents txtRida2Kast6 As TextBox
-    Friend WithEvents txtRida1Kast6 As TextBox
     Friend WithEvents Timer2 As Timer
     Friend WithEvents lblTimeText As Label
     Friend WithEvents lblTimeLeft As Label
-    Friend WithEvents btnEnter As Button
-    Friend WithEvents btnDelete As Button
+    Friend WithEvents lblRida1Kast1 As Label
+    Friend WithEvents lblRida1Kast2 As Label
+    Friend WithEvents lblRida1Kast3 As Label
+    Friend WithEvents lblRida1Kast4 As Label
+    Friend WithEvents lblRida1Kast5 As Label
+    Friend WithEvents lblRida1Kast6 As Label
+    Friend WithEvents lblRida2Kast6 As Label
+    Friend WithEvents lblRida2Kast5 As Label
+    Friend WithEvents lblRida2Kast4 As Label
+    Friend WithEvents lblRida2Kast3 As Label
+    Friend WithEvents lblRida2Kast2 As Label
+    Friend WithEvents lblRida2Kast1 As Label
+    Friend WithEvents lblRida3Kast6 As Label
+    Friend WithEvents lblRida3Kast5 As Label
+    Friend WithEvents lblRida3Kast4 As Label
+    Friend WithEvents lblRida3Kast3 As Label
+    Friend WithEvents lblRida3Kast2 As Label
+    Friend WithEvents lblRida3Kast1 As Label
+    Friend WithEvents lblRida4Kast6 As Label
+    Friend WithEvents lblRida4Kast5 As Label
+    Friend WithEvents lblRida4Kast4 As Label
+    Friend WithEvents lblRida4Kast3 As Label
+    Friend WithEvents lblRida4Kast2 As Label
+    Friend WithEvents lblRida4Kast1 As Label
+    Friend WithEvents lblRida5Kast6 As Label
+    Friend WithEvents lblRida5Kast5 As Label
+    Friend WithEvents lblRida5Kast4 As Label
+    Friend WithEvents lblRida5Kast3 As Label
+    Friend WithEvents lblRida5Kast2 As Label
+    Friend WithEvents lblRida5Kast1 As Label
+    Friend WithEvents lblRida6Kast6 As Label
+    Friend WithEvents lblRida6Kast5 As Label
+    Friend WithEvents lblRida6Kast4 As Label
+    Friend WithEvents lblRida6Kast3 As Label
+    Friend WithEvents lblRida6Kast2 As Label
+    Friend WithEvents lblRida6Kast1 As Label
+    Friend WithEvents lblQ As Label
+    Friend WithEvents lblW As Label
+    Friend WithEvents lblR As Label
+    Friend WithEvents lblE As Label
+    Friend WithEvents lblI As Label
+    Friend WithEvents lblU As Label
+    Friend WithEvents lblY As Label
+    Friend WithEvents lblT As Label
+    Friend WithEvents lblÕ As Label
+    Friend WithEvents lblÜ As Label
+    Friend WithEvents lblP As Label
+    Friend WithEvents lblO As Label
+    Friend WithEvents lblS As Label
+    Friend WithEvents lblA As Label
+    Friend WithEvents lblD As Label
+    Friend WithEvents lblF As Label
+    Friend WithEvents lblG As Label
+    Friend WithEvents lblH As Label
+    Friend WithEvents lblJ As Label
+    Friend WithEvents lblK As Label
+    Friend WithEvents lblL As Label
+    Friend WithEvents lblÖ As Label
+    Friend WithEvents lblÄ As Label
+    Friend WithEvents lblM As Label
+    Friend WithEvents lblN As Label
+    Friend WithEvents lblB As Label
+    Friend WithEvents lblV As Label
+    Friend WithEvents lblC As Label
+    Friend WithEvents lblX As Label
+    Friend WithEvents lblZ As Label
+    Friend WithEvents lblEnter As Label
+    Friend WithEvents lblBackspace As Label
 End Class

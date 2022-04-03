@@ -99,7 +99,7 @@ Public Class formGame
             Dim boxName As String = game.getBoxName(game.intRida, i + 1)
 
             If Me.Controls.Find(boxName, True).Count = 1 Then
-                Dim box As TextBox = Me.Controls.Find(boxName, True)(0)
+                Dim box As Label = Me.Controls.Find(boxName, True)(0)
 
                 'Kui wordChecker tagastas 2, siis on õige täht vastavas kastis, ehk kast tehakse roheliseks
                 If misVarv = 2 And box.BackColor <> Color.Green Then
@@ -128,10 +128,10 @@ Public Class formGame
     'input = stringi kujul täht
     Private Sub makeKeyRed(ByVal value As String)
 
-        Dim boxName As String = "txt" & value
+        Dim boxName As String = "lbl" & value
 
         If Me.Controls.Find(boxName, True).Count = 1 Then
-            Dim box As TextBox = Me.Controls.Find(boxName, True)(0)
+            Dim box As Label = Me.Controls.Find(boxName, True)(0)
             If box.BackColor <> Color.Red Then
 
                 box.BackColor = Color.Red
@@ -151,11 +151,11 @@ Public Class formGame
         If Me.Controls.Find(value, True).Count = 1 Then
             'Kui viimane vajutatud klahv on Backspace siis Textboxi sisu tühjendatakse
             If game.lastLetter = 8 Then
-                Dim box As TextBox = Me.Controls.Find(value, True)(0)
+                Dim box As Label = Me.Controls.Find(value, True)(0)
                 box.Text = ""
                 'Vastasel juhul sisestatakse Kasti väärtuseks viimasena vajutatud täht
             Else
-                Dim box As TextBox = Me.Controls.Find(value, True)(0)
+                Dim box As Label = Me.Controls.Find(value, True)(0)
                 box.Text = UCase(Chr(game.lastLetter))
 
             End If
@@ -283,13 +283,13 @@ Public Class formGame
         If game.gameMode = "Kerge" Then
             For i As Integer = 5 To 6
                 For j As Integer = 1 To 6
-                    hideThisTextBox("txtRida" & j & "Kast" & i, False)
+                    hideThisTextBox("lblRida" & j & "Kast" & i, False)
                 Next
             Next
         ElseIf game.gameMode = "Tavaline" Then
             For i As Integer = 1 To 6
 
-                hideThisTextBox("txtRida" & i & "Kast6", False)
+                hideThisTextBox("lblRida" & i & "Kast6", False)
             Next
 
         End If
@@ -300,7 +300,7 @@ Public Class formGame
     Private Sub hideThisTextBox(ByVal value1 As String, ByVal value2 As Boolean)
 
         If Me.Controls.Find(value1, True).Count = 1 Then
-            Dim box As TextBox = Me.Controls.Find(value1, True)(0)
+            Dim box As Label = Me.Controls.Find(value1, True)(0)
             box.Visible = value2
 
         End If
@@ -310,7 +310,7 @@ Public Class formGame
     Private Sub enableAllTextBoxes()
         For i As Integer = 5 To 6
             For j As Integer = 1 To 6
-                hideThisTextBox("txtRida" & j & "Kast" & i, True)
+                hideThisTextBox("lblRida" & j & "Kast" & i, True)
             Next
         Next
 
@@ -329,7 +329,7 @@ Public Class formGame
     End Sub
 
     'Listen for any click on on-screen keyboard
-    Private Sub txtA_Click(sender As Object, e As EventArgs) Handles txtA.Click, txtZ.Click, txtY.Click, txtX.Click, txtW.Click, txtV.Click, txtÜ.Click, txtU.Click, txtT.Click, txtS.Click, txtR.Click, txtQ.Click, txtP.Click, txtÕ.Click, txtÖ.Click, txtO.Click, txtN.Click, txtM.Click, txtL.Click, txtK.Click, txtJ.Click, txtI.Click, txtH.Click, txtG.Click, txtF.Click, txtE.Click, txtD.Click, txtC.Click, txtB.Click, txtÄ.Click, btnEnter.Click, btnDelete.Click
+    Private Sub lblQ_Click(sender As Object, e As EventArgs) Handles lblQ.Click, lblZ.Click, lblY.Click, lblX.Click, lblW.Click, lblV.Click, lblÜ.Click, lblU.Click, lblT.Click, lblS.Click, lblR.Click, lblP.Click, lblÕ.Click, lblÖ.Click, lblO.Click, lblN.Click, lblM.Click, lblL.Click, lblK.Click, lblJ.Click, lblI.Click, lblH.Click, lblG.Click, lblF.Click, lblEnter.Click, lblE.Click, lblD.Click, lblC.Click, lblBackspace.Click, lblB.Click, lblÄ.Click, lblA.Click
         Dim game As IGame
         game = New CGame
 
@@ -344,7 +344,6 @@ Public Class formGame
         End If
 
         gameEngine()
-
 
     End Sub
 End Class

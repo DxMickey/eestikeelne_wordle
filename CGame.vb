@@ -331,10 +331,10 @@
 
     'Funktsioon textboxi nime saamiseks
     'input = rea arv, kasti arv
-    'output = Textboxi nimi vastava rea ja kasti arvuga
+    'output = Labeli nimi vastava rea ja kasti arvuga
     Private Function getBoxName(ByVal value1 As Integer, ByVal value2 As Integer) As String Implements IGame.getBoxName
 
-        Dim whichBox As String = "txtRida" & value1.ToString & "Kast" & value2.ToString
+        Dim whichBox As String = "lblRida" & value1.ToString & "Kast" & value2.ToString
 
         Return whichBox
     End Function
