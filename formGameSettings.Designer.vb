@@ -78,7 +78,7 @@ Partial Class formGameSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.btnTimed)
         Me.Controls.Add(Me.btnNoTime)
         Me.Controls.Add(Me.btnHard)

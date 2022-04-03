@@ -41,12 +41,18 @@
 
         game.gameMode = value1
 
-        Dim position = Me.Bounds
         Dim newForm As New formGame
-        AddHandler newForm.Load, Sub() newForm.Bounds = position
         Dim colors As IGraphics
         colors = New CGraphics
+
+        newForm.TopLevel = False
+        newForm.Parent = formContainer
+        newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        newForm.StartPosition = FormStartPosition.Manual
+        newForm.Location = New Point(0, 0)
         newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+
+
         newForm.Show()
         Me.Close()
     End Sub
