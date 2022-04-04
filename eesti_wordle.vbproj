@@ -271,6 +271,7 @@
     <Compile Include="CGame.vb" />
     <Compile Include="CDatabase.vb" />
     <Compile Include="CGraphics.vb" />
+    <Compile Include="CTimeLimit.vb" />
     <Compile Include="formContainer.Designer.vb">
       <DependentUpon>formContainer.vb</DependentUpon>
     </Compile>
@@ -320,9 +321,16 @@
       <DependentUpon>formMenu.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formTimeLimit.Designer.vb">
+      <DependentUpon>formTimeLimit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formTimeLimit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IGame.vb" />
     <Compile Include="IDatabase.vb" />
     <Compile Include="IGraphics.vb" />
+    <Compile Include="ITimeLimit.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -364,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formStatistika.resx">
       <DependentUpon>formStatistika.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTimeLimit.resx">
+      <DependentUpon>formTimeLimit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

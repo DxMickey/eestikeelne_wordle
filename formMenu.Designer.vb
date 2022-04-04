@@ -22,12 +22,16 @@ Partial Class formMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnPlay = New System.Windows.Forms.Button()
         Me.btnHistory = New System.Windows.Forms.Button()
         Me.btnStats = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClassic = New System.Windows.Forms.Button()
         Me.btnGraphics = New System.Windows.Forms.Button()
+        Me.btnTimeLimit = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lblTimer = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnPlay
@@ -87,11 +91,36 @@ Partial Class formMenu
         Me.btnGraphics.Text = "Kujundus"
         Me.btnGraphics.UseVisualStyleBackColor = True
         '
+        'btnTimeLimit
+        '
+        Me.btnTimeLimit.Location = New System.Drawing.Point(292, 412)
+        Me.btnTimeLimit.Name = "btnTimeLimit"
+        Me.btnTimeLimit.Size = New System.Drawing.Size(75, 23)
+        Me.btnTimeLimit.TabIndex = 5
+        Me.btnTimeLimit.Text = "Ajalimiit"
+        Me.btnTimeLimit.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
+        'lblTimer
+        '
+        Me.lblTimer.AutoSize = True
+        Me.lblTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.25!)
+        Me.lblTimer.Location = New System.Drawing.Point(311, 200)
+        Me.lblTimer.Name = "lblTimer"
+        Me.lblTimer.Size = New System.Drawing.Size(36, 39)
+        Me.lblTimer.TabIndex = 6
+        Me.lblTimer.Text = "0"
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.lblTimer)
+        Me.Controls.Add(Me.btnTimeLimit)
         Me.Controls.Add(Me.btnClassic)
         Me.Controls.Add(Me.btnGraphics)
         Me.Controls.Add(Me.Label1)
@@ -114,5 +143,7 @@ Partial Class formMenu
     Friend WithEvents btnClassic As Button
 
     Friend WithEvents btnGraphics As Button
-
+    Friend WithEvents btnTimeLimit As Button
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents lblTimer As Label
 End Class
