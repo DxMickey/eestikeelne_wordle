@@ -73,7 +73,7 @@ Public Class formGameEnd
             Dim response = TClient.TranslateText(game.strSona, cmbLanguage.SelectedItem, "et")
             Dim result As String = response.TranslatedText
 
-            If result = game.strSona Then
+            If String.Equals(result, game.strSona) Then
                 txtTranslation.Text = "Puudub"
             Else
                 txtTranslation.Text = result
