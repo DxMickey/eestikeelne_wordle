@@ -31,7 +31,7 @@ Public Class formGame
             game.intKast = -1
 
         End If
-        txtDebug2.Text = data.howManyWords()
+
 
         'Kui letterCheck tagastab True ja Kasti arv pole max kasti arv
         If game.letterCheck(game.lastLetter) And game.intKast <> game.maxKast Then
@@ -200,13 +200,24 @@ Public Class formGame
         'Peab olema true, et klahvivajutusi oleks võimalik jälgida
         Me.KeyPreview = True
 
+        'Kuupäeva kontrollimine, kui mängitakse mitte piiramatut versiooni siis kui uus ja vana kuupäev on samad, tuleb vana sõna uuesti
+        Dim uusKuupaev As String = DateTime.Today.ToShortDateString()
+        Dim vanaKuupaev As String = data.getItem("miscData", "kuupaev")
+
+        txtDebug2.Text = ""
+
         If game.kasPiiramatu = False Then
-            If game.misKuupaev <> Date.Today Then
-                game.misKuupaev = Date.Today
+
+            game.strSona = data.getItem("miscData", "sona")
+            If uusKuupaev.Equals(vanaKuupaev) = False Then
                 newWord()
+                data.setItem("miscData", "sona", game.strSona)
+                data.setItem("miscData", "kuupaev", uusKuupaev)
             End If
+
         Else
             newWord()
+
         End If
 
 

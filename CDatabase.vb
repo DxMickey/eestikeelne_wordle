@@ -18,7 +18,7 @@
     End Sub
 
 
-    Public Function howManyWords() As Object Implements IDatabase.howManyWords
+    Private Function howManyWords() As Object Implements IDatabase.howManyWords
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
         Dim game As IGame
@@ -47,6 +47,78 @@
 
     End Function
 
+    Private Sub setItem(ByVal tableName As String, ByVal itemName As String, ByVal item As String) Implements IDatabase.setItem
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = '" & item & "' WHERE id = 1"
+        SQLcommand.ExecuteNonQuery()
+        SQLconnection.Close()
+    End Sub
+
+    Private Sub setItem(ByVal tableName As String, ByVal itemName As String, ByVal item As Integer) Implements IDatabase.setItem
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & " WHERE id = 1"
+        SQLcommand.ExecuteNonQuery()
+        SQLconnection.Close()
+    End Sub
+
+    Private Sub setItem(tableName As String, itemName As String, item As UInteger) Implements IDatabase.setItem
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & " WHERE id = 1"
+        SQLcommand.ExecuteNonQuery()
+        SQLconnection.Close()
+    End Sub
+
+    Private Function getItemInt(tableName As String, itemName As String) As Integer Implements IDatabase.getItemInt
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "Select " & itemName & " FROM " & tableName
+        Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
+        SQLconnection.Close()
+        Return sqlResponse
+    End Function
+
+    Private Function getItem(tableName As String, itemName As String) As String Implements IDatabase.getItem
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "Select " & itemName & " FROM " & tableName
+        Dim sqlResponse As String = SQLcommand.ExecuteScalar()
+        SQLconnection.Close()
+        Return sqlResponse
+    End Function
+
     Private Function isWordInList(value As String) As Object Implements IDatabase.isWordInList
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
@@ -69,7 +141,7 @@
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT sonaID FROM '" & millineList & "' WHERE sona = '" & LCase(value) & "'"
+        SQLcommand.CommandText = "Select sonaID FROM '" & millineList & "' WHERE sona = '" & LCase(value) & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
         If sqlResponse = 0 Then

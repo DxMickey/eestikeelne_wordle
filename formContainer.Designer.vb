@@ -28,8 +28,9 @@ Partial Class formContainer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(686, 763)
+        Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.IsMdiContainer = True
+        Me.MaximizeBox = False
         Me.Name = "formContainer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
