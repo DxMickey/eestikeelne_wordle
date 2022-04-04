@@ -293,7 +293,7 @@
       <DependentUpon>formStatistika.vb</DependentUpon>
     </Compile>
     <Compile Include="formStatistika.vb">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="formHistory.Designer.vb">
       <DependentUpon>formHistory.vb</DependentUpon>
