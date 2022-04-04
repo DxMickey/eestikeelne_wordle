@@ -222,4 +222,36 @@
         fileWriter.Close()
     End Sub
 
+    Private Sub btnTimeLimit_Click(sender As Object, e As EventArgs) Handles btnTimeLimit.Click
+
+        If CKeyWord.keypass <> Nothing Then
+            Dim newform As New FormKeyword
+            Dim colors As IGraphics
+            colors = New CGraphics
+            newform.TopLevel = False
+            newform.Parent = formContainer
+            newform.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            newform.StartPosition = FormStartPosition.Manual
+            newform.Location = New Point(0, 0)
+            newform.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+
+            newform.Show()
+            Me.Close()
+        Else
+            Dim newform As New formLogIn
+            Dim colors As IGraphics
+            colors = New CGraphics
+            newform.TopLevel = False
+            newform.Parent = formContainer
+            newform.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            newform.StartPosition = FormStartPosition.Manual
+            newform.Location = New Point(0, 0)
+            newform.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+
+
+            newform.Show()
+            Me.Close()
+        End If
+    End Sub
+
 End Class

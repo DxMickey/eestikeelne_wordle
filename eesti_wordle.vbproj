@@ -271,6 +271,8 @@
     <Compile Include="CGame.vb" />
     <Compile Include="CDatabase.vb" />
     <Compile Include="CGraphics.vb" />
+    <Compile Include="CKeyWord.vb" />
+    <Compile Include="CTimeLimit.vb" />
     <Compile Include="formContainer.Designer.vb">
       <DependentUpon>formContainer.vb</DependentUpon>
     </Compile>
@@ -287,6 +289,18 @@
       <DependentUpon>formGameSettings.vb</DependentUpon>
     </Compile>
     <Compile Include="formGameSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKeyword.Designer.vb">
+      <DependentUpon>FormKeyword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormKeyword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogIn.Designer.vb">
+      <DependentUpon>formLogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formLogIn.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formStatistika.Designer.vb">
@@ -320,9 +334,17 @@
       <DependentUpon>formMenu.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formTimeLimit.Designer.vb">
+      <DependentUpon>formTimeLimit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formTimeLimit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IGame.vb" />
     <Compile Include="IDatabase.vb" />
     <Compile Include="IGraphics.vb" />
+    <Compile Include="IKeyWord.vb" />
+    <Compile Include="ITimeLimit.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -359,11 +381,20 @@
     <EmbeddedResource Include="formHistory.resx">
       <DependentUpon>formHistory.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormKeyword.resx">
+      <DependentUpon>FormKeyword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogIn.resx">
+      <DependentUpon>formLogIn.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formStatistika.resx">
       <DependentUpon>formStatistika.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTimeLimit.resx">
+      <DependentUpon>formTimeLimit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -19,7 +19,7 @@
         If value1 = "Kerge" Then
             game.maxKast = 4
             If game.kasTimed Then
-                game.timeSetting = 360
+                game.timeSetting = CTimeLimit.timeLimit
             End If
 
         End If
@@ -27,14 +27,14 @@
         If value1 = "Tavaline" Then
             game.maxKast = 5
             If game.kasTimed Then
-                game.timeSetting = 200
+                game.timeSetting = CTimeLimit.timeLimit
             End If
         End If
 
         If value1 = "Raske" Then
             game.maxKast = 6
             If game.kasTimed Then
-                game.timeSetting = 120
+                game.timeSetting = CTimeLimit.timeLimit
             End If
 
         End If
