@@ -141,7 +141,7 @@
     'Salvestab kasutaja sisestatud värvid tekstifaili
     Private Sub setColors(ByVal red As UInteger, ByVal green As UInteger, ByVal blue As UInteger)
         Dim pathToGame As String = Application.StartupPath
-        Dim fileName As String = "visuals\wordleColor.txt"
+        Dim fileName As String = "wordleColor.txt"
         Dim fullPath As String = My.Computer.FileSystem.CombinePath(pathToGame, fileName)
 
         Dim fileWriter As System.IO.StreamWriter

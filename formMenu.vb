@@ -59,7 +59,7 @@
         colors = New CGraphics
 
         Dim pathToGame As String = Application.StartupPath
-        Dim fileName As String = "visuals\wordleColor.txt"
+        Dim fileName As String = "wordleColor.txt"
         Dim fullPath As String = My.Computer.FileSystem.CombinePath(pathToGame, fileName)
         'Kontrolli, kas fail on olemas
         Dim fileFlag As Boolean = checkFile()
@@ -83,7 +83,7 @@
     'Kontrolli, kas fail on olemas
     Private Function checkFile()
         Dim pathToGame As String = Application.StartupPath
-        Dim fileName As String = "visuals\wordleColor.txt"
+        Dim fileName As String = "wordleColor.txt"
         Dim fullPath As String = My.Computer.FileSystem.CombinePath(pathToGame, fileName)
 
         If My.Computer.FileSystem.FileExists(fullPath) Then
@@ -100,7 +100,7 @@
 
         'Tekstifaili salvestamise path
         Dim pathToGame As String = Application.StartupPath
-        Dim fileName As String = "visuals\wordleColor.txt"
+        Dim fileName As String = "wordleColor.txt"
         Dim fullPath As String = My.Computer.FileSystem.CombinePath(pathToGame, fileName)
         Dim flag As Boolean
 
