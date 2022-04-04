@@ -24,7 +24,6 @@ Partial Class formGame
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.txtDebug = New System.Windows.Forms.TextBox()
-        Me.txtDebug2 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.lblTimeText = New System.Windows.Forms.Label()
@@ -97,6 +96,7 @@ Partial Class formGame
         Me.lblZ = New System.Windows.Forms.Label()
         Me.lblEnter = New System.Windows.Forms.Label()
         Me.lblBackspace = New System.Windows.Forms.Label()
+        Me.txtDebug4 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txtDebug
@@ -106,14 +106,6 @@ Partial Class formGame
         Me.txtDebug.ReadOnly = True
         Me.txtDebug.Size = New System.Drawing.Size(316, 20)
         Me.txtDebug.TabIndex = 62
-        '
-        'txtDebug2
-        '
-        Me.txtDebug2.Location = New System.Drawing.Point(276, 88)
-        Me.txtDebug2.Name = "txtDebug2"
-        Me.txtDebug2.ReadOnly = True
-        Me.txtDebug2.Size = New System.Drawing.Size(233, 20)
-        Me.txtDebug2.TabIndex = 63
         '
         'Timer1
         '
@@ -1059,11 +1051,20 @@ Partial Class formGame
         Me.lblBackspace.Text = "KUSTUTA"
         Me.lblBackspace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'txtDebug4
+        '
+        Me.txtDebug4.Location = New System.Drawing.Point(225, 88)
+        Me.txtDebug4.Name = "txtDebug4"
+        Me.txtDebug4.ReadOnly = True
+        Me.txtDebug4.Size = New System.Drawing.Size(316, 20)
+        Me.txtDebug4.TabIndex = 143
+        '
         'formGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.txtDebug4)
         Me.Controls.Add(Me.lblBackspace)
         Me.Controls.Add(Me.lblEnter)
         Me.Controls.Add(Me.lblM)
@@ -1134,7 +1135,6 @@ Partial Class formGame
         Me.Controls.Add(Me.lblRida1Kast1)
         Me.Controls.Add(Me.lblTimeLeft)
         Me.Controls.Add(Me.lblTimeText)
-        Me.Controls.Add(Me.txtDebug2)
         Me.Controls.Add(Me.txtDebug)
         Me.Name = "formGame"
         Me.Text = "Form1"
@@ -1143,7 +1143,6 @@ Partial Class formGame
 
     End Sub
     Friend WithEvents txtDebug As TextBox
-    Friend WithEvents txtDebug2 As TextBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents lblTimeText As Label
@@ -1216,4 +1215,5 @@ Partial Class formGame
     Friend WithEvents lblZ As Label
     Friend WithEvents lblEnter As Label
     Friend WithEvents lblBackspace As Label
+    Friend WithEvents txtDebug4 As TextBox
 End Class

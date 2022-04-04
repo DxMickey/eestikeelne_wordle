@@ -1,12 +1,15 @@
 ﻿Public Class formGraphics
 
+
     'Sätesta värv kogu mängu jaoks
     Public Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         Dim colors As IGraphics
         colors = New CGraphics
-        UInteger.TryParse(txtRed.Text, colors.red)
-        UInteger.TryParse(txtGreen.Text, colors.green)
-        UInteger.TryParse(txtBlue.Text, colors.blue)
+        Dim data As IDatabase
+        data = New CDatabase
+        Integer.TryParse(txtRed.Text, colors.red)
+        Integer.TryParse(txtGreen.Text, colors.green)
+        Integer.TryParse(txtBlue.Text, colors.blue)
 
         'Kontrolli, kas  sisestatud väärtused on sobivad
         'Ehk kas on numbrilised ja lubatud vahemikus
@@ -19,7 +22,9 @@
                 'Väärtused on korras
                 Dim backColor As Color = Color.FromArgb(255, colors.red, colors.green, colors.blue)
                 Me.BackColor = backColor
-                setColors(colors.red, colors.green, colors.blue)
+                Data.setItem("miscData", "red", colors.red)
+                Data.setItem("miscData", "green", colors.green)
+                Data.setItem("miscData", "blue", colors.blue)
             Else
                 'Väärtused numbrilised, kuid piirkonnast väljas
                 lblError.Visible = True
@@ -92,16 +97,22 @@
     Private Sub btnDefault_Click(sender As Object, e As EventArgs) Handles btnDefault.Click
         Dim colors As IGraphics
         colors = New CGraphics
+        Dim data As IDatabase
+        data = New CDatabase
 
         Me.BackColor = SystemColors.Control
         colors.red = 239
         colors.green = 239
         colors.blue = 239
+        data.setItem("miscData", "red", colors.red)
+        data.setItem("miscData", "green", colors.green)
+        data.setItem("miscData", "blue", colors.blue)
+
+
+
         txtRed.Text = colors.red
         txtGreen.Text = colors.green
         txtBlue.Text = colors.blue
-
-        setColors(colors.red, colors.green, colors.blue)
     End Sub
 
 
@@ -144,20 +155,6 @@
         End If
     End Function
 
-    'Salvestab kasutaja sisestatud värvid tekstifaili
-    Private Sub setColors(ByVal red As UInteger, ByVal green As UInteger, ByVal blue As UInteger)
-        Dim pathToGame As String = Application.StartupPath
-        Dim fileName As String = "visuals\wordleColor.txt"
-        Dim fullPath As String = My.Computer.FileSystem.CombinePath(pathToGame, fileName)
 
-        Dim fileWriter As System.IO.StreamWriter
-        fileWriter = My.Computer.FileSystem.OpenTextFileWriter(fullPath, False)
-
-        fileWriter.WriteLine(red, False, 0)
-        fileWriter.WriteLine(green, False, 1)
-        fileWriter.WriteLine(blue, False, 2)
-
-        fileWriter.Close()
-    End Sub
 
 End Class

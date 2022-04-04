@@ -12,6 +12,13 @@
 
     Function howManyWords()
 
+    Function getItem(tableName As String, itemName As String) As String
+    Function getItemInt(tableName As String, itemName As String) As Integer
+    Sub setItem(tableName As String, itemName As String, item As String)
+    Sub setItem(tableName As String, itemName As String, item As Integer)
+    Sub setItem(tableName As String, itemName As String, item As UInteger)
+
+
 
 
 
