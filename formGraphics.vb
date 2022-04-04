@@ -4,6 +4,7 @@
     Public Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         Dim colors As IGraphics
         colors = New CGraphics
+
         UInteger.TryParse(txtRed.Text, colors.red)
         UInteger.TryParse(txtGreen.Text, colors.green)
         UInteger.TryParse(txtBlue.Text, colors.blue)
@@ -20,6 +21,9 @@
                 Dim backColor As Color = Color.FromArgb(255, colors.red, colors.green, colors.blue)
                 Me.BackColor = backColor
                 setColors(colors.red, colors.green, colors.blue)
+                lblError.Visible = False
+                Dim fontColor As Color = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+                setLblColor(fontColor)
             Else
                 'Väärtused numbrilised, kuid piirkonnast väljas
                 lblError.Visible = True
@@ -28,6 +32,7 @@
         Else
             'Väärtused ei ole numbilised
             lblError.Visible = True
+            lblError.ForeColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
             lblError.Text = "Vigane väärtus! Väärtused peavad olema numbrilised"
         End If
 
@@ -52,6 +57,7 @@
                 'Kui kõik korras, siis muuda värv
                 Dim backColor As Color = Color.FromArgb(255, colors.red, colors.green, colors.blue)
                 pnlColor.BackColor = backColor
+                lblError.Visible = False
             Else
                 'Väärtus on numbriline, kuid piirkonnast väljas
                 lblError.Visible = True
@@ -92,11 +98,14 @@
     Private Sub btnDefault_Click(sender As Object, e As EventArgs) Handles btnDefault.Click
         Dim colors As IGraphics
         colors = New CGraphics
+        Dim fontColor As Color = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
 
         Me.BackColor = SystemColors.Control
         colors.red = 239
         colors.green = 239
         colors.blue = 239
+        setLblColor(fontColor)
+        lblError.Visible = False
         txtRed.Text = colors.red
         txtGreen.Text = colors.green
         txtBlue.Text = colors.blue
@@ -121,8 +130,10 @@
     Private Sub baseSettings()
         Dim colors As IGraphics
         colors = New CGraphics
+        Dim fontColor As Color = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
 
         lblError.Visible = False
+        setLblColor(fontColor)
         txtRed.Text = colors.red
         txtGreen.Text = colors.green
         txtBlue.Text = colors.blue
@@ -147,7 +158,7 @@
     'Salvestab kasutaja sisestatud värvid tekstifaili
     Private Sub setColors(ByVal red As UInteger, ByVal green As UInteger, ByVal blue As UInteger)
         Dim pathToGame As String = Application.StartupPath
-        Dim fileName As String = "visuals\wordleColor.txt"
+        Dim fileName As String = "wordleColor.txt"
         Dim fullPath As String = My.Computer.FileSystem.CombinePath(pathToGame, fileName)
 
         Dim fileWriter As System.IO.StreamWriter
@@ -158,6 +169,16 @@
         fileWriter.WriteLine(blue, False, 2)
 
         fileWriter.Close()
+    End Sub
+
+    Private Sub setLblColor(ByVal color As Color)
+        Dim colors As IGraphics
+        colors = New CGraphics
+        lblError.ForeColor = color
+        lblRed.ForeColor = color
+        lblGreen.ForeColor = color
+        lblBlue.ForeColor = color
+        lblTestColor.ForeColor = color
     End Sub
 
 End Class
