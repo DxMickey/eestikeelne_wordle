@@ -104,16 +104,20 @@ Public Class formGame
                 'Kui wordChecker tagastas 2, siis on õige täht vastavas kastis, ehk kast tehakse roheliseks
                 If misVarv = 2 And box.BackColor <> Color.Green Then
                     box.BackColor = Color.Green
+                    Dim boxText1 As String = box.Text
+                    changeKeyColor(boxText1, 2)
 
                     'Kui wordChecker tagastas 1, siis täht on sõnas olemas, aga vales kastis, seega kast tehakse kollaseks
                 ElseIf misVarv = 1 And box.BackColor <> Color.Yellow Then
                     box.BackColor = Color.Yellow
+                    Dim boxText2 As String = box.Text
+                    changeKeyColor(boxText2, 1)
 
                     'Kui wordChecker tagastas 0, siis tähte pole sõnas, ehk klaviatuuril tehakse täht punaseks ja täht lisatakse redLetters stringi
                 ElseIf misVarv = 0 Then
                     box.BackColor = Color.Red
-                    Dim boxText As String = box.Text
-                    makeKeyRed(boxText)
+                    Dim boxText3 As String = box.Text
+                    changeKeyColor(boxText3, 0)
                     game.redLetters = game.ArvatudSona(i)
 
                 End If
@@ -126,15 +130,20 @@ Public Class formGame
 
     'Klaviatuuril tähe punaseks muutmine
     'input = stringi kujul täht
-    Private Sub makeKeyRed(ByVal value As String)
+    Private Sub changeKeyColor(ByVal name As String, ByVal whichColor As Integer)
 
-        Dim boxName As String = "lbl" & value
+        Dim boxName As String = "lbl" & name
 
         If Me.Controls.Find(boxName, True).Count = 1 Then
             Dim box As Label = Me.Controls.Find(boxName, True)(0)
-            If box.BackColor <> Color.Red Then
+
+            If box.BackColor <> Color.Red And whichColor = 0 Then
 
                 box.BackColor = Color.Red
+            ElseIf box.BackColor <> Color.Green And box.BackColor <> Color.Yellow And whichColor = 1 Then
+                box.BackColor = Color.Yellow
+            ElseIf box.BackColor <> Color.Green And whichColor = 2 Then
+                box.BackColor = Color.Green
             End If
 
         End If

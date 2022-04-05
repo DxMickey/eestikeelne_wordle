@@ -316,8 +316,8 @@
             letterIsCorrect = True
         End If
 
-        'Punaste tähtede kontrollimine, kui on punane täht, siis pole korrektne klahv.
-        If intRidaSymbol > 1 Then
+        'Punaste tähtede kontrollimine, kui on punane täht, siis pole korrektne klahv. AINULT RASKE RASKUSASTME AJAL AKTIIVNE
+        If intRidaSymbol > 1 And gameMode = "Raske" Then
 
             For i = 0 To Len(strRedLetters) - 1
                 If UCase(Chr(value)) = strRedLetters(i) Then
