@@ -28,6 +28,7 @@ Partial Class formMenu
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClassic = New System.Windows.Forms.Button()
         Me.btnGraphics = New System.Windows.Forms.Button()
+        Me.btnWordList = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnPlay
@@ -87,11 +88,21 @@ Partial Class formMenu
         Me.btnGraphics.Text = "Kujundus"
         Me.btnGraphics.UseVisualStyleBackColor = True
         '
+        'btnWordList
+        '
+        Me.btnWordList.Location = New System.Drawing.Point(273, 414)
+        Me.btnWordList.Name = "btnWordList"
+        Me.btnWordList.Size = New System.Drawing.Size(118, 23)
+        Me.btnWordList.TabIndex = 5
+        Me.btnWordList.Text = "Enda sõnadelist"
+        Me.btnWordList.UseVisualStyleBackColor = True
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.btnWordList)
         Me.Controls.Add(Me.btnClassic)
         Me.Controls.Add(Me.btnGraphics)
         Me.Controls.Add(Me.Label1)
@@ -114,5 +125,5 @@ Partial Class formMenu
     Friend WithEvents btnClassic As Button
 
     Friend WithEvents btnGraphics As Button
-
+    Friend WithEvents btnWordList As Button
 End Class

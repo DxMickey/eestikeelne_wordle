@@ -213,7 +213,7 @@ Public Class formGame
         Dim uusKuupaev As String = DateTime.Today.ToShortDateString()
         Dim vanaKuupaev As String = data.getItem("miscData", "kuupaev")
 
-        txtDebug2.Text = ""
+        txtDebug2.Text = data.howManyWords()
 
         If game.kasPiiramatu = False Then
 
