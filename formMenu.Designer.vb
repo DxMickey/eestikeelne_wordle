@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class formMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class formMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnPlay = New System.Windows.Forms.Button()
         Me.btnHistory = New System.Windows.Forms.Button()
@@ -29,6 +29,8 @@ Partial Class formMenu
         Me.btnClassic = New System.Windows.Forms.Button()
         Me.btnGraphics = New System.Windows.Forms.Button()
         Me.btnWordList = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.txtDebug = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'btnPlay
@@ -97,11 +99,29 @@ Partial Class formMenu
         Me.btnWordList.Text = "Enda sõnadelist"
         Me.btnWordList.UseVisualStyleBackColor = True
         '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(273, 577)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(113, 23)
+        Me.btnUpdate.TabIndex = 6
+        Me.btnUpdate.Text = "Uuenda sõnu"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        '
+        'txtDebug
+        '
+        Me.txtDebug.Location = New System.Drawing.Point(47, 182)
+        Me.txtDebug.Name = "txtDebug"
+        Me.txtDebug.Size = New System.Drawing.Size(100, 20)
+        Me.txtDebug.TabIndex = 7
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.txtDebug)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnWordList)
         Me.Controls.Add(Me.btnClassic)
         Me.Controls.Add(Me.btnGraphics)
@@ -111,7 +131,7 @@ Partial Class formMenu
         Me.Controls.Add(Me.btnPlay)
         Me.Name = "formMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Wordle"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -126,4 +146,6 @@ Partial Class formMenu
 
     Friend WithEvents btnGraphics As Button
     Friend WithEvents btnWordList As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents txtDebug As TextBox
 End Class

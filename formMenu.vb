@@ -1,4 +1,6 @@
-﻿Public Class formMenu
+﻿Imports System.Net
+
+Public Class formMenu
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
         Dim game As IGame
         game = New CGame
@@ -121,9 +123,9 @@
         'Kui värvid väärtustamata, proovi saada need failist
         If colors.red = Nothing Or colors.green = Nothing Or colors.blue = Nothing Then
 
-            colors.red = Data.getItemInt("miscData", "red")
-            colors.green = Data.getItemInt("miscData", "green")
-            colors.blue = Data.getItemInt("miscData", "blue")
+            colors.red = data.getItemInt("miscData", "red")
+            colors.green = data.getItemInt("miscData", "green")
+            colors.blue = data.getItemInt("miscData", "blue")
         End If
     End Sub
 
@@ -142,5 +144,49 @@
 
         newForm.Show()
         Me.Close()
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim data As IDatabase
+        data = New CDatabase
+
+        Dim client As New WebClient
+        Dim saveFile As New SaveFileDialog
+        Dim fileUrl1 As String = "https://docs.google.com/uc?export=download&id=1BEwFvCp8TXU1tqlo9cJccKilIWvg_lTM"
+        Dim fileUrl2 As String = "https://docs.google.com/uc?export=download&id=1tpY8m6-sEzLla8l160oSGyFPvlkCJQFm"
+        Dim fileUrl3 As String = "https://docs.google.com/uc?export=download&id=1dR14DNVom_LtZkZAyNmrIDb9XdwO6RPy"
+        MessageBox.Show("Uuenduse kontrollimine võib võtta mõne hetke!")
+
+        client.DownloadFile(New Uri(fileUrl1), "sonadeListEasy.csv")
+        client.DownloadFile(New Uri(fileUrl2), "sonadeList.csv")
+        client.DownloadFile(New Uri(fileUrl3), "sonadeListHard.csv")
+
+
+        'txtDebug.Text = data.listCountWords("sonadeListHard")
+
+        If data.fileCountWords("sonadeListEasy.csv") <> data.listCountWords("sonadeListEasy") Or data.fileCountWords("sonadeList.csv") <> data.listCountWords("sonadeList") Or data.fileCountWords("sonadeListHard.csv") <> data.listCountWords("sonadeListHard") Then
+            MsgBox("Uuendus on olemas. Kas te soovite uuendada sõnu?", MsgBoxStyle.YesNo, "Uuendus")
+            If MsgBoxResult.Yes Then
+                If data.fileCountWords("sonadeListEasy.csv") <> data.listCountWords("sonadeListEasy") Then
+                    data.updateWordList("sonadeListEasy")
+                End If
+                If data.fileCountWords("sonadeList.csv") <> data.listCountWords("sonadeList") Then
+                    data.updateWordList("sonadeList")
+                End If
+                If data.fileCountWords("sonadeListHard.csv") <> data.listCountWords("sonadeListHard") Then
+                    data.updateWordList("sonadeListHard")
+                End If
+            Else
+
+            End If
+        Else
+            MessageBox.Show("Uuendust ei ole!")
+
+        End If
+
+
+        My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeListEasy.csv")
+        My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeList.csv")
+        My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeListHard.csv")
     End Sub
 End Class

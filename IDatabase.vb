@@ -19,6 +19,11 @@
     Sub setItem(tableName As String, itemName As String, item As UInteger)
     Sub importCSV(fileName As String)
     Sub deleteTable(tableName As String)
+    Function fileCountWords(fileName As String)
+
+    Function listCountWords(listName As String)
+
+    Sub updateWordList(tableName As String)
 
 
 

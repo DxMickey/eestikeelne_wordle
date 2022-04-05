@@ -290,11 +290,12 @@ Public Class CDatabase
             SQLcommand.ExecuteNonQuery()
 
         Loop Until line Is Nothing
+        reader.Close()
 
         SQLconnection.Close()
     End Sub
 
-    Public Sub deleteTable(tableName As String) Implements IDatabase.deleteTable
+    Private Sub deleteTable(tableName As String) Implements IDatabase.deleteTable
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -305,6 +306,71 @@ Public Class CDatabase
 
         SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & tableName & "'"
         SQLcommand.ExecuteNonQuery()
+
+        SQLconnection.Close()
+    End Sub
+
+
+    Private Function fileCountWords(fileName As String) As Object Implements IDatabase.fileCountWords
+        Dim count As Integer = 0
+
+        Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(fileName)
+        Dim line As String
+        Do
+            line = reader.ReadLine
+
+            count = count + 1
+
+        Loop Until line Is Nothing
+        reader.Close()
+
+        Return count
+    End Function
+
+    Private Function listCountWords(listName As String) As Object Implements IDatabase.listCountWords
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+        Dim game As IGame
+        game = New CGame
+
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "SELECT Count(rowid) FROM '" & listName & "'"
+        Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
+        SQLconnection.Close()
+
+        Return sqlResponse
+    End Function
+
+    Private Sub updateWordList(tableName As String) Implements IDatabase.updateWordList
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & tableName & "'"
+        SQLcommand.ExecuteNonQuery()
+
+        SQLcommand.CommandText = "CREATE TABLE '" & tableName & "'(sona STRING)"
+        SQLcommand.ExecuteNonQuery()
+
+        Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(tableName & ".csv")
+        Dim line As String
+        Do
+            line = reader.ReadLine
+
+            SQLcommand.CommandText = "INSERT INTO '" & tableName & "' VALUES('" & line & "')"
+            SQLcommand.ExecuteNonQuery()
+
+        Loop Until line Is Nothing
+        reader.Close()
 
         SQLconnection.Close()
     End Sub
