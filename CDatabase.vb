@@ -1,4 +1,6 @@
-﻿Public Class CDatabase
+﻿Imports System.IO
+
+Public Class CDatabase
     Implements IDatabase
 
     'Mängu andmete lisamine ajaloo tabelisse andmebaasis
@@ -26,11 +28,24 @@
         Dim millineList As String
 
         If game.gameMode = "Kerge" Then
-            millineList = "sonadeListEasy"
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "none" Then
+                millineList = getItem("miscData", "customEasy")
+            Else
+                millineList = "sonadeListEasy"
+            End If
+
         ElseIf game.gameMode = "Tavaline" Then
-            millineList = "sonadeList"
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "none" Then
+                millineList = getItem("miscData", "customNormal")
+            Else
+                millineList = "sonadeList"
+            End If
         Else
-            millineList = "sonadeListHard"
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "none" Then
+                millineList = getItem("miscData", "customHard")
+            Else
+                millineList = "sonadeListHard"
+            End If
 
         End If
 
@@ -39,7 +54,7 @@
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT Count(sonaID) FROM '" & millineList & "'"
+        SQLcommand.CommandText = "SELECT Count(rowid) FROM '" & millineList & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
 
@@ -128,11 +143,24 @@
         Dim number As Integer = 0
 
         If game.gameMode = "Kerge" Then
-            millineList = "sonadeListEasy"
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "none" Then
+                millineList = getItem("miscData", "customEasy")
+            Else
+                millineList = "sonadeListEasy"
+            End If
+
         ElseIf game.gameMode = "Tavaline" Then
-            millineList = "sonadeList"
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "none" Then
+                millineList = getItem("miscData", "customNormal")
+            Else
+                millineList = "sonadeList"
+            End If
         Else
-            millineList = "sonadeListHard"
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "none" Then
+                millineList = getItem("miscData", "customHard")
+            Else
+                millineList = "sonadeListHard"
+            End If
 
         End If
 
@@ -141,7 +169,7 @@
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "Select sonaID FROM '" & millineList & "' WHERE sona = '" & LCase(value) & "'"
+        SQLcommand.CommandText = "Select rowid FROM '" & millineList & "' WHERE sona = '" & LCase(value) & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
         If sqlResponse = 0 Then
@@ -206,11 +234,24 @@
         Dim millineList As String
 
         If game.gameMode = "Kerge" Then
-            millineList = "sonadeListEasy"
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "none" Then
+                millineList = getItem("miscData", "customEasy")
+            Else
+                millineList = "sonadeListEasy"
+            End If
+
         ElseIf game.gameMode = "Tavaline" Then
-            millineList = "sonadeList"
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "none" Then
+                millineList = getItem("miscData", "customNormal")
+            Else
+                millineList = "sonadeList"
+            End If
         Else
-            millineList = "sonadeListHard"
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "none" Then
+                millineList = getItem("miscData", "customHard")
+            Else
+                millineList = "sonadeListHard"
+            End If
 
         End If
 
@@ -219,9 +260,52 @@
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT * FROM        '" & millineList & "' WHERE sonaID = " & value
+        SQLcommand.CommandText = "SELECT * FROM        '" & millineList & "' WHERE rowid = " & value
         Dim sqlResponse As String = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
         Return sqlResponse
     End Function
+
+    Private Sub importCSV(fileName As String) Implements IDatabase.importCSV
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & fileName & "'"
+        SQLcommand.ExecuteNonQuery()
+
+        SQLcommand.CommandText = "CREATE TABLE '" & fileName & "'(sona STRING)"
+        SQLcommand.ExecuteNonQuery()
+
+        Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(fileName)
+        Dim line As String
+        Do
+            line = reader.ReadLine
+
+            SQLcommand.CommandText = "INSERT INTO '" & fileName & "' VALUES('" & line & "')"
+            SQLcommand.ExecuteNonQuery()
+
+        Loop Until line Is Nothing
+
+        SQLconnection.Close()
+    End Sub
+
+    Public Sub deleteTable(tableName As String) Implements IDatabase.deleteTable
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & tableName & "'"
+        SQLcommand.ExecuteNonQuery()
+
+        SQLconnection.Close()
+    End Sub
 End Class

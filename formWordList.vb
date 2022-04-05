@@ -1,0 +1,98 @@
+﻿Public Class formWordList
+
+
+    Private Sub btnSisesta_Click(sender As Object, e As EventArgs) Handles btnSisesta.Click
+        Dim data As IDatabase
+        data = New CDatabase
+
+        If txtCSVName.Text = Nothing Then
+            MessageBox.Show("Nime kast ei tohi tühi olla")
+        Else
+            If System.IO.File.Exists(Application.StartupPath() & "\" & txtCSVName.Text) Then
+                If rbtnLihtne.Checked Then
+                    If data.getItem("miscData", "customNormal") = txtCSVName.Text Or data.getItem("miscData", "customHard") = txtCSVName.Text Then
+                        MessageBox.Show("Sellise nimega fail on juba laetud ühte kolmest listidest")
+                    Else
+                        data.deleteTable(data.getItem("miscData", "customEasy"))
+                        data.importCSV(txtCSVName.Text)
+                        data.setItem("miscData", "customEasy", txtCSVName.Text)
+                    End If
+
+
+                ElseIf rbtnTavaline.Checked Then
+                    If data.getItem("miscData", "customEasy") = txtCSVName.Text Or data.getItem("miscData", "customHard") = txtCSVName.Text Then
+                        MessageBox.Show("Sellise nimega fail on juba laetud ühte kolmest listidest")
+                    Else
+                        data.deleteTable(data.getItem("miscData", "customNormal"))
+                        data.importCSV(txtCSVName.Text)
+                        data.setItem("miscData", "customNormal", txtCSVName.Text)
+                    End If
+
+
+                ElseIf rbtnRaske.Checked Then
+                    If data.getItem("miscData", "customNormal") = txtCSVName.Text Or data.getItem("miscData", "customEasy") = txtCSVName.Text Then
+                        MessageBox.Show("Sellise nimega fail on juba laetud ühte kolmest listidest")
+                    Else
+                        data.deleteTable(data.getItem("miscData", "customHard"))
+                        data.importCSV(txtCSVName.Text)
+                        data.setItem("miscData", "customHard", txtCSVName.Text)
+                    End If
+
+                End If
+            Else
+                MessageBox.Show("Sellise nimega CSV faili ei suuda leida")
+
+            End If
+        End If
+
+    End Sub
+
+    Private Sub btnOff_Click(sender As Object, e As EventArgs) Handles btnOff.Click
+        Dim data As IDatabase
+        data = New CDatabase
+
+        btnOff.Enabled = False
+        btnOn.Enabled = True
+        data.setItem("miscData", "customListState", "off")
+    End Sub
+
+    Private Sub btnOn_Click(sender As Object, e As EventArgs) Handles btnOn.Click
+        Dim data As IDatabase
+        data = New CDatabase
+
+        btnOff.Enabled = True
+        btnOn.Enabled = False
+        data.setItem("miscData", "customListState", "on")
+    End Sub
+
+    Private Sub formWordList_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Dim data As IDatabase
+        data = New CDatabase
+
+        btnOff.Enabled = False
+        btnOn.Enabled = False
+
+        If data.getItem("miscData", "customListState") = "off" Then
+            btnOn.Enabled = True
+        Else
+            btnOff.Enabled = True
+        End If
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Dim newForm As New formMenu
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        newForm.TopLevel = False
+        newForm.Parent = formContainer
+        newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        newForm.StartPosition = FormStartPosition.Manual
+        newForm.Location = New Point(0, 0)
+        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+
+
+        newForm.Show()
+        Me.Close()
+    End Sub
+End Class

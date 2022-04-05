@@ -271,6 +271,12 @@
     <Compile Include="CGame.vb" />
     <Compile Include="CDatabase.vb" />
     <Compile Include="CGraphics.vb" />
+    <Compile Include="formWordList.Designer.vb">
+      <DependentUpon>formWordList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formWordList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formContainer.Designer.vb">
       <DependentUpon>formContainer.vb</DependentUpon>
     </Compile>
@@ -341,6 +347,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="formWordList.resx">
+      <DependentUpon>formWordList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formContainer.resx">
       <DependentUpon>formContainer.vb</DependentUpon>
     </EmbeddedResource>
