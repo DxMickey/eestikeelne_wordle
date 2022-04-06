@@ -11,7 +11,7 @@ Public Class formGameEnd
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -28,7 +28,7 @@ Public Class formGameEnd
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -40,6 +40,8 @@ Public Class formGameEnd
         game = New CGame
         Dim data As IDatabase
         data = New CDatabase
+        Dim colors As IGraphics
+        colors = New CGraphics
 
         'Tõlkekasti keelte valiku lisamine
         cmbLanguage.Items.Add("en")
@@ -52,11 +54,14 @@ Public Class formGameEnd
 
         'Võidu või kaotuse teksti valimine
         If game.winOrLose = 1 Then
+            lblResult.ForeColor = colors.lblColor
             lblResult.Text = "Sa arvasid sõna ära!"
         Else
+            lblResult.ForeColor = colors.lblColor
             lblResult.Text = "Sa ei suutnud sõna ära arvata!"
         End If
 
+        lblSona.ForeColor = colors.lblColor
         lblSona.Text = game.strSona
     End Sub
 

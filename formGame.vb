@@ -192,6 +192,12 @@ Public Class formGame
         game = New CGame
         Dim data As IDatabase
         data = New CDatabase
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        'Muuda labelite värvi
+        lblTimeLeft.ForeColor = colors.lblColor
+        lblTimeText.ForeColor = colors.lblColor
 
         'Väärtuste taastamine algväärtustele uue mängu jaoks
         game.intKast = Nothing
@@ -278,7 +284,7 @@ Public Class formGame
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -366,4 +372,5 @@ Public Class formGame
         gameEngine()
 
     End Sub
+
 End Class

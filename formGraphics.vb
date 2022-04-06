@@ -16,10 +16,14 @@
         If flag2 = 1 Then
 
             If flag1 = 1 Then
-                'Väärtused on korras
-                Dim backColor As Color = Color.FromArgb(255, colors.red, colors.green, colors.blue)
-                Me.BackColor = backColor
+                'Väärtused on korras, vaheta taustavärv ja muuda labelite värv
+                lblError.Visible = False
                 setColors(colors.red, colors.green, colors.blue)
+                colors.backColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+                'colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+                setLblColor()
+                changeLabels(colors.lblColor)
+                Me.BackColor = colors.backColor
             Else
                 'Väärtused numbrilised, kuid piirkonnast väljas
                 lblError.Visible = True
@@ -27,38 +31,6 @@
             End If
         Else
             'Väärtused ei ole numbilised
-            lblError.Visible = True
-            lblError.Text = "Vigane väärtus! Väärtused peavad olema numbrilised"
-        End If
-
-    End Sub
-
-    'Vaata, milline sisestatud koodiga värv on
-    Public Sub btnTry_Click(sender As Object, e As EventArgs) Handles btnTry.Click
-        Dim colors As IGraphics
-        colors = New CGraphics
-        'Väärtusa värvid
-        UInteger.TryParse(txtRed.Text, colors.red)
-        UInteger.TryParse(txtGreen.Text, colors.green)
-        UInteger.TryParse(txtBlue.Text, colors.blue)
-
-        'Kontrolli kas sisestatud väärtused on sobivad
-        Dim flag2 As Integer = checkValues(txtRed.Text, txtGreen.Text, txtBlue.Text)
-        Dim flag1 As Integer = checkColors(colors.red, colors.green, colors.blue)
-
-        If flag2 = 1 Then
-
-            If flag1 = 1 Then
-                'Kui kõik korras, siis muuda värv
-                Dim backColor As Color = Color.FromArgb(255, colors.red, colors.green, colors.blue)
-                pnlColor.BackColor = backColor
-            Else
-                'Väärtus on numbriline, kuid piirkonnast väljas
-                lblError.Visible = True
-                lblError.Text = "Vigane väärtus! Väärtused peavad olema vahemikus 0 - 255"
-            End If
-        Else
-            'Väärtus ei ole numbriline
             lblError.Visible = True
             lblError.Text = "Vigane väärtus! Väärtused peavad olema numbrilised"
         End If
@@ -81,7 +53,7 @@
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -93,16 +65,72 @@
         Dim colors As IGraphics
         colors = New CGraphics
 
+        lblError.Visible = False
         Me.BackColor = SystemColors.Control
         colors.red = 239
         colors.green = 239
         colors.blue = 239
-        txtRed.Text = colors.red
-        txtGreen.Text = colors.green
-        txtBlue.Text = colors.blue
+
+        txtRed.Text = 239
+        txtGreen.Text = 239
+        txtBlue.Text = 239
 
         setColors(colors.red, colors.green, colors.blue)
+        colors.backColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        'colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        setLblColor()
+        changeLabels(colors.lblColor)
     End Sub
+
+    'Muuda värtvuseid ja proovi värvi
+    Private Sub tbrGreen_Scroll(sender As Object, e As EventArgs) Handles tbrGreen.Scroll
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        colors.green = Int(tbrGreen.Value)
+        txtGreen.Text = colors.green
+
+        tryColor()
+    End Sub
+
+    'Muuda värvuseid ja proovi värvi
+    Private Sub tbrRed_Scroll(sender As Object, e As EventArgs) Handles tbrRed.Scroll
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        colors.red = Int(tbrRed.Value)
+        txtRed.Text = colors.red
+
+        tryColor()
+    End Sub
+
+    'Muuda väärtuseid ja proovi värvi
+    Private Sub tbrBlue_Scroll(sender As Object, e As EventArgs) Handles tbrBlue.Scroll
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        colors.blue = Int(tbrBlue.Value)
+        txtBlue.Text = colors.blue
+
+        tryColor()
+    End Sub
+
+    'Proovi värvi, kui punase lahtrit on muudetud
+    Private Sub txtRed_TextChanged(sender As Object, e As EventArgs) Handles txtRed.TextChanged
+        tryColor()
+    End Sub
+
+    'Proovi värvi, kui rohelise lahtrit on muudetud
+    Private Sub txtGreen_TextChanged(sender As Object, e As EventArgs) Handles txtGreen.TextChanged
+        tryColor()
+    End Sub
+
+    'Proovi värvi, kui sinise lahtrit on muudetud
+    Private Sub txtBlue_TextChanged(sender As Object, e As EventArgs) Handles txtBlue.TextChanged
+        tryColor()
+    End Sub
+
+
 
 
     'Kontrolli, kas sistestatud värv jääb vahemikku 255
@@ -121,8 +149,17 @@
     Private Sub baseSettings()
         Dim colors As IGraphics
         colors = New CGraphics
+        Dim data As IDatabase
+        data = New CDatabase
 
+        changeLabels(colors.lblColor)
+        'Peida error silt
         lblError.Visible = False
+        'Algväärtusta sliderid
+        tbrRed.Value = colors.red
+        tbrGreen.Value = colors.green
+        tbrBlue.Value = colors.blue
+        'Algväärtusta tekstboxid
         txtRed.Text = colors.red
         txtGreen.Text = colors.green
         txtBlue.Text = colors.blue
@@ -153,8 +190,61 @@
         data.setItem("miscData", "green", green)
         data.setItem("miscData", "blue", blue)
 
+    End Sub
 
+
+    Private Sub tryColor()
+        Dim red, green, blue As UInteger
+        'Väärtusta värvid
+        UInteger.TryParse(txtRed.Text, red)
+        UInteger.TryParse(txtGreen.Text, green)
+        UInteger.TryParse(txtBlue.Text, blue)
+
+        'Kontrolli kas sisestatud väärtused on sobivad
+        Dim flag2 As Integer = checkValues(txtRed.Text, txtGreen.Text, txtBlue.Text)
+        Dim flag1 As Integer = checkColors(red, green, blue)
+
+        If flag2 = 1 Then
+
+            If flag1 = 1 Then
+                'Kui kõik korras, siis muuda värv
+                lblError.Visible = False
+
+                tbrRed.Value = red
+                tbrGreen.Value = green
+                tbrBlue.Value = blue
+
+                Dim backColor As Color = Color.FromArgb(255, red, green, blue)
+                pnlColor.BackColor = backColor
+            Else
+                'Väärtus on numbriline, kuid piirkonnast väljas
+                lblError.Visible = True
+                lblError.Text = "Vigane väärtus! Väärtused peavad olema vahemikus 0 - 255"
+            End If
+        Else
+            'Väärtus ei ole numbriline
+            lblError.Visible = True
+            lblError.Text = "Vigane väärtus! Väärtused peavad olema numbrilised"
+        End If
 
     End Sub
 
+    Private Sub changeLabels(ByVal color As Color)
+        lblBlue.ForeColor = color
+        lblError.ForeColor = color
+        lblGreen.ForeColor = color
+        lblTestColor.ForeColor = color
+        lblRed.ForeColor = color
+    End Sub
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red - 70), 255 - (colors.green - 70), 255 - (colors.blue - 70))
+        End If
+    End Sub
 End Class

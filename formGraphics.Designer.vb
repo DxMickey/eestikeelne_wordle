@@ -22,7 +22,6 @@ Partial Class formGraphics
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnTry = New System.Windows.Forms.Button()
         Me.btnConfirm = New System.Windows.Forms.Button()
         Me.pnlColor = New System.Windows.Forms.Panel()
         Me.lblRed = New System.Windows.Forms.Label()
@@ -35,24 +34,20 @@ Partial Class formGraphics
         Me.btnBack = New System.Windows.Forms.Button()
         Me.lblError = New System.Windows.Forms.Label()
         Me.btnDefault = New System.Windows.Forms.Button()
+        Me.tbrRed = New System.Windows.Forms.TrackBar()
+        Me.tbrGreen = New System.Windows.Forms.TrackBar()
+        Me.tbrBlue = New System.Windows.Forms.TrackBar()
+        CType(Me.tbrRed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbrGreen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tbrBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btnTry
-        '
-        Me.btnTry.Location = New System.Drawing.Point(216, 293)
-        Me.btnTry.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.btnTry.Name = "btnTry"
-        Me.btnTry.Size = New System.Drawing.Size(56, 19)
-        Me.btnTry.TabIndex = 0
-        Me.btnTry.Text = "Proovi"
-        Me.btnTry.UseVisualStyleBackColor = True
         '
         'btnConfirm
         '
-        Me.btnConfirm.Location = New System.Drawing.Point(142, 293)
-        Me.btnConfirm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnConfirm.Location = New System.Drawing.Point(412, 609)
+        Me.btnConfirm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnConfirm.Name = "btnConfirm"
-        Me.btnConfirm.Size = New System.Drawing.Size(56, 19)
+        Me.btnConfirm.Size = New System.Drawing.Size(125, 48)
         Me.btnConfirm.TabIndex = 1
         Me.btnConfirm.Text = "Sätesta"
         Me.btnConfirm.UseVisualStyleBackColor = True
@@ -61,82 +56,82 @@ Partial Class formGraphics
         '
         Me.pnlColor.BackColor = System.Drawing.SystemColors.Control
         Me.pnlColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pnlColor.Location = New System.Drawing.Point(327, 127)
-        Me.pnlColor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pnlColor.Location = New System.Drawing.Point(584, 308)
+        Me.pnlColor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlColor.Name = "pnlColor"
-        Me.pnlColor.Size = New System.Drawing.Size(169, 172)
+        Me.pnlColor.Size = New System.Drawing.Size(225, 211)
         Me.pnlColor.TabIndex = 2
         '
         'lblRed
         '
         Me.lblRed.AutoSize = True
-        Me.lblRed.Location = New System.Drawing.Point(66, 158)
-        Me.lblRed.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblRed.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRed.Location = New System.Drawing.Point(96, 308)
         Me.lblRed.Name = "lblRed"
-        Me.lblRed.Size = New System.Drawing.Size(44, 13)
+        Me.lblRed.Size = New System.Drawing.Size(59, 16)
         Me.lblRed.TabIndex = 3
         Me.lblRed.Text = "Punane"
         '
         'lblGreen
         '
         Me.lblGreen.AutoSize = True
-        Me.lblGreen.Location = New System.Drawing.Point(66, 202)
-        Me.lblGreen.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblGreen.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGreen.Location = New System.Drawing.Point(96, 401)
         Me.lblGreen.Name = "lblGreen"
-        Me.lblGreen.Size = New System.Drawing.Size(49, 13)
+        Me.lblGreen.Size = New System.Drawing.Size(69, 16)
         Me.lblGreen.TabIndex = 4
         Me.lblGreen.Text = "Roheline"
         '
         'lblBlue
         '
         Me.lblBlue.AutoSize = True
-        Me.lblBlue.Location = New System.Drawing.Point(66, 240)
-        Me.lblBlue.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblBlue.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlue.Location = New System.Drawing.Point(96, 484)
         Me.lblBlue.Name = "lblBlue"
-        Me.lblBlue.Size = New System.Drawing.Size(36, 13)
+        Me.lblBlue.Size = New System.Drawing.Size(50, 16)
         Me.lblBlue.TabIndex = 5
         Me.lblBlue.Text = "Sinine"
         '
         'txtRed
         '
-        Me.txtRed.Location = New System.Drawing.Point(148, 153)
-        Me.txtRed.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtRed.Location = New System.Drawing.Point(470, 308)
+        Me.txtRed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtRed.Name = "txtRed"
-        Me.txtRed.Size = New System.Drawing.Size(125, 20)
+        Me.txtRed.Size = New System.Drawing.Size(67, 22)
         Me.txtRed.TabIndex = 6
         '
         'txtGreen
         '
-        Me.txtGreen.Location = New System.Drawing.Point(148, 197)
-        Me.txtGreen.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtGreen.Location = New System.Drawing.Point(470, 395)
+        Me.txtGreen.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtGreen.Name = "txtGreen"
-        Me.txtGreen.Size = New System.Drawing.Size(125, 20)
+        Me.txtGreen.Size = New System.Drawing.Size(67, 22)
         Me.txtGreen.TabIndex = 7
         '
         'txtBlue
         '
-        Me.txtBlue.Location = New System.Drawing.Point(148, 235)
-        Me.txtBlue.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBlue.Location = New System.Drawing.Point(470, 484)
+        Me.txtBlue.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBlue.Name = "txtBlue"
-        Me.txtBlue.Size = New System.Drawing.Size(125, 20)
+        Me.txtBlue.Size = New System.Drawing.Size(67, 22)
         Me.txtBlue.TabIndex = 8
         '
         'lblTestColor
         '
         Me.lblTestColor.AutoSize = True
-        Me.lblTestColor.Location = New System.Drawing.Point(371, 98)
-        Me.lblTestColor.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblTestColor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTestColor.Location = New System.Drawing.Point(643, 273)
         Me.lblTestColor.Name = "lblTestColor"
-        Me.lblTestColor.Size = New System.Drawing.Size(78, 13)
+        Me.lblTestColor.Size = New System.Drawing.Size(113, 16)
         Me.lblTestColor.TabIndex = 9
         Me.lblTestColor.Text = "Värvi eelvaade"
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(25, 25)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBack.Location = New System.Drawing.Point(33, 31)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(88, 28)
+        Me.btnBack.Size = New System.Drawing.Size(117, 34)
         Me.btnBack.TabIndex = 10
         Me.btnBack.Text = "Tagasi"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -144,30 +139,56 @@ Partial Class formGraphics
         'lblError
         '
         Me.lblError.AutoSize = True
-        Me.lblError.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblError.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblError.ForeColor = System.Drawing.Color.Brown
-        Me.lblError.Location = New System.Drawing.Point(116, 342)
-        Me.lblError.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblError.Location = New System.Drawing.Point(148, 564)
         Me.lblError.Name = "lblError"
-        Me.lblError.Size = New System.Drawing.Size(31, 15)
+        Me.lblError.Size = New System.Drawing.Size(39, 16)
         Me.lblError.TabIndex = 13
         Me.lblError.Text = "Viga"
         '
         'btnDefault
         '
-        Me.btnDefault.Location = New System.Drawing.Point(68, 293)
-        Me.btnDefault.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnDefault.Location = New System.Drawing.Point(99, 609)
+        Me.btnDefault.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnDefault.Name = "btnDefault"
-        Me.btnDefault.Size = New System.Drawing.Size(56, 19)
+        Me.btnDefault.Size = New System.Drawing.Size(126, 48)
         Me.btnDefault.TabIndex = 14
         Me.btnDefault.Text = "Default"
         Me.btnDefault.UseVisualStyleBackColor = True
         '
+        'tbrRed
+        '
+        Me.tbrRed.Location = New System.Drawing.Point(183, 308)
+        Me.tbrRed.Maximum = 255
+        Me.tbrRed.Name = "tbrRed"
+        Me.tbrRed.Size = New System.Drawing.Size(253, 56)
+        Me.tbrRed.TabIndex = 15
+        '
+        'tbrGreen
+        '
+        Me.tbrGreen.Location = New System.Drawing.Point(183, 401)
+        Me.tbrGreen.Maximum = 255
+        Me.tbrGreen.Name = "tbrGreen"
+        Me.tbrGreen.Size = New System.Drawing.Size(253, 56)
+        Me.tbrGreen.TabIndex = 16
+        '
+        'tbrBlue
+        '
+        Me.tbrBlue.Location = New System.Drawing.Point(183, 484)
+        Me.tbrBlue.Maximum = 255
+        Me.tbrBlue.Name = "tbrBlue"
+        Me.tbrBlue.Size = New System.Drawing.Size(253, 56)
+        Me.tbrBlue.TabIndex = 17
+        '
         'formGraphics
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.ClientSize = New System.Drawing.Size(912, 937)
+        Me.Controls.Add(Me.tbrBlue)
+        Me.Controls.Add(Me.tbrGreen)
+        Me.Controls.Add(Me.tbrRed)
         Me.Controls.Add(Me.btnDefault)
         Me.Controls.Add(Me.lblError)
         Me.Controls.Add(Me.btnBack)
@@ -180,17 +201,17 @@ Partial Class formGraphics
         Me.Controls.Add(Me.lblRed)
         Me.Controls.Add(Me.pnlColor)
         Me.Controls.Add(Me.btnConfirm)
-        Me.Controls.Add(Me.btnTry)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "formGraphics"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Graafika"
+        CType(Me.tbrRed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbrGreen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tbrBlue, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btnTry As Button
     Friend WithEvents btnConfirm As Button
     Friend WithEvents pnlColor As Panel
     Friend WithEvents lblRed As Label
@@ -203,4 +224,7 @@ Partial Class formGraphics
     Friend WithEvents btnBack As Button
     Friend WithEvents lblError As Label
     Friend WithEvents btnDefault As Button
+    Friend WithEvents tbrRed As TrackBar
+    Friend WithEvents tbrGreen As TrackBar
+    Friend WithEvents tbrBlue As TrackBar
 End Class
