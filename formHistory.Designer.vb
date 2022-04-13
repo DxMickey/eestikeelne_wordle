@@ -39,9 +39,9 @@ Partial Class formHistory
         'dtgDatagrid
         '
         Me.dtgDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgDatagrid.Location = New System.Drawing.Point(35, 12)
+        Me.dtgDatagrid.Location = New System.Drawing.Point(12, 12)
         Me.dtgDatagrid.Name = "dtgDatagrid"
-        Me.dtgDatagrid.Size = New System.Drawing.Size(612, 669)
+        Me.dtgDatagrid.Size = New System.Drawing.Size(660, 669)
         Me.dtgDatagrid.TabIndex = 1
         '
         'btnBack

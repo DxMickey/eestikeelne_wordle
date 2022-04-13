@@ -194,7 +194,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT * FROM history_view"
+        SQLcommand.CommandText = "SELECT * FROM history_view ORDER BY mitmesMäng DESC"
         Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
         SQLite_Data_Reader = SQLcommand.ExecuteReader
 
@@ -204,6 +204,20 @@ Public Class CDatabase
         SQLconnection.Close()
 
         Return tabel
+    End Function
+    Private Function Transpose(ByVal table As DataTable) As DataTable
+        Dim flippedTable As New DataTable
+        'creates as many columns as rows in source table
+        flippedTable.Columns.AddRange(
+        table.Select.Select(
+            Function(dr) New DataColumn("col" & table.Rows.IndexOf(dr), GetType(Object))
+            ).ToArray)
+        'iterates columns in source table
+        For Each dc As DataColumn In table.Columns
+            'get array of values of column in each row and add as new row in target table
+            flippedTable.Rows.Add(table.Select.Select(Function(dr) dr(dc)).ToArray)
+        Next
+        Return flippedTable
     End Function
 
     'Statistika tagastamine andmebaasist
