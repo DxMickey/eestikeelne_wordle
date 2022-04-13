@@ -326,7 +326,7 @@ Public Class CDatabase
         SQLite_Data_Reader = SQLcommand.ExecuteReader
 
         Dim tabel As New DataTable
-        tabel.Load(SQLite_Data_Reader)
+        '' uus osa
         Dim JSONtabel = JsonConvert.SerializeObject(tabel, Formatting.Indented)
 
         If (My.Computer.FileSystem.FileExists("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json")) Then
