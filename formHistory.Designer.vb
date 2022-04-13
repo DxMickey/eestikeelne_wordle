@@ -25,6 +25,7 @@ Partial Class formHistory
         Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.dtgDatagrid = New System.Windows.Forms.DataGridView()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnExport = New System.Windows.Forms.Button()
         CType(Me.dtgDatagrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,11 +53,21 @@ Partial Class formHistory
         Me.btnBack.Text = "Tagasi"
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'btnExport
+        '
+        Me.btnExport.Location = New System.Drawing.Point(552, 706)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(95, 23)
+        Me.btnExport.TabIndex = 3
+        Me.btnExport.Text = "Ekspordi JSON"
+        Me.btnExport.UseVisualStyleBackColor = True
+        '
         'formHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.btnExport)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.dtgDatagrid)
         Me.Controls.Add(Me.VScrollBar1)
@@ -70,4 +81,5 @@ Partial Class formHistory
     Friend WithEvents VScrollBar1 As VScrollBar
     Friend WithEvents dtgDatagrid As DataGridView
     Friend WithEvents btnBack As Button
+    Friend WithEvents btnExport As Button
 End Class

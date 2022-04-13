@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports Newtonsoft.Json
 
 Public Class CDatabase
     Implements IDatabase
@@ -307,5 +308,32 @@ Public Class CDatabase
         SQLcommand.ExecuteNonQuery()
 
         SQLconnection.Close()
+    End Sub
+    ' formHistory on nupp 'Ekspordi JSON', mida see funktsioon siis teeb
+    ' kood on suurem osa kopeeritud funktsioonist getHistory
+    ' ainult l6pus muudetud mida tabeliga tehakse
+    Public Sub exportJSON() Implements IDatabase.exportJSON
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "SELECT * FROM gameHistory"
+        Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
+        SQLite_Data_Reader = SQLcommand.ExecuteReader
+
+        Dim tabel As New DataTable
+        tabel.Load(SQLite_Data_Reader)
+        Dim JSONtabel = JsonConvert.SerializeObject(tabel, Formatting.Indented)
+
+        If (My.Computer.FileSystem.FileExists("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json")) Then
+            My.Computer.FileSystem.DeleteFile("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json")
+            My.Computer.FileSystem.WriteAllText("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json", JSONtabel, True)
+        Else
+            My.Computer.FileSystem.WriteAllText("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json", JSONtabel, True)
+        End If
     End Sub
 End Class

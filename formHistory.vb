@@ -21,4 +21,9 @@
         newForm.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        Dim CDatabase As New CDatabase
+        CDatabase.exportJSON()
+    End Sub
 End Class
