@@ -271,6 +271,7 @@
     <Compile Include="CGame.vb" />
     <Compile Include="CDatabase.vb" />
     <Compile Include="CGraphics.vb" />
+    <Compile Include="CTaustaMuusika.vb" />
     <Compile Include="formWordList.Designer.vb">
       <DependentUpon>formWordList.vb</DependentUpon>
     </Compile>
@@ -329,6 +330,7 @@
     <Compile Include="IGame.vb" />
     <Compile Include="IDatabase.vb" />
     <Compile Include="IGraphics.vb" />
+    <Compile Include="ITaustaMuusika.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -409,6 +411,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
