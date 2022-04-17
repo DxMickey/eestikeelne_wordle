@@ -35,12 +35,13 @@ Partial Class formGraphics
         Me.btnBack = New System.Windows.Forms.Button()
         Me.lblError = New System.Windows.Forms.Label()
         Me.btnDefault = New System.Windows.Forms.Button()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'btnTry
         '
         Me.btnTry.Location = New System.Drawing.Point(216, 293)
-        Me.btnTry.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnTry.Margin = New System.Windows.Forms.Padding(2)
         Me.btnTry.Name = "btnTry"
         Me.btnTry.Size = New System.Drawing.Size(56, 19)
         Me.btnTry.TabIndex = 0
@@ -50,7 +51,7 @@ Partial Class formGraphics
         'btnConfirm
         '
         Me.btnConfirm.Location = New System.Drawing.Point(142, 293)
-        Me.btnConfirm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnConfirm.Margin = New System.Windows.Forms.Padding(2)
         Me.btnConfirm.Name = "btnConfirm"
         Me.btnConfirm.Size = New System.Drawing.Size(56, 19)
         Me.btnConfirm.TabIndex = 1
@@ -62,7 +63,7 @@ Partial Class formGraphics
         Me.pnlColor.BackColor = System.Drawing.SystemColors.Control
         Me.pnlColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlColor.Location = New System.Drawing.Point(327, 127)
-        Me.pnlColor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pnlColor.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlColor.Name = "pnlColor"
         Me.pnlColor.Size = New System.Drawing.Size(169, 172)
         Me.pnlColor.TabIndex = 2
@@ -100,7 +101,7 @@ Partial Class formGraphics
         'txtRed
         '
         Me.txtRed.Location = New System.Drawing.Point(148, 153)
-        Me.txtRed.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtRed.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRed.Name = "txtRed"
         Me.txtRed.Size = New System.Drawing.Size(125, 20)
         Me.txtRed.TabIndex = 6
@@ -108,7 +109,7 @@ Partial Class formGraphics
         'txtGreen
         '
         Me.txtGreen.Location = New System.Drawing.Point(148, 197)
-        Me.txtGreen.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtGreen.Margin = New System.Windows.Forms.Padding(2)
         Me.txtGreen.Name = "txtGreen"
         Me.txtGreen.Size = New System.Drawing.Size(125, 20)
         Me.txtGreen.TabIndex = 7
@@ -116,7 +117,7 @@ Partial Class formGraphics
         'txtBlue
         '
         Me.txtBlue.Location = New System.Drawing.Point(148, 235)
-        Me.txtBlue.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBlue.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBlue.Name = "txtBlue"
         Me.txtBlue.Size = New System.Drawing.Size(125, 20)
         Me.txtBlue.TabIndex = 8
@@ -134,7 +135,7 @@ Partial Class formGraphics
         'btnBack
         '
         Me.btnBack.Location = New System.Drawing.Point(25, 25)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(88, 28)
         Me.btnBack.TabIndex = 10
@@ -156,18 +157,26 @@ Partial Class formGraphics
         'btnDefault
         '
         Me.btnDefault.Location = New System.Drawing.Point(68, 293)
-        Me.btnDefault.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnDefault.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDefault.Name = "btnDefault"
         Me.btnDefault.Size = New System.Drawing.Size(56, 19)
         Me.btnDefault.TabIndex = 14
         Me.btnDefault.Text = "Default"
         Me.btnDefault.UseVisualStyleBackColor = True
         '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 15
+        '
         'formGraphics
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnDefault)
         Me.Controls.Add(Me.lblError)
         Me.Controls.Add(Me.btnBack)
@@ -181,7 +190,7 @@ Partial Class formGraphics
         Me.Controls.Add(Me.pnlColor)
         Me.Controls.Add(Me.btnConfirm)
         Me.Controls.Add(Me.btnTry)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "formGraphics"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Graafika"
@@ -203,4 +212,5 @@ Partial Class formGraphics
     Friend WithEvents btnBack As Button
     Friend WithEvents lblError As Label
     Friend WithEvents btnDefault As Button
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class

@@ -39,6 +39,7 @@ Partial Class formStatistika
         Me.txtSlowestTime = New System.Windows.Forms.Label()
         Me.txtHighscore = New System.Windows.Forms.Label()
         Me.txtAvgScore = New System.Windows.Forms.Label()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'btnBack
@@ -210,11 +211,19 @@ Partial Class formStatistika
         Me.txtAvgScore.TabIndex = 16
         Me.txtAvgScore.Text = "0"
         '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 17
+        '
         'formStatistika
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.txtAvgScore)
         Me.Controls.Add(Me.txtHighscore)
         Me.Controls.Add(Me.txtSlowestTime)
@@ -256,4 +265,5 @@ Partial Class formStatistika
     Friend WithEvents txtSlowestTime As Label
     Friend WithEvents txtHighscore As Label
     Friend WithEvents txtAvgScore As Label
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class

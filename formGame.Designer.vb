@@ -97,6 +97,7 @@ Partial Class formGame
         Me.lblZ = New System.Windows.Forms.Label()
         Me.lblEnter = New System.Windows.Forms.Label()
         Me.lblBackspace = New System.Windows.Forms.Label()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'txtDebug
@@ -1059,11 +1060,19 @@ Partial Class formGame
         Me.lblBackspace.Text = "KUSTUTA"
         Me.lblBackspace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 143
+        '
         'formGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.lblBackspace)
         Me.Controls.Add(Me.lblEnter)
         Me.Controls.Add(Me.lblM)
@@ -1216,4 +1225,5 @@ Partial Class formGame
     Friend WithEvents lblZ As Label
     Friend WithEvents lblEnter As Label
     Friend WithEvents lblBackspace As Label
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class

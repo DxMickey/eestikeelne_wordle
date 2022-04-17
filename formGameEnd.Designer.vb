@@ -29,6 +29,7 @@ Partial Class formGameEnd
         Me.txtTranslation = New System.Windows.Forms.TextBox()
         Me.btnTranslate = New System.Windows.Forms.Button()
         Me.cmbLanguage = New System.Windows.Forms.ComboBox()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'lblResult
@@ -93,11 +94,19 @@ Partial Class formGameEnd
         Me.cmbLanguage.Size = New System.Drawing.Size(121, 21)
         Me.cmbLanguage.TabIndex = 6
         '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 7
+        '
         'formGameEnd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.cmbLanguage)
         Me.Controls.Add(Me.btnTranslate)
         Me.Controls.Add(Me.txtTranslation)
@@ -119,4 +128,5 @@ Partial Class formGameEnd
     Friend WithEvents txtTranslation As TextBox
     Friend WithEvents btnTranslate As Button
     Friend WithEvents cmbLanguage As ComboBox
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class

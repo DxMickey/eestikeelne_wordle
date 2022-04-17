@@ -29,6 +29,7 @@ Partial Class formMenu
         Me.btnClassic = New System.Windows.Forms.Button()
         Me.btnGraphics = New System.Windows.Forms.Button()
         Me.btnWordList = New System.Windows.Forms.Button()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'btnPlay
@@ -97,11 +98,19 @@ Partial Class formMenu
         Me.btnWordList.Text = "Enda sõnadelist"
         Me.btnWordList.UseVisualStyleBackColor = True
         '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 6
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnWordList)
         Me.Controls.Add(Me.btnClassic)
         Me.Controls.Add(Me.btnGraphics)
@@ -126,4 +135,5 @@ Partial Class formMenu
 
     Friend WithEvents btnGraphics As Button
     Friend WithEvents btnWordList As Button
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class
