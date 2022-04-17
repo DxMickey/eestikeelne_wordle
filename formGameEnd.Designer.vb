@@ -33,13 +33,14 @@ Partial Class formGameEnd
         Me.lblGameScore = New System.Windows.Forms.Label()
         Me.lblBestScoreName = New System.Windows.Forms.Label()
         Me.lblBestScore = New System.Windows.Forms.Label()
+        Me.lblNewHighscore = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblResult
         '
         Me.lblResult.AutoSize = True
         Me.lblResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
-        Me.lblResult.Location = New System.Drawing.Point(297, 177)
+        Me.lblResult.Location = New System.Drawing.Point(310, 222)
         Me.lblResult.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblResult.Name = "lblResult"
         Me.lblResult.Size = New System.Drawing.Size(236, 30)
@@ -70,7 +71,7 @@ Partial Class formGameEnd
         '
         Me.lblSona.AutoSize = True
         Me.lblSona.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.25!)
-        Me.lblSona.Location = New System.Drawing.Point(372, 249)
+        Me.lblSona.Location = New System.Drawing.Point(378, 280)
         Me.lblSona.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSona.Name = "lblSona"
         Me.lblSona.Size = New System.Drawing.Size(101, 32)
@@ -108,7 +109,7 @@ Partial Class formGameEnd
         '
         Me.lblScoreName.AutoSize = True
         Me.lblScoreName.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblScoreName.Location = New System.Drawing.Point(335, 45)
+        Me.lblScoreName.Location = New System.Drawing.Point(174, 21)
         Me.lblScoreName.Name = "lblScoreName"
         Me.lblScoreName.Size = New System.Drawing.Size(126, 42)
         Me.lblScoreName.TabIndex = 7
@@ -118,7 +119,7 @@ Partial Class formGameEnd
         '
         Me.lblGameScore.AutoSize = True
         Me.lblGameScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGameScore.Location = New System.Drawing.Point(463, 45)
+        Me.lblGameScore.Location = New System.Drawing.Point(302, 21)
         Me.lblGameScore.Name = "lblGameScore"
         Me.lblGameScore.Size = New System.Drawing.Size(39, 42)
         Me.lblGameScore.TabIndex = 8
@@ -128,7 +129,7 @@ Partial Class formGameEnd
         '
         Me.lblBestScoreName.AutoSize = True
         Me.lblBestScoreName.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBestScoreName.Location = New System.Drawing.Point(235, 87)
+        Me.lblBestScoreName.Location = New System.Drawing.Point(74, 63)
         Me.lblBestScoreName.Name = "lblBestScoreName"
         Me.lblBestScoreName.Size = New System.Drawing.Size(226, 42)
         Me.lblBestScoreName.TabIndex = 9
@@ -138,17 +139,28 @@ Partial Class formGameEnd
         '
         Me.lblBestScore.AutoSize = True
         Me.lblBestScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBestScore.Location = New System.Drawing.Point(463, 87)
+        Me.lblBestScore.Location = New System.Drawing.Point(302, 63)
         Me.lblBestScore.Name = "lblBestScore"
         Me.lblBestScore.Size = New System.Drawing.Size(39, 42)
         Me.lblBestScore.TabIndex = 10
         Me.lblBestScore.Text = "0"
+        '
+        'lblNewHighscore
+        '
+        Me.lblNewHighscore.AutoSize = True
+        Me.lblNewHighscore.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNewHighscore.Location = New System.Drawing.Point(274, 170)
+        Me.lblNewHighscore.Name = "lblNewHighscore"
+        Me.lblNewHighscore.Size = New System.Drawing.Size(307, 39)
+        Me.lblNewHighscore.TabIndex = 11
+        Me.lblNewHighscore.Text = "Uus suurim skoor!"
         '
         'formGameEnd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(912, 937)
+        Me.Controls.Add(Me.lblNewHighscore)
         Me.Controls.Add(Me.lblBestScore)
         Me.Controls.Add(Me.lblBestScoreName)
         Me.Controls.Add(Me.lblGameScore)
@@ -179,4 +191,5 @@ Partial Class formGameEnd
     Friend WithEvents lblGameScore As Label
     Friend WithEvents lblBestScoreName As Label
     Friend WithEvents lblBestScore As Label
+    Friend WithEvents lblNewHighscore As Label
 End Class

@@ -308,4 +308,34 @@ Public Class CDatabase
 
         SQLconnection.Close()
     End Sub
+
+    Public Sub setScoreItem(ByVal itemName As String, ByVal item As Integer) Implements IDatabase.setScoreItem
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "UPDATE statistika SET " & itemName & " = " & item
+        SQLcommand.ExecuteNonQuery()
+        SQLconnection.Close()
+    End Sub
+
+    'Keskmise skoori arvutamise jaoks
+    Public Function getItemWithId(ByVal tableName As String, ByVal itemName As String, ByVal id As Integer) Implements IDatabase.getItemWithId
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "SELECT " & itemName & " FROM " & tableName & " WHERE mitmesMäng = " & id
+        Dim sqlResponse As String = SQLcommand.ExecuteScalar()
+        SQLconnection.Close()
+        Return sqlResponse
+    End Function
 End Class

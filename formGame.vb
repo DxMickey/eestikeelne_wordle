@@ -212,6 +212,8 @@ Public Class formGame
         'Muuda labelite värvi
         lblTimeLeft.ForeColor = colors.lblColor
         lblTimeText.ForeColor = colors.lblColor
+        Label1.ForeColor = colors.lblColor
+        lblScore.ForeColor = colors.lblColor
 
         'Väärtuste taastamine algväärtustele uue mängu jaoks
         game.intKast = Nothing

@@ -44,10 +44,26 @@ Public Class formGameEnd
         colors = New CGraphics
 
         Dim tempHighScore As Integer = data.getStat("suurim_skoor")
+        Dim gamesPlayed As Integer = data.getStat("m2ngude_arv")
+        Dim tempAverageScore As Int64 = 0
+        Dim averageScore As Integer = 0
+        lblNewHighscore.Visible = False
 
+        'Leia suurim skoor, kui uus skoor on suurem kui vana, siis uuenda
         If tempHighScore < game.gameScore Then
-            data.setItem("gameHistory", "suurim_skoor", game.gameScore)
+            data.setScoreItem("suurim_skoor", game.gameScore)
+            lblNewHighscore.Visible = True
         End If
+
+        'Leia keskmine skoor
+        For i As Integer = 1 To gamesPlayed Step 1
+            Dim temp As Integer = data.getItemWithId("gameHistory", "score", i)
+            If temp > 0 Then
+                tempAverageScore += temp
+            End If
+        Next
+        averageScore = tempAverageScore / gamesPlayed
+        data.setScoreItem("keskmine_skoor", averageScore)
 
         'Tõlkekasti keelte valiku lisamine
         cmbLanguage.Items.Add("en")
@@ -73,6 +89,7 @@ Public Class formGameEnd
         lblBestScoreName.ForeColor = colors.lblColor
         lblGameScore.ForeColor = colors.lblColor
         lblScoreName.ForeColor = colors.lblColor
+        lblNewHighscore.ForeColor = colors.lblColor
 
         'Mängu sõna
         lblSona.Text = game.strSona
@@ -121,4 +138,5 @@ Public Class formGameEnd
         End Try
 
     End Function
+
 End Class
