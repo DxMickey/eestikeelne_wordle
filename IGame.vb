@@ -26,6 +26,8 @@
 
     Property kasTimed As Boolean
 
+    Property gameScore As UInteger
+
     Function getBoxName(ByVal value1 As Integer, ByVal value2 As Integer) As String
 
     Function wordChecker(ByVal value As String, ByVal index As Integer)

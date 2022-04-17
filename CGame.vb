@@ -17,6 +17,7 @@
     Shared boolKasTimed As Boolean
     Shared boolKasPiiramatu As Boolean
     Shared intMisKuupaev As Date
+    Shared uintGameScore
 
     Public Property misKuupaev As Date Implements IGame.misKuupaev
         Get
@@ -203,6 +204,21 @@
                 'Kui value on -1, siis vähendatakse Kastide väärtust ühe võrra
             ElseIf value = -1 Then
                 intKastSymbol = intKastSymbol - 1
+            End If
+        End Set
+    End Property
+
+    Public Property gameScore As UInteger Implements IGame.gameScore
+        Get
+            Return uintGameScore
+        End Get
+        Set(value As UInteger)
+            If value = Nothing Then
+                uintGameScore = 0
+            ElseIf value = 0 Then
+                uintGameScore = gameScore
+            Else
+                uintGameScore = gameScore + value
             End If
         End Set
     End Property

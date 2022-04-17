@@ -97,12 +97,14 @@ Partial Class formGame
         Me.lblZ = New System.Windows.Forms.Label()
         Me.lblEnter = New System.Windows.Forms.Label()
         Me.lblBackspace = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblScore = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtDebug
         '
         Me.txtDebug.Location = New System.Drawing.Point(300, 76)
-        Me.txtDebug.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDebug.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDebug.Name = "txtDebug"
         Me.txtDebug.ReadOnly = True
         Me.txtDebug.Size = New System.Drawing.Size(420, 22)
@@ -111,7 +113,7 @@ Partial Class formGame
         'txtDebug2
         '
         Me.txtDebug2.Location = New System.Drawing.Point(368, 108)
-        Me.txtDebug2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDebug2.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDebug2.Name = "txtDebug2"
         Me.txtDebug2.ReadOnly = True
         Me.txtDebug2.Size = New System.Drawing.Size(309, 22)
@@ -1131,11 +1133,33 @@ Partial Class formGame
         Me.lblBackspace.Text = "KUSTUTA"
         Me.lblBackspace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(593, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(137, 46)
+        Me.Label1.TabIndex = 143
+        Me.Label1.Text = "Skoor:"
+        '
+        'lblScore
+        '
+        Me.lblScore.AutoSize = True
+        Me.lblScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblScore.Location = New System.Drawing.Point(736, 11)
+        Me.lblScore.Name = "lblScore"
+        Me.lblScore.Size = New System.Drawing.Size(42, 46)
+        Me.lblScore.TabIndex = 144
+        Me.lblScore.Text = "0"
+        '
         'formGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(912, 937)
+        Me.Controls.Add(Me.lblScore)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblBackspace)
         Me.Controls.Add(Me.lblEnter)
         Me.Controls.Add(Me.lblM)
@@ -1208,7 +1232,7 @@ Partial Class formGame
         Me.Controls.Add(Me.lblTimeText)
         Me.Controls.Add(Me.txtDebug2)
         Me.Controls.Add(Me.txtDebug)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "formGame"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -1289,4 +1313,6 @@ Partial Class formGame
     Friend WithEvents lblZ As Label
     Friend WithEvents lblEnter As Label
     Friend WithEvents lblBackspace As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblScore As Label
 End Class

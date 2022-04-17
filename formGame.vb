@@ -23,6 +23,8 @@ Public Class formGame
         Dim data As IDatabase
         data = New CDatabase
 
+        game.winOrLose = 0
+
         'Kui vajutatud klahv on Backspace ja Kasti arv pole 0, siis kustutakse viimane nupuvajutus ja kasti arvu vähendatakse
         If game.lastLetter = 8 And game.intKast <> 0 Then
 
@@ -66,6 +68,7 @@ Public Class formGame
                     'Vastasel juhul väärtuste taastamine uue rea jaoks ja rea suurendamine ühe võrra
                 Else
                     updateColors()
+                    lblScore.Text = game.gameScore
                     game.intRida = 1
                     game.intKast = Nothing
                     'Holderi tõstmine ümber punaste tähtede stringi ja Holderi tühjaks tegemine
@@ -90,6 +93,7 @@ Public Class formGame
         game = New CGame
 
         Dim i As Integer = 0
+        Dim boxScore As Integer = 0
 
         'Loop mis käib läbi kõikide kastide
         While i < game.maxKast
@@ -103,18 +107,23 @@ Public Class formGame
 
                 'Kui wordChecker tagastas 2, siis on õige täht vastavas kastis, ehk kast tehakse roheliseks
                 If misVarv = 2 And box.BackColor <> Color.Green Then
+                    'Iga roheline kast on 10 punkti
+                    boxScore += 10
                     box.BackColor = Color.Green
                     Dim boxText1 As String = box.Text
                     changeKeyColor(boxText1, 2)
 
                     'Kui wordChecker tagastas 1, siis täht on sõnas olemas, aga vales kastis, seega kast tehakse kollaseks
                 ElseIf misVarv = 1 And box.BackColor <> Color.Yellow Then
+                    'Iga kollane kast on võrdeline 5 punktiga
+                    boxScore += 5
                     box.BackColor = Color.Yellow
                     Dim boxText2 As String = box.Text
                     changeKeyColor(boxText2, 1)
 
                     'Kui wordChecker tagastas 0, siis tähte pole sõnas, ehk klaviatuuril tehakse täht punaseks ja täht lisatakse redLetters stringi
                 ElseIf misVarv = 0 Then
+                    boxScore += 0
                     box.BackColor = Color.Red
                     Dim boxText3 As String = box.Text
                     changeKeyColor(boxText3, 0)
@@ -125,6 +134,11 @@ Public Class formGame
 
             i = i + 1
         End While
+
+        'Valem skoori leidmiseks, kui saadud skooriks on 0, siis seda ei arvestata
+        If boxScore > 0 Then
+            game.gameScore = boxScore * ((7 - game.intRida) * (11 - game.intRida))
+        End If
 
     End Sub
 
@@ -260,6 +274,11 @@ Public Class formGame
         Dim data As IDatabase
         data = New CDatabase
 
+        'Kui sõna arvati ära, siis korrutatakse tavaline tulemus kümnega
+        'et esimesel korral äraarvamine annaks suurima summa punkte
+        Dim boxScore As Integer = (10 * game.maxKast) * ((7 - game.intRida) * (11 - game.intRida)) * 10
+        game.gameScore = boxScore
+
         Timer1.Enabled = False
         Timer2.Enabled = False
 
@@ -270,7 +289,7 @@ Public Class formGame
             kasArvatud = "Ei"
         End If
         'Mängu andmete sisestamine ajaloosse andmebaasis
-        data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida)
+        data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida, game.gameScore)
 
         enableAllTextBoxes()
 

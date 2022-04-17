@@ -43,6 +43,12 @@ Public Class formGameEnd
         Dim colors As IGraphics
         colors = New CGraphics
 
+        Dim tempHighScore As Integer = data.getStat("suurim_skoor")
+
+        If tempHighScore < game.gameScore Then
+            data.setItem("gameHistory", "suurim_skoor", game.gameScore)
+        End If
+
         'Tõlkekasti keelte valiku lisamine
         cmbLanguage.Items.Add("en")
         cmbLanguage.Items.Add("ru")
@@ -61,8 +67,21 @@ Public Class formGameEnd
             lblResult.Text = "Sa ei suutnud sõna ära arvata!"
         End If
 
+        'Vaheta labelite värvid
         lblSona.ForeColor = colors.lblColor
+        lblBestScore.ForeColor = colors.lblColor
+        lblBestScoreName.ForeColor = colors.lblColor
+        lblGameScore.ForeColor = colors.lblColor
+        lblScoreName.ForeColor = colors.lblColor
+
+        'Mängu sõna
         lblSona.Text = game.strSona
+        'Mängu skoor
+        lblGameScore.Text = game.gameScore
+        lblBestScore.Text = data.getStat("suurim_skoor")
+        'Nulli skoor uue mängu jaoks
+        game.gameScore = Nothing
+
     End Sub
 
     'Google.Cloud.Translation.V2 API kasutamine sõna tõlke saamiseks

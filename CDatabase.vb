@@ -5,7 +5,7 @@ Public Class CDatabase
 
     'Mängu andmete lisamine ajaloo tabelisse andmebaasis
     'input = kõik ajaloo tabelis olevad andmete tulbad
-    Private Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String) Implements IDatabase.insertHistory
+    Private Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String, value7 As Integer) Implements IDatabase.insertHistory
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -14,7 +14,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ")"
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ", " & value7 & ")"
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -28,20 +28,20 @@ Public Class CDatabase
         Dim millineList As String
 
         If game.gameMode = "Kerge" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "none" Then
+            If getItem("miscData", "customListState") = "On" And getItem("miscData", "customEasy") <> "none" Then
                 millineList = getItem("miscData", "customEasy")
             Else
                 millineList = "sonadeListEasy"
             End If
 
         ElseIf game.gameMode = "Tavaline" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "none" Then
+            If getItem("miscData", "customListState") = "On" And getItem("miscData", "customNormal") <> "none" Then
                 millineList = getItem("miscData", "customNormal")
             Else
                 millineList = "sonadeList"
             End If
         Else
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "none" Then
+            If getItem("miscData", "customListState") = "On" And getItem("miscData", "customHard") <> "none" Then
                 millineList = getItem("miscData", "customHard")
             Else
                 millineList = "sonadeListHard"
@@ -54,7 +54,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT Count(rowid) FROM '" & millineList & "'"
+        SQLcommand.CommandText = "Select Count(rowid) FROM '" & millineList & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
 
