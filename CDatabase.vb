@@ -183,8 +183,8 @@ Public Class CDatabase
     End Function
 
 
-    'Ajaloo uuendamine history_view viewist
-    'output = tabel, kuhu on laetud history_view
+    'Ajaloo uuendamine gameHistory viewist
+    'output = tabel, kuhu on laetud gameHistory
     Private Function getHistory() Implements IDatabase.getHistory
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
@@ -194,7 +194,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT * FROM history_view ORDER BY mitmesMäng DESC"
+        SQLcommand.CommandText = "SELECT * FROM gameHistory ORDER BY mitmesMäng DESC"
         Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
         SQLite_Data_Reader = SQLcommand.ExecuteReader
 
