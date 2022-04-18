@@ -1,5 +1,6 @@
 ﻿Public Class CTimeLimit
     Implements ITimeLimit
+    'test
 
     Shared intTimePlay As Integer
     Shared intTimeWait As Integer
