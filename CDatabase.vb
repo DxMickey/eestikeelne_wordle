@@ -1,4 +1,5 @@
-﻿Imports System.IO
+Imports System.IO
+Imports Newtonsoft.Json
 
 Public Class CDatabase
     Implements IDatabase
@@ -74,7 +75,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = '" & item & "' WHERE id = 1"
+        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = '" & item & "'"
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -90,7 +91,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & " WHERE id = 1"
+        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & ""
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -106,7 +107,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & " WHERE id = 1"
+        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & ""
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -198,8 +199,8 @@ Public Class CDatabase
     End Function
 
 
-    'Ajaloo uuendamine history_view viewist
-    'output = tabel, kuhu on laetud history_view
+    'Ajaloo uuendamine gameHistory viewist
+    'output = tabel, kuhu on laetud gameHistory
     Private Function getHistory() Implements IDatabase.getHistory
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
@@ -209,7 +210,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT * FROM history_view"
+        SQLcommand.CommandText = "SELECT * FROM gameHistory ORDER BY mitmesMäng DESC"
         Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
         SQLite_Data_Reader = SQLcommand.ExecuteReader
 
@@ -219,6 +220,20 @@ Public Class CDatabase
         SQLconnection.Close()
 
         Return tabel
+    End Function
+    Private Function Transpose(ByVal table As DataTable) As DataTable
+        Dim flippedTable As New DataTable
+        'creates as many columns as rows in source table
+        flippedTable.Columns.AddRange(
+        table.Select.Select(
+            Function(dr) New DataColumn("col" & table.Rows.IndexOf(dr), GetType(Object))
+            ).ToArray)
+        'iterates columns in source table
+        For Each dc As DataColumn In table.Columns
+            'get array of values of column in each row and add as new row in target table
+            flippedTable.Rows.Add(table.Select.Select(Function(dr) dr(dc)).ToArray)
+        Next
+        Return flippedTable
     End Function
 
     'Statistika tagastamine andmebaasist
@@ -331,7 +346,14 @@ Public Class CDatabase
         SQLconnection.Close()
     End Sub
 
+    ' formHistory on nupp 'Ekspordi JSON', mida see funktsioon siis teeb
+    ' kood on suurem osa kopeeritud funktsioonist getHistory
+    ' ainult l6pus muudetud mida tabeliga tehakse
+    Public Sub exportJSON() Implements IDatabase.exportJSON
+
+
     Public Sub setScoreItem(ByVal itemName As String, ByVal item As Integer) Implements IDatabase.setScoreItem
+
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -339,6 +361,23 @@ Public Class CDatabase
         SQLconnection.Open()
 
         SQLcommand = SQLconnection.CreateCommand
+
+
+        SQLcommand.CommandText = "SELECT * FROM gameHistory"
+        Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
+        SQLite_Data_Reader = SQLcommand.ExecuteReader
+
+        Dim tabel As New DataTable
+        '' uus osa
+        Dim JSONtabel = JsonConvert.SerializeObject(tabel, Formatting.Indented)
+
+        If (My.Computer.FileSystem.FileExists("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json")) Then
+            My.Computer.FileSystem.DeleteFile("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json")
+            My.Computer.FileSystem.WriteAllText("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json", JSONtabel, True)
+        Else
+            My.Computer.FileSystem.WriteAllText("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json", JSONtabel, True)
+        End If
+    End Sub
 
         SQLcommand.CommandText = "UPDATE statistika SET " & itemName & " = " & item
         SQLcommand.ExecuteNonQuery()
@@ -360,4 +399,5 @@ Public Class CDatabase
         SQLconnection.Close()
         Return sqlResponse
     End Function
+
 End Class
