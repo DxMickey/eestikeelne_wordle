@@ -58,6 +58,14 @@ Public Class formGameEnd
         End If
 
         lblSona.Text = game.strSona
+
+        'Sõna tähenduse saamine
+        Dim sonaTahendus As ISonaTahendus
+        sonaTahendus = New CSonaTahendus
+        Dim tahendus = sonaTahendus.getSonaTahendus(game.strSona)
+        UcSonaTahendus1.setWordTexts(game.strSona, tahendus)
+
+
     End Sub
 
     'Google.Cloud.Translation.V2 API kasutamine sõna tõlke saamiseks
@@ -97,4 +105,6 @@ Public Class formGameEnd
         End Try
 
     End Function
+
+
 End Class

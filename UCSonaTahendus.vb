@@ -1,6 +1,10 @@
 ﻿Public Class UCSonaTahendus
-    Public Sub addWordDefiniton(ByVal sona, ByVal tahendus)
+
+
+    Public Sub setWordTexts(ByRef sona, ByRef tahendus)
         lblSona.Text = sona
         rtbSonaTahendus.Text = tahendus
     End Sub
+
+
 End Class

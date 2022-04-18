@@ -10,17 +10,18 @@ Public Class CSonaTahendus
     Private strOutput = ""
 
     Public Function getSonaTahendus(ByRef sona As String) Implements ISonaTahendus.getSonaTahendus
-        'Tagastavad error stringid'
+
 
         If Not hasNetworkConnection() Then
             Return nettiPole
         End If
-        Try
-            Me.scrapeWord(sona)
-        Catch ex As Exception
-            Return sonaPole
-        End Try
-        Return strOutput
+        Return "Scraper pole valmis"
+        'Try
+        '    Me.scrapeWord(sona)
+        'Catch ex As Exception
+        '    Return sonaPole
+        'End Try
+        'Return strOutput
     End Function
     Private Function scrapeWord(sona)
         'Otsib valja sonale vastava URL-i ja proovib selle tahenduse valja saada
@@ -77,6 +78,6 @@ Public Class CSonaTahendus
         'Funktsioon, mis kontrollib kas on võrguühendus.
         'Proovib pingida google.com
         'Peaks tegema mingi utility komponendi 
-        Return My.Computer.Network.Ping("https://google.com")
+        Return My.Computer.Network.Ping("www.google.com")
     End Function
 End Class
