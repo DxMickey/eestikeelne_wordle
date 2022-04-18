@@ -123,7 +123,6 @@ Public Class formGame
 
                     'Kui wordChecker tagastas 0, siis tähte pole sõnas, ehk klaviatuuril tehakse täht punaseks ja täht lisatakse redLetters stringi
                 ElseIf misVarv = 0 Then
-                    boxScore += 0
                     box.BackColor = Color.Red
                     Dim boxText3 As String = box.Text
                     changeKeyColor(boxText3, 0)
@@ -222,6 +221,7 @@ Public Class formGame
         game.ArvatudSona = Nothing
         game.redLetters = Nothing
         game.kestvus = Nothing
+        game.winOrLose = 0
         hideTextboxes()
         game.timeLeft = game.timeSetting
         lblTimeLeft.Text = game.timeSetting
@@ -261,6 +261,16 @@ Public Class formGame
             lblTimeLeft.Visible = True
             lblTimeText.Visible = True
 
+            'Ekstra punkte, kui timed versioon kasutuses
+            If game.timeSetting = 360 Then
+                game.gameScore = 5400
+            ElseIf game.timeSetting = 200 Then
+                game.gameScore = 12000
+            ElseIf game.timeSetting = 120 Then
+                game.gameScore = 18000
+            End If
+            'Uuenda skoor, et lisapunktid oleksid nähtavad
+            lblScore.Text = game.gameScore
         Else
             lblTimeLeft.Visible = False
             lblTimeText.Visible = False
@@ -276,17 +286,15 @@ Public Class formGame
         Dim data As IDatabase
         data = New CDatabase
 
-        'Kui sõna arvati ära, siis korrutatakse tavaline tulemus kümnega
-        'et esimesel korral äraarvamine annaks suurima summa punkte
-        Dim boxScore As Integer = (10 * game.maxKast) * ((7 - game.intRida) * (11 - game.intRida)) * 10
-        game.gameScore = boxScore
-
         Timer1.Enabled = False
         Timer2.Enabled = False
 
         Dim kasArvatud As String
         If game.winOrLose = 1 Then
             kasArvatud = "Jah"
+            'Kui sõna arvati ära, siis korrutatakse tavaline tulemus kümnega
+            'et esimesel korral äraarvamine annaks suurima summa punkte
+            game.gameScore = (10 * game.maxKast) * ((7 - game.intRida) * (11 - game.intRida)) * 10
         Else
             kasArvatud = "Ei"
         End If
@@ -369,8 +377,20 @@ Public Class formGame
 
         If game.timeLeft <= 0 Then
             finishGame()
-
+            Exit Sub
         End If
+
+        'Vähem lisapunkte, mida aeglasemalt mängitakse
+        If game.timeSetting = 360 Then
+            game.gameScore = -15
+        ElseIf game.timeSetting = 200 Then
+            game.gameScore = -60
+        ElseIf game.timeSetting = 120 Then
+            game.gameScore = -150
+        End If
+
+        'Uuenda skoori
+        lblScore.Text = game.gameScore
         game.timeLeft = (game.timeLeft - 1)
         lblTimeLeft.Text = game.timeLeft
     End Sub

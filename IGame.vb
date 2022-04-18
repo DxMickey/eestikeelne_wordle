@@ -26,7 +26,7 @@
 
     Property kasTimed As Boolean
 
-    Property gameScore As UInteger
+    Property gameScore As Integer
 
     Function getBoxName(ByVal value1 As Integer, ByVal value2 As Integer) As String
 

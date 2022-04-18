@@ -47,6 +47,7 @@ Public Class formGameEnd
         Dim gamesPlayed As Integer = data.getStat("m2ngude_arv")
         Dim tempAverageScore As Int64 = 0
         Dim averageScore As Integer = 0
+        Dim firstGameIndex As Integer = data.getItemInt("gameHistory", "mitmesMäng")
         lblNewHighscore.Visible = False
 
         'Leia suurim skoor, kui uus skoor on suurem kui vana, siis uuenda
@@ -56,7 +57,7 @@ Public Class formGameEnd
         End If
 
         'Leia keskmine skoor
-        For i As Integer = 1 To gamesPlayed Step 1
+        For i As Integer = firstGameIndex To gamesPlayed Step 1
             Dim temp As Integer = data.getItemWithId("gameHistory", "score", i)
             If temp > 0 Then
                 tempAverageScore += temp

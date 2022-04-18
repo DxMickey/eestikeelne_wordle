@@ -17,7 +17,7 @@
     Shared boolKasTimed As Boolean
     Shared boolKasPiiramatu As Boolean
     Shared intMisKuupaev As Date
-    Shared uintGameScore
+    Shared intGameScore As Integer
 
     Public Property misKuupaev As Date Implements IGame.misKuupaev
         Get
@@ -208,17 +208,17 @@
         End Set
     End Property
 
-    Public Property gameScore As UInteger Implements IGame.gameScore
+    Public Property gameScore As Integer Implements IGame.gameScore
         Get
-            Return uintGameScore
+            Return intGameScore
         End Get
-        Set(value As UInteger)
+        Set(value As Integer)
             If value = Nothing Then
-                uintGameScore = 0
+                intGameScore = 0
             ElseIf value = 0 Then
-                uintGameScore = gameScore
+                intGameScore = gameScore
             Else
-                uintGameScore = gameScore + value
+                intGameScore = gameScore + value
             End If
         End Set
     End Property
@@ -314,7 +314,6 @@
             winOrLose = 1
         ElseIf intRida = 6 Then
             over = True
-
         End If
         Return over
     End Function
