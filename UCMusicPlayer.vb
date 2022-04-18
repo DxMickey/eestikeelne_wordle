@@ -1,7 +1,7 @@
 ﻿Public Class UCMusicPlayer
     Dim taustaMuusika As ITaustaMuusika
-
     Private Sub pbPlay_Click(sender As Object, e As EventArgs) Handles pbPlay.Click
+
         taustaMuusika = New CTaustaMuusika
         taustaMuusika.startPlayback()
     End Sub
@@ -10,4 +10,7 @@
         taustaMuusika = New CTaustaMuusika
         taustaMuusika.stopPlayback()
     End Sub
+
+
+
 End Class

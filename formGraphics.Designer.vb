@@ -35,7 +35,6 @@ Partial Class formGraphics
         Me.btnBack = New System.Windows.Forms.Button()
         Me.lblError = New System.Windows.Forms.Label()
         Me.btnDefault = New System.Windows.Forms.Button()
-        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'btnTry
@@ -164,19 +163,11 @@ Partial Class formGraphics
         Me.btnDefault.Text = "Default"
         Me.btnDefault.UseVisualStyleBackColor = True
         '
-        'UcMusicPlayer1
-        '
-        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
-        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
-        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
-        Me.UcMusicPlayer1.TabIndex = 15
-        '
         'formGraphics
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
-        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnDefault)
         Me.Controls.Add(Me.lblError)
         Me.Controls.Add(Me.btnBack)
@@ -212,5 +203,4 @@ Partial Class formGraphics
     Friend WithEvents btnBack As Button
     Friend WithEvents lblError As Label
     Friend WithEvents btnDefault As Button
-    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class

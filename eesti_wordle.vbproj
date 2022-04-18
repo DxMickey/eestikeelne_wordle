@@ -271,6 +271,7 @@
     <Compile Include="CGame.vb" />
     <Compile Include="CDatabase.vb" />
     <Compile Include="CGraphics.vb" />
+    <Compile Include="CSonaTahendus.vb" />
     <Compile Include="CTaustaMuusika.vb" />
     <Compile Include="formWordList.Designer.vb">
       <DependentUpon>formWordList.vb</DependentUpon>
@@ -330,6 +331,7 @@
     <Compile Include="IGame.vb" />
     <Compile Include="IDatabase.vb" />
     <Compile Include="IGraphics.vb" />
+    <Compile Include="ISonaTahendus.vb" />
     <Compile Include="ITaustaMuusika.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -351,6 +353,12 @@
       <DependentUpon>UCMusicPlayer.vb</DependentUpon>
     </Compile>
     <Compile Include="UCMusicPlayer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSonaTahendus.Designer.vb">
+      <DependentUpon>UCSonaTahendus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCSonaTahendus.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
@@ -390,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCMusicPlayer.resx">
       <DependentUpon>UCMusicPlayer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSonaTahendus.resx">
+      <DependentUpon>UCSonaTahendus.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
