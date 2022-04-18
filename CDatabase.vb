@@ -5,7 +5,7 @@ Public Class CDatabase
 
     'Mängu andmete lisamine ajaloo tabelisse andmebaasis
     'input = kõik ajaloo tabelis olevad andmete tulbad
-    Private Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String) Implements IDatabase.insertHistory
+    Private Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String, value7 As Integer) Implements IDatabase.insertHistory
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -14,7 +14,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ")"
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ", " & value7 & ")"
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -29,20 +29,20 @@ Public Class CDatabase
         Dim millineList As String
 
         If game.gameMode = "Kerge" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "none" Then
+            If getItem("miscData", "customListState") = "On" And getItem("miscData", "customEasy") <> "none" Then
                 millineList = getItem("miscData", "customEasy")
             Else
                 millineList = "sonadeListEasy"
             End If
 
         ElseIf game.gameMode = "Tavaline" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "none" Then
+            If getItem("miscData", "customListState") = "On" And getItem("miscData", "customNormal") <> "none" Then
                 millineList = getItem("miscData", "customNormal")
             Else
                 millineList = "sonadeList"
             End If
         Else
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "none" Then
+            If getItem("miscData", "customListState") = "On" And getItem("miscData", "customHard") <> "none" Then
                 millineList = getItem("miscData", "customHard")
             Else
                 millineList = "sonadeListHard"
@@ -55,7 +55,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT Count(rowid) FROM '" & millineList & "'"
+        SQLcommand.CommandText = "Select Count(rowid) FROM '" & millineList & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
 
@@ -330,4 +330,34 @@ Public Class CDatabase
 
         SQLconnection.Close()
     End Sub
+
+    Public Sub setScoreItem(ByVal itemName As String, ByVal item As Integer) Implements IDatabase.setScoreItem
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "UPDATE statistika SET " & itemName & " = " & item
+        SQLcommand.ExecuteNonQuery()
+        SQLconnection.Close()
+    End Sub
+
+    'Keskmise skoori arvutamise jaoks
+    Public Function getItemWithId(ByVal tableName As String, ByVal itemName As String, ByVal id As Integer) Implements IDatabase.getItemWithId
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "SELECT " & itemName & " FROM " & tableName & " WHERE mitmesMäng = " & id
+        Dim sqlResponse As String = SQLcommand.ExecuteScalar()
+        SQLconnection.Close()
+        Return sqlResponse
+    End Function
 End Class

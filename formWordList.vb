@@ -80,6 +80,7 @@
 
         btnOff.Enabled = False
         btnOn.Enabled = False
+        changeLabelColors()
 
         If data.getItem("miscData", "customListState") = "off" Then
             btnOn.Enabled = True
@@ -98,10 +99,21 @@
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
         Me.Close()
+    End Sub
+
+    Private Sub changeLabelColors()
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        Label1.ForeColor = colors.lblColor
+        Label2.ForeColor = colors.lblColor
+        rbtnLihtne.ForeColor = colors.lblColor
+        rbtnTavaline.ForeColor = colors.lblColor
+        rbtnRaske.ForeColor = colors.lblColor
     End Sub
 End Class

@@ -14,7 +14,7 @@
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -31,7 +31,7 @@
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -48,7 +48,7 @@
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -75,7 +75,7 @@
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -93,7 +93,7 @@
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -106,7 +106,8 @@
         colors = New CGraphics
 
         getColor()
-        Me.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        Me.BackColor = colors.backColor
+        Label1.ForeColor = colors.lblColor
     End Sub
 
 
@@ -121,9 +122,11 @@
         'Kui värvid väärtustamata, proovi saada need failist
         If colors.red = Nothing Or colors.green = Nothing Or colors.blue = Nothing Then
 
-            colors.red = Data.getItemInt("miscData", "red")
-            colors.green = Data.getItemInt("miscData", "green")
-            colors.blue = Data.getItemInt("miscData", "blue")
+            colors.red = data.getItemInt("miscData", "red")
+            colors.green = data.getItemInt("miscData", "green")
+            colors.blue = data.getItemInt("miscData", "blue")
+            colors.backColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+            setLblColor()
         End If
     End Sub
 
@@ -137,10 +140,21 @@
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
         Me.Close()
+    End Sub
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
     End Sub
 End Class
