@@ -153,7 +153,8 @@
         data = New CDatabase
 
         time.timeWait = time.timeWait - 1
-        lblTimer.Text = time.timeWait
+        lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:" & time.timeWait & "s"
+        lblTimer.Visible = True
         data.setItem("miscData", "timeWaitCurrent", time.timeWait)
 
         If time.timeWait <= 0 And time.timeState = "On" Then
@@ -176,10 +177,12 @@
 
         If time.timePlay <= 0 Then
             Timer1.Enabled = True
-            lblTimer.Text = time.timeWait
+            lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:"
             lblTimer.Visible = True
             btnClassic.Enabled = False
             btnPlay.Enabled = False
         End If
     End Sub
+
+
 End Class
