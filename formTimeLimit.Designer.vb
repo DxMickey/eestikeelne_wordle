@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class formTimeLimit
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class formTimeLimit
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblNewPass1 = New System.Windows.Forms.Label()
         Me.txtNewPass1 = New System.Windows.Forms.TextBox()
@@ -37,12 +37,13 @@ Partial Class formTimeLimit
         Me.btnOnOff = New System.Windows.Forms.Button()
         Me.lblTimePlayNow = New System.Windows.Forms.Label()
         Me.lblTimeWaitNow = New System.Windows.Forms.Label()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'lblNewPass1
         '
         Me.lblNewPass1.AutoSize = True
-        Me.lblNewPass1.Location = New System.Drawing.Point(173, 259)
+        Me.lblNewPass1.Location = New System.Drawing.Point(174, 308)
         Me.lblNewPass1.Name = "lblNewPass1"
         Me.lblNewPass1.Size = New System.Drawing.Size(109, 13)
         Me.lblNewPass1.TabIndex = 0
@@ -51,7 +52,7 @@ Partial Class formTimeLimit
         '
         'txtNewPass1
         '
-        Me.txtNewPass1.Location = New System.Drawing.Point(285, 256)
+        Me.txtNewPass1.Location = New System.Drawing.Point(286, 305)
         Me.txtNewPass1.Name = "txtNewPass1"
         Me.txtNewPass1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtNewPass1.Size = New System.Drawing.Size(100, 20)
@@ -60,7 +61,7 @@ Partial Class formTimeLimit
         '
         'txtNewPass2
         '
-        Me.txtNewPass2.Location = New System.Drawing.Point(285, 287)
+        Me.txtNewPass2.Location = New System.Drawing.Point(286, 331)
         Me.txtNewPass2.Name = "txtNewPass2"
         Me.txtNewPass2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtNewPass2.Size = New System.Drawing.Size(100, 20)
@@ -70,7 +71,7 @@ Partial Class formTimeLimit
         'lblNewPass2
         '
         Me.lblNewPass2.AutoSize = True
-        Me.lblNewPass2.Location = New System.Drawing.Point(142, 290)
+        Me.lblNewPass2.Location = New System.Drawing.Point(143, 334)
         Me.lblNewPass2.Name = "lblNewPass2"
         Me.lblNewPass2.Size = New System.Drawing.Size(140, 13)
         Me.lblNewPass2.TabIndex = 2
@@ -79,7 +80,7 @@ Partial Class formTimeLimit
         '
         'txtTimeWait
         '
-        Me.txtTimeWait.Location = New System.Drawing.Point(285, 291)
+        Me.txtTimeWait.Location = New System.Drawing.Point(285, 334)
         Me.txtTimeWait.Name = "txtTimeWait"
         Me.txtTimeWait.Size = New System.Drawing.Size(100, 20)
         Me.txtTimeWait.TabIndex = 7
@@ -88,7 +89,7 @@ Partial Class formTimeLimit
         'lblTimeWait
         '
         Me.lblTimeWait.AutoSize = True
-        Me.lblTimeWait.Location = New System.Drawing.Point(164, 294)
+        Me.lblTimeWait.Location = New System.Drawing.Point(165, 337)
         Me.lblTimeWait.Name = "lblTimeWait"
         Me.lblTimeWait.Size = New System.Drawing.Size(114, 13)
         Me.lblTimeWait.TabIndex = 6
@@ -97,7 +98,7 @@ Partial Class formTimeLimit
         '
         'txtTimePlay
         '
-        Me.txtTimePlay.Location = New System.Drawing.Point(285, 256)
+        Me.txtTimePlay.Location = New System.Drawing.Point(286, 302)
         Me.txtTimePlay.Name = "txtTimePlay"
         Me.txtTimePlay.Size = New System.Drawing.Size(100, 20)
         Me.txtTimePlay.TabIndex = 5
@@ -106,7 +107,7 @@ Partial Class formTimeLimit
         'lblTimePlay
         '
         Me.lblTimePlay.AutoSize = True
-        Me.lblTimePlay.Location = New System.Drawing.Point(164, 259)
+        Me.lblTimePlay.Location = New System.Drawing.Point(165, 302)
         Me.lblTimePlay.Name = "lblTimePlay"
         Me.lblTimePlay.Size = New System.Drawing.Size(118, 13)
         Me.lblTimePlay.TabIndex = 4
@@ -115,7 +116,7 @@ Partial Class formTimeLimit
         '
         'btnEnter
         '
-        Me.btnEnter.Location = New System.Drawing.Point(299, 333)
+        Me.btnEnter.Location = New System.Drawing.Point(299, 366)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(75, 23)
         Me.btnEnter.TabIndex = 8
@@ -124,7 +125,7 @@ Partial Class formTimeLimit
         '
         'txtPass
         '
-        Me.txtPass.Location = New System.Drawing.Point(285, 256)
+        Me.txtPass.Location = New System.Drawing.Point(286, 318)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass.Size = New System.Drawing.Size(100, 20)
@@ -134,7 +135,7 @@ Partial Class formTimeLimit
         'lblPass
         '
         Me.lblPass.AutoSize = True
-        Me.lblPass.Location = New System.Drawing.Point(189, 259)
+        Me.lblPass.Location = New System.Drawing.Point(190, 321)
         Me.lblPass.Name = "lblPass"
         Me.lblPass.Size = New System.Drawing.Size(89, 13)
         Me.lblPass.TabIndex = 9
@@ -152,7 +153,7 @@ Partial Class formTimeLimit
         '
         'btnOnOff
         '
-        Me.btnOnOff.Location = New System.Drawing.Point(299, 441)
+        Me.btnOnOff.Location = New System.Drawing.Point(299, 447)
         Me.btnOnOff.Name = "btnOnOff"
         Me.btnOnOff.Size = New System.Drawing.Size(75, 23)
         Me.btnOnOff.TabIndex = 12
@@ -162,19 +163,19 @@ Partial Class formTimeLimit
         'lblTimePlayNow
         '
         Me.lblTimePlayNow.AutoSize = True
-        Me.lblTimePlayNow.Location = New System.Drawing.Point(392, 259)
+        Me.lblTimePlayNow.Location = New System.Drawing.Point(392, 305)
         Me.lblTimePlayNow.Name = "lblTimePlayNow"
         Me.lblTimePlayNow.Size = New System.Drawing.Size(78, 13)
-        Me.lblTimePlayNow.TabIndex = 13
+        Me.lblTimePlayNow.TabIndex = 15
         Me.lblTimePlayNow.Text = "Väärtus hetkel:"
         '
         'lblTimeWaitNow
         '
         Me.lblTimeWaitNow.AutoSize = True
-        Me.lblTimeWaitNow.Location = New System.Drawing.Point(392, 298)
+        Me.lblTimeWaitNow.Location = New System.Drawing.Point(392, 338)
         Me.lblTimeWaitNow.Name = "lblTimeWaitNow"
         Me.lblTimeWaitNow.Size = New System.Drawing.Size(78, 13)
-        Me.lblTimeWaitNow.TabIndex = 14
+        Me.lblTimeWaitNow.TabIndex = 16
         Me.lblTimeWaitNow.Text = "Väärtus hetkel:"
         '
         'UcMusicPlayer1
@@ -191,6 +192,7 @@ Partial Class formTimeLimit
         Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.lblTimeWaitNow)
         Me.Controls.Add(Me.lblTimePlayNow)
+        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnOnOff)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.txtPass)
@@ -224,6 +226,7 @@ Partial Class formTimeLimit
     Friend WithEvents lblPass As Label
     Friend WithEvents btnBack As Button
     Friend WithEvents btnOnOff As Button
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
     Friend WithEvents lblTimePlayNow As Label
     Friend WithEvents lblTimeWaitNow As Label
 End Class
