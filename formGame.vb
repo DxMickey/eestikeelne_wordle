@@ -217,10 +217,10 @@ Public Class formGame
 
         If game.kasPiiramatu = False Then
 
-            game.strSona = data.getItem("miscData", "sona")
+            game.strSona = data.getItem("miscData", "dailySona")
             If uusKuupaev.Equals(vanaKuupaev) = False Then
                 newWord()
-                data.setItem("miscData", "sona", game.strSona)
+                data.setItem("miscData", "dailySona", game.strSona)
                 data.setItem("miscData", "kuupaev", uusKuupaev)
             End If
 
