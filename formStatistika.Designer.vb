@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class formStatistika
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class formStatistika
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -39,6 +39,7 @@ Partial Class formStatistika
         Me.txtSlowestTime = New System.Windows.Forms.Label()
         Me.txtHighscore = New System.Windows.Forms.Label()
         Me.txtAvgScore = New System.Windows.Forms.Label()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'btnBack
@@ -210,11 +211,19 @@ Partial Class formStatistika
         Me.txtAvgScore.TabIndex = 16
         Me.txtAvgScore.Text = "0"
         '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 17
+        '
         'formStatistika
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.txtAvgScore)
         Me.Controls.Add(Me.txtHighscore)
         Me.Controls.Add(Me.txtSlowestTime)
@@ -256,4 +265,5 @@ Partial Class formStatistika
     Friend WithEvents txtSlowestTime As Label
     Friend WithEvents txtHighscore As Label
     Friend WithEvents txtAvgScore As Label
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class

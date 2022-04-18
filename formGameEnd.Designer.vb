@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class formGameEnd
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class formGameEnd
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblResult = New System.Windows.Forms.Label()
         Me.btbPlayAgain = New System.Windows.Forms.Button()
@@ -29,6 +29,8 @@ Partial Class formGameEnd
         Me.txtTranslation = New System.Windows.Forms.TextBox()
         Me.btnTranslate = New System.Windows.Forms.Button()
         Me.cmbLanguage = New System.Windows.Forms.ComboBox()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
+        Me.UcSonaTahendus1 = New eesti_wordle.UCSonaTahendus()
         Me.lblScoreName = New System.Windows.Forms.Label()
         Me.lblGameScore = New System.Windows.Forms.Label()
         Me.lblBestScoreName = New System.Windows.Forms.Label()
@@ -105,6 +107,20 @@ Partial Class formGameEnd
         Me.cmbLanguage.Size = New System.Drawing.Size(160, 24)
         Me.cmbLanguage.TabIndex = 6
         '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 7
+        '
+        'UcSonaTahendus1
+        '
+        Me.UcSonaTahendus1.Location = New System.Drawing.Point(157, 499)
+        Me.UcSonaTahendus1.Name = "UcSonaTahendus1"
+        Me.UcSonaTahendus1.Size = New System.Drawing.Size(202, 141)
+        Me.UcSonaTahendus1.TabIndex = 8
+        '
         'lblScoreName
         '
         Me.lblScoreName.AutoSize = True
@@ -159,6 +175,9 @@ Partial Class formGameEnd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcSonaTahendus1)
+        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.ClientSize = New System.Drawing.Size(912, 937)
         Me.Controls.Add(Me.lblNewHighscore)
         Me.Controls.Add(Me.lblBestScore)
@@ -187,6 +206,8 @@ Partial Class formGameEnd
     Friend WithEvents txtTranslation As TextBox
     Friend WithEvents btnTranslate As Button
     Friend WithEvents cmbLanguage As ComboBox
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
+    Friend WithEvents UcSonaTahendus1 As UCSonaTahendus
     Friend WithEvents lblScoreName As Label
     Friend WithEvents lblGameScore As Label
     Friend WithEvents lblBestScoreName As Label

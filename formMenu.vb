@@ -203,6 +203,200 @@
         Me.Close()
     End Sub
 
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
+    Private Sub setLblColor()
+        Dim colors As IGraphics
+        colors = New CGraphics
+        If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
+            Or (colors.blue > 175 Or colors.blue < 80) Then
+            colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
+        Else
+            colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
+        End If
+    End Sub
+
+
     Private Sub setLblColor()
         Dim colors As IGraphics
         colors = New CGraphics

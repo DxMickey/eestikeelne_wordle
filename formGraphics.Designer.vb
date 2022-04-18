@@ -42,10 +42,22 @@ Partial Class formGraphics
         CType(Me.tbrBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'btnTry
+        '
+        Me.btnTry.Location = New System.Drawing.Point(216, 293)
+        Me.btnTry.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnTry.Name = "btnTry"
+        Me.btnTry.Size = New System.Drawing.Size(56, 19)
+        Me.btnTry.TabIndex = 0
+        Me.btnTry.Text = "Proovi"
+        Me.btnTry.UseVisualStyleBackColor = True
+        '
         'btnConfirm
         '
         Me.btnConfirm.Location = New System.Drawing.Point(412, 609)
         Me.btnConfirm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnConfirm.Location = New System.Drawing.Point(142, 293)
+        Me.btnConfirm.Margin = New System.Windows.Forms.Padding(2)
         Me.btnConfirm.Name = "btnConfirm"
         Me.btnConfirm.Size = New System.Drawing.Size(125, 48)
         Me.btnConfirm.TabIndex = 1
@@ -56,6 +68,8 @@ Partial Class formGraphics
         '
         Me.pnlColor.BackColor = System.Drawing.SystemColors.Control
         Me.pnlColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlColor.Location = New System.Drawing.Point(327, 127)
+        Me.pnlColor.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlColor.Location = New System.Drawing.Point(584, 308)
         Me.pnlColor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlColor.Name = "pnlColor"
@@ -94,6 +108,8 @@ Partial Class formGraphics
         '
         'txtRed
         '
+        Me.txtRed.Location = New System.Drawing.Point(148, 153)
+        Me.txtRed.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRed.Location = New System.Drawing.Point(470, 308)
         Me.txtRed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtRed.Name = "txtRed"
@@ -102,6 +118,8 @@ Partial Class formGraphics
         '
         'txtGreen
         '
+        Me.txtGreen.Location = New System.Drawing.Point(148, 197)
+        Me.txtGreen.Margin = New System.Windows.Forms.Padding(2)
         Me.txtGreen.Location = New System.Drawing.Point(470, 395)
         Me.txtGreen.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtGreen.Name = "txtGreen"
@@ -110,6 +128,8 @@ Partial Class formGraphics
         '
         'txtBlue
         '
+        Me.txtBlue.Location = New System.Drawing.Point(148, 235)
+        Me.txtBlue.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBlue.Location = New System.Drawing.Point(470, 484)
         Me.txtBlue.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBlue.Name = "txtBlue"
@@ -128,6 +148,8 @@ Partial Class formGraphics
         '
         'btnBack
         '
+        Me.btnBack.Location = New System.Drawing.Point(25, 25)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBack.Location = New System.Drawing.Point(33, 31)
         Me.btnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBack.Name = "btnBack"
@@ -149,6 +171,8 @@ Partial Class formGraphics
         '
         'btnDefault
         '
+        Me.btnDefault.Location = New System.Drawing.Point(68, 293)
+        Me.btnDefault.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDefault.Location = New System.Drawing.Point(99, 609)
         Me.btnDefault.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnDefault.Name = "btnDefault"
@@ -201,6 +225,8 @@ Partial Class formGraphics
         Me.Controls.Add(Me.lblRed)
         Me.Controls.Add(Me.pnlColor)
         Me.Controls.Add(Me.btnConfirm)
+        Me.Controls.Add(Me.btnTry)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "formGraphics"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

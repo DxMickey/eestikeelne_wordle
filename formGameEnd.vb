@@ -95,6 +95,14 @@ Public Class formGameEnd
 
         'Mängu sõna
         lblSona.Text = game.strSona
+
+        'Sõna tähenduse saamine
+        Dim sonaTahendus As ISonaTahendus
+        sonaTahendus = New CSonaTahendus
+        Dim tahendus = sonaTahendus.getSonaTahendus(game.strSona)
+        UcSonaTahendus1.setWordTexts(game.strSona, tahendus)
+
+
         'Mängu skoor
         lblGameScore.Text = game.gameScore
         lblBestScore.Text = data.getStat("suurim_skoor")
@@ -140,5 +148,7 @@ Public Class formGameEnd
         End Try
 
     End Function
+
+
 
 End Class

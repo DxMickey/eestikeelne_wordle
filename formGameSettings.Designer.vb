@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class formGameSettings
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,14 @@ Partial Class formGameSettings
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnEasy = New System.Windows.Forms.Button()
         Me.btnNormal = New System.Windows.Forms.Button()
         Me.btnHard = New System.Windows.Forms.Button()
         Me.btnNoTime = New System.Windows.Forms.Button()
         Me.btnTimed = New System.Windows.Forms.Button()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'btnEasy
@@ -74,11 +75,19 @@ Partial Class formGameSettings
         Me.btnTimed.Text = "Ajaline"
         Me.btnTimed.UseVisualStyleBackColor = True
         '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 5
+        '
         'formGameSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnTimed)
         Me.Controls.Add(Me.btnNoTime)
         Me.Controls.Add(Me.btnHard)
@@ -95,4 +104,5 @@ Partial Class formGameSettings
     Friend WithEvents btnHard As Button
     Friend WithEvents btnNoTime As Button
     Friend WithEvents btnTimed As Button
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class
