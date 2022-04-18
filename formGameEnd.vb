@@ -11,7 +11,7 @@ Public Class formGameEnd
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -28,7 +28,7 @@ Public Class formGameEnd
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -40,6 +40,32 @@ Public Class formGameEnd
         game = New CGame
         Dim data As IDatabase
         data = New CDatabase
+        Dim time As ITimeLimit
+        time = New CTimeLimit
+
+        If time.timeState = "On" And time.timePlay <= 0 Then
+            btbPlayAgain.Enabled = False
+        Else
+            btbPlayAgain.Enabled = True
+        End If
+
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        Dim tempHighScore As Integer = data.getStat("suurim_skoor")
+        Dim gamesPlayed As Integer = data.getStat("m2ngude_arv")
+        Dim tempAverageScore As Int64 = 0
+        Dim averageScore As Integer = 0
+        Dim firstGameIndex As Integer = data.getItemInt("gameHistory", "mitmesMäng")
+        lblNewHighscore.Visible = False
+
+        'Leia suurim skoor, kui uus skoor on suurem kui vana, siis uuenda
+        'If tempHighScore < game.gameScore Then
+        'data.setScoreItem("suurim_skoor", game.gameScore)
+        'lblNewHighscore.Visible = True
+        ' End If
+
+
 
         'Tõlkekasti keelte valiku lisamine
         cmbLanguage.Items.Add("en")
@@ -52,11 +78,22 @@ Public Class formGameEnd
 
         'Võidu või kaotuse teksti valimine
         If game.winOrLose = 1 Then
+            lblResult.ForeColor = colors.lblColor
             lblResult.Text = "Sa arvasid sõna ära!"
         Else
+            lblResult.ForeColor = colors.lblColor
             lblResult.Text = "Sa ei suutnud sõna ära arvata!"
         End If
 
+        'Vaheta labelite värvid
+        lblSona.ForeColor = colors.lblColor
+        lblBestScore.ForeColor = colors.lblColor
+        lblBestScoreName.ForeColor = colors.lblColor
+        lblGameScore.ForeColor = colors.lblColor
+        lblScoreName.ForeColor = colors.lblColor
+        lblNewHighscore.ForeColor = colors.lblColor
+
+        'Mängu sõna
         lblSona.Text = game.strSona
 
         'Sõna tähenduse saamine
@@ -65,6 +102,12 @@ Public Class formGameEnd
         Dim tahendus = sonaTahendus.getSonaTahendus(game.strSona)
         UcSonaTahendus1.setWordTexts(game.strSona, tahendus)
 
+
+        'Mängu skoor
+        lblGameScore.Text = game.gameScore
+        lblBestScore.Text = data.getStat("suurim_skoor")
+        'Nulli skoor uue mängu jaoks
+        game.gameScore = Nothing
 
     End Sub
 
@@ -105,6 +148,7 @@ Public Class formGameEnd
         End Try
 
     End Function
+
 
 
 End Class

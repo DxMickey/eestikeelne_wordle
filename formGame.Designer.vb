@@ -98,6 +98,8 @@ Partial Class formGame
         Me.lblEnter = New System.Windows.Forms.Label()
         Me.lblBackspace = New System.Windows.Forms.Label()
         Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblScore = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtDebug
@@ -1063,9 +1065,32 @@ Partial Class formGame
         'UcMusicPlayer1
         '
         Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
         Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
         Me.UcMusicPlayer1.TabIndex = 143
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(445, 9)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(110, 37)
+        Me.Label1.TabIndex = 143
+        Me.Label1.Text = "Skoor:"
+        '
+        'lblScore
+        '
+        Me.lblScore.AutoSize = True
+        Me.lblScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblScore.Location = New System.Drawing.Point(552, 9)
+        Me.lblScore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblScore.Name = "lblScore"
+        Me.lblScore.Size = New System.Drawing.Size(35, 37)
+        Me.lblScore.TabIndex = 144
+        Me.lblScore.Text = "0"
         '
         'formGame
         '
@@ -1073,6 +1098,8 @@ Partial Class formGame
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.UcMusicPlayer1)
+        Me.Controls.Add(Me.lblScore)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblBackspace)
         Me.Controls.Add(Me.lblEnter)
         Me.Controls.Add(Me.lblM)
@@ -1226,4 +1253,6 @@ Partial Class formGame
     Friend WithEvents lblEnter As Label
     Friend WithEvents lblBackspace As Label
     Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblScore As Label
 End Class

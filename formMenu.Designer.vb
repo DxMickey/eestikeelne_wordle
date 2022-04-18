@@ -22,12 +22,16 @@ Partial Class formMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnPlay = New System.Windows.Forms.Button()
         Me.btnHistory = New System.Windows.Forms.Button()
         Me.btnStats = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClassic = New System.Windows.Forms.Button()
         Me.btnGraphics = New System.Windows.Forms.Button()
+        Me.btnTimeLimit = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lblTimer = New System.Windows.Forms.Label()
         Me.btnWordList = New System.Windows.Forms.Button()
         Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
@@ -89,13 +93,37 @@ Partial Class formMenu
         Me.btnGraphics.Text = "Kujundus"
         Me.btnGraphics.UseVisualStyleBackColor = True
         '
+        'btnTimeLimit
+        '
+        Me.btnTimeLimit.Location = New System.Drawing.Point(292, 430)
+        Me.btnTimeLimit.Name = "btnTimeLimit"
+        Me.btnTimeLimit.Size = New System.Drawing.Size(75, 23)
+        Me.btnTimeLimit.TabIndex = 5
+        Me.btnTimeLimit.Text = "Ajalimiit"
+        Me.btnTimeLimit.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
+        'lblTimer
+        '
+        Me.lblTimer.AutoSize = True
+        Me.lblTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.25!)
+        Me.lblTimer.Location = New System.Drawing.Point(74, 212)
+        Me.lblTimer.Name = "lblTimer"
+        Me.lblTimer.Size = New System.Drawing.Size(27, 29)
+        Me.lblTimer.TabIndex = 6
+        Me.lblTimer.Text = "0"
+        Me.lblTimer.Visible = False
+        '
         'btnWordList
         '
-        Me.btnWordList.Location = New System.Drawing.Point(273, 414)
+        Me.btnWordList.Location = New System.Drawing.Point(274, 401)
         Me.btnWordList.Name = "btnWordList"
-        Me.btnWordList.Size = New System.Drawing.Size(118, 23)
-        Me.btnWordList.TabIndex = 5
-        Me.btnWordList.Text = "Enda sõnadelist"
+        Me.btnWordList.Size = New System.Drawing.Size(109, 23)
+        Me.btnWordList.TabIndex = 7
+        Me.btnWordList.Text = "Enda sõnade list"
         Me.btnWordList.UseVisualStyleBackColor = True
         '
         'UcMusicPlayer1
@@ -112,6 +140,8 @@ Partial Class formMenu
         Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnWordList)
+        Me.Controls.Add(Me.lblTimer)
+        Me.Controls.Add(Me.btnTimeLimit)
         Me.Controls.Add(Me.btnClassic)
         Me.Controls.Add(Me.btnGraphics)
         Me.Controls.Add(Me.Label1)
@@ -134,6 +164,9 @@ Partial Class formMenu
     Friend WithEvents btnClassic As Button
 
     Friend WithEvents btnGraphics As Button
+    Friend WithEvents btnTimeLimit As Button
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents lblTimer As Label
     Friend WithEvents btnWordList As Button
     Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class

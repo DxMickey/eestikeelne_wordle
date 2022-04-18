@@ -25,6 +25,8 @@ Partial Class formHistory
         Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.dtgDatagrid = New System.Windows.Forms.DataGridView()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnExport = New System.Windows.Forms.Button()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         CType(Me.dtgDatagrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,9 +40,9 @@ Partial Class formHistory
         'dtgDatagrid
         '
         Me.dtgDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgDatagrid.Location = New System.Drawing.Point(35, 12)
+        Me.dtgDatagrid.Location = New System.Drawing.Point(12, 12)
         Me.dtgDatagrid.Name = "dtgDatagrid"
-        Me.dtgDatagrid.Size = New System.Drawing.Size(612, 669)
+        Me.dtgDatagrid.Size = New System.Drawing.Size(660, 669)
         Me.dtgDatagrid.TabIndex = 1
         '
         'btnBack
@@ -52,11 +54,29 @@ Partial Class formHistory
         Me.btnBack.Text = "Tagasi"
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'btnExport
+        '
+        Me.btnExport.Location = New System.Drawing.Point(552, 706)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(95, 23)
+        Me.btnExport.TabIndex = 3
+        Me.btnExport.Text = "Ekspordi JSON"
+        Me.btnExport.UseVisualStyleBackColor = True
+        '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 4
+        '
         'formHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcMusicPlayer1)
+        Me.Controls.Add(Me.btnExport)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.dtgDatagrid)
         Me.Controls.Add(Me.VScrollBar1)
@@ -70,4 +90,6 @@ Partial Class formHistory
     Friend WithEvents VScrollBar1 As VScrollBar
     Friend WithEvents dtgDatagrid As DataGridView
     Friend WithEvents btnBack As Button
+    Friend WithEvents btnExport As Button
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class

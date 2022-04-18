@@ -6,7 +6,7 @@
 
     Function getHistory()
 
-    Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String)
+    Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String, value7 As Integer)
 
     Function isWordInList(value As String)
 
@@ -19,7 +19,7 @@
     Sub setItem(tableName As String, itemName As String, item As UInteger)
     Sub importCSV(fileName As String)
     Sub deleteTable(tableName As String)
-
+    Sub exportJSON()
 
 
 

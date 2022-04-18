@@ -23,6 +23,8 @@ Public Class formGame
         Dim data As IDatabase
         data = New CDatabase
 
+        game.winOrLose = 0
+
         'Kui vajutatud klahv on Backspace ja Kasti arv pole 0, siis kustutakse viimane nupuvajutus ja kasti arvu vähendatakse
         If game.lastLetter = 8 And game.intKast <> 0 Then
 
@@ -66,6 +68,7 @@ Public Class formGame
                     'Vastasel juhul väärtuste taastamine uue rea jaoks ja rea suurendamine ühe võrra
                 Else
                     updateColors()
+                    lblScore.Text = game.gameScore
                     game.intRida = 1
                     game.intKast = Nothing
                     'Holderi tõstmine ümber punaste tähtede stringi ja Holderi tühjaks tegemine
@@ -90,6 +93,7 @@ Public Class formGame
         game = New CGame
 
         Dim i As Integer = 0
+        Dim boxScore As Integer = 0
 
         'Loop mis käib läbi kõikide kastide
         While i < game.maxKast
@@ -103,12 +107,16 @@ Public Class formGame
 
                 'Kui wordChecker tagastas 2, siis on õige täht vastavas kastis, ehk kast tehakse roheliseks
                 If misVarv = 2 And box.BackColor <> Color.Green Then
+                    'Iga roheline kast on 10 punkti
+                    boxScore += 10
                     box.BackColor = Color.Green
                     Dim boxText1 As String = box.Text
                     changeKeyColor(boxText1, 2)
 
                     'Kui wordChecker tagastas 1, siis täht on sõnas olemas, aga vales kastis, seega kast tehakse kollaseks
                 ElseIf misVarv = 1 And box.BackColor <> Color.Yellow Then
+                    'Iga kollane kast on võrdeline 5 punktiga
+                    boxScore += 5
                     box.BackColor = Color.Yellow
                     Dim boxText2 As String = box.Text
                     changeKeyColor(boxText2, 1)
@@ -125,6 +133,11 @@ Public Class formGame
 
             i = i + 1
         End While
+
+        'Valem skoori leidmiseks, kui saadud skooriks on 0, siis seda ei arvestata
+        If boxScore > 0 Then
+            game.gameScore = boxScore * ((7 - game.intRida) * (11 - game.intRida))
+        End If
 
     End Sub
 
@@ -192,6 +205,14 @@ Public Class formGame
         game = New CGame
         Dim data As IDatabase
         data = New CDatabase
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        'Muuda labelite värvi
+        lblTimeLeft.ForeColor = colors.lblColor
+        lblTimeText.ForeColor = colors.lblColor
+        Label1.ForeColor = colors.lblColor
+        lblScore.ForeColor = colors.lblColor
 
         'Väärtuste taastamine algväärtustele uue mängu jaoks
         game.intKast = Nothing
@@ -200,6 +221,7 @@ Public Class formGame
         game.ArvatudSona = Nothing
         game.redLetters = Nothing
         game.kestvus = Nothing
+        game.winOrLose = 0
         hideTextboxes()
         game.timeLeft = game.timeSetting
         lblTimeLeft.Text = game.timeSetting
@@ -217,10 +239,10 @@ Public Class formGame
 
         If game.kasPiiramatu = False Then
 
-            game.strSona = data.getItem("miscData", "sona")
+            game.strSona = data.getItem("miscData", "dailySona")
             If uusKuupaev.Equals(vanaKuupaev) = False Then
                 newWord()
-                data.setItem("miscData", "sona", game.strSona)
+                data.setItem("miscData", "dailySona", game.strSona)
                 data.setItem("miscData", "kuupaev", uusKuupaev)
             End If
 
@@ -239,6 +261,16 @@ Public Class formGame
             lblTimeLeft.Visible = True
             lblTimeText.Visible = True
 
+            'Ekstra punkte, kui timed versioon kasutuses
+            If game.timeSetting = 360 Then
+                game.gameScore = 5400
+            ElseIf game.timeSetting = 200 Then
+                game.gameScore = 12000
+            ElseIf game.timeSetting = 120 Then
+                game.gameScore = 18000
+            End If
+            'Uuenda skoor, et lisapunktid oleksid nähtavad
+            lblScore.Text = game.gameScore
         Else
             lblTimeLeft.Visible = False
             lblTimeText.Visible = False
@@ -250,9 +282,10 @@ Public Class formGame
     Private Sub finishGame()
         Dim game As IGame
         game = New CGame
-
         Dim data As IDatabase
         data = New CDatabase
+        Dim time As ITimeLimit
+        time = New CTimeLimit
 
         Timer1.Enabled = False
         Timer2.Enabled = False
@@ -260,11 +293,22 @@ Public Class formGame
         Dim kasArvatud As String
         If game.winOrLose = 1 Then
             kasArvatud = "Jah"
+            'Kui sõna arvati ära, siis korrutatakse tavaline tulemus kümnega
+            'et esimesel korral äraarvamine annaks suurima summa punkte
+            game.gameScore = (10 * game.maxKast) * ((7 - game.intRida) * (11 - game.intRida)) * 10
         Else
             kasArvatud = "Ei"
         End If
+
+        If time.timeState = "On" Then
+            time.timePlay = time.timePlay - game.kestvus
+            data.setItem("time", "timePlayCurrent", time.timePlay)
+        End If
+
+
+
         'Mängu andmete sisestamine ajaloosse andmebaasis
-        data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida)
+        data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida, game.gameScore)
 
         enableAllTextBoxes()
 
@@ -278,7 +322,7 @@ Public Class formGame
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()
@@ -342,8 +386,20 @@ Public Class formGame
 
         If game.timeLeft <= 0 Then
             finishGame()
-
+            Exit Sub
         End If
+
+        'Vähem lisapunkte, mida aeglasemalt mängitakse
+        If game.timeSetting = 360 Then
+            game.gameScore = -15
+        ElseIf game.timeSetting = 200 Then
+            game.gameScore = -60
+        ElseIf game.timeSetting = 120 Then
+            game.gameScore = -150
+        End If
+
+        'Uuenda skoori
+        lblScore.Text = game.gameScore
         game.timeLeft = (game.timeLeft - 1)
         lblTimeLeft.Text = game.timeLeft
     End Sub
@@ -366,6 +422,7 @@ Public Class formGame
         gameEngine()
 
     End Sub
+
 
 
 End Class
