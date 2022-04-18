@@ -14,6 +14,13 @@ Public Class CSonaTahendus
 
         If Not hasNetworkConnection() Then
             Return nettiPole
+        Else
+            Try
+                scrapeWord(sona)
+                Return "ssssssss"
+            Catch ex As Exception
+
+            End Try
         End If
         Return "Scraper pole valmis"
         'Try
@@ -31,28 +38,17 @@ Public Class CSonaTahendus
         Dim webRes As WebResponse
         Dim webReq = HttpWebRequest.Create(sonaveebURL)
 
-        Try
-            webRes = webReq.GetResponse()
-            Debug.WriteLine(webRes)
-
-            'Loeb vastuse ja paneb muutujasse strOutput
-            Using sr As New StreamReader(webRes.GetResponseStream())
-                strOutput = sr.ReadToEnd()
-                ' Close and clean up the StreamReader
-                sr.Close()
-            End Using
-
-
-            If Len(Me.strOutput) > 0 Then
-                parseHTMLforDefinition()
-            Else
-                Return ""
-            End If
-
-        Catch ex As Exception
-            Return ""
-        End Try
-        Return ""
+        Dim request As HttpWebRequest = WebRequest.Create("https://sonaveeb.ee/search/unif/dlall/dsall/hellitus/1")
+        request.Proxy = Nothing
+        request.UseDefaultCredentials = True
+        request.CookieContainer = New CookieContainer()
+        Dim response As HttpWebResponse = request.GetResponse()
+        Dim response2 As StreamReader = New StreamReader(response.GetResponseStream)
+        Dim str As String = response2.ReadToEnd()
+        Dim SearchForThis As String = "definition-value"
+        Dim indeks = str.IndexOf(SearchForThis)
+        Console.WriteLine(str(indeks))
+        Return "scraperi funktsiooni seest"
     End Function
     Private Function parseHTMLforDefinition()
         'Formatting Techniques
