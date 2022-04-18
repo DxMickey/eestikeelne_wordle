@@ -36,6 +36,7 @@ Partial Class formTimeLimit
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnOn = New System.Windows.Forms.Button()
         Me.btnOff = New System.Windows.Forms.Button()
+        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'lblNewPass1
@@ -164,11 +165,19 @@ Partial Class formTimeLimit
         Me.btnOff.Text = "Lülita välja"
         Me.btnOff.UseVisualStyleBackColor = True
         '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 14
+        '
         'formTimeLimit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnOff)
         Me.Controls.Add(Me.btnOn)
         Me.Controls.Add(Me.btnBack)
@@ -204,4 +213,5 @@ Partial Class formTimeLimit
     Friend WithEvents btnBack As Button
     Friend WithEvents btnOn As Button
     Friend WithEvents btnOff As Button
+    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class
