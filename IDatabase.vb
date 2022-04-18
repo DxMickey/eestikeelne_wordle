@@ -14,11 +14,9 @@
 
     Function getItem(tableName As String, itemName As String) As String
     Function getItemInt(tableName As String, itemName As String) As Integer
-    Function getItemWithId(tableName As String, itemName As String, id As Integer)
     Sub setItem(tableName As String, itemName As String, item As String)
     Sub setItem(tableName As String, itemName As String, item As Integer)
     Sub setItem(tableName As String, itemName As String, item As UInteger)
-    Sub setScoreItem(itemName As String, item As Integer)
     Sub importCSV(fileName As String)
     Sub deleteTable(tableName As String)
     Sub exportJSON()

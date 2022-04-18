@@ -51,20 +51,12 @@ Public Class formGameEnd
         lblNewHighscore.Visible = False
 
         'Leia suurim skoor, kui uus skoor on suurem kui vana, siis uuenda
-        If tempHighScore < game.gameScore Then
-            data.setScoreItem("suurim_skoor", game.gameScore)
-            lblNewHighscore.Visible = True
-        End If
+        'If tempHighScore < game.gameScore Then
+        'data.setScoreItem("suurim_skoor", game.gameScore)
+        'lblNewHighscore.Visible = True
+        ' End If
 
-        'Leia keskmine skoor
-        For i As Integer = firstGameIndex To gamesPlayed Step 1
-            Dim temp As Integer = data.getItemWithId("gameHistory", "score", i)
-            If temp > 0 Then
-                tempAverageScore += temp
-            End If
-        Next
-        averageScore = tempAverageScore / gamesPlayed
-        data.setScoreItem("keskmine_skoor", averageScore)
+
 
         'Tõlkekasti keelte valiku lisamine
         cmbLanguage.Items.Add("en")

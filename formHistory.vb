@@ -23,7 +23,9 @@
     End Sub
 
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
-        Dim CDatabase As New CDatabase
-        CDatabase.exportJSON()
+        Dim data As IDatabase
+        data = New CDatabase
+
+        data.exportJSON()
     End Sub
 End Class

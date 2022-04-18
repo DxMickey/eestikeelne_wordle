@@ -349,11 +349,7 @@ Public Class CDatabase
     ' formHistory on nupp 'Ekspordi JSON', mida see funktsioon siis teeb
     ' kood on suurem osa kopeeritud funktsioonist getHistory
     ' ainult l6pus muudetud mida tabeliga tehakse
-    Public Sub exportJSON() Implements IDatabase.exportJSON
-
-
-    Public Sub setScoreItem(ByVal itemName As String, ByVal item As Integer) Implements IDatabase.setScoreItem
-
+    Private Sub exportJSON() Implements IDatabase.exportJSON
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -361,7 +357,6 @@ Public Class CDatabase
         SQLconnection.Open()
 
         SQLcommand = SQLconnection.CreateCommand
-
 
         SQLcommand.CommandText = "SELECT * FROM gameHistory"
         Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
@@ -371,33 +366,14 @@ Public Class CDatabase
         '' uus osa
         Dim JSONtabel = JsonConvert.SerializeObject(tabel, Formatting.Indented)
 
-        If (My.Computer.FileSystem.FileExists("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json")) Then
-            My.Computer.FileSystem.DeleteFile("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json")
-            My.Computer.FileSystem.WriteAllText("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json", JSONtabel, True)
+        If (My.Computer.FileSystem.FileExists(Application.StartupPath() & "\export.json")) Then
+            My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\export.json")
+            My.Computer.FileSystem.WriteAllText(Application.StartupPath() & "\export.json", JSONtabel, True)
         Else
-            My.Computer.FileSystem.WriteAllText("C:\Users\eesti\source\repos\eestikeelne_wordle\bin\Debug\test.json", JSONtabel, True)
+            My.Computer.FileSystem.WriteAllText(Application.StartupPath() & "\export.json", JSONtabel, True)
         End If
     End Sub
 
-        SQLcommand.CommandText = "UPDATE statistika SET " & itemName & " = " & item
-        SQLcommand.ExecuteNonQuery()
-        SQLconnection.Close()
-    End Sub
 
-    'Keskmise skoori arvutamise jaoks
-    Public Function getItemWithId(ByVal tableName As String, ByVal itemName As String, ByVal id As Integer) Implements IDatabase.getItemWithId
-        Dim SQLconnection As New SQLite.SQLiteConnection()
-        Dim SQLcommand As SQLite.SQLiteCommand
-
-        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-        SQLconnection.Open()
-
-        SQLcommand = SQLconnection.CreateCommand
-
-        SQLcommand.CommandText = "SELECT " & itemName & " FROM " & tableName & " WHERE mitmesMäng = " & id
-        Dim sqlResponse As String = SQLcommand.ExecuteScalar()
-        SQLconnection.Close()
-        Return sqlResponse
-    End Function
 
 End Class
