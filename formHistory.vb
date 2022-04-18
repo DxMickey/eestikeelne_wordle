@@ -15,7 +15,7 @@
         newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
-        newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
+        newForm.BackColor = colors.backColor
 
 
         newForm.Show()

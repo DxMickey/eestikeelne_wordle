@@ -17,6 +17,7 @@
     Shared boolKasTimed As Boolean
     Shared boolKasPiiramatu As Boolean
     Shared intMisKuupaev As Date
+    Shared intGameScore As Integer
 
     Public Property misKuupaev As Date Implements IGame.misKuupaev
         Get
@@ -207,6 +208,21 @@
         End Set
     End Property
 
+    Public Property gameScore As Integer Implements IGame.gameScore
+        Get
+            Return intGameScore
+        End Get
+        Set(value As Integer)
+            If value = Nothing Then
+                intGameScore = 0
+            ElseIf value = 0 Then
+                intGameScore = gameScore
+            Else
+                intGameScore = gameScore + value
+            End If
+        End Set
+    End Property
+
     'ArvatudSona-st viimase tähe kustutamine
     Private Sub deleteLastKey() Implements IGame.deleteLastKey
         Dim oldArvatud As String = ArvatudSona
@@ -298,7 +314,6 @@
             winOrLose = 1
         ElseIf intRida = 6 Then
             over = True
-
         End If
         Return over
     End Function
