@@ -155,22 +155,29 @@
         Dim data As IDatabase
         data = New CDatabase
 
-        time.timeWait = time.timeWait - 1
-        lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:" & time.timeWait & "s"
-        lblTimer.Visible = True
-        data.setItem("time", "timeWaitCurrent", time.timeWait)
-
         If time.timeWait <= 0 And time.timeState = "On" Then
             btnClassic.Enabled = True
             btnPlay.Enabled = True
 
             time.timePlay = data.getItem("time", "timePlay")
             time.timeWait = data.getItem("time", "timeWait")
+            data.setItem("time", "timeWaitCurrent", time.timeWait)
+            data.setItem("time", "timePlayCurrent", time.timePlay)
+
 
             lblTimer.Visible = False
             Timer1.Enabled = False
+        Else
+            time.timeWait = time.timeWait - 1
+            lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:" & time.timeWait & "s"
+            lblTimer.Visible = True
+            data.setItem("time", "timeWaitCurrent", time.timeWait)
 
         End If
+
+
+
+
 
     End Sub
 
@@ -178,10 +185,10 @@
         Dim time As ITimeLimit
         time = New CTimeLimit
 
-        If time.timePlay <= 0 Then
+        If time.timePlay <= 0 And time.timeState = "On" Then
             Timer1.Enabled = True
-            lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:"
-            lblTimer.Visible = True
+            ' lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:"
+            'lblTimer.Visible = True
             btnClassic.Enabled = False
             btnPlay.Enabled = False
         End If

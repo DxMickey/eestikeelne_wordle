@@ -299,7 +299,7 @@ Public Class CDatabase
 
     'CSV failist kasutaja enda sõnade laadimine andmebaasi, sõnade fail peab olema mängu .exe-ga samas kaustas.
     'Input = kasutaja sisestatud failinimi
-    Private Sub importCSV(fileName As String) Implements IDatabase.importCSV
+    Private Sub importCSV(fileName As String, letters As Integer) Implements IDatabase.importCSV
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -321,8 +321,14 @@ Public Class CDatabase
         Do
             line = reader.ReadLine
 
-            SQLcommand.CommandText = "INSERT INTO '" & fileName & "' VALUES('" & line & "')"
-            SQLcommand.ExecuteNonQuery()
+            If line <> Nothing Then
+
+                If line.Length = letters Then
+                    SQLcommand.CommandText = "INSERT INTO '" & fileName & "' VALUES('" & line & "')"
+                    SQLcommand.ExecuteNonQuery()
+                End If
+            End If
+
 
         Loop Until line Is Nothing
 
