@@ -72,7 +72,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = '" & item & "' WHERE id = 1"
+        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = '" & item & "'"
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -86,7 +86,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & " WHERE id = 1"
+        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & ""
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -100,7 +100,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & " WHERE id = 1"
+        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & ""
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
