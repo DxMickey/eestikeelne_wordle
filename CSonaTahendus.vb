@@ -1,7 +1,6 @@
 ﻿Imports System.Text
 Imports System.Net
 Imports System.IO
-Imports System.Text.RegularExpressions
 Public Class CSonaTahendus
     Implements ISonaTahendus
     Private Const sonaveebURL = "https://sonaveeb.ee/search/unif/dlall/dsall/"
@@ -11,63 +10,50 @@ Public Class CSonaTahendus
 
     Public Function getSonaTahendus(ByRef sona As String) Implements ISonaTahendus.getSonaTahendus
 
-
+        sona = LCase(sona)
         If Not hasNetworkConnection() Then
             Return nettiPole
         Else
             Try
-                scrapeWord(sona)
-                Return "ssssssss"
+                Dim tahendus = scrapeWord(sona)
+                Return tahendus
             Catch ex As Exception
-
+                Return "Ei leidnud tähendust " & vbCrLf & "https://sonaveeb.ee/search/unif/dlall/dsall/" & sona & "/1"
             End Try
         End If
-        Return "Scraper pole valmis"
-        'Try
-        '    Me.scrapeWord(sona)
-        'Catch ex As Exception
-        '    Return sonaPole
-        'End Try
-        'Return strOutput
+        Return "Midagi läks katki"
     End Function
     Private Function scrapeWord(sona)
         'Otsib valja sonale vastava URL-i ja proovib selle tahenduse valja saada
         'https://www.codeguru.com/visual-basic/creating-a-web-text-scraper-with-visual-basic/
 
-        Dim reqURL = sonaveebURL & sona
-        Dim webRes As WebResponse
-        Dim webReq = HttpWebRequest.Create(sonaveebURL)
 
-        Dim request As HttpWebRequest = WebRequest.Create("https://sonaveeb.ee/search/unif/dlall/dsall/hellitus/1")
+
+        Dim request As HttpWebRequest = WebRequest.Create("https://sonaveeb.ee/search/unif/dlall/dsall/" & sona & "/1")
         request.Proxy = Nothing
         request.UseDefaultCredentials = True
         request.CookieContainer = New CookieContainer()
         Dim response As HttpWebResponse = request.GetResponse()
         Dim response2 As StreamReader = New StreamReader(response.GetResponseStream)
         Dim str As String = response2.ReadToEnd()
-        Dim SearchForThis As String = "definition-value"
-        Dim indeks = str.IndexOf(SearchForThis)
-        Console.WriteLine(str(indeks))
-        Return "scraperi funktsiooni seest"
+        Dim jk = parseHTMLforDefinition(str)
+
+        Return jk
     End Function
-    Private Function parseHTMLforDefinition()
+    Private Function parseHTMLforDefinition(ByVal str)
         'Formatting Techniques
-
-        ' Remove Doctype ( HTML 5 )
-        strOutput = Regex.Replace(strOutput, "<!(.|\s)*?>", "")
-
-        ' Remove HTML Tags
-        strOutput = Regex.Replace(strOutput, "</?[a-z][a-z0-9]*[^<>]*>", "")
-
-        ' Remove HTML Comments
-        strOutput = Regex.Replace(strOutput, "<!--(.|\s)*?-->", "")
-
-        ' Remove Script Tags
-        strOutput = Regex.Replace(strOutput, "<script.*?</script>", "", RegexOptions.Singleline Or RegexOptions.IgnoreCase)
-
-        ' Remove Stylesheets
-        strOutput = Regex.Replace(strOutput, "<style.*?</style>", "", RegexOptions.Singleline Or RegexOptions.IgnoreCase)
-
+        'Peaks tagstama true or false ja strout panem komponendi tippu
+        Dim strOutput As String
+        Try
+            Dim htmlContent = New HtmlAgilityPack.HtmlDocument()
+            htmlContent.LoadHtml(str)
+            Dim dblQuote = """"
+            Dim span = htmlContent.DocumentNode.SelectNodes("//span[contains(@class, " &
+                                                            dblQuote & "homonym-intro d-block" & dblQuote & ")]")
+            strOutput = span(0).InnerText
+        Catch ex As Exception
+            Return "Ei suutnud tähendust leida"
+        End Try
         Return strOutput
     End Function
     Private Function hasNetworkConnection()

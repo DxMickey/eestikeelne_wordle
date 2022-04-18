@@ -103,17 +103,17 @@ Partial Class formGameEnd
         'UcMusicPlayer1
         '
         Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
-        Me.UcMusicPlayer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.UcMusicPlayer1.Margin = New System.Windows.Forms.Padding(2)
         Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
         Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
         Me.UcMusicPlayer1.TabIndex = 7
         '
         'UcSonaTahendus1
         '
-        Me.UcSonaTahendus1.Location = New System.Drawing.Point(118, 405)
-        Me.UcSonaTahendus1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.UcSonaTahendus1.Location = New System.Drawing.Point(62, 522)
+        Me.UcSonaTahendus1.Margin = New System.Windows.Forms.Padding(2)
         Me.UcSonaTahendus1.Name = "UcSonaTahendus1"
-        Me.UcSonaTahendus1.Size = New System.Drawing.Size(152, 115)
+        Me.UcSonaTahendus1.Size = New System.Drawing.Size(554, 163)
         Me.UcSonaTahendus1.TabIndex = 8
         '
         'lblScoreName

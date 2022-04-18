@@ -52,8 +52,9 @@ Partial Class UCSonaTahendus
         Me.rtbSonaTahendus.Enabled = False
         Me.rtbSonaTahendus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
         Me.rtbSonaTahendus.Location = New System.Drawing.Point(2, 41)
+        Me.rtbSonaTahendus.MaximumSize = New System.Drawing.Size(404, 96)
         Me.rtbSonaTahendus.Name = "rtbSonaTahendus"
-        Me.rtbSonaTahendus.Size = New System.Drawing.Size(197, 96)
+        Me.rtbSonaTahendus.Size = New System.Drawing.Size(399, 96)
         Me.rtbSonaTahendus.TabIndex = 3
         Me.rtbSonaTahendus.Text = "Siia ilmub sona t2hendus jne"
         '
@@ -65,7 +66,7 @@ Partial Class UCSonaTahendus
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblSona)
         Me.Name = "UCSonaTahendus"
-        Me.Size = New System.Drawing.Size(202, 141)
+        Me.Size = New System.Drawing.Size(404, 141)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
