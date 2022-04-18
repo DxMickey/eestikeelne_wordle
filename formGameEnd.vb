@@ -40,6 +40,15 @@ Public Class formGameEnd
         game = New CGame
         Dim data As IDatabase
         data = New CDatabase
+        Dim time As ITimeLimit
+        time = New CTimeLimit
+
+        If time.timeState = "On" And time.timePlay <= 0 Then
+            btbPlayAgain.Enabled = False
+        Else
+            btbPlayAgain.Enabled = True
+        End If
+
         Dim colors As IGraphics
         colors = New CGraphics
 

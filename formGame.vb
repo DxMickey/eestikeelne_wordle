@@ -282,9 +282,10 @@ Public Class formGame
     Private Sub finishGame()
         Dim game As IGame
         game = New CGame
-
         Dim data As IDatabase
         data = New CDatabase
+        Dim time As ITimeLimit
+        time = New CTimeLimit
 
         Timer1.Enabled = False
         Timer2.Enabled = False
@@ -298,6 +299,14 @@ Public Class formGame
         Else
             kasArvatud = "Ei"
         End If
+
+        If time.timeState = "On" Then
+            time.timePlay = time.timePlay - game.kestvus
+            data.setItem("miscData", "timePlayCurrent", time.timePlay)
+        End If
+
+
+
         'Mängu andmete sisestamine ajaloosse andmebaasis
         data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida, game.gameScore)
 

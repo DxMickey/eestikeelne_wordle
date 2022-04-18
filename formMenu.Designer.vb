@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class formMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,18 @@ Partial Class formMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnPlay = New System.Windows.Forms.Button()
         Me.btnHistory = New System.Windows.Forms.Button()
         Me.btnStats = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClassic = New System.Windows.Forms.Button()
         Me.btnGraphics = New System.Windows.Forms.Button()
+        Me.btnTimeLimit = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lblTimer = New System.Windows.Forms.Label()
         Me.btnWordList = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -92,22 +96,11 @@ Partial Class formMenu
         Me.btnGraphics.Text = "Kujundus"
         Me.btnGraphics.UseVisualStyleBackColor = True
         '
-        'btnWordList
-        '
-        Me.btnWordList.Location = New System.Drawing.Point(364, 510)
-        Me.btnWordList.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnWordList.Name = "btnWordList"
-        Me.btnWordList.Size = New System.Drawing.Size(157, 28)
-        Me.btnWordList.TabIndex = 5
-        Me.btnWordList.Text = "Enda sõnadelist"
-        Me.btnWordList.UseVisualStyleBackColor = True
-        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(912, 937)
-        Me.Controls.Add(Me.btnWordList)
+        Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.btnClassic)
         Me.Controls.Add(Me.btnGraphics)
         Me.Controls.Add(Me.Label1)
@@ -131,5 +124,5 @@ Partial Class formMenu
     Friend WithEvents btnClassic As Button
 
     Friend WithEvents btnGraphics As Button
-    Friend WithEvents btnWordList As Button
+
 End Class
