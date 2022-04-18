@@ -8,10 +8,10 @@
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
 
         time.password = data.getItem("miscData", "parool")
-        time.timeState = data.getItem("miscData", "timeState")
+        time.timeState = data.getItem("time", "timeState")
         'time.timePlay = data.getItem("miscData", "timePlayCurrent")
         time.timePlay = 0
-        time.timeWait = data.getItem("miscData", "timeWaitCurrent")
+        time.timeWait = data.getItem("time", "timeWaitCurrent")
 
         newForm.TopLevel = False
         newForm.Parent = Me

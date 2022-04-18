@@ -302,7 +302,7 @@ Public Class formGame
 
         If time.timeState = "On" Then
             time.timePlay = time.timePlay - game.kestvus
-            data.setItem("miscData", "timePlayCurrent", time.timePlay)
+            data.setItem("time", "timePlayCurrent", time.timePlay)
         End If
 
 

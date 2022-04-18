@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class formMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class formMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.btnPlay = New System.Windows.Forms.Button()
@@ -37,30 +37,27 @@ Partial Class formMenu
         '
         'btnPlay
         '
-        Me.btnPlay.Location = New System.Drawing.Point(469, 309)
-        Me.btnPlay.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnPlay.Location = New System.Drawing.Point(352, 251)
         Me.btnPlay.Name = "btnPlay"
-        Me.btnPlay.Size = New System.Drawing.Size(100, 28)
+        Me.btnPlay.Size = New System.Drawing.Size(75, 23)
         Me.btnPlay.TabIndex = 0
         Me.btnPlay.Text = "Piiramatu"
         Me.btnPlay.UseVisualStyleBackColor = True
         '
         'btnHistory
         '
-        Me.btnHistory.Location = New System.Drawing.Point(389, 458)
-        Me.btnHistory.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnHistory.Location = New System.Drawing.Point(292, 372)
         Me.btnHistory.Name = "btnHistory"
-        Me.btnHistory.Size = New System.Drawing.Size(100, 28)
+        Me.btnHistory.Size = New System.Drawing.Size(75, 23)
         Me.btnHistory.TabIndex = 1
         Me.btnHistory.Text = "Ajalugu"
         Me.btnHistory.UseVisualStyleBackColor = True
         '
         'btnStats
         '
-        Me.btnStats.Location = New System.Drawing.Point(389, 407)
-        Me.btnStats.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnStats.Location = New System.Drawing.Point(292, 331)
         Me.btnStats.Name = "btnStats"
-        Me.btnStats.Size = New System.Drawing.Size(100, 28)
+        Me.btnStats.Size = New System.Drawing.Size(75, 23)
         Me.btnStats.TabIndex = 2
         Me.btnStats.Text = "Statistika"
         Me.btnStats.UseVisualStyleBackColor = True
@@ -69,45 +66,79 @@ Partial Class formMenu
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Stencil", 40.75!)
-        Me.Label1.Location = New System.Drawing.Point(48, 70)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(36, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(756, 81)
+        Me.Label1.Size = New System.Drawing.Size(609, 65)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Eestikeelne Wordle"
         '
         'btnClassic
         '
-        Me.btnClassic.Location = New System.Drawing.Point(309, 309)
-        Me.btnClassic.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnClassic.Location = New System.Drawing.Point(232, 251)
+        Me.btnClassic.Margin = New System.Windows.Forms.Padding(2)
         Me.btnClassic.Name = "btnClassic"
-        Me.btnClassic.Size = New System.Drawing.Size(100, 28)
+        Me.btnClassic.Size = New System.Drawing.Size(75, 23)
         Me.btnClassic.TabIndex = 4
         Me.btnClassic.Text = "Klassikaline"
         Me.btnClassic.UseVisualStyleBackColor = True
         '
         'btnGraphics
         '
-        Me.btnGraphics.Location = New System.Drawing.Point(389, 357)
-        Me.btnGraphics.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnGraphics.Location = New System.Drawing.Point(292, 290)
+        Me.btnGraphics.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGraphics.Name = "btnGraphics"
-        Me.btnGraphics.Size = New System.Drawing.Size(100, 28)
+        Me.btnGraphics.Size = New System.Drawing.Size(75, 23)
         Me.btnGraphics.TabIndex = 4
         Me.btnGraphics.Text = "Kujundus"
         Me.btnGraphics.UseVisualStyleBackColor = True
         '
+        'btnTimeLimit
+        '
+        Me.btnTimeLimit.Location = New System.Drawing.Point(292, 430)
+        Me.btnTimeLimit.Name = "btnTimeLimit"
+        Me.btnTimeLimit.Size = New System.Drawing.Size(75, 23)
+        Me.btnTimeLimit.TabIndex = 5
+        Me.btnTimeLimit.Text = "Ajalimiit"
+        Me.btnTimeLimit.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
+        'lblTimer
+        '
+        Me.lblTimer.AutoSize = True
+        Me.lblTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.25!)
+        Me.lblTimer.Location = New System.Drawing.Point(74, 212)
+        Me.lblTimer.Name = "lblTimer"
+        Me.lblTimer.Size = New System.Drawing.Size(27, 29)
+        Me.lblTimer.TabIndex = 6
+        Me.lblTimer.Text = "0"
+        Me.lblTimer.Visible = False
+        '
+        'btnWordList
+        '
+        Me.btnWordList.Location = New System.Drawing.Point(274, 401)
+        Me.btnWordList.Name = "btnWordList"
+        Me.btnWordList.Size = New System.Drawing.Size(109, 23)
+        Me.btnWordList.TabIndex = 7
+        Me.btnWordList.Text = "Enda sõnade list"
+        Me.btnWordList.UseVisualStyleBackColor = True
+        '
         'formMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.btnWordList)
+        Me.Controls.Add(Me.lblTimer)
+        Me.Controls.Add(Me.btnTimeLimit)
         Me.Controls.Add(Me.btnClassic)
         Me.Controls.Add(Me.btnGraphics)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnStats)
         Me.Controls.Add(Me.btnHistory)
         Me.Controls.Add(Me.btnPlay)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "formMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
@@ -124,5 +155,8 @@ Partial Class formMenu
     Friend WithEvents btnClassic As Button
 
     Friend WithEvents btnGraphics As Button
-
+    Friend WithEvents btnTimeLimit As Button
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents lblTimer As Label
+    Friend WithEvents btnWordList As Button
 End Class

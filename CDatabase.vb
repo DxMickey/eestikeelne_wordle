@@ -364,6 +364,7 @@ Public Class CDatabase
 
         Dim tabel As New DataTable
         '' uus osa
+        tabel.Load(SQLite_Data_Reader)
         Dim JSONtabel = JsonConvert.SerializeObject(tabel, Formatting.Indented)
 
         If (My.Computer.FileSystem.FileExists(Application.StartupPath() & "\export.json")) Then

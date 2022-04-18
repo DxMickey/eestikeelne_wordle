@@ -158,14 +158,14 @@
         time.timeWait = time.timeWait - 1
         lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:" & time.timeWait & "s"
         lblTimer.Visible = True
-        data.setItem("miscData", "timeWaitCurrent", time.timeWait)
+        data.setItem("time", "timeWaitCurrent", time.timeWait)
 
         If time.timeWait <= 0 And time.timeState = "On" Then
             btnClassic.Enabled = True
             btnPlay.Enabled = True
 
-            time.timePlay = data.getItem("miscData", "timePlay")
-            time.timeWait = data.getItem("miscData", "timeWait")
+            time.timePlay = data.getItem("time", "timePlay")
+            time.timeWait = data.getItem("time", "timeWait")
 
             lblTimer.Visible = False
             Timer1.Enabled = False
@@ -213,4 +213,5 @@
             colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
         End If
     End Sub
+
 End Class

@@ -59,8 +59,8 @@
                 time.timePlay = txtTimePlay.Text
                 time.timeWait = txtTimeWait.Text
 
-                data.setItem("miscData", "timePlay", txtTimePlay.Text)
-                data.setItem("miscData", "timeWait", txtTimeWait.Text)
+                data.setItem("time", "timePlay", txtTimePlay.Text)
+                data.setItem("time", "timeWait", txtTimeWait.Text)
             Else
                 MessageBox.Show("Väärtused peavad olema numbrilised ja ei tohi olla tühjad")
             End If
@@ -114,7 +114,7 @@
         data = New CDatabase
 
         time.timeState = "On"
-        data.setItem("miscData", "timeState", "On")
+        data.setItem("time", "timeState", "On")
 
         btnOff.Enabled = True
         btnOn.Enabled = False
@@ -128,7 +128,7 @@
         data = New CDatabase
 
         time.timeState = "Off"
-        data.setItem("miscData", "timeState", "Off")
+        data.setItem("time", "timeState", "Off")
 
         btnOff.Enabled = False
         btnOn.Enabled = True
