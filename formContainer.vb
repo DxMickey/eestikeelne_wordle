@@ -9,8 +9,7 @@
 
         time.password = data.getItem("miscData", "parool")
         time.timeState = data.getItem("time", "timeState")
-        'time.timePlay = data.getItem("miscData", "timePlayCurrent")
-        time.timePlay = 0
+        time.timePlay = data.getItem("time", "timePlayCurrent")
         time.timeWait = data.getItem("time", "timeWaitCurrent")
 
         newForm.TopLevel = False

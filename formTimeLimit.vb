@@ -37,16 +37,9 @@
                 lblTimePlay.Visible = True
                 lblTimeWait.Visible = True
 
-                btnOff.Visible = True
-                btnOn.Visible = True
-
-                If time.timeState = "off" Then
-                    btnOff.Enabled = False
-                    btnOn.Enabled = True
-                Else
-                    btnOff.Enabled = True
-                    btnOn.Enabled = False
-                End If
+                btnOnOff.Visible = True
+                lblTimeWaitNow.Visible = True
+                lblTimePlayNow.Visible = True
             Else
                 MessageBox.Show("Vale salasõna")
             End If
@@ -66,6 +59,8 @@
             End If
 
 
+            lblTimePlayNow.Text = "Väärtus hetkel:" & time.timePlay
+            lblTimeWaitNow.Text = "Väärtus hetkel:" & time.timeWait
 
         End If
     End Sub
@@ -76,8 +71,19 @@
         Dim data As IDatabase
         data = New CDatabase
 
-        btnOff.Visible = False
-        btnOn.Visible = False
+        btnOnOff.Visible = False
+
+        lblTimePlayNow.Visible = False
+        lblTimeWaitNow.Visible = False
+        lblTimePlayNow.Text = "Väärtus hetkel:" & data.getItem("time", "timePlay")
+        lblTimeWaitNow.Text = "Väärtus hetkel:" & data.getItem("time", "timeWait")
+
+
+        If time.timeState = "On" Then
+            btnOnOff.Text = "Lülita välja"
+        Else
+            btnOnOff.Text = "Lülita sisse"
+        End If
 
         If time.password = "Puudub" Then
             txtNewPass1.Visible = True
@@ -107,30 +113,34 @@
         Me.Close()
     End Sub
 
-    Private Sub btnOn_Click(sender As Object, e As EventArgs) Handles btnOn.Click
+    Private Sub btnOnOff_Click(sender As Object, e As EventArgs) Handles btnOnOff.Click
         Dim time As ITimeLimit
         time = New CTimeLimit
         Dim data As IDatabase
         data = New CDatabase
+        If btnOnOff.Text = "Lülita sisse" Then
+            If time.timeWait <= 0 Or time.timePlay <= 0 Then
+                MessageBox.Show("Väärtused peavad olema nullist suuremad")
+            Else
+                time.timeState = "On"
+                data.setItem("time", "timeState", "On")
+                btnOnOff.Text = "Lülita välja"
+            End If
 
-        time.timeState = "On"
-        data.setItem("time", "timeState", "On")
+        Else
+            time.timeState = "Off"
+            data.setItem("time", "timeState", "Off")
+            btnOnOff.Text = "Lülita sisse"
+        End If
 
-        btnOff.Enabled = True
-        btnOn.Enabled = False
+        time.timePlay = data.getItem("time", "timePlay")
+        time.timeWait = data.getItem("time", "timeWait")
+        data.setItem("time", "timeWaitCurrent", time.timeWait)
+        data.setItem("time", "timePlayCurrent", time.timePlay)
+
+
 
     End Sub
 
-    Private Sub btnOff_Click(sender As Object, e As EventArgs) Handles btnOff.Click
-        Dim time As ITimeLimit
-        time = New CTimeLimit
-        Dim data As IDatabase
-        data = New CDatabase
 
-        time.timeState = "Off"
-        data.setItem("time", "timeState", "Off")
-
-        btnOff.Enabled = False
-        btnOn.Enabled = True
-    End Sub
 End Class

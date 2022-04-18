@@ -30,8 +30,7 @@ Partial Class formWordList
         Me.rbtnLihtne = New System.Windows.Forms.RadioButton()
         Me.rbtnTavaline = New System.Windows.Forms.RadioButton()
         Me.rbtnRaske = New System.Windows.Forms.RadioButton()
-        Me.btnOn = New System.Windows.Forms.Button()
-        Me.btnOff = New System.Windows.Forms.Button()
+        Me.btnOnOff = New System.Windows.Forms.Button()
         Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
         Me.SuspendLayout()
         '
@@ -111,23 +110,14 @@ Partial Class formWordList
         Me.rbtnRaske.Text = "6-tähelised sõnad"
         Me.rbtnRaske.UseVisualStyleBackColor = True
         '
-        'btnOn
+        'btnOnOff
         '
-        Me.btnOn.Location = New System.Drawing.Point(407, 449)
-        Me.btnOn.Name = "btnOn"
-        Me.btnOn.Size = New System.Drawing.Size(75, 23)
-        Me.btnOn.TabIndex = 12
-        Me.btnOn.Text = "Lülita sisse"
-        Me.btnOn.UseVisualStyleBackColor = True
-        '
-        'btnOff
-        '
-        Me.btnOff.Location = New System.Drawing.Point(210, 449)
-        Me.btnOff.Name = "btnOff"
-        Me.btnOff.Size = New System.Drawing.Size(75, 23)
-        Me.btnOff.TabIndex = 13
-        Me.btnOff.Text = "Lülita välja"
-        Me.btnOff.UseVisualStyleBackColor = True
+        Me.btnOnOff.Location = New System.Drawing.Point(299, 450)
+        Me.btnOnOff.Name = "btnOnOff"
+        Me.btnOnOff.Size = New System.Drawing.Size(75, 23)
+        Me.btnOnOff.TabIndex = 12
+        Me.btnOnOff.Text = "Lülita sisse"
+        Me.btnOnOff.UseVisualStyleBackColor = True
         '
         'UcMusicPlayer1
         '
@@ -142,8 +132,7 @@ Partial Class formWordList
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.UcMusicPlayer1)
-        Me.Controls.Add(Me.btnOff)
-        Me.Controls.Add(Me.btnOn)
+        Me.Controls.Add(Me.btnOnOff)
         Me.Controls.Add(Me.rbtnRaske)
         Me.Controls.Add(Me.rbtnTavaline)
         Me.Controls.Add(Me.rbtnLihtne)
@@ -167,7 +156,6 @@ Partial Class formWordList
     Friend WithEvents rbtnLihtne As RadioButton
     Friend WithEvents rbtnTavaline As RadioButton
     Friend WithEvents rbtnRaske As RadioButton
-    Friend WithEvents btnOn As Button
-    Friend WithEvents btnOff As Button
+    Friend WithEvents btnOnOff As Button
     Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
 End Class

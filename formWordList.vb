@@ -19,7 +19,7 @@
                     Else
                         'Eelmise kasutaja sõnade tabeli kustutamine andmebaasist ja uude tabelisse uute sõnade sisestamine csv failist
                         data.deleteTable(data.getItem("miscData", "customEasy"))
-                        data.importCSV(txtCSVName.Text)
+                        data.importCSV(txtCSVName.Text, 4)
                         data.setItem("miscData", "customEasy", txtCSVName.Text)
                     End If
 
@@ -31,7 +31,7 @@
                     Else
                         'Eelmise kasutaja sõnade tabeli kustutamine andmebaasist ja uude tabelisse uute sõnade sisestamine csv failist
                         data.deleteTable(data.getItem("miscData", "customNormal"))
-                        data.importCSV(txtCSVName.Text)
+                        data.importCSV(txtCSVName.Text, 5)
                         data.setItem("miscData", "customNormal", txtCSVName.Text)
                     End If
 
@@ -43,7 +43,7 @@
                     Else
                         'Eelmise kasutaja sõnade tabeli kustutamine andmebaasist ja uude tabelisse uute sõnade sisestamine csv failist
                         data.deleteTable(data.getItem("miscData", "customHard"))
-                        data.importCSV(txtCSVName.Text)
+                        data.importCSV(txtCSVName.Text, 6)
                         data.setItem("miscData", "customHard", txtCSVName.Text)
                     End If
 
@@ -56,36 +56,29 @@
 
     End Sub
 
-    Private Sub btnOff_Click(sender As Object, e As EventArgs) Handles btnOff.Click
+    Private Sub btnOnOff_Click(sender As Object, e As EventArgs) Handles btnOnOff.Click
         Dim data As IDatabase
         data = New CDatabase
 
-        btnOff.Enabled = False
-        btnOn.Enabled = True
-        data.setItem("miscData", "customListState", "off")
-    End Sub
-
-    Private Sub btnOn_Click(sender As Object, e As EventArgs) Handles btnOn.Click
-        Dim data As IDatabase
-        data = New CDatabase
-
-        btnOff.Enabled = True
-        btnOn.Enabled = False
-        data.setItem("miscData", "customListState", "on")
+        If btnOnOff.Text = "Lülita sisse" Then
+            data.setItem("miscData", "customListState", "on")
+            btnOnOff.Text = "Lülita välja"
+        Else
+            data.setItem("miscData", "customListState", "off")
+            btnOnOff.Text = "Lülita sisse"
+        End If
     End Sub
 
     Private Sub formWordList_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dim data As IDatabase
         data = New CDatabase
 
-        btnOff.Enabled = False
-        btnOn.Enabled = False
         changeLabelColors()
 
         If data.getItem("miscData", "customListState") = "off" Then
-            btnOn.Enabled = True
+            btnOnOff.Text = "Lülita sisse"
         Else
-            btnOff.Enabled = True
+            btnOnOff.Text = "Lülita välja"
         End If
     End Sub
 
