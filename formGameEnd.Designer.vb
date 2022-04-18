@@ -42,29 +42,26 @@ Partial Class formGameEnd
         '
         Me.lblResult.AutoSize = True
         Me.lblResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
-        Me.lblResult.Location = New System.Drawing.Point(310, 222)
-        Me.lblResult.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblResult.Location = New System.Drawing.Point(232, 180)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(236, 30)
+        Me.lblResult.Size = New System.Drawing.Size(192, 25)
         Me.lblResult.TabIndex = 0
         Me.lblResult.Text = "WORD GUESSED!"
         '
         'btbPlayAgain
         '
-        Me.btbPlayAgain.Location = New System.Drawing.Point(379, 450)
-        Me.btbPlayAgain.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btbPlayAgain.Location = New System.Drawing.Point(284, 366)
         Me.btbPlayAgain.Name = "btbPlayAgain"
-        Me.btbPlayAgain.Size = New System.Drawing.Size(100, 28)
+        Me.btbPlayAgain.Size = New System.Drawing.Size(75, 23)
         Me.btbPlayAgain.TabIndex = 1
         Me.btbPlayAgain.Text = "Mängi uuesti"
         Me.btbPlayAgain.UseVisualStyleBackColor = True
         '
         'btbToMenu
         '
-        Me.btbToMenu.Location = New System.Drawing.Point(379, 510)
-        Me.btbToMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btbToMenu.Location = New System.Drawing.Point(284, 414)
         Me.btbToMenu.Name = "btbToMenu"
-        Me.btbToMenu.Size = New System.Drawing.Size(100, 28)
+        Me.btbToMenu.Size = New System.Drawing.Size(75, 23)
         Me.btbToMenu.TabIndex = 2
         Me.btbToMenu.Text = "Menüüsse"
         Me.btbToMenu.UseVisualStyleBackColor = True
@@ -73,27 +70,24 @@ Partial Class formGameEnd
         '
         Me.lblSona.AutoSize = True
         Me.lblSona.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.25!)
-        Me.lblSona.Location = New System.Drawing.Point(378, 280)
-        Me.lblSona.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSona.Location = New System.Drawing.Point(284, 228)
         Me.lblSona.Name = "lblSona"
-        Me.lblSona.Size = New System.Drawing.Size(101, 32)
+        Me.lblSona.Size = New System.Drawing.Size(77, 26)
         Me.lblSona.TabIndex = 3
         Me.lblSona.Text = "Label1"
         '
         'txtTranslation
         '
-        Me.txtTranslation.Location = New System.Drawing.Point(487, 367)
-        Me.txtTranslation.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTranslation.Location = New System.Drawing.Point(365, 298)
         Me.txtTranslation.Name = "txtTranslation"
-        Me.txtTranslation.Size = New System.Drawing.Size(132, 22)
+        Me.txtTranslation.Size = New System.Drawing.Size(100, 20)
         Me.txtTranslation.TabIndex = 4
         '
         'btnTranslate
         '
-        Me.btnTranslate.Location = New System.Drawing.Point(379, 364)
-        Me.btnTranslate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnTranslate.Location = New System.Drawing.Point(284, 296)
         Me.btnTranslate.Name = "btnTranslate"
-        Me.btnTranslate.Size = New System.Drawing.Size(100, 28)
+        Me.btnTranslate.Size = New System.Drawing.Size(75, 23)
         Me.btnTranslate.TabIndex = 5
         Me.btnTranslate.Text = "Tõlgi"
         Me.btnTranslate.UseVisualStyleBackColor = True
@@ -101,33 +95,35 @@ Partial Class formGameEnd
         'cmbLanguage
         '
         Me.cmbLanguage.FormattingEnabled = True
-        Me.cmbLanguage.Location = New System.Drawing.Point(209, 366)
-        Me.cmbLanguage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbLanguage.Location = New System.Drawing.Point(157, 297)
         Me.cmbLanguage.Name = "cmbLanguage"
-        Me.cmbLanguage.Size = New System.Drawing.Size(160, 24)
+        Me.cmbLanguage.Size = New System.Drawing.Size(121, 21)
         Me.cmbLanguage.TabIndex = 6
         '
         'UcMusicPlayer1
         '
         Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
         Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
         Me.UcMusicPlayer1.TabIndex = 7
         '
         'UcSonaTahendus1
         '
-        Me.UcSonaTahendus1.Location = New System.Drawing.Point(157, 499)
+        Me.UcSonaTahendus1.Location = New System.Drawing.Point(118, 405)
+        Me.UcSonaTahendus1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.UcSonaTahendus1.Name = "UcSonaTahendus1"
-        Me.UcSonaTahendus1.Size = New System.Drawing.Size(202, 141)
+        Me.UcSonaTahendus1.Size = New System.Drawing.Size(152, 115)
         Me.UcSonaTahendus1.TabIndex = 8
         '
         'lblScoreName
         '
         Me.lblScoreName.AutoSize = True
         Me.lblScoreName.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblScoreName.Location = New System.Drawing.Point(174, 21)
+        Me.lblScoreName.Location = New System.Drawing.Point(130, 17)
+        Me.lblScoreName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblScoreName.Name = "lblScoreName"
-        Me.lblScoreName.Size = New System.Drawing.Size(126, 42)
+        Me.lblScoreName.Size = New System.Drawing.Size(102, 36)
         Me.lblScoreName.TabIndex = 7
         Me.lblScoreName.Text = "Skoor:"
         '
@@ -135,9 +131,10 @@ Partial Class formGameEnd
         '
         Me.lblGameScore.AutoSize = True
         Me.lblGameScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGameScore.Location = New System.Drawing.Point(302, 21)
+        Me.lblGameScore.Location = New System.Drawing.Point(226, 17)
+        Me.lblGameScore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblGameScore.Name = "lblGameScore"
-        Me.lblGameScore.Size = New System.Drawing.Size(39, 42)
+        Me.lblGameScore.Size = New System.Drawing.Size(32, 36)
         Me.lblGameScore.TabIndex = 8
         Me.lblGameScore.Text = "0"
         '
@@ -145,9 +142,10 @@ Partial Class formGameEnd
         '
         Me.lblBestScoreName.AutoSize = True
         Me.lblBestScoreName.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBestScoreName.Location = New System.Drawing.Point(74, 63)
+        Me.lblBestScoreName.Location = New System.Drawing.Point(56, 51)
+        Me.lblBestScoreName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblBestScoreName.Name = "lblBestScoreName"
-        Me.lblBestScoreName.Size = New System.Drawing.Size(226, 42)
+        Me.lblBestScoreName.Size = New System.Drawing.Size(181, 36)
         Me.lblBestScoreName.TabIndex = 9
         Me.lblBestScoreName.Text = "Parim skoor:"
         '
@@ -155,9 +153,10 @@ Partial Class formGameEnd
         '
         Me.lblBestScore.AutoSize = True
         Me.lblBestScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBestScore.Location = New System.Drawing.Point(302, 63)
+        Me.lblBestScore.Location = New System.Drawing.Point(226, 51)
+        Me.lblBestScore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblBestScore.Name = "lblBestScore"
-        Me.lblBestScore.Size = New System.Drawing.Size(39, 42)
+        Me.lblBestScore.Size = New System.Drawing.Size(32, 36)
         Me.lblBestScore.TabIndex = 10
         Me.lblBestScore.Text = "0"
         '
@@ -165,20 +164,20 @@ Partial Class formGameEnd
         '
         Me.lblNewHighscore.AutoSize = True
         Me.lblNewHighscore.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNewHighscore.Location = New System.Drawing.Point(274, 170)
+        Me.lblNewHighscore.Location = New System.Drawing.Point(206, 138)
+        Me.lblNewHighscore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNewHighscore.Name = "lblNewHighscore"
-        Me.lblNewHighscore.Size = New System.Drawing.Size(307, 39)
+        Me.lblNewHighscore.Size = New System.Drawing.Size(250, 31)
         Me.lblNewHighscore.TabIndex = 11
         Me.lblNewHighscore.Text = "Uus suurim skoor!"
         '
         'formGameEnd
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.UcSonaTahendus1)
         Me.Controls.Add(Me.UcMusicPlayer1)
-        Me.ClientSize = New System.Drawing.Size(912, 937)
         Me.Controls.Add(Me.lblNewHighscore)
         Me.Controls.Add(Me.lblBestScore)
         Me.Controls.Add(Me.lblBestScoreName)
@@ -191,7 +190,6 @@ Partial Class formGameEnd
         Me.Controls.Add(Me.btbToMenu)
         Me.Controls.Add(Me.btbPlayAgain)
         Me.Controls.Add(Me.lblResult)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "formGameEnd"
         Me.Text = "Form1"
         Me.ResumeLayout(False)

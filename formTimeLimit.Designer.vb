@@ -177,6 +177,13 @@ Partial Class formTimeLimit
         Me.lblTimeWaitNow.TabIndex = 14
         Me.lblTimeWaitNow.Text = "Väärtus hetkel:"
         '
+        'UcMusicPlayer1
+        '
+        Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
+        Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
+        Me.UcMusicPlayer1.TabIndex = 14
+        '
         'formTimeLimit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)

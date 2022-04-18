@@ -104,20 +104,18 @@ Partial Class formGame
         '
         'txtDebug
         '
-        Me.txtDebug.Location = New System.Drawing.Point(300, 76)
-        Me.txtDebug.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDebug.Location = New System.Drawing.Point(225, 62)
         Me.txtDebug.Name = "txtDebug"
         Me.txtDebug.ReadOnly = True
-        Me.txtDebug.Size = New System.Drawing.Size(420, 22)
+        Me.txtDebug.Size = New System.Drawing.Size(316, 20)
         Me.txtDebug.TabIndex = 62
         '
         'txtDebug2
         '
-        Me.txtDebug2.Location = New System.Drawing.Point(368, 108)
-        Me.txtDebug2.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDebug2.Location = New System.Drawing.Point(276, 88)
         Me.txtDebug2.Name = "txtDebug2"
         Me.txtDebug2.ReadOnly = True
-        Me.txtDebug2.Size = New System.Drawing.Size(309, 22)
+        Me.txtDebug2.Size = New System.Drawing.Size(233, 20)
         Me.txtDebug2.TabIndex = 63
         '
         'Timer1
@@ -132,10 +130,9 @@ Partial Class formGame
         '
         Me.lblTimeText.AutoSize = True
         Me.lblTimeText.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.lblTimeText.Location = New System.Drawing.Point(16, 11)
-        Me.lblTimeText.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTimeText.Location = New System.Drawing.Point(12, 9)
         Me.lblTimeText.Name = "lblTimeText"
-        Me.lblTimeText.Size = New System.Drawing.Size(218, 39)
+        Me.lblTimeText.Size = New System.Drawing.Size(173, 31)
         Me.lblTimeText.TabIndex = 70
         Me.lblTimeText.Text = "Aega jäänud:"
         '
@@ -143,10 +140,9 @@ Partial Class formGame
         '
         Me.lblTimeLeft.AutoSize = True
         Me.lblTimeLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.lblTimeLeft.Location = New System.Drawing.Point(235, 11)
-        Me.lblTimeLeft.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTimeLeft.Location = New System.Drawing.Point(176, 9)
         Me.lblTimeLeft.Name = "lblTimeLeft"
-        Me.lblTimeLeft.Size = New System.Drawing.Size(36, 39)
+        Me.lblTimeLeft.Size = New System.Drawing.Size(29, 31)
         Me.lblTimeLeft.TabIndex = 71
         Me.lblTimeLeft.Text = "0"
         '
@@ -155,12 +151,11 @@ Partial Class formGame
         Me.lblRida1Kast1.BackColor = System.Drawing.Color.White
         Me.lblRida1Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida1Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida1Kast1.Location = New System.Drawing.Point(249, 150)
-        Me.lblRida1Kast1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida1Kast1.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida1Kast1.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast1.Location = New System.Drawing.Point(187, 122)
+        Me.lblRida1Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast1.Name = "lblRida1Kast1"
-        Me.lblRida1Kast1.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast1.Size = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast1.TabIndex = 74
         Me.lblRida1Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -169,12 +164,11 @@ Partial Class formGame
         Me.lblRida1Kast2.BackColor = System.Drawing.Color.White
         Me.lblRida1Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida1Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida1Kast2.Location = New System.Drawing.Point(337, 150)
-        Me.lblRida1Kast2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida1Kast2.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida1Kast2.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast2.Location = New System.Drawing.Point(253, 122)
+        Me.lblRida1Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast2.Name = "lblRida1Kast2"
-        Me.lblRida1Kast2.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast2.Size = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast2.TabIndex = 75
         Me.lblRida1Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -183,12 +177,11 @@ Partial Class formGame
         Me.lblRida1Kast3.BackColor = System.Drawing.Color.White
         Me.lblRida1Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida1Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida1Kast3.Location = New System.Drawing.Point(425, 150)
-        Me.lblRida1Kast3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida1Kast3.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida1Kast3.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast3.Location = New System.Drawing.Point(319, 122)
+        Me.lblRida1Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast3.Name = "lblRida1Kast3"
-        Me.lblRida1Kast3.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast3.Size = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast3.TabIndex = 76
         Me.lblRida1Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -197,12 +190,11 @@ Partial Class formGame
         Me.lblRida1Kast4.BackColor = System.Drawing.Color.White
         Me.lblRida1Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida1Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida1Kast4.Location = New System.Drawing.Point(513, 150)
-        Me.lblRida1Kast4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida1Kast4.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida1Kast4.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast4.Location = New System.Drawing.Point(385, 122)
+        Me.lblRida1Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast4.Name = "lblRida1Kast4"
-        Me.lblRida1Kast4.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast4.Size = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast4.TabIndex = 77
         Me.lblRida1Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -211,12 +203,11 @@ Partial Class formGame
         Me.lblRida1Kast5.BackColor = System.Drawing.Color.White
         Me.lblRida1Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida1Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida1Kast5.Location = New System.Drawing.Point(601, 150)
-        Me.lblRida1Kast5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida1Kast5.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida1Kast5.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast5.Location = New System.Drawing.Point(451, 122)
+        Me.lblRida1Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast5.Name = "lblRida1Kast5"
-        Me.lblRida1Kast5.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast5.Size = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast5.TabIndex = 78
         Me.lblRida1Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -225,12 +216,11 @@ Partial Class formGame
         Me.lblRida1Kast6.BackColor = System.Drawing.Color.White
         Me.lblRida1Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida1Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida1Kast6.Location = New System.Drawing.Point(689, 150)
-        Me.lblRida1Kast6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida1Kast6.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida1Kast6.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast6.Location = New System.Drawing.Point(517, 122)
+        Me.lblRida1Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida1Kast6.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast6.Name = "lblRida1Kast6"
-        Me.lblRida1Kast6.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida1Kast6.Size = New System.Drawing.Size(60, 60)
         Me.lblRida1Kast6.TabIndex = 79
         Me.lblRida1Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -239,12 +229,11 @@ Partial Class formGame
         Me.lblRida2Kast6.BackColor = System.Drawing.Color.White
         Me.lblRida2Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida2Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida2Kast6.Location = New System.Drawing.Point(689, 236)
-        Me.lblRida2Kast6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida2Kast6.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida2Kast6.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast6.Location = New System.Drawing.Point(517, 192)
+        Me.lblRida2Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast6.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast6.Name = "lblRida2Kast6"
-        Me.lblRida2Kast6.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast6.Size = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast6.TabIndex = 85
         Me.lblRida2Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -253,12 +242,11 @@ Partial Class formGame
         Me.lblRida2Kast5.BackColor = System.Drawing.Color.White
         Me.lblRida2Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida2Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida2Kast5.Location = New System.Drawing.Point(601, 236)
-        Me.lblRida2Kast5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida2Kast5.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida2Kast5.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast5.Location = New System.Drawing.Point(451, 192)
+        Me.lblRida2Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast5.Name = "lblRida2Kast5"
-        Me.lblRida2Kast5.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast5.Size = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast5.TabIndex = 84
         Me.lblRida2Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -267,12 +255,11 @@ Partial Class formGame
         Me.lblRida2Kast4.BackColor = System.Drawing.Color.White
         Me.lblRida2Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida2Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida2Kast4.Location = New System.Drawing.Point(513, 236)
-        Me.lblRida2Kast4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida2Kast4.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida2Kast4.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast4.Location = New System.Drawing.Point(385, 192)
+        Me.lblRida2Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast4.Name = "lblRida2Kast4"
-        Me.lblRida2Kast4.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast4.Size = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast4.TabIndex = 83
         Me.lblRida2Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -281,12 +268,11 @@ Partial Class formGame
         Me.lblRida2Kast3.BackColor = System.Drawing.Color.White
         Me.lblRida2Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida2Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida2Kast3.Location = New System.Drawing.Point(425, 236)
-        Me.lblRida2Kast3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida2Kast3.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida2Kast3.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast3.Location = New System.Drawing.Point(319, 192)
+        Me.lblRida2Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast3.Name = "lblRida2Kast3"
-        Me.lblRida2Kast3.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast3.Size = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast3.TabIndex = 82
         Me.lblRida2Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -295,12 +281,11 @@ Partial Class formGame
         Me.lblRida2Kast2.BackColor = System.Drawing.Color.White
         Me.lblRida2Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida2Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida2Kast2.Location = New System.Drawing.Point(337, 236)
-        Me.lblRida2Kast2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida2Kast2.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida2Kast2.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast2.Location = New System.Drawing.Point(253, 192)
+        Me.lblRida2Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast2.Name = "lblRida2Kast2"
-        Me.lblRida2Kast2.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast2.Size = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast2.TabIndex = 81
         Me.lblRida2Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -309,12 +294,11 @@ Partial Class formGame
         Me.lblRida2Kast1.BackColor = System.Drawing.Color.White
         Me.lblRida2Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida2Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida2Kast1.Location = New System.Drawing.Point(249, 236)
-        Me.lblRida2Kast1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida2Kast1.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida2Kast1.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast1.Location = New System.Drawing.Point(187, 192)
+        Me.lblRida2Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida2Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast1.Name = "lblRida2Kast1"
-        Me.lblRida2Kast1.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida2Kast1.Size = New System.Drawing.Size(60, 60)
         Me.lblRida2Kast1.TabIndex = 80
         Me.lblRida2Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -323,12 +307,11 @@ Partial Class formGame
         Me.lblRida3Kast6.BackColor = System.Drawing.Color.White
         Me.lblRida3Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida3Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida3Kast6.Location = New System.Drawing.Point(689, 321)
-        Me.lblRida3Kast6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida3Kast6.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida3Kast6.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast6.Location = New System.Drawing.Point(517, 261)
+        Me.lblRida3Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast6.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast6.Name = "lblRida3Kast6"
-        Me.lblRida3Kast6.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast6.Size = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast6.TabIndex = 91
         Me.lblRida3Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -337,12 +320,11 @@ Partial Class formGame
         Me.lblRida3Kast5.BackColor = System.Drawing.Color.White
         Me.lblRida3Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida3Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida3Kast5.Location = New System.Drawing.Point(601, 321)
-        Me.lblRida3Kast5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida3Kast5.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida3Kast5.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast5.Location = New System.Drawing.Point(451, 261)
+        Me.lblRida3Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast5.Name = "lblRida3Kast5"
-        Me.lblRida3Kast5.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast5.Size = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast5.TabIndex = 90
         Me.lblRida3Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -351,12 +333,11 @@ Partial Class formGame
         Me.lblRida3Kast4.BackColor = System.Drawing.Color.White
         Me.lblRida3Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida3Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida3Kast4.Location = New System.Drawing.Point(513, 321)
-        Me.lblRida3Kast4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida3Kast4.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida3Kast4.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast4.Location = New System.Drawing.Point(385, 261)
+        Me.lblRida3Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast4.Name = "lblRida3Kast4"
-        Me.lblRida3Kast4.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast4.Size = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast4.TabIndex = 89
         Me.lblRida3Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -365,12 +346,11 @@ Partial Class formGame
         Me.lblRida3Kast3.BackColor = System.Drawing.Color.White
         Me.lblRida3Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida3Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida3Kast3.Location = New System.Drawing.Point(425, 321)
-        Me.lblRida3Kast3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida3Kast3.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida3Kast3.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast3.Location = New System.Drawing.Point(319, 261)
+        Me.lblRida3Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast3.Name = "lblRida3Kast3"
-        Me.lblRida3Kast3.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast3.Size = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast3.TabIndex = 88
         Me.lblRida3Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -379,12 +359,11 @@ Partial Class formGame
         Me.lblRida3Kast2.BackColor = System.Drawing.Color.White
         Me.lblRida3Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida3Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida3Kast2.Location = New System.Drawing.Point(337, 321)
-        Me.lblRida3Kast2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida3Kast2.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida3Kast2.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast2.Location = New System.Drawing.Point(253, 261)
+        Me.lblRida3Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast2.Name = "lblRida3Kast2"
-        Me.lblRida3Kast2.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast2.Size = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast2.TabIndex = 87
         Me.lblRida3Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -393,12 +372,11 @@ Partial Class formGame
         Me.lblRida3Kast1.BackColor = System.Drawing.Color.White
         Me.lblRida3Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida3Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida3Kast1.Location = New System.Drawing.Point(249, 321)
-        Me.lblRida3Kast1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida3Kast1.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida3Kast1.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast1.Location = New System.Drawing.Point(187, 261)
+        Me.lblRida3Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida3Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast1.Name = "lblRida3Kast1"
-        Me.lblRida3Kast1.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida3Kast1.Size = New System.Drawing.Size(60, 60)
         Me.lblRida3Kast1.TabIndex = 86
         Me.lblRida3Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -407,12 +385,11 @@ Partial Class formGame
         Me.lblRida4Kast6.BackColor = System.Drawing.Color.White
         Me.lblRida4Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida4Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida4Kast6.Location = New System.Drawing.Point(689, 407)
-        Me.lblRida4Kast6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida4Kast6.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida4Kast6.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast6.Location = New System.Drawing.Point(517, 331)
+        Me.lblRida4Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast6.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast6.Name = "lblRida4Kast6"
-        Me.lblRida4Kast6.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast6.Size = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast6.TabIndex = 97
         Me.lblRida4Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -421,12 +398,11 @@ Partial Class formGame
         Me.lblRida4Kast5.BackColor = System.Drawing.Color.White
         Me.lblRida4Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida4Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida4Kast5.Location = New System.Drawing.Point(601, 407)
-        Me.lblRida4Kast5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida4Kast5.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida4Kast5.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast5.Location = New System.Drawing.Point(451, 331)
+        Me.lblRida4Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast5.Name = "lblRida4Kast5"
-        Me.lblRida4Kast5.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast5.Size = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast5.TabIndex = 96
         Me.lblRida4Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -435,12 +411,11 @@ Partial Class formGame
         Me.lblRida4Kast4.BackColor = System.Drawing.Color.White
         Me.lblRida4Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida4Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida4Kast4.Location = New System.Drawing.Point(513, 407)
-        Me.lblRida4Kast4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida4Kast4.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida4Kast4.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast4.Location = New System.Drawing.Point(385, 331)
+        Me.lblRida4Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast4.Name = "lblRida4Kast4"
-        Me.lblRida4Kast4.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast4.Size = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast4.TabIndex = 95
         Me.lblRida4Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -449,12 +424,11 @@ Partial Class formGame
         Me.lblRida4Kast3.BackColor = System.Drawing.Color.White
         Me.lblRida4Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida4Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida4Kast3.Location = New System.Drawing.Point(425, 407)
-        Me.lblRida4Kast3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida4Kast3.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida4Kast3.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast3.Location = New System.Drawing.Point(319, 331)
+        Me.lblRida4Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast3.Name = "lblRida4Kast3"
-        Me.lblRida4Kast3.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast3.Size = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast3.TabIndex = 94
         Me.lblRida4Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -463,12 +437,11 @@ Partial Class formGame
         Me.lblRida4Kast2.BackColor = System.Drawing.Color.White
         Me.lblRida4Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida4Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida4Kast2.Location = New System.Drawing.Point(337, 407)
-        Me.lblRida4Kast2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida4Kast2.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida4Kast2.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast2.Location = New System.Drawing.Point(253, 331)
+        Me.lblRida4Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast2.Name = "lblRida4Kast2"
-        Me.lblRida4Kast2.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast2.Size = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast2.TabIndex = 93
         Me.lblRida4Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -477,12 +450,11 @@ Partial Class formGame
         Me.lblRida4Kast1.BackColor = System.Drawing.Color.White
         Me.lblRida4Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida4Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida4Kast1.Location = New System.Drawing.Point(249, 407)
-        Me.lblRida4Kast1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida4Kast1.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida4Kast1.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast1.Location = New System.Drawing.Point(187, 331)
+        Me.lblRida4Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida4Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast1.Name = "lblRida4Kast1"
-        Me.lblRida4Kast1.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida4Kast1.Size = New System.Drawing.Size(60, 60)
         Me.lblRida4Kast1.TabIndex = 92
         Me.lblRida4Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -491,12 +463,11 @@ Partial Class formGame
         Me.lblRida5Kast6.BackColor = System.Drawing.Color.White
         Me.lblRida5Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida5Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida5Kast6.Location = New System.Drawing.Point(689, 492)
-        Me.lblRida5Kast6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida5Kast6.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida5Kast6.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast6.Location = New System.Drawing.Point(517, 400)
+        Me.lblRida5Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast6.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast6.Name = "lblRida5Kast6"
-        Me.lblRida5Kast6.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast6.Size = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast6.TabIndex = 103
         Me.lblRida5Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -505,12 +476,11 @@ Partial Class formGame
         Me.lblRida5Kast5.BackColor = System.Drawing.Color.White
         Me.lblRida5Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida5Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida5Kast5.Location = New System.Drawing.Point(601, 492)
-        Me.lblRida5Kast5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida5Kast5.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida5Kast5.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast5.Location = New System.Drawing.Point(451, 400)
+        Me.lblRida5Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast5.Name = "lblRida5Kast5"
-        Me.lblRida5Kast5.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast5.Size = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast5.TabIndex = 102
         Me.lblRida5Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -519,12 +489,11 @@ Partial Class formGame
         Me.lblRida5Kast4.BackColor = System.Drawing.Color.White
         Me.lblRida5Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida5Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida5Kast4.Location = New System.Drawing.Point(513, 492)
-        Me.lblRida5Kast4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida5Kast4.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida5Kast4.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast4.Location = New System.Drawing.Point(385, 400)
+        Me.lblRida5Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast4.Name = "lblRida5Kast4"
-        Me.lblRida5Kast4.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast4.Size = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast4.TabIndex = 101
         Me.lblRida5Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -533,12 +502,11 @@ Partial Class formGame
         Me.lblRida5Kast3.BackColor = System.Drawing.Color.White
         Me.lblRida5Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida5Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida5Kast3.Location = New System.Drawing.Point(425, 492)
-        Me.lblRida5Kast3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida5Kast3.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida5Kast3.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast3.Location = New System.Drawing.Point(319, 400)
+        Me.lblRida5Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast3.Name = "lblRida5Kast3"
-        Me.lblRida5Kast3.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast3.Size = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast3.TabIndex = 100
         Me.lblRida5Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -547,12 +515,11 @@ Partial Class formGame
         Me.lblRida5Kast2.BackColor = System.Drawing.Color.White
         Me.lblRida5Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida5Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida5Kast2.Location = New System.Drawing.Point(337, 492)
-        Me.lblRida5Kast2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida5Kast2.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida5Kast2.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast2.Location = New System.Drawing.Point(253, 400)
+        Me.lblRida5Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast2.Name = "lblRida5Kast2"
-        Me.lblRida5Kast2.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast2.Size = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast2.TabIndex = 99
         Me.lblRida5Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -561,12 +528,11 @@ Partial Class formGame
         Me.lblRida5Kast1.BackColor = System.Drawing.Color.White
         Me.lblRida5Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida5Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida5Kast1.Location = New System.Drawing.Point(249, 492)
-        Me.lblRida5Kast1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida5Kast1.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida5Kast1.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast1.Location = New System.Drawing.Point(187, 400)
+        Me.lblRida5Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida5Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast1.Name = "lblRida5Kast1"
-        Me.lblRida5Kast1.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida5Kast1.Size = New System.Drawing.Size(60, 60)
         Me.lblRida5Kast1.TabIndex = 98
         Me.lblRida5Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -575,12 +541,11 @@ Partial Class formGame
         Me.lblRida6Kast6.BackColor = System.Drawing.Color.White
         Me.lblRida6Kast6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida6Kast6.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida6Kast6.Location = New System.Drawing.Point(689, 577)
-        Me.lblRida6Kast6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida6Kast6.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida6Kast6.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast6.Location = New System.Drawing.Point(517, 469)
+        Me.lblRida6Kast6.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast6.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast6.Name = "lblRida6Kast6"
-        Me.lblRida6Kast6.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast6.Size = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast6.TabIndex = 109
         Me.lblRida6Kast6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -589,12 +554,11 @@ Partial Class formGame
         Me.lblRida6Kast5.BackColor = System.Drawing.Color.White
         Me.lblRida6Kast5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida6Kast5.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida6Kast5.Location = New System.Drawing.Point(601, 577)
-        Me.lblRida6Kast5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida6Kast5.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida6Kast5.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast5.Location = New System.Drawing.Point(451, 469)
+        Me.lblRida6Kast5.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast5.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast5.Name = "lblRida6Kast5"
-        Me.lblRida6Kast5.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast5.Size = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast5.TabIndex = 108
         Me.lblRida6Kast5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -603,12 +567,11 @@ Partial Class formGame
         Me.lblRida6Kast4.BackColor = System.Drawing.Color.White
         Me.lblRida6Kast4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida6Kast4.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida6Kast4.Location = New System.Drawing.Point(513, 577)
-        Me.lblRida6Kast4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida6Kast4.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida6Kast4.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast4.Location = New System.Drawing.Point(385, 469)
+        Me.lblRida6Kast4.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast4.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast4.Name = "lblRida6Kast4"
-        Me.lblRida6Kast4.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast4.Size = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast4.TabIndex = 107
         Me.lblRida6Kast4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -617,12 +580,11 @@ Partial Class formGame
         Me.lblRida6Kast3.BackColor = System.Drawing.Color.White
         Me.lblRida6Kast3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida6Kast3.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida6Kast3.Location = New System.Drawing.Point(425, 577)
-        Me.lblRida6Kast3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida6Kast3.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida6Kast3.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast3.Location = New System.Drawing.Point(319, 469)
+        Me.lblRida6Kast3.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast3.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast3.Name = "lblRida6Kast3"
-        Me.lblRida6Kast3.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast3.Size = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast3.TabIndex = 106
         Me.lblRida6Kast3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -631,12 +593,11 @@ Partial Class formGame
         Me.lblRida6Kast2.BackColor = System.Drawing.Color.White
         Me.lblRida6Kast2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida6Kast2.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida6Kast2.Location = New System.Drawing.Point(337, 577)
-        Me.lblRida6Kast2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida6Kast2.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida6Kast2.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast2.Location = New System.Drawing.Point(253, 469)
+        Me.lblRida6Kast2.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast2.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast2.Name = "lblRida6Kast2"
-        Me.lblRida6Kast2.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast2.Size = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast2.TabIndex = 105
         Me.lblRida6Kast2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -645,12 +606,11 @@ Partial Class formGame
         Me.lblRida6Kast1.BackColor = System.Drawing.Color.White
         Me.lblRida6Kast1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblRida6Kast1.Font = New System.Drawing.Font("Poor Richard", 38.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRida6Kast1.Location = New System.Drawing.Point(249, 577)
-        Me.lblRida6Kast1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRida6Kast1.MaximumSize = New System.Drawing.Size(80, 74)
-        Me.lblRida6Kast1.MinimumSize = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast1.Location = New System.Drawing.Point(187, 469)
+        Me.lblRida6Kast1.MaximumSize = New System.Drawing.Size(60, 60)
+        Me.lblRida6Kast1.MinimumSize = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast1.Name = "lblRida6Kast1"
-        Me.lblRida6Kast1.Size = New System.Drawing.Size(80, 74)
+        Me.lblRida6Kast1.Size = New System.Drawing.Size(60, 60)
         Me.lblRida6Kast1.TabIndex = 104
         Me.lblRida6Kast1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -659,12 +619,11 @@ Partial Class formGame
         Me.lblQ.BackColor = System.Drawing.Color.White
         Me.lblQ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblQ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblQ.Location = New System.Drawing.Point(168, 710)
-        Me.lblQ.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblQ.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblQ.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblQ.Location = New System.Drawing.Point(126, 577)
+        Me.lblQ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblQ.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblQ.Name = "lblQ"
-        Me.lblQ.Size = New System.Drawing.Size(47, 43)
+        Me.lblQ.Size = New System.Drawing.Size(35, 35)
         Me.lblQ.TabIndex = 110
         Me.lblQ.Text = "Q"
         Me.lblQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -674,12 +633,11 @@ Partial Class formGame
         Me.lblW.BackColor = System.Drawing.Color.White
         Me.lblW.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblW.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblW.Location = New System.Drawing.Point(223, 710)
-        Me.lblW.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblW.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblW.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblW.Location = New System.Drawing.Point(167, 577)
+        Me.lblW.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblW.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblW.Name = "lblW"
-        Me.lblW.Size = New System.Drawing.Size(47, 43)
+        Me.lblW.Size = New System.Drawing.Size(35, 35)
         Me.lblW.TabIndex = 111
         Me.lblW.Text = "W"
         Me.lblW.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -689,12 +647,11 @@ Partial Class formGame
         Me.lblR.BackColor = System.Drawing.Color.White
         Me.lblR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblR.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblR.Location = New System.Drawing.Point(332, 710)
-        Me.lblR.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblR.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblR.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblR.Location = New System.Drawing.Point(249, 577)
+        Me.lblR.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblR.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblR.Name = "lblR"
-        Me.lblR.Size = New System.Drawing.Size(47, 43)
+        Me.lblR.Size = New System.Drawing.Size(35, 35)
         Me.lblR.TabIndex = 113
         Me.lblR.Text = "R"
         Me.lblR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -704,12 +661,11 @@ Partial Class formGame
         Me.lblE.BackColor = System.Drawing.Color.White
         Me.lblE.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblE.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblE.Location = New System.Drawing.Point(277, 710)
-        Me.lblE.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblE.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblE.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblE.Location = New System.Drawing.Point(208, 577)
+        Me.lblE.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblE.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblE.Name = "lblE"
-        Me.lblE.Size = New System.Drawing.Size(47, 43)
+        Me.lblE.Size = New System.Drawing.Size(35, 35)
         Me.lblE.TabIndex = 112
         Me.lblE.Text = "E"
         Me.lblE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -719,12 +675,11 @@ Partial Class formGame
         Me.lblI.BackColor = System.Drawing.Color.White
         Me.lblI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblI.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblI.Location = New System.Drawing.Point(548, 710)
-        Me.lblI.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblI.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblI.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblI.Location = New System.Drawing.Point(411, 577)
+        Me.lblI.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblI.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblI.Name = "lblI"
-        Me.lblI.Size = New System.Drawing.Size(47, 43)
+        Me.lblI.Size = New System.Drawing.Size(35, 35)
         Me.lblI.TabIndex = 117
         Me.lblI.Text = "I"
         Me.lblI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -734,12 +689,11 @@ Partial Class formGame
         Me.lblU.BackColor = System.Drawing.Color.White
         Me.lblU.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblU.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblU.Location = New System.Drawing.Point(493, 710)
-        Me.lblU.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblU.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblU.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblU.Location = New System.Drawing.Point(370, 577)
+        Me.lblU.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblU.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblU.Name = "lblU"
-        Me.lblU.Size = New System.Drawing.Size(47, 43)
+        Me.lblU.Size = New System.Drawing.Size(35, 35)
         Me.lblU.TabIndex = 116
         Me.lblU.Text = "U"
         Me.lblU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -749,12 +703,11 @@ Partial Class formGame
         Me.lblY.BackColor = System.Drawing.Color.White
         Me.lblY.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblY.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblY.Location = New System.Drawing.Point(439, 710)
-        Me.lblY.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblY.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblY.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblY.Location = New System.Drawing.Point(329, 577)
+        Me.lblY.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblY.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblY.Name = "lblY"
-        Me.lblY.Size = New System.Drawing.Size(47, 43)
+        Me.lblY.Size = New System.Drawing.Size(35, 35)
         Me.lblY.TabIndex = 115
         Me.lblY.Text = "Y"
         Me.lblY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -764,12 +717,11 @@ Partial Class formGame
         Me.lblT.BackColor = System.Drawing.Color.White
         Me.lblT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblT.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblT.Location = New System.Drawing.Point(384, 710)
-        Me.lblT.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblT.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblT.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblT.Location = New System.Drawing.Point(288, 577)
+        Me.lblT.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblT.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblT.Name = "lblT"
-        Me.lblT.Size = New System.Drawing.Size(47, 43)
+        Me.lblT.Size = New System.Drawing.Size(35, 35)
         Me.lblT.TabIndex = 114
         Me.lblT.Text = "T"
         Me.lblT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -779,12 +731,11 @@ Partial Class formGame
         Me.lblÕ.BackColor = System.Drawing.Color.White
         Me.lblÕ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblÕ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblÕ.Location = New System.Drawing.Point(767, 710)
-        Me.lblÕ.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblÕ.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblÕ.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblÕ.Location = New System.Drawing.Point(575, 577)
+        Me.lblÕ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblÕ.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblÕ.Name = "lblÕ"
-        Me.lblÕ.Size = New System.Drawing.Size(47, 43)
+        Me.lblÕ.Size = New System.Drawing.Size(35, 35)
         Me.lblÕ.TabIndex = 121
         Me.lblÕ.Text = "Õ"
         Me.lblÕ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -794,12 +745,11 @@ Partial Class formGame
         Me.lblÜ.BackColor = System.Drawing.Color.White
         Me.lblÜ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblÜ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblÜ.Location = New System.Drawing.Point(712, 710)
-        Me.lblÜ.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblÜ.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblÜ.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblÜ.Location = New System.Drawing.Point(534, 577)
+        Me.lblÜ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblÜ.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblÜ.Name = "lblÜ"
-        Me.lblÜ.Size = New System.Drawing.Size(47, 43)
+        Me.lblÜ.Size = New System.Drawing.Size(35, 35)
         Me.lblÜ.TabIndex = 120
         Me.lblÜ.Text = "Ü"
         Me.lblÜ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -809,12 +759,11 @@ Partial Class formGame
         Me.lblP.BackColor = System.Drawing.Color.White
         Me.lblP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblP.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblP.Location = New System.Drawing.Point(657, 710)
-        Me.lblP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblP.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblP.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblP.Location = New System.Drawing.Point(493, 577)
+        Me.lblP.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblP.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblP.Name = "lblP"
-        Me.lblP.Size = New System.Drawing.Size(47, 43)
+        Me.lblP.Size = New System.Drawing.Size(35, 35)
         Me.lblP.TabIndex = 119
         Me.lblP.Text = "P"
         Me.lblP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -824,12 +773,11 @@ Partial Class formGame
         Me.lblO.BackColor = System.Drawing.Color.White
         Me.lblO.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblO.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblO.Location = New System.Drawing.Point(603, 710)
-        Me.lblO.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblO.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblO.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblO.Location = New System.Drawing.Point(452, 577)
+        Me.lblO.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblO.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblO.Name = "lblO"
-        Me.lblO.Size = New System.Drawing.Size(47, 43)
+        Me.lblO.Size = New System.Drawing.Size(35, 35)
         Me.lblO.TabIndex = 118
         Me.lblO.Text = "O"
         Me.lblO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -839,12 +787,11 @@ Partial Class formGame
         Me.lblS.BackColor = System.Drawing.Color.White
         Me.lblS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblS.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblS.Location = New System.Drawing.Point(251, 766)
-        Me.lblS.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblS.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblS.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblS.Location = New System.Drawing.Point(188, 622)
+        Me.lblS.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblS.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblS.Name = "lblS"
-        Me.lblS.Size = New System.Drawing.Size(47, 43)
+        Me.lblS.Size = New System.Drawing.Size(35, 35)
         Me.lblS.TabIndex = 124
         Me.lblS.Text = "S"
         Me.lblS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -854,12 +801,11 @@ Partial Class formGame
         Me.lblA.BackColor = System.Drawing.Color.White
         Me.lblA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblA.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblA.Location = New System.Drawing.Point(196, 766)
-        Me.lblA.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblA.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblA.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblA.Location = New System.Drawing.Point(147, 622)
+        Me.lblA.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblA.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblA.Name = "lblA"
-        Me.lblA.Size = New System.Drawing.Size(47, 43)
+        Me.lblA.Size = New System.Drawing.Size(35, 35)
         Me.lblA.TabIndex = 123
         Me.lblA.Text = "A"
         Me.lblA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -869,12 +815,11 @@ Partial Class formGame
         Me.lblD.BackColor = System.Drawing.Color.White
         Me.lblD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblD.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblD.Location = New System.Drawing.Point(305, 766)
-        Me.lblD.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblD.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblD.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblD.Location = New System.Drawing.Point(229, 622)
+        Me.lblD.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblD.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblD.Name = "lblD"
-        Me.lblD.Size = New System.Drawing.Size(47, 43)
+        Me.lblD.Size = New System.Drawing.Size(35, 35)
         Me.lblD.TabIndex = 125
         Me.lblD.Text = "D"
         Me.lblD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -884,12 +829,11 @@ Partial Class formGame
         Me.lblF.BackColor = System.Drawing.Color.White
         Me.lblF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblF.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblF.Location = New System.Drawing.Point(357, 766)
-        Me.lblF.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblF.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblF.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblF.Location = New System.Drawing.Point(268, 622)
+        Me.lblF.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblF.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblF.Name = "lblF"
-        Me.lblF.Size = New System.Drawing.Size(47, 43)
+        Me.lblF.Size = New System.Drawing.Size(35, 35)
         Me.lblF.TabIndex = 126
         Me.lblF.Text = "F"
         Me.lblF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -899,12 +843,11 @@ Partial Class formGame
         Me.lblG.BackColor = System.Drawing.Color.White
         Me.lblG.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblG.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblG.Location = New System.Drawing.Point(412, 766)
-        Me.lblG.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblG.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblG.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblG.Location = New System.Drawing.Point(309, 622)
+        Me.lblG.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblG.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblG.Name = "lblG"
-        Me.lblG.Size = New System.Drawing.Size(47, 43)
+        Me.lblG.Size = New System.Drawing.Size(35, 35)
         Me.lblG.TabIndex = 127
         Me.lblG.Text = "G"
         Me.lblG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -914,12 +857,11 @@ Partial Class formGame
         Me.lblH.BackColor = System.Drawing.Color.White
         Me.lblH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblH.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblH.Location = New System.Drawing.Point(467, 766)
-        Me.lblH.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblH.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblH.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblH.Location = New System.Drawing.Point(350, 622)
+        Me.lblH.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblH.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblH.Name = "lblH"
-        Me.lblH.Size = New System.Drawing.Size(47, 43)
+        Me.lblH.Size = New System.Drawing.Size(35, 35)
         Me.lblH.TabIndex = 128
         Me.lblH.Text = "H"
         Me.lblH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -929,12 +871,11 @@ Partial Class formGame
         Me.lblJ.BackColor = System.Drawing.Color.White
         Me.lblJ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblJ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblJ.Location = New System.Drawing.Point(521, 766)
-        Me.lblJ.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblJ.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblJ.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblJ.Location = New System.Drawing.Point(391, 622)
+        Me.lblJ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblJ.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblJ.Name = "lblJ"
-        Me.lblJ.Size = New System.Drawing.Size(47, 43)
+        Me.lblJ.Size = New System.Drawing.Size(35, 35)
         Me.lblJ.TabIndex = 129
         Me.lblJ.Text = "J"
         Me.lblJ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -944,12 +885,11 @@ Partial Class formGame
         Me.lblK.BackColor = System.Drawing.Color.White
         Me.lblK.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblK.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblK.Location = New System.Drawing.Point(576, 766)
-        Me.lblK.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblK.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblK.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblK.Location = New System.Drawing.Point(432, 622)
+        Me.lblK.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblK.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblK.Name = "lblK"
-        Me.lblK.Size = New System.Drawing.Size(47, 43)
+        Me.lblK.Size = New System.Drawing.Size(35, 35)
         Me.lblK.TabIndex = 130
         Me.lblK.Text = "K"
         Me.lblK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -959,12 +899,11 @@ Partial Class formGame
         Me.lblL.BackColor = System.Drawing.Color.White
         Me.lblL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblL.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblL.Location = New System.Drawing.Point(631, 766)
-        Me.lblL.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblL.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblL.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblL.Location = New System.Drawing.Point(473, 622)
+        Me.lblL.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblL.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblL.Name = "lblL"
-        Me.lblL.Size = New System.Drawing.Size(47, 43)
+        Me.lblL.Size = New System.Drawing.Size(35, 35)
         Me.lblL.TabIndex = 131
         Me.lblL.Text = "L"
         Me.lblL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -974,12 +913,11 @@ Partial Class formGame
         Me.lblÖ.BackColor = System.Drawing.Color.White
         Me.lblÖ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblÖ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblÖ.Location = New System.Drawing.Point(685, 766)
-        Me.lblÖ.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblÖ.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblÖ.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblÖ.Location = New System.Drawing.Point(514, 622)
+        Me.lblÖ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblÖ.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblÖ.Name = "lblÖ"
-        Me.lblÖ.Size = New System.Drawing.Size(47, 43)
+        Me.lblÖ.Size = New System.Drawing.Size(35, 35)
         Me.lblÖ.TabIndex = 132
         Me.lblÖ.Text = "Ö"
         Me.lblÖ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -989,12 +927,11 @@ Partial Class formGame
         Me.lblÄ.BackColor = System.Drawing.Color.White
         Me.lblÄ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblÄ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblÄ.Location = New System.Drawing.Point(740, 766)
-        Me.lblÄ.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblÄ.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblÄ.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblÄ.Location = New System.Drawing.Point(555, 622)
+        Me.lblÄ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblÄ.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblÄ.Name = "lblÄ"
-        Me.lblÄ.Size = New System.Drawing.Size(47, 43)
+        Me.lblÄ.Size = New System.Drawing.Size(35, 35)
         Me.lblÄ.TabIndex = 133
         Me.lblÄ.Text = "Ä"
         Me.lblÄ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1004,12 +941,11 @@ Partial Class formGame
         Me.lblM.BackColor = System.Drawing.Color.White
         Me.lblM.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblM.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblM.Location = New System.Drawing.Point(655, 821)
-        Me.lblM.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblM.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblM.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblM.Location = New System.Drawing.Point(491, 667)
+        Me.lblM.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblM.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblM.Name = "lblM"
-        Me.lblM.Size = New System.Drawing.Size(47, 43)
+        Me.lblM.Size = New System.Drawing.Size(35, 35)
         Me.lblM.TabIndex = 140
         Me.lblM.Text = "M"
         Me.lblM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1019,12 +955,11 @@ Partial Class formGame
         Me.lblN.BackColor = System.Drawing.Color.White
         Me.lblN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblN.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblN.Location = New System.Drawing.Point(600, 821)
-        Me.lblN.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblN.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblN.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblN.Location = New System.Drawing.Point(450, 667)
+        Me.lblN.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblN.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblN.Name = "lblN"
-        Me.lblN.Size = New System.Drawing.Size(47, 43)
+        Me.lblN.Size = New System.Drawing.Size(35, 35)
         Me.lblN.TabIndex = 139
         Me.lblN.Text = "N"
         Me.lblN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1034,12 +969,11 @@ Partial Class formGame
         Me.lblB.BackColor = System.Drawing.Color.White
         Me.lblB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblB.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblB.Location = New System.Drawing.Point(545, 821)
-        Me.lblB.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblB.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblB.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblB.Location = New System.Drawing.Point(409, 667)
+        Me.lblB.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblB.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblB.Name = "lblB"
-        Me.lblB.Size = New System.Drawing.Size(47, 43)
+        Me.lblB.Size = New System.Drawing.Size(35, 35)
         Me.lblB.TabIndex = 138
         Me.lblB.Text = "B"
         Me.lblB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1049,12 +983,11 @@ Partial Class formGame
         Me.lblV.BackColor = System.Drawing.Color.White
         Me.lblV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblV.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblV.Location = New System.Drawing.Point(491, 821)
-        Me.lblV.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblV.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblV.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblV.Location = New System.Drawing.Point(368, 667)
+        Me.lblV.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblV.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblV.Name = "lblV"
-        Me.lblV.Size = New System.Drawing.Size(47, 43)
+        Me.lblV.Size = New System.Drawing.Size(35, 35)
         Me.lblV.TabIndex = 137
         Me.lblV.Text = "V"
         Me.lblV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1064,12 +997,11 @@ Partial Class formGame
         Me.lblC.BackColor = System.Drawing.Color.White
         Me.lblC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblC.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblC.Location = New System.Drawing.Point(439, 821)
-        Me.lblC.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblC.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblC.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblC.Location = New System.Drawing.Point(329, 667)
+        Me.lblC.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblC.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblC.Name = "lblC"
-        Me.lblC.Size = New System.Drawing.Size(47, 43)
+        Me.lblC.Size = New System.Drawing.Size(35, 35)
         Me.lblC.TabIndex = 136
         Me.lblC.Text = "C"
         Me.lblC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1079,12 +1011,11 @@ Partial Class formGame
         Me.lblX.BackColor = System.Drawing.Color.White
         Me.lblX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblX.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblX.Location = New System.Drawing.Point(384, 821)
-        Me.lblX.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblX.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblX.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblX.Location = New System.Drawing.Point(288, 667)
+        Me.lblX.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblX.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblX.Name = "lblX"
-        Me.lblX.Size = New System.Drawing.Size(47, 43)
+        Me.lblX.Size = New System.Drawing.Size(35, 35)
         Me.lblX.TabIndex = 135
         Me.lblX.Text = "X"
         Me.lblX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1094,12 +1025,11 @@ Partial Class formGame
         Me.lblZ.BackColor = System.Drawing.Color.White
         Me.lblZ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblZ.Font = New System.Drawing.Font("Poor Richard", 18.25!, System.Drawing.FontStyle.Bold)
-        Me.lblZ.Location = New System.Drawing.Point(329, 821)
-        Me.lblZ.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblZ.MaximumSize = New System.Drawing.Size(47, 43)
-        Me.lblZ.MinimumSize = New System.Drawing.Size(47, 43)
+        Me.lblZ.Location = New System.Drawing.Point(247, 667)
+        Me.lblZ.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.lblZ.MinimumSize = New System.Drawing.Size(35, 35)
         Me.lblZ.Name = "lblZ"
-        Me.lblZ.Size = New System.Drawing.Size(47, 43)
+        Me.lblZ.Size = New System.Drawing.Size(35, 35)
         Me.lblZ.TabIndex = 134
         Me.lblZ.Text = "Z"
         Me.lblZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1109,12 +1039,11 @@ Partial Class formGame
         Me.lblEnter.BackColor = System.Drawing.Color.White
         Me.lblEnter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblEnter.Font = New System.Drawing.Font("Poor Richard", 16.25!, System.Drawing.FontStyle.Bold)
-        Me.lblEnter.Location = New System.Drawing.Point(215, 821)
-        Me.lblEnter.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblEnter.MaximumSize = New System.Drawing.Size(107, 43)
-        Me.lblEnter.MinimumSize = New System.Drawing.Size(107, 43)
+        Me.lblEnter.Location = New System.Drawing.Point(161, 667)
+        Me.lblEnter.MaximumSize = New System.Drawing.Size(80, 35)
+        Me.lblEnter.MinimumSize = New System.Drawing.Size(80, 35)
         Me.lblEnter.Name = "lblEnter"
-        Me.lblEnter.Size = New System.Drawing.Size(107, 43)
+        Me.lblEnter.Size = New System.Drawing.Size(80, 35)
         Me.lblEnter.TabIndex = 141
         Me.lblEnter.Text = "ENTER"
         Me.lblEnter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1124,12 +1053,11 @@ Partial Class formGame
         Me.lblBackspace.BackColor = System.Drawing.Color.White
         Me.lblBackspace.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblBackspace.Font = New System.Drawing.Font("Poor Richard", 12.25!, System.Drawing.FontStyle.Bold)
-        Me.lblBackspace.Location = New System.Drawing.Point(712, 821)
-        Me.lblBackspace.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblBackspace.MaximumSize = New System.Drawing.Size(120, 43)
-        Me.lblBackspace.MinimumSize = New System.Drawing.Size(120, 43)
+        Me.lblBackspace.Location = New System.Drawing.Point(534, 667)
+        Me.lblBackspace.MaximumSize = New System.Drawing.Size(90, 35)
+        Me.lblBackspace.MinimumSize = New System.Drawing.Size(90, 35)
         Me.lblBackspace.Name = "lblBackspace"
-        Me.lblBackspace.Size = New System.Drawing.Size(120, 43)
+        Me.lblBackspace.Size = New System.Drawing.Size(90, 35)
         Me.lblBackspace.TabIndex = 142
         Me.lblBackspace.Text = "KUSTUTA"
         Me.lblBackspace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1137,6 +1065,7 @@ Partial Class formGame
         'UcMusicPlayer1
         '
         Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
+        Me.UcMusicPlayer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
         Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
         Me.UcMusicPlayer1.TabIndex = 143
@@ -1145,9 +1074,10 @@ Partial Class formGame
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(593, 11)
+        Me.Label1.Location = New System.Drawing.Point(445, 9)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(137, 46)
+        Me.Label1.Size = New System.Drawing.Size(110, 37)
         Me.Label1.TabIndex = 143
         Me.Label1.Text = "Skoor:"
         '
@@ -1155,19 +1085,19 @@ Partial Class formGame
         '
         Me.lblScore.AutoSize = True
         Me.lblScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblScore.Location = New System.Drawing.Point(736, 11)
+        Me.lblScore.Location = New System.Drawing.Point(552, 9)
+        Me.lblScore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblScore.Name = "lblScore"
-        Me.lblScore.Size = New System.Drawing.Size(42, 46)
+        Me.lblScore.Size = New System.Drawing.Size(35, 37)
         Me.lblScore.TabIndex = 144
         Me.lblScore.Text = "0"
         '
         'formGame
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.UcMusicPlayer1)
-        Me.ClientSize = New System.Drawing.Size(912, 937)
         Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblBackspace)
@@ -1242,7 +1172,6 @@ Partial Class formGame
         Me.Controls.Add(Me.lblTimeText)
         Me.Controls.Add(Me.txtDebug2)
         Me.Controls.Add(Me.txtDebug)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "formGame"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
