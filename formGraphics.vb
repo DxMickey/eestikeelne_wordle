@@ -149,8 +149,8 @@
     Private Sub baseSettings()
         Dim colors As IGraphics
         colors = New CGraphics
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         changeLabels(colors.lblColor)
         'Peida error silt
@@ -183,8 +183,8 @@
 
     'Salvestab kasutaja sisestatud värvid tekstifaili
     Private Sub setColors(ByVal red As UInteger, ByVal green As UInteger, ByVal blue As UInteger)
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         data.setItem("miscData", "red", red)
         data.setItem("miscData", "green", green)

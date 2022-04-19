@@ -31,7 +31,7 @@ Partial Class formWordList
         Me.rbtnTavaline = New System.Windows.Forms.RadioButton()
         Me.rbtnRaske = New System.Windows.Forms.RadioButton()
         Me.btnOnOff = New System.Windows.Forms.Button()
-        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
+        Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'btnBack
@@ -157,5 +157,5 @@ Partial Class formWordList
     Friend WithEvents rbtnTavaline As RadioButton
     Friend WithEvents rbtnRaske As RadioButton
     Friend WithEvents btnOnOff As Button
-    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
+    Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
 End Class

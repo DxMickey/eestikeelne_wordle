@@ -27,7 +27,7 @@ Partial Class formGameSettings
         Me.btnHard = New System.Windows.Forms.Button()
         Me.btnNoTime = New System.Windows.Forms.Button()
         Me.btnTimed = New System.Windows.Forms.Button()
-        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
+        Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'btnEasy
@@ -104,5 +104,5 @@ Partial Class formGameSettings
     Friend WithEvents btnHard As Button
     Friend WithEvents btnNoTime As Button
     Friend WithEvents btnTimed As Button
-    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
+    Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
 End Class

@@ -13,8 +13,8 @@
     End Sub
 
     Private Sub chooseGame(ByVal value1 As String, ByVal value2 As Boolean)
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         If value1 = "Kerge" Then
             game.maxKast = 4
@@ -58,16 +58,16 @@
     End Sub
 
     Private Sub btnNoTime_Click(sender As Object, e As EventArgs) Handles btnNoTime.Click
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         game.kasTimed = False
         updateVisibility(True)
     End Sub
 
     Private Sub btnTimed_Click(sender As Object, e As EventArgs) Handles btnTimed.Click
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         game.kasTimed = True
         updateVisibility(True)

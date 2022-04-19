@@ -33,7 +33,7 @@ Partial Class formMenu
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblTimer = New System.Windows.Forms.Label()
         Me.btnWordList = New System.Windows.Forms.Button()
-        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
+        Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'btnPlay
@@ -168,5 +168,5 @@ Partial Class formMenu
     Friend WithEvents Timer1 As Timer
     Friend WithEvents lblTimer As Label
     Friend WithEvents btnWordList As Button
-    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
+    Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
 End Class

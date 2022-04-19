@@ -1,7 +1,7 @@
 ﻿Public Class formMenu
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         game.kasPiiramatu = True
 
@@ -57,8 +57,8 @@
 
 
     Private Sub btnClassic_Click(sender As Object, e As EventArgs) Handles btnClassic.Click
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         game.kasPiiramatu = False
         'Väärtuste taastamine algseadetele
@@ -117,8 +117,8 @@
     Private Sub getColor()
         Dim colors As IGraphics
         colors = New CGraphics
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
 
         'Kui värvid väärtustamata, proovi saada need failist
@@ -152,8 +152,8 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim time As ITimeLimit
         time = New CTimeLimit
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         If time.timeWait <= 0 And time.timeState = "On" Then
             btnClassic.Enabled = True

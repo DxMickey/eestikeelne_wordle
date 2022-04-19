@@ -1,7 +1,7 @@
 ﻿Public Class formHistory
     Private Sub formHistory_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
         dtgDatagrid.DataSource = data.getHistory()
     End Sub
 
@@ -23,8 +23,8 @@
     End Sub
 
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         data.exportJSON()
     End Sub

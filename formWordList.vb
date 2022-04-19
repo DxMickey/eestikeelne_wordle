@@ -2,8 +2,8 @@
 
     '"Sisesta" nupu vajutamisel
     Private Sub btnSisesta_Click(sender As Object, e As EventArgs) Handles btnSisesta.Click
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         'Kontroll, ega tekstiväli tühi pole
         If txtCSVName.Text = Nothing Then
@@ -57,8 +57,8 @@
     End Sub
 
     Private Sub btnOnOff_Click(sender As Object, e As EventArgs) Handles btnOnOff.Click
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         If btnOnOff.Text = "Lülita sisse" Then
             data.setItem("miscData", "customListState", "on")
@@ -70,8 +70,8 @@
     End Sub
 
     Private Sub formWordList_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         changeLabelColors()
 

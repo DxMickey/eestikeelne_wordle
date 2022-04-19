@@ -36,10 +36,10 @@ Public Class formGameEnd
     End Sub
 
     Private Sub formGameEnd_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Dim game As IGame
-        game = New CGame
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim game As Game.IGame
+        game = New Game.CGame
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
         Dim time As ITimeLimit
         time = New CTimeLimit
 
@@ -113,8 +113,8 @@ Public Class formGameEnd
 
     'Google.Cloud.Translation.V2 API kasutamine sõna tõlke saamiseks
     Private Sub TranslateWord()
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         Dim TClient As TranslationClient = TranslationClient.CreateFromApiKey("AIzaSyAv_0Zx3VCVGgn0hGLMoCCtT4O5xtYu1rY")
         If checkInternet() = False Then

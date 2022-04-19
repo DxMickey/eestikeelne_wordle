@@ -26,7 +26,7 @@ Partial Class formHistory
         Me.dtgDatagrid = New System.Windows.Forms.DataGridView()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExport = New System.Windows.Forms.Button()
-        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
+        Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         CType(Me.dtgDatagrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -91,5 +91,5 @@ Partial Class formHistory
     Friend WithEvents dtgDatagrid As DataGridView
     Friend WithEvents btnBack As Button
     Friend WithEvents btnExport As Button
-    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
+    Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
 End Class

@@ -1,7 +1,7 @@
 ﻿Public Class formStatistika
     Private Sub formStatistika_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
         changeLabelColors()
         txtGamesCount.Text = data.getStat("m2ngude_arv")
         txtTotalTime.Text = data.getStat("m2ngitud_aeg") & " sekundit"

@@ -3,10 +3,10 @@ Public Class formGame
 
     'Listen for any keypress
     Private Sub formGame_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
-        Dim game As IGame
-        game = New CGame
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim game As Game.IGame
+        game = New Game.CGame
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         'Salvesta vajutatud nupu ascii kood muutujasse lastLetter
         game.lastLetter = Asc(e.KeyChar)
@@ -17,11 +17,11 @@ Public Class formGame
 
     'Siin toimub kogu mäng
     Private Sub gameEngine()
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         game.winOrLose = 0
 
@@ -89,8 +89,8 @@ Public Class formGame
 
     'Meetod kastide värvide uuendamiseks
     Private Sub updateColors()
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         Dim i As Integer = 0
         Dim boxScore As Integer = 0
@@ -166,8 +166,8 @@ Public Class formGame
     'Textboxi nime muutmine control-iks ja controli kasutades viimase vajutatud tähe sisestamine Textboxi
     'input = stringina Textboxi nimi
     Private Sub stringToControl(ByVal value As String)
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         'https://stackoverflow.com/questions/47243351/how-to-obtain-a-control-using-its-name-in-visual-basic-net
         If Me.Controls.Find(value, True).Count = 1 Then
@@ -187,10 +187,10 @@ Public Class formGame
 
     'Uue sõna hankimine sõnade listist
     Private Sub newWord()
-        Dim game As IGame
-        game = New CGame
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim game As Game.IGame
+        game = New Game.CGame
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         game.strSona = UCase(data.getSona(Int((data.howManyWords() * Rnd()) + 1)))
         'Hetkel on sõnade tekstifailis tühimikus, seega kui tuleb tühimik, tuleb uus sõna valida
@@ -201,10 +201,10 @@ Public Class formGame
 
     'Meetod, mis töötab iga kord kui form avatakse
     Private Sub formGame_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Dim game As IGame
-        game = New CGame
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim game As Game.IGame
+        game = New Game.CGame
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
         Dim colors As IGraphics
         colors = New CGraphics
 
@@ -280,10 +280,10 @@ Public Class formGame
 
     'Mängu lõpetamine, andmete edastamine, uue formi avamine
     Private Sub finishGame()
-        Dim game As IGame
-        game = New CGame
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim game As Game.IGame
+        game = New Game.CGame
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
         Dim time As ITimeLimit
         time = New CTimeLimit
 
@@ -330,8 +330,8 @@ Public Class formGame
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         game.kestvus = 1
 
@@ -341,8 +341,8 @@ Public Class formGame
     'Kui Kerge siis 2 viimase rea peitmine
     'Kui Tavaline siis 1 viimase rea peitmine
     Private Sub hideTextboxes()
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         If game.gameMode = "Kerge" Then
             For i As Integer = 5 To 6
@@ -381,8 +381,8 @@ Public Class formGame
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         If game.timeLeft <= 0 Then
             finishGame()
@@ -406,8 +406,8 @@ Public Class formGame
 
     'Listen for any click on on-screen keyboard
     Private Sub lblQ_Click(sender As Object, e As EventArgs) Handles lblQ.Click, lblZ.Click, lblY.Click, lblX.Click, lblW.Click, lblV.Click, lblÜ.Click, lblU.Click, lblT.Click, lblS.Click, lblR.Click, lblP.Click, lblÕ.Click, lblÖ.Click, lblO.Click, lblN.Click, lblM.Click, lblL.Click, lblK.Click, lblJ.Click, lblI.Click, lblH.Click, lblG.Click, lblF.Click, lblEnter.Click, lblE.Click, lblD.Click, lblC.Click, lblBackspace.Click, lblB.Click, lblÄ.Click, lblA.Click
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
 
         If sender.Text = "ENTER" Then
             game.lastLetter = 13

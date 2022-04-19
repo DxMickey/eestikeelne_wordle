@@ -37,7 +37,7 @@ Partial Class formTimeLimit
         Me.btnOnOff = New System.Windows.Forms.Button()
         Me.lblTimePlayNow = New System.Windows.Forms.Label()
         Me.lblTimeWaitNow = New System.Windows.Forms.Label()
-        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
+        Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         Me.SuspendLayout()
         '
         'lblNewPass1
@@ -226,7 +226,7 @@ Partial Class formTimeLimit
     Friend WithEvents lblPass As Label
     Friend WithEvents btnBack As Button
     Friend WithEvents btnOnOff As Button
-    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
+    Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
     Friend WithEvents lblTimePlayNow As Label
     Friend WithEvents lblTimeWaitNow As Label
 End Class

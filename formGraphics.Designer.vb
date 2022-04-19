@@ -37,7 +37,7 @@ Partial Class formGraphics
         Me.tbrRed = New System.Windows.Forms.TrackBar()
         Me.tbrGreen = New System.Windows.Forms.TrackBar()
         Me.tbrBlue = New System.Windows.Forms.TrackBar()
-        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
+        Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         CType(Me.tbrRed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbrGreen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbrBlue, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -244,5 +244,5 @@ Partial Class formGraphics
     Friend WithEvents tbrRed As TrackBar
     Friend WithEvents tbrGreen As TrackBar
     Friend WithEvents tbrBlue As TrackBar
-    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
+    Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
 End Class

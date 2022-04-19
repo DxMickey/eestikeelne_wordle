@@ -2,8 +2,8 @@
     Private Sub formContainer_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim time As ITimeLimit
         time = New CTimeLimit
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
         Dim newForm As New formMenu
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
 

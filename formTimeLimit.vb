@@ -7,8 +7,8 @@
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         Dim time As ITimeLimit
         time = New CTimeLimit
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
 
 
@@ -68,8 +68,8 @@
     Private Sub formTimeLimit_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dim time As ITimeLimit
         time = New CTimeLimit
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
 
         btnOnOff.Visible = False
 
@@ -116,8 +116,8 @@
     Private Sub btnOnOff_Click(sender As Object, e As EventArgs) Handles btnOnOff.Click
         Dim time As ITimeLimit
         time = New CTimeLimit
-        Dim data As IDatabase
-        data = New CDatabase
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
         If btnOnOff.Text = "Lülita sisse" Then
             If time.timeWait <= 0 Or time.timePlay <= 0 Then
                 MessageBox.Show("Väärtused peavad olema nullist suuremad")

@@ -97,7 +97,7 @@ Partial Class formGame
         Me.lblZ = New System.Windows.Forms.Label()
         Me.lblEnter = New System.Windows.Forms.Label()
         Me.lblBackspace = New System.Windows.Forms.Label()
-        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
+        Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblScore = New System.Windows.Forms.Label()
         Me.SuspendLayout()
@@ -1252,7 +1252,7 @@ Partial Class formGame
     Friend WithEvents lblZ As Label
     Friend WithEvents lblEnter As Label
     Friend WithEvents lblBackspace As Label
-    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
+    Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
     Friend WithEvents Label1 As Label
     Friend WithEvents lblScore As Label
 End Class

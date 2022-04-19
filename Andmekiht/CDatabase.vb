@@ -1,5 +1,6 @@
 Imports System.IO
 Imports Newtonsoft.Json
+Imports System.Windows.Forms
 
 Public Class CDatabase
     Implements IDatabase
@@ -7,17 +8,20 @@ Public Class CDatabase
     'Mängu andmete lisamine ajaloo tabelisse andmebaasis
     'input = kõik ajaloo tabelis olevad andmete tulbad
     Private Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String, value7 As Integer) Implements IDatabase.insertHistory
+
+
         Dim SQLconnection As New SQLite.SQLiteConnection()
-        Dim SQLcommand As SQLite.SQLiteCommand
+            Dim SQLcommand As SQLite.SQLiteCommand
 
-        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-        SQLconnection.Open()
+            SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+            SQLconnection.Open()
 
-        SQLcommand = SQLconnection.CreateCommand
+            SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ", " & value7 & ")"
-        SQLcommand.ExecuteNonQuery()
-        SQLconnection.Close()
+            SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ", " & value7 & ")"
+            SQLcommand.ExecuteNonQuery()
+            SQLconnection.Close()
+
     End Sub
 
     'Funktsioon kontrollimaks mitu sõna on mängulaadi jaoks valitud sõnade listis
@@ -25,8 +29,8 @@ Public Class CDatabase
     Private Function howManyWords() As Object Implements IDatabase.howManyWords
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
         Dim millineList As String
 
         If game.gameMode = "Kerge" Then
@@ -154,8 +158,8 @@ Public Class CDatabase
     Private Function isWordInList(value As String) As Object Implements IDatabase.isWordInList
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
         Dim millineList As String
         Dim number As Integer = 0
 
@@ -260,8 +264,8 @@ Public Class CDatabase
     Private Function getSona(value As Integer) As String Implements IDatabase.getSona
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
-        Dim game As IGame
-        game = New CGame
+        Dim game As Game.IGame
+        game = New Game.CGame
         Dim millineList As String
 
         If game.gameMode = "Kerge" Then

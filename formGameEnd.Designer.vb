@@ -29,7 +29,7 @@ Partial Class formGameEnd
         Me.txtTranslation = New System.Windows.Forms.TextBox()
         Me.btnTranslate = New System.Windows.Forms.Button()
         Me.cmbLanguage = New System.Windows.Forms.ComboBox()
-        Me.UcMusicPlayer1 = New eesti_wordle.UCMusicPlayer()
+        Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         Me.UcSonaTahendus1 = New eesti_wordle.UCSonaTahendus()
         Me.lblScoreName = New System.Windows.Forms.Label()
         Me.lblGameScore = New System.Windows.Forms.Label()
@@ -204,7 +204,7 @@ Partial Class formGameEnd
     Friend WithEvents txtTranslation As TextBox
     Friend WithEvents btnTranslate As Button
     Friend WithEvents cmbLanguage As ComboBox
-    Friend WithEvents UcMusicPlayer1 As UCMusicPlayer
+    Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
     Friend WithEvents UcSonaTahendus1 As UCSonaTahendus
     Friend WithEvents lblScoreName As Label
     Friend WithEvents lblGameScore As Label
