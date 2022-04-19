@@ -381,6 +381,42 @@ Public Class CDatabase
         End If
     End Sub
 
+    Private Sub exportCSV() Implements IDatabase.exportCSV
+        Dim data As CSVExporterDNF.IExporter
+        data = New CSVExporterDNF.CExporter
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
 
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "SELECT * FROM gameHistory"
+        Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
+        SQLite_Data_Reader = SQLcommand.ExecuteReader
+
+        'Dim tabel As New DataTable
+        'tabel.Load(SQLite_Data_Reader)
+
+        Dim result As New ArrayList()
+        While SQLite_Data_Reader.Read()
+            ' Insert each column into a dictionary
+            Dim dict As New Dictionary(Of String, Object)
+            For count As Integer = 0 To (SQLite_Data_Reader.FieldCount - 1)
+                dict.Add(SQLite_Data_Reader.GetName(count), SQLite_Data_Reader(count))
+            Next
+
+            ' Add the dictionary to the ArrayList
+            result.Add(dict)
+        End While
+        SQLite_Data_Reader.Close()
+        'Dim str() As String = result.ToArray(TypeOf (Stri))
+        data.setFileToSave()
+        'data.saveDataToCsv(str)
+
+
+
+    End Sub
 
 End Class
