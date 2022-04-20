@@ -30,12 +30,12 @@ Partial Class formGameEnd
         Me.btnTranslate = New System.Windows.Forms.Button()
         Me.cmbLanguage = New System.Windows.Forms.ComboBox()
         Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
-        Me.UcSonaTahendus1 = New eesti_wordle.UCSonaTahendus()
         Me.lblScoreName = New System.Windows.Forms.Label()
         Me.lblGameScore = New System.Windows.Forms.Label()
         Me.lblBestScoreName = New System.Windows.Forms.Label()
         Me.lblBestScore = New System.Windows.Forms.Label()
         Me.lblNewHighscore = New System.Windows.Forms.Label()
+        Me.UcSonaTahendus1 = New SonaTahendus.UCSonaTahendus()
         Me.SuspendLayout()
         '
         'lblResult
@@ -103,18 +103,10 @@ Partial Class formGameEnd
         'UcMusicPlayer1
         '
         Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
-        Me.UcMusicPlayer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.UcMusicPlayer1.Margin = New System.Windows.Forms.Padding(2)
         Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
         Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
         Me.UcMusicPlayer1.TabIndex = 7
-        '
-        'UcSonaTahendus1
-        '
-        Me.UcSonaTahendus1.Location = New System.Drawing.Point(118, 405)
-        Me.UcSonaTahendus1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.UcSonaTahendus1.Name = "UcSonaTahendus1"
-        Me.UcSonaTahendus1.Size = New System.Drawing.Size(152, 115)
-        Me.UcSonaTahendus1.TabIndex = 8
         '
         'lblScoreName
         '
@@ -171,6 +163,14 @@ Partial Class formGameEnd
         Me.lblNewHighscore.TabIndex = 11
         Me.lblNewHighscore.Text = "Uus suurim skoor!"
         '
+        'UcSonaTahendus1
+        '
+        Me.UcSonaTahendus1.Location = New System.Drawing.Point(126, 494)
+        Me.UcSonaTahendus1.Margin = New System.Windows.Forms.Padding(2)
+        Me.UcSonaTahendus1.Name = "UcSonaTahendus1"
+        Me.UcSonaTahendus1.Size = New System.Drawing.Size(376, 156)
+        Me.UcSonaTahendus1.TabIndex = 8
+        '
         'formGameEnd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -205,7 +205,7 @@ Partial Class formGameEnd
     Friend WithEvents btnTranslate As Button
     Friend WithEvents cmbLanguage As ComboBox
     Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
-    Friend WithEvents UcSonaTahendus1 As UCSonaTahendus
+    Friend WithEvents UcSonaTahendus1 As SonaTahendus.UCSonaTahendus
     Friend WithEvents lblScoreName As Label
     Friend WithEvents lblGameScore As Label
     Friend WithEvents lblBestScoreName As Label

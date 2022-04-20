@@ -1,4 +1,5 @@
 ﻿Public Class formMenu
+    Dim utils As Utils.IUtils = New Utils.CUtils
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
         Dim game As Game.IGame
         game = New Game.CGame
@@ -169,7 +170,8 @@
             Timer1.Enabled = False
         Else
             time.timeWait = time.timeWait - 1
-            lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:" & time.timeWait & "s"
+            lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:" &
+                utils.secondsToTimeString(time.timeWait)
             lblTimer.Visible = True
             data.setItem("time", "timeWaitCurrent", time.timeWait)
 

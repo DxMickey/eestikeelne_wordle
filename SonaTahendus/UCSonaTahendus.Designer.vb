@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UCSonaTahendus
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class UCSonaTahendus
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblSona = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -52,8 +52,9 @@ Partial Class UCSonaTahendus
         Me.rtbSonaTahendus.Enabled = False
         Me.rtbSonaTahendus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
         Me.rtbSonaTahendus.Location = New System.Drawing.Point(2, 41)
+        Me.rtbSonaTahendus.MaximumSize = New System.Drawing.Size(404, 96)
         Me.rtbSonaTahendus.Name = "rtbSonaTahendus"
-        Me.rtbSonaTahendus.Size = New System.Drawing.Size(197, 96)
+        Me.rtbSonaTahendus.Size = New System.Drawing.Size(399, 96)
         Me.rtbSonaTahendus.TabIndex = 3
         Me.rtbSonaTahendus.Text = "Siia ilmub sona t2hendus jne"
         '
@@ -65,13 +66,13 @@ Partial Class UCSonaTahendus
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblSona)
         Me.Name = "UCSonaTahendus"
-        Me.Size = New System.Drawing.Size(202, 141)
+        Me.Size = New System.Drawing.Size(404, 141)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents lblSona As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents rtbSonaTahendus As RichTextBox
+    Friend WithEvents lblSona As Windows.Forms.Label
+    Friend WithEvents Label1 As Windows.Forms.Label
+    Friend WithEvents rtbSonaTahendus As Windows.Forms.RichTextBox
 End Class

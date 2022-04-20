@@ -109,10 +109,10 @@ Partial Class formMenu
         'lblTimer
         '
         Me.lblTimer.AutoSize = True
-        Me.lblTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.25!)
-        Me.lblTimer.Location = New System.Drawing.Point(74, 212)
+        Me.lblTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.lblTimer.Location = New System.Drawing.Point(52, 562)
         Me.lblTimer.Name = "lblTimer"
-        Me.lblTimer.Size = New System.Drawing.Size(27, 29)
+        Me.lblTimer.Size = New System.Drawing.Size(18, 20)
         Me.lblTimer.TabIndex = 6
         Me.lblTimer.Text = "0"
         Me.lblTimer.Visible = False

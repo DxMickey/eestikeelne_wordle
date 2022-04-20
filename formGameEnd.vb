@@ -97,8 +97,8 @@ Public Class formGameEnd
         lblSona.Text = game.strSona
 
         'Sõna tähenduse saamine
-        Dim sonaTahendus As ISonaTahendus
-        sonaTahendus = New CSonaTahendus
+        Dim sonaTahendus As SonaTahendus.ISonaTahendus
+        sonaTahendus = New SonaTahendus.CSonaTahendus
         Dim tahendus = sonaTahendus.getSonaTahendus(game.strSona)
         UcSonaTahendus1.setWordTexts(game.strSona, tahendus)
 
