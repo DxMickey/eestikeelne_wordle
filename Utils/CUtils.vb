@@ -8,17 +8,20 @@
         Return My.Computer.Network.Ping("www.google.com")
     End Function
 
-    Public Function secondsToTimeString(ByRef seconds As Integer, Optional msgString As String = "") As String Implements IUtils.secondsToTimeString
+    Public Function secondsToTimeString(ByVal seconds As Integer, Optional msgString As String = "") As String Implements IUtils.secondsToTimeString
         'muudab sekundites antud arvu loetavaks stringiks
         'sisend võib olla int või str, muundatakse nkn stringiks
-        Debug.WriteLine(seconds)
+
         Dim days = seconds \ (3600 * 24)
-        seconds = seconds - (days * 3600 * 24)
+        seconds -= (days * 3600 * 24)
+
         Dim hours = seconds \ 3600
-        seconds = seconds - (hours * 3600)
+        seconds -= (hours * 3600)
+
+
         Dim minutes = seconds \ 60
-        seconds = seconds - (minutes * 60)
-        Debug.WriteLine(days, hours, minutes)
+        seconds -= (minutes * 60)
+
         Dim s = getTimestring(days, hours, minutes, seconds)
         Debug.WriteLine(s)
         Return s

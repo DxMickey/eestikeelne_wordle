@@ -4,6 +4,6 @@
     'nt võrgu ühenduse kontroll, aja konversioonid jne
 
     Function isNetworkConnection() As Boolean
-    Function secondsToTimeString(ByRef seconds As Integer, Optional msgString As String = "") As String
+    Function secondsToTimeString(ByVal seconds As Integer, Optional msgString As String = "") As String
 
 End Interface

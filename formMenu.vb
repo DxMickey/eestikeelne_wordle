@@ -170,8 +170,7 @@
             Timer1.Enabled = False
         Else
             time.timeWait = time.timeWait - 1
-            lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:" &
-                utils.secondsToTimeString(time.timeWait)
+            lblTimer.Text = "Aega jäänud kuni saab uuesti mängida:" & utils.secondsToTimeString(time.timeWait)
             lblTimer.Visible = True
             data.setItem("time", "timeWaitCurrent", time.timeWait)
 
