@@ -420,6 +420,10 @@
       <Project>{edd03834-3554-4207-8994-18f4ddbd5ae3}</Project>
       <Name>Game</Name>
     </ProjectReference>
+    <ProjectReference Include="Notifications\Notifications.vbproj">
+      <Project>{4c554f45-1c03-492f-aea2-3f7482757fca}</Project>
+      <Name>Notifications</Name>
+    </ProjectReference>
     <ProjectReference Include="SonaTahendus\SonaTahendus.vbproj">
       <Project>{9681aa48-14b5-462b-b895-64f7aa32c0ea}</Project>
       <Name>SonaTahendus</Name>

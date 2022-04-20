@@ -34,6 +34,7 @@ Partial Class formMenu
         Me.lblTimer = New System.Windows.Forms.Label()
         Me.btnWordList = New System.Windows.Forms.Button()
         Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
+        Me.UcNotification1 = New Notifications.UCNotification()
         Me.SuspendLayout()
         '
         'btnPlay
@@ -133,11 +134,19 @@ Partial Class formMenu
         Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
         Me.UcMusicPlayer1.TabIndex = 6
         '
+        'UcNotification1
+        '
+        Me.UcNotification1.Location = New System.Drawing.Point(47, 131)
+        Me.UcNotification1.Name = "UcNotification1"
+        Me.UcNotification1.Size = New System.Drawing.Size(170, 143)
+        Me.UcNotification1.TabIndex = 8
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.UcNotification1)
         Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnWordList)
         Me.Controls.Add(Me.lblTimer)
@@ -169,4 +178,5 @@ Partial Class formMenu
     Friend WithEvents lblTimer As Label
     Friend WithEvents btnWordList As Button
     Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
+    Friend WithEvents UcNotification1 As Notifications.UCNotification
 End Class
