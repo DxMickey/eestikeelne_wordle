@@ -23,7 +23,6 @@
         seconds -= (minutes * 60)
 
         Dim s = getTimestring(days, hours, minutes, seconds)
-        Debug.WriteLine(s)
         Return s
     End Function
     Private Function getTimestring(ByRef days, hours, minutes, seconds)
