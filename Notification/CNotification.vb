@@ -44,7 +44,7 @@ Public Class CNotification
 
 
 
-    Private Sub INotification_showNotif(ByRef parentElement As Form, text As String, title As String, Optional imgpath As String = "", Optional timeOut As Integer = 3) Implements INotification.showNotif
+    Private Sub INotification_showNotif(ByRef parentElement As Form, text As String, title As String, Optional imgpath As String = "", Optional timeOut As Integer = 5) Implements INotification.showNotif
         _text = text
         _title = title
         _imagepath = imgpath
@@ -74,7 +74,7 @@ Public Class CNotification
         n.RichTextBox1.BackColor = _backColor
         n.RichTextBox1.ForeColor = _textColor
 
-
+        'timeout alustab
         n.Timer1.Start()
 
         'Lisa vanem elemendile
