@@ -101,5 +101,11 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Andmekiht\Andmekiht.vbproj">
+      <Project>{fa749a41-94ee-44f2-aeff-548744f7341b}</Project>
+      <Name>Andmekiht</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
