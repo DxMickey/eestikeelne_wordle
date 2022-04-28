@@ -113,13 +113,20 @@ Public Class formGameEnd
 
 
         'Achievement chechker
+        Dim ac As AchievementChecker.IAchievements 'ei tea miks achievementchecker mitte achievements
+        ac = New AchievementChecker.CAchievements
+        Dim achievement = ac.getAchievements() 'massiiv, kus title ja kirjeldus
+
         'NotificationAchievemen
         'if achievements siis 
-        Dim notif As Notification.INotification
-        notif = New Notification.CNotification
-        notif.backColor = colors.backColor
-        notif.textColor = colors.lblColor
-        notif.showNotif(Me, "Siia achievement vms tekst", "PEALKIRI")
+        If ac.TwoHundredGames Then
+            Dim notif As Notification.INotification
+            notif = New Notification.CNotification
+            notif.backColor = colors.backColor
+            notif.textColor = colors.lblColor
+
+            notif.showNotif(Me, achievement(1), achievement(0))
+        End If
 
 
     End Sub

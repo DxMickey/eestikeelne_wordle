@@ -412,6 +412,10 @@
     <None Include="Resources\Untitled.wav" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Achievements\Achievments.vbproj">
+      <Project>{6687e580-7604-4e3b-9b40-356820e0dce2}</Project>
+      <Name>Achievments</Name>
+    </ProjectReference>
     <ProjectReference Include="Andmekiht\Andmekiht.vbproj">
       <Project>{fa749a41-94ee-44f2-aeff-548744f7341b}</Project>
       <Name>Andmekiht</Name>
