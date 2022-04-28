@@ -24,7 +24,7 @@ Partial Class UCSonaTahendus
     Private Sub InitializeComponent()
         Me.lblSona = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.rtbSonaTahendus = New System.Windows.Forms.RichTextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'lblSona
@@ -46,23 +46,21 @@ Partial Class UCSonaTahendus
         Me.Label1.Size = New System.Drawing.Size(0, 13)
         Me.Label1.TabIndex = 1
         '
-        'rtbSonaTahendus
+        'TextBox1
         '
-        Me.rtbSonaTahendus.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.rtbSonaTahendus.Enabled = False
-        Me.rtbSonaTahendus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.rtbSonaTahendus.Location = New System.Drawing.Point(2, 41)
-        Me.rtbSonaTahendus.MaximumSize = New System.Drawing.Size(404, 96)
-        Me.rtbSonaTahendus.Name = "rtbSonaTahendus"
-        Me.rtbSonaTahendus.Size = New System.Drawing.Size(399, 96)
-        Me.rtbSonaTahendus.TabIndex = 3
-        Me.rtbSonaTahendus.Text = "Siia ilmub sona t2hendus jne"
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(3, 41)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(398, 97)
+        Me.TextBox1.TabIndex = 4
         '
         'UCSonaTahendus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.rtbSonaTahendus)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblSona)
         Me.Name = "UCSonaTahendus"
@@ -74,5 +72,5 @@ Partial Class UCSonaTahendus
 
     Friend WithEvents lblSona As Windows.Forms.Label
     Friend WithEvents Label1 As Windows.Forms.Label
-    Friend WithEvents rtbSonaTahendus As Windows.Forms.RichTextBox
+    Friend WithEvents TextBox1 As Windows.Forms.TextBox
 End Class

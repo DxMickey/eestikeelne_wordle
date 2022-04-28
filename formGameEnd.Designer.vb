@@ -112,7 +112,7 @@ Partial Class formGameEnd
         '
         Me.lblScoreName.AutoSize = True
         Me.lblScoreName.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblScoreName.Location = New System.Drawing.Point(130, 17)
+        Me.lblScoreName.Location = New System.Drawing.Point(479, 367)
         Me.lblScoreName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblScoreName.Name = "lblScoreName"
         Me.lblScoreName.Size = New System.Drawing.Size(102, 36)
@@ -123,7 +123,7 @@ Partial Class formGameEnd
         '
         Me.lblGameScore.AutoSize = True
         Me.lblGameScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGameScore.Location = New System.Drawing.Point(226, 17)
+        Me.lblGameScore.Location = New System.Drawing.Point(575, 367)
         Me.lblGameScore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblGameScore.Name = "lblGameScore"
         Me.lblGameScore.Size = New System.Drawing.Size(32, 36)
@@ -134,7 +134,7 @@ Partial Class formGameEnd
         '
         Me.lblBestScoreName.AutoSize = True
         Me.lblBestScoreName.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBestScoreName.Location = New System.Drawing.Point(56, 51)
+        Me.lblBestScoreName.Location = New System.Drawing.Point(405, 401)
         Me.lblBestScoreName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblBestScoreName.Name = "lblBestScoreName"
         Me.lblBestScoreName.Size = New System.Drawing.Size(181, 36)
@@ -145,7 +145,7 @@ Partial Class formGameEnd
         '
         Me.lblBestScore.AutoSize = True
         Me.lblBestScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBestScore.Location = New System.Drawing.Point(226, 51)
+        Me.lblBestScore.Location = New System.Drawing.Point(575, 401)
         Me.lblBestScore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblBestScore.Name = "lblBestScore"
         Me.lblBestScore.Size = New System.Drawing.Size(32, 36)
@@ -165,10 +165,12 @@ Partial Class formGameEnd
         '
         'UcSonaTahendus1
         '
+        Me.UcSonaTahendus1._backColor = System.Drawing.Color.White
+        Me.UcSonaTahendus1._textColor = System.Drawing.Color.Black
         Me.UcSonaTahendus1.Location = New System.Drawing.Point(126, 494)
         Me.UcSonaTahendus1.Margin = New System.Windows.Forms.Padding(2)
         Me.UcSonaTahendus1.Name = "UcSonaTahendus1"
-        Me.UcSonaTahendus1.Size = New System.Drawing.Size(376, 156)
+        Me.UcSonaTahendus1.Size = New System.Drawing.Size(407, 156)
         Me.UcSonaTahendus1.TabIndex = 8
         '
         'formGameEnd

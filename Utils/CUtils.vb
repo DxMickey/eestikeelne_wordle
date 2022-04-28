@@ -37,7 +37,7 @@
             infoString = "" 'msgString
         End If
         'ajaühik_str = { str_ainsuses, str_mitmuses,tühi string}
-        Dim d_string = {" Päev, ", " Päeva, ", ""}
+        Dim d_string = {" päev, ", " päeva, ", ""}
         Dim h_string = {" tund, ", " tundi, ", ""}
         Dim m_string = {" minut, ", " minutit, ", ""}
         Dim s_string = {" sekund.", " sekundit", ""}

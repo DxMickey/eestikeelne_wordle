@@ -99,6 +99,8 @@ Public Class formGameEnd
         'Sõna tähenduse saamine
         Dim sonaTahendus As SonaTahendus.ISonaTahendus
         sonaTahendus = New SonaTahendus.CSonaTahendus
+        UcSonaTahendus1._backColor = colors.backColor
+        UcSonaTahendus1._textColor = colors.lblColor
         Dim tahendus = sonaTahendus.getSonaTahendus(game.strSona)
         UcSonaTahendus1.setWordTexts(game.strSona, tahendus)
 
@@ -108,6 +110,18 @@ Public Class formGameEnd
         lblBestScore.Text = data.getStat("suurim_skoor")
         'Nulli skoor uue mängu jaoks
         game.gameScore = Nothing
+
+
+        'Achievement chechker
+
+        'Notification
+        'if achievements siis 
+        Dim notif As Notification.INotification
+        notif = New Notification.CNotification
+        notif.backColor = colors.backColor
+        notif.textColor = colors.lblColor
+        notif.showNotif(Me, "Siia achievement vms tekst", "PEALKIRI")
+
 
     End Sub
 

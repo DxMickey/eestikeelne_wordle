@@ -1,10 +1,11 @@
-﻿Public Class CGraphics
+﻿
+Public Class CGraphics
     Implements IGraphics
 
     Shared redValue As UInteger
     Shared greenValue As UInteger
     Shared blueValue As UInteger
-    Shared labelColor As Color
+    Shared labelColor As System.Drawing.Color
     Shared backgroundColor
 
     Public Property red As UInteger Implements IGraphics.red
@@ -34,20 +35,20 @@
         End Set
     End Property
 
-    Public Property lblColor As Color Implements IGraphics.lblColor
+    Public Property lblColor As System.Drawing.Color Implements IGraphics.lblColor
         Get
             Return labelColor
         End Get
-        Set(value As Color)
+        Set(value As System.Drawing.Color)
             labelColor = value
         End Set
     End Property
 
-    Public Property backColor As Color Implements IGraphics.backColor
+    Public Property backColor As System.Drawing.Color Implements IGraphics.backColor
         Get
             Return backgroundColor
         End Get
-        Set(value As Color)
+        Set(value As System.Drawing.Color)
             backgroundColor = value
         End Set
     End Property

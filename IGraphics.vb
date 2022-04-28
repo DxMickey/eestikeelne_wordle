@@ -3,7 +3,7 @@
     Property green As UInteger
     Property blue As UInteger
 
-    Property lblColor As Color
+    Property lblColor As System.Drawing.Color
 
-    Property backColor As Color
+    Property backColor As System.Drawing.Color
 End Interface

@@ -412,6 +412,10 @@
     <None Include="Resources\Untitled.wav" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="AchievementChecker\Achievments.vbproj">
+      <Project>{6687e580-7604-4e3b-9b40-356820e0dce2}</Project>
+      <Name>Achievments</Name>
+    </ProjectReference>
     <ProjectReference Include="Andmekiht\Andmekiht.vbproj">
       <Project>{fa749a41-94ee-44f2-aeff-548744f7341b}</Project>
       <Name>Andmekiht</Name>
@@ -420,9 +424,9 @@
       <Project>{edd03834-3554-4207-8994-18f4ddbd5ae3}</Project>
       <Name>Game</Name>
     </ProjectReference>
-    <ProjectReference Include="Notifications\Notifications.vbproj">
-      <Project>{4c554f45-1c03-492f-aea2-3f7482757fca}</Project>
-      <Name>Notifications</Name>
+    <ProjectReference Include="Notification\Notification.vbproj">
+      <Project>{1ab7206a-a537-44fa-9f33-6be67c05d6f6}</Project>
+      <Name>Notification</Name>
     </ProjectReference>
     <ProjectReference Include="SonaTahendus\SonaTahendus.vbproj">
       <Project>{9681aa48-14b5-462b-b895-64f7aa32c0ea}</Project>
