@@ -3,11 +3,12 @@
 
     Public Property TwoHundredGames = False
 
-    Private Property IAchievements_TwoHundredGames As Object Implements IAchievements.TwoHundredGames
+
+    Private Property IAchievements_TwoHundredGames1 As Boolean Implements IAchievements.TwoHundredGames
         Get
             Return TwoHundredGames
         End Get
-        Set(value As Object)
+        Set(value As Boolean)
             Throw New NotImplementedException()
         End Set
     End Property

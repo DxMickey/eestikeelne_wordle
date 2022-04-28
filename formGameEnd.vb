@@ -122,9 +122,8 @@ Public Class formGameEnd
         If ac.TwoHundredGames Then
             Dim notif As Notification.INotification
             notif = New Notification.CNotification
-            notif.backColor = colors.backColor
             notif.textColor = colors.lblColor
-
+            notif.backColor = colors.backColor
             notif.showNotif(Me, achievement(1), achievement(0))
         End If
 

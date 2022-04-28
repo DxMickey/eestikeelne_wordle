@@ -1,4 +1,7 @@
-﻿
+﻿'Tekitab notifiactioni, mis kaob ise teatud aja möödudes
+'Seadistada saab pealkirja, sisuteksti ja säilimise aega
+'Kutsuda tuleb showNotif funktsiooni (showNotif(parentElement, text, title)
+'Veel saab seadistada teksti ja tausta värvi, et säilib graafiline kontekst
 Public Class CNotification
     Implements INotification
 
@@ -54,8 +57,8 @@ Public Class CNotification
         tbSize.Width = _size.Width * textBoxWidthPercentage
         tbSize.Height = _size.Height
 
+        'Uue UC loomine
         Dim n As New UCNotification
-        'n.BackColor = Color.FromArgb(255)
         n.Size = _size
         n.RichTextBox1.Text = Me._text
         n.RichTextBox1.Size = tbSize
@@ -65,11 +68,16 @@ Public Class CNotification
 
         n.btnClose.Location = New System.Drawing.Point(_width - 45, 3)
 
+        'Varvide seadmine
         n.BackColor = _backColor
         n.ForeColor = _textColor
+        n.RichTextBox1.BackColor = _backColor
+        n.RichTextBox1.ForeColor = _textColor
+
 
         n.Timer1.Start()
 
+        'Lisa vanem elemendile
         parentElement.Controls.Add(n)
     End Sub
 End Class
