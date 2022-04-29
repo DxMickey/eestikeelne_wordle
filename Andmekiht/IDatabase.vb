@@ -12,6 +12,8 @@
 
     Function howManyWords()
 
+    Function fileCountWords(fileName As String)
+    Function listCountWords(listName As String)
     Function getItem(tableName As String, itemName As String) As String
     Function getItemInt(tableName As String, itemName As String) As Integer
     Sub setItem(tableName As String, itemName As String, item As String)
@@ -20,6 +22,7 @@
     Sub importCSV(fileName As String, letters As Integer)
     Sub deleteTable(tableName As String)
     Sub exportJSON()
+    Sub updateWordList(tableName As String)
 
 
 
