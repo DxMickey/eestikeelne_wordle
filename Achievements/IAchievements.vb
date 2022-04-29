@@ -1,6 +1,5 @@
 ﻿Public Interface IAchievements
-    Function getAchievements()
-    Function setAchievements()
-    Property TwoHundredGames As Boolean
-
+    Property newAchievement As Boolean
+    Property text As String
+    Property title As String
 End Interface

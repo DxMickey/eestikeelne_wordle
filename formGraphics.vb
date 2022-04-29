@@ -149,8 +149,8 @@
     Private Sub baseSettings()
         Dim colors As IGraphics
         colors = New CGraphics
-        Dim data As Andmekiht.IDatabase
-        data = New Andmekiht.CDatabase
+        'Dim data As Andmekiht.IDatabase
+        'data = New Andmekiht.CDatabase
 
         changeLabels(colors.lblColor)
         'Peida error silt

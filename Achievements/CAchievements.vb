@@ -1,29 +1,86 @@
 ﻿Public Class CAchievements
     Implements IAchievements
 
-    Public Property TwoHundredGames = False
+    Private _gamesPlayed = vbNull
+    Private _timePlayed = vbNull
+    Private _avgGuessTime = vbNull
+    Private _wordsGuessed = vbNull
+    Private _fastestGuess = vbNull
+    Private _slowestGuess = vbNull
+    Private _highScore = vbNull
+    Private _avgScore = vbNull
+    Private _acArray As Integer()
+    Private _newAchievement = False
+    Private _text = ""
+    Private _title = ""
 
-
-    Private Property IAchievements_TwoHundredGames1 As Boolean Implements IAchievements.TwoHundredGames
+    Public Property newAchievement As Boolean Implements IAchievements.newAchievement
         Get
-            Return TwoHundredGames
+            Return _newAchievement
         End Get
         Set(value As Boolean)
-            Throw New NotImplementedException()
+            _newAchievement = value
         End Set
     End Property
 
-    Public Function getAchievements() As Object Implements IAchievements.getAchievements
-        'Otsib andmebaasist eri andmeid eri saavutuste kohta (vt funktsioone)
-        'tagastab stringide massiivi, mida saab notificationinga näidata
+    Public Property text As String Implements IAchievements.text
+        Get
+            Return _text
+        End Get
+        Set(value As String)
+            _text = value
+        End Set
+    End Property
+
+    Public Property title As String Implements IAchievements.title
+        Get
+            Return _title
+        End Get
+        Set(value As String)
+            _title = value
+        End Set
+    End Property
+
+
+
+
+    Public Sub New()
+        'Uue klass instantsi puhul võetakse andmekihist statistika
+        'Et ei peaks iga achievmenti puhul otsima uuesti välja
+
+
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
-        Dim gamesPlayed = Me.getGamesPlayed(data)
-        Dim arr = checkForGamesPlayedAchievements(gamesPlayed)
-        Return arr
-    End Function
 
-    Public Function setAchievements() As Object Implements IAchievements.setAchievements
+        Dim gamesPlayed = data.getStat("m2ngude_arv")
+        Dim timePlayed = data.getStat("m2ngitud_aeg")
+        Dim avgGuessTime = data.getStat("keskmine_arvamise_aeg")
+        Dim wordsGuessed = data.getStat("arvatud_s6nade_hulk")
+        Dim fastestGuess = data.getStat("k6ige_kiirem_aeg")
+        Dim slowestGuess = data.getStat("k6ige_aeglasem_aeg")
+        Dim highScore = data.getStat("suurim_skoor")
+        Dim avgScore = data.getStat("keskmine_skoor")
+
+        'Andmete töötlus, kui mõni formaat oleks parem (nt int asemel string)
+        'pole hetkel midagi muuta aga tulevikuks
+        'Muutujate seadmine
+        _gamesPlayed = gamesPlayed
+        _timePlayed = timePlayed
+        _avgGuessTime = avgGuessTime
+        _wordsGuessed = wordsGuessed
+        _fastestGuess = fastestGuess
+        _slowestGuess = slowestGuess
+        _highScore = highScore
+        _avgScore = avgScore
+
+        Me.newAchievement = False
+        _acArray = data.getAchievementArray()
+        checkForGamesPlayedAchievements()
+
+    End Sub
+
+
+    Public Function setAchievements() As Object
         'vaata mis achievmente saadi. Lisa andmebaasi,kui midagi uut
         Throw New NotImplementedException()
     End Function
@@ -35,13 +92,24 @@
         Dim n = rows(0).ItemArray
         Return n(0)
     End Function
-    Private Function checkForGamesPlayedAchievements(n) As Array
+    Private Sub checkForGamesPlayedAchievements()
+        'Kontrollib saavutusi, kus teatud mangude arv vaja saada
+        'Valib esimese, seega kui 350 mängu tehtud, aga saavutusi pole, siis tuleb esimesena 10, siis 20 jne
+        Dim nrToCheck = {10, 20, 50, 100, 200, 500} 'arvud, kus saavutused
+        Dim ids = {1, 2, 3, 4, 5, 6} 'nende saavutuste id-d
+        For i = 0 To nrToCheck.Length - 1
+            'Kui mangud arv on suurem voi vordne, ja see saavutus pole juba tehtud
+            If _gamesPlayed >= nrToCheck(i) And _acArray(i) <= 0 Then
+                Dim data As Andmekiht.IDatabase
+                data = New Andmekiht.CDatabase
+                Dim h = data.getAchievementData(ids(i))
+                data.setAchievement(ids(i)) 'pmst i  + 1
+                text = h(1)
+                title = h(0)
+                newAchievement = True
+                Exit For
+            End If
+        Next
+    End Sub
 
-        Dim achievementArray = {}
-        If n > 200 Then
-            TwoHundredGames = True
-            Return {"Elite Gamer", "Mängisid 200 mängu!"}
-        End If
-        Return achievementArray
-    End Function
 End Class

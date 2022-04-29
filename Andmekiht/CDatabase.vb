@@ -383,8 +383,74 @@ Public Class CDatabase
         Else
             My.Computer.FileSystem.WriteAllText(Application.StartupPath() & "\export.json", JSONtabel, True)
         End If
+        SQLconnection.Close()
     End Sub
 
+    Public Function getAchievementArray() As Integer() Implements IDatabase.getAchievementArray
+        'Tagastab massiivi, kujul {0,0,0,1,0...},
+        'kus indeks näitab saavutuse ID-d ja väärtus seda, kas tehtud
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
 
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+        SQLcommand = SQLconnection.CreateCommand
+        SQLcommand.CommandText = "SELECT isDone FROM achievements ORDER BY ID ASC"
+        Dim queryRes As SQLite.SQLiteDataReader
+        queryRes = SQLcommand.ExecuteReader
+        Dim tabel As New DataTable
+        tabel.Load(queryRes)
 
+        Dim N = tabel.Rows.Count - 1
+        Dim acArray(N) As Integer
+
+        For i = 0 To N
+            Dim el As Integer
+            el = tabel.Rows(i).ItemArray(0)
+            acArray(i) = el
+        Next
+
+        SQLconnection.Close()
+        Return acArray
+
+    End Function
+
+    Public Sub setAchievement(id As Integer, Optional setBit As Integer = 1) Implements IDatabase.setAchievement
+        'Märgib id väärtuse järgi achievementi tehtuks. Optionaalse väärtusega saab ka nulliks märkida, kui vaja.
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "UPDATE achievements SET isDone = " & setBit & " WHERE ID = " & id
+        Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
+        SQLite_Data_Reader = SQLcommand.ExecuteReader
+        SQLconnection.Close()
+
+    End Sub
+    Private Function getAchievementData(ID As Integer) Implements IDatabase.getAchievementData
+        'Tagastab saavutuse id järgi kujul {title, text}
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "SELECT  title,text FROM achievements WHERE ID = " & ID
+        Dim queryRes As SQLite.SQLiteDataReader
+        queryRes = SQLcommand.ExecuteReader
+        'pain
+        Dim tabel As New DataTable
+        tabel.Load(queryRes)
+        Dim title = tabel.Rows(0).ItemArray(0)
+        Dim text = tabel.Rows(0).ItemArray(1)
+        Dim h = {title, text}
+        SQLconnection.Close()
+        Return h
+    End Function
 End Class

@@ -20,6 +20,10 @@
     Sub importCSV(fileName As String, letters As Integer)
     Sub deleteTable(tableName As String)
     Sub exportJSON()
+    Function getAchievementArray() As Integer()
+    Sub setAchievement(id As Integer, Optional setBit As Integer = 1)
+    Function getAchievementData(ID As Integer)
+
 
 
 
