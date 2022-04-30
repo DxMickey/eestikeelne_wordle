@@ -435,7 +435,21 @@ Public Class CDatabase
         'Tagastab saavutuse id järgi kujul {title, text}
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
-
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+        SQLcommand = SQLconnection.CreateCommand
+        SQLcommand.CommandText = "SELECT  title,text FROM achievements WHERE ID = " & ID
+        Dim queryRes As SQLite.SQLiteDataReader
+        queryRes = SQLcommand.ExecuteReader
+        'pain
+        Dim tabel As New DataTable
+        tabel.Load(queryRes)
+        Dim title = tabel.Rows(0).ItemArray(0)
+        Dim text = tabel.Rows(0).ItemArray(1)
+        Dim h = {title, text}
+        SQLconnection.Close()
+        Return h
+    End Function
     'Funktsioon sõnade arvu saamiseks soovitud sõnade listis
     'Input = Listi nimi mille sõnade arvu soovitakse
     'Output = Sõnade arv
@@ -455,8 +469,7 @@ Public Class CDatabase
 
         Return sqlResponse
     End Function
-        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-        SQLconnection.Open()
+
 
     'Funktsioon sõnade arvu saamiseks soovitud failis
     'Input = Faili nimi mille sõnade arvu soovitakse
@@ -473,7 +486,7 @@ Public Class CDatabase
 
         Loop Until line Is Nothing
         reader.Close()
-        SQLcommand = SQLconnection.CreateCommand
+
 
         Return count
     End Function
@@ -509,16 +522,4 @@ Public Class CDatabase
         SQLconnection.Close()
     End Sub
 End Class
-SQLcommand.CommandText = "SELECT  title,text FROM achievements WHERE ID = " & ID
-Dim queryRes As SQLite.SQLiteDataReader
-queryRes = SQLcommand.ExecuteReader
-'pain
-Dim tabel As New DataTable
-tabel.Load(queryRes)
-Dim title = tabel.Rows(0).ItemArray(0)
-Dim text = tabel.Rows(0).ItemArray(1)
-Dim h = {title, text}
-SQLconnection.Close()
-Return h
-End Function
-End Class
+

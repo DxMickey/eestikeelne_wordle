@@ -22,11 +22,22 @@ Partial Class UCMusicPlayer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.pbPlay = New System.Windows.Forms.PictureBox()
         Me.pbPause = New System.Windows.Forms.PictureBox()
-        CType(Me.pbPlay, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pbPlay = New System.Windows.Forms.PictureBox()
         CType(Me.pbPause, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbPlay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'pbPause
+        '
+        Me.pbPause.ErrorImage = Global.TaustaMuusika.My.Resources.Resources.pause_button
+        Me.pbPause.Image = Global.TaustaMuusika.My.Resources.Resources.pause_button
+        Me.pbPause.InitialImage = Nothing
+        Me.pbPause.Location = New System.Drawing.Point(32, 0)
+        Me.pbPause.Name = "pbPause"
+        Me.pbPause.Size = New System.Drawing.Size(26, 26)
+        Me.pbPause.TabIndex = 0
+        Me.pbPause.TabStop = False
         '
         'pbPlay
         '
@@ -38,16 +49,6 @@ Partial Class UCMusicPlayer
         Me.pbPlay.TabIndex = 0
         Me.pbPlay.TabStop = False
         '
-        'pbPause
-        '
-        Me.pbPause.Image = Global.TaustaMuusika.My.Resources.Resources.pause_button
-        Me.pbPause.InitialImage = Nothing
-        Me.pbPause.Location = New System.Drawing.Point(32, 0)
-        Me.pbPause.Name = "pbPause"
-        Me.pbPause.Size = New System.Drawing.Size(26, 26)
-        Me.pbPause.TabIndex = 0
-        Me.pbPause.TabStop = False
-        '
         'UCMusicPlayer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -56,8 +57,8 @@ Partial Class UCMusicPlayer
         Me.Controls.Add(Me.pbPlay)
         Me.Name = "UCMusicPlayer"
         Me.Size = New System.Drawing.Size(58, 26)
-        CType(Me.pbPlay, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbPause, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbPlay, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

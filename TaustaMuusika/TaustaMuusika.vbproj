@@ -93,9 +93,9 @@
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UCMusicPlayer.resx">
       <DependentUpon>UCMusicPlayer.vb</DependentUpon>
@@ -123,6 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play_button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
