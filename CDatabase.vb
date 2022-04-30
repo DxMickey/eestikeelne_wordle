@@ -388,7 +388,7 @@ Public Class CDatabase
         Dim Numbers(11) As Integer
         Numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
         Dim miscData() As Object = {"Hello World", 12D, 16UI, "A"c}
-        Dim text() As String = {"Hello World", "A"c}
+        Dim text() As String = {"Hello World", "A"}
 
         Try
             data2.setFileToSave()
