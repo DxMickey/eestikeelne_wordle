@@ -86,4 +86,6 @@
             & s_val_str & s_string(strSet(3)) _
             & infoString
     End Function
+
+
 End Class

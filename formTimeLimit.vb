@@ -36,6 +36,8 @@
                 txtTimeWait.Visible = True
                 lblTimePlay.Visible = True
                 lblTimeWait.Visible = True
+                cmbTimePlay.Visible = True
+                cmbWaitTime.Visible = True
 
                 btnOnOff.Visible = True
                 lblTimeWaitNow.Visible = True
@@ -49,18 +51,35 @@
 
 
             If txtTimePlay.Text <> Nothing And txtTimeWait.Text <> Nothing And IsNumeric(txtTimePlay.Text) And IsNumeric(txtTimeWait.Text) Then
-                time.timePlay = txtTimePlay.Text
-                time.timeWait = txtTimeWait.Text
+                If cmbTimePlay.SelectedIndex = 0 Then
+                    time.timePlay = txtTimePlay.Text
+                ElseIf cmbTimePlay.SelectedIndex = 1 Then
+                    time.timePlay = txtTimePlay.Text * 60
+                ElseIf cmbTimePlay.SelectedIndex = 2 Then
+                    time.timePlay = txtTimePlay.Text * 3600
+                End If
 
-                data.setItem("time", "timePlay", txtTimePlay.Text)
-                data.setItem("time", "timeWait", txtTimeWait.Text)
+
+
+                If cmbWaitTime.SelectedIndex = 0 Then
+                    time.timeWait = txtTimeWait.Text
+                ElseIf cmbWaitTime.SelectedIndex = 1 Then
+                    time.timeWait = txtTimeWait.Text * 60
+                ElseIf cmbWaitTime.SelectedIndex = 2 Then
+                    time.timeWait = txtTimeWait.Text * 3600
+                End If
+
+
+
+
+                data.setItem("time", "timePlay", time.timePlay)
+                data.setItem("time", "timeWait", time.timeWait)
+
+                lblTimePlayNow.Text = "Väärtus hetkel:" & time.timePlay
+                lblTimeWaitNow.Text = "Väärtus hetkel:" & time.timeWait
             Else
                 MessageBox.Show("Väärtused peavad olema numbrilised ja ei tohi olla tühjad")
             End If
-
-
-            lblTimePlayNow.Text = "Väärtus hetkel:" & time.timePlay
-            lblTimeWaitNow.Text = "Väärtus hetkel:" & time.timeWait
 
         End If
     End Sub
@@ -75,8 +94,12 @@
 
         lblTimePlayNow.Visible = False
         lblTimeWaitNow.Visible = False
-        lblTimePlayNow.Text = "Väärtus hetkel:" & data.getItem("time", "timePlay")
-        lblTimeWaitNow.Text = "Väärtus hetkel:" & data.getItem("time", "timeWait")
+        cmbTimePlay.Visible = False
+        cmbWaitTime.Visible = False
+        cmbTimePlay.SelectedIndex = 0
+        cmbWaitTime.SelectedIndex = 0
+        lblTimePlayNow.Text = "Väärtus hetkel:" & data.getItem("time", "timePlay") & " sekundit"
+        lblTimeWaitNow.Text = "Väärtus hetkel:" & data.getItem("time", "timeWait") & " sekundit"
 
 
         If time.timeState = "On" Then

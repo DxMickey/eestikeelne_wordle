@@ -1,4 +1,6 @@
-﻿Public Class formMenu
+﻿Imports System.Net
+
+Public Class formMenu
     Dim utils As Utils.IUtils = New Utils.CUtils
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
         Dim game As Game.IGame
@@ -224,5 +226,65 @@
         End If
     End Sub
 
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
+        Dim utils As Utils.IUtils
+        utils = New Utils.CUtils
+
+
+        If utils.isNetworkConnection() = False Then
+            MessageBox.Show("Internet puudub")
+        Else
+
+            Dim client As New WebClient
+            Dim saveFile As New SaveFileDialog
+            Dim fileUrl1 As String = "https://docs.google.com/uc?export=download&id=1BEwFvCp8TXU1tqlo9cJccKilIWvg_lTM"
+            Dim fileUrl2 As String = "https://docs.google.com/uc?export=download&id=1tpY8m6-sEzLla8l160oSGyFPvlkCJQFm"
+            Dim fileUrl3 As String = "https://docs.google.com/uc?export=download&id=1dR14DNVom_LtZkZAyNmrIDb9XdwO6RPy"
+            MessageBox.Show("Uuenduse kontrollimine võib võtta mõne hetke!")
+            Cursor = Cursors.WaitCursor
+
+            client.DownloadFile(New Uri(fileUrl1), "sonadeListEasy.csv")
+            client.DownloadFile(New Uri(fileUrl2), "sonadeList.csv")
+            client.DownloadFile(New Uri(fileUrl3), "sonadeListHard.csv")
+
+            If data.fileCountWords("sonadeListEasy.csv") <> data.listCountWords("sonadeListEasy") Or data.fileCountWords("sonadeList.csv") <> data.listCountWords("sonadeList") Or data.fileCountWords("sonadeListHard.csv") <> data.listCountWords("sonadeListHard") Then
+                Cursor = Cursors.Default
+                Dim tulemus As DialogResult = MessageBox.Show("Uuendus on olemas. Kas te soovite uuendada sõnu?", "Uuendus", MessageBoxButtons.YesNo)
+                ' MsgBox("Uuendus on olemas. Kas te soovite uuendada sõnu?", MsgBoxStyle.YesNo, "Uuendus")
+                If tulemus = DialogResult.Yes Then
+                    Cursor = Cursors.WaitCursor
+                    If data.fileCountWords("sonadeListEasy.csv") <> data.listCountWords("sonadeListEasy") Then
+                        data.updateWordList("sonadeListEasy")
+                    End If
+                    If data.fileCountWords("sonadeList.csv") <> data.listCountWords("sonadeList") Then
+                        data.updateWordList("sonadeList")
+                    End If
+                    If data.fileCountWords("sonadeListHard.csv") <> data.listCountWords("sonadeListHard") Then
+                        data.updateWordList("sonadeListHard")
+                    End If
+
+                    My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeListEasy.csv")
+                    My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeList.csv")
+                    My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeListHard.csv")
+
+                    Cursor = Cursors.Default
+                    MessageBox.Show("Uuendus lõpetatud")
+
+                Else
+                    Cursor = Cursors.Default
+                End If
+            Else
+                Cursor = Cursors.Default
+                MessageBox.Show("Uuendust ei ole!")
+
+            End If
+
+
+        End If
+    End Sub
+
 
 End Class
+

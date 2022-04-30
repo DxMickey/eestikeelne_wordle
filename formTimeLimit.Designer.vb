@@ -38,6 +38,8 @@ Partial Class formTimeLimit
         Me.lblTimePlayNow = New System.Windows.Forms.Label()
         Me.lblTimeWaitNow = New System.Windows.Forms.Label()
         Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
+        Me.cmbTimePlay = New System.Windows.Forms.ComboBox()
+        Me.cmbWaitTime = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lblNewPass1
@@ -163,7 +165,7 @@ Partial Class formTimeLimit
         'lblTimePlayNow
         '
         Me.lblTimePlayNow.AutoSize = True
-        Me.lblTimePlayNow.Location = New System.Drawing.Point(392, 305)
+        Me.lblTimePlayNow.Location = New System.Drawing.Point(481, 305)
         Me.lblTimePlayNow.Name = "lblTimePlayNow"
         Me.lblTimePlayNow.Size = New System.Drawing.Size(78, 13)
         Me.lblTimePlayNow.TabIndex = 15
@@ -172,7 +174,7 @@ Partial Class formTimeLimit
         'lblTimeWaitNow
         '
         Me.lblTimeWaitNow.AutoSize = True
-        Me.lblTimeWaitNow.Location = New System.Drawing.Point(392, 338)
+        Me.lblTimeWaitNow.Location = New System.Drawing.Point(481, 338)
         Me.lblTimeWaitNow.Name = "lblTimeWaitNow"
         Me.lblTimeWaitNow.Size = New System.Drawing.Size(78, 13)
         Me.lblTimeWaitNow.TabIndex = 16
@@ -185,11 +187,33 @@ Partial Class formTimeLimit
         Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
         Me.UcMusicPlayer1.TabIndex = 14
         '
+        'cmbTimePlay
+        '
+        Me.cmbTimePlay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTimePlay.FormattingEnabled = True
+        Me.cmbTimePlay.Items.AddRange(New Object() {"sekund", "minut", "tund"})
+        Me.cmbTimePlay.Location = New System.Drawing.Point(392, 300)
+        Me.cmbTimePlay.Name = "cmbTimePlay"
+        Me.cmbTimePlay.Size = New System.Drawing.Size(83, 21)
+        Me.cmbTimePlay.TabIndex = 17
+        '
+        'cmbWaitTime
+        '
+        Me.cmbWaitTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbWaitTime.FormattingEnabled = True
+        Me.cmbWaitTime.Items.AddRange(New Object() {"sekund", "minut", "tund"})
+        Me.cmbWaitTime.Location = New System.Drawing.Point(391, 335)
+        Me.cmbWaitTime.Name = "cmbWaitTime"
+        Me.cmbWaitTime.Size = New System.Drawing.Size(83, 21)
+        Me.cmbWaitTime.TabIndex = 18
+        '
         'formTimeLimit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.cmbWaitTime)
+        Me.Controls.Add(Me.cmbTimePlay)
         Me.Controls.Add(Me.lblTimeWaitNow)
         Me.Controls.Add(Me.lblTimePlayNow)
         Me.Controls.Add(Me.UcMusicPlayer1)
@@ -229,4 +253,6 @@ Partial Class formTimeLimit
     Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
     Friend WithEvents lblTimePlayNow As Label
     Friend WithEvents lblTimeWaitNow As Label
+    Friend WithEvents cmbTimePlay As ComboBox
+    Friend WithEvents cmbWaitTime As ComboBox
 End Class

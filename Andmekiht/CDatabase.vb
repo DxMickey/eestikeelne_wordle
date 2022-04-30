@@ -11,16 +11,16 @@ Public Class CDatabase
 
 
         Dim SQLconnection As New SQLite.SQLiteConnection()
-            Dim SQLcommand As SQLite.SQLiteCommand
+        Dim SQLcommand As SQLite.SQLiteCommand
 
-            SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
-            SQLconnection.Open()
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
 
-            SQLcommand = SQLconnection.CreateCommand
+        SQLcommand = SQLconnection.CreateCommand
 
-            SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ", " & value7 & ")"
-            SQLcommand.ExecuteNonQuery()
-            SQLconnection.Close()
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ", " & value7 & ")"
+        SQLcommand.ExecuteNonQuery()
+        SQLconnection.Close()
 
     End Sub
 
@@ -436,21 +436,89 @@ Public Class CDatabase
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
+    'Funktsioon sõnade arvu saamiseks soovitud sõnade listis
+    'Input = Listi nimi mille sõnade arvu soovitakse
+    'Output = Sõnade arv
+    Private Function listCountWords(listName As String) As Object Implements IDatabase.listCountWords
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+
         SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
         SQLconnection.Open()
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT  title,text FROM achievements WHERE ID = " & ID
-        Dim queryRes As SQLite.SQLiteDataReader
-        queryRes = SQLcommand.ExecuteReader
-        'pain
-        Dim tabel As New DataTable
-        tabel.Load(queryRes)
-        Dim title = tabel.Rows(0).ItemArray(0)
-        Dim text = tabel.Rows(0).ItemArray(1)
-        Dim h = {title, text}
+        SQLcommand.CommandText = "SELECT Count(rowid) FROM '" & listName & "'"
+        Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
-        Return h
+
+        Return sqlResponse
     End Function
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+    'Funktsioon sõnade arvu saamiseks soovitud failis
+    'Input = Faili nimi mille sõnade arvu soovitakse
+    'Output = Sõnade arv
+    Private Function fileCountWords(fileName As String) As Object Implements IDatabase.fileCountWords
+        Dim count As Integer = 0
+
+        Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(fileName)
+        Dim line As String
+        Do
+            line = reader.ReadLine
+
+            count = count + 1
+
+        Loop Until line Is Nothing
+        reader.Close()
+        SQLcommand = SQLconnection.CreateCommand
+
+        Return count
+    End Function
+
+    'Meetod sõnade listi uuendamiseks andmebaasis, asendades kõik vanad sõnad uute vastu vastavas tabelis
+    'Input = Tabeli nimi, milles soovitakse sõnu uuendada
+    Private Sub updateWordList(tableName As String) Implements IDatabase.updateWordList
+        Dim SQLconnection As New SQLite.SQLiteConnection()
+        Dim SQLcommand As SQLite.SQLiteCommand
+
+        SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
+        SQLconnection.Open()
+
+        SQLcommand = SQLconnection.CreateCommand
+
+        SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & tableName & "'"
+        SQLcommand.ExecuteNonQuery()
+
+        SQLcommand.CommandText = "CREATE TABLE '" & tableName & "'(sona STRING)"
+        SQLcommand.ExecuteNonQuery()
+
+        Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(tableName & ".csv")
+        Dim line As String
+        Do
+            line = reader.ReadLine
+
+            SQLcommand.CommandText = "INSERT INTO '" & tableName & "' VALUES('" & line & "')"
+            SQLcommand.ExecuteNonQuery()
+
+        Loop Until line Is Nothing
+        reader.Close()
+
+        SQLconnection.Close()
+    End Sub
+End Class
+SQLcommand.CommandText = "SELECT  title,text FROM achievements WHERE ID = " & ID
+Dim queryRes As SQLite.SQLiteDataReader
+queryRes = SQLcommand.ExecuteReader
+'pain
+Dim tabel As New DataTable
+tabel.Load(queryRes)
+Dim title = tabel.Rows(0).ItemArray(0)
+Dim text = tabel.Rows(0).ItemArray(1)
+Dim h = {title, text}
+SQLconnection.Close()
+Return h
+End Function
 End Class

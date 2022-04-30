@@ -34,6 +34,7 @@ Partial Class formMenu
         Me.lblTimer = New System.Windows.Forms.Label()
         Me.btnWordList = New System.Windows.Forms.Button()
         Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnPlay
@@ -133,13 +134,21 @@ Partial Class formMenu
         Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
         Me.UcMusicPlayer1.TabIndex = 6
         '
-
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(274, 459)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(109, 23)
+        Me.btnUpdate.TabIndex = 8
+        Me.btnUpdate.Text = "Otsi uuendusi"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnWordList)
         Me.Controls.Add(Me.lblTimer)
@@ -171,4 +180,5 @@ Partial Class formMenu
     Friend WithEvents lblTimer As Label
     Friend WithEvents btnWordList As Button
     Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
+    Friend WithEvents btnUpdate As Button
 End Class

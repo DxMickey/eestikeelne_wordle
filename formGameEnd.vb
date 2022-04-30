@@ -134,9 +134,11 @@ Public Class formGameEnd
     Private Sub TranslateWord()
         Dim game As Game.IGame
         game = New Game.CGame
+        Dim utils As Utils.IUtils
+        utils = New Utils.CUtils
 
         Dim TClient As TranslationClient = TranslationClient.CreateFromApiKey("AIzaSyAv_0Zx3VCVGgn0hGLMoCCtT4O5xtYu1rY")
-        If checkInternet() = False Then
+        If utils.isNetworkConnection() = False Then
             txtTranslation.Text = "Internet puudub"
         Else
 
@@ -156,17 +158,8 @@ Public Class formGameEnd
         TranslateWord()
     End Sub
 
-    'Internetiühenduse kontrollimine, kui google.com-i pingimine ebaõnnestub, tagastab False
-    Private Function checkInternet() As Boolean
 
-        Try
-            Return My.Computer.Network.Ping("www.google.com")
-        Catch
-            Return False
 
-        End Try
-
-    End Function
 
 
 
