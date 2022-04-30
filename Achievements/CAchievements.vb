@@ -48,7 +48,6 @@
         'Uue klass instantsi puhul võetakse andmekihist statistika
         'Et ei peaks iga achievmenti puhul otsima uuesti välja
 
-
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
 
@@ -75,6 +74,7 @@
 
         Me.newAchievement = False
         _acArray = data.getAchievementArray()
+
         checkForGamesPlayedAchievements()
 
     End Sub
@@ -111,5 +111,13 @@
             End If
         Next
     End Sub
-
+    Public Sub resetAchievements()
+        'saab nullida kõik saavutused. Kasuta ainult debuggimiseks.
+        'tuleb kutsuda peale seda, kui _acArray on väärtuse saanud
+        Dim data As Andmekiht.IDatabase
+        data = New Andmekiht.CDatabase
+        For i = 1 To _acArray.Length
+            data.setAchievement(i, 0)
+        Next
+    End Sub
 End Class
