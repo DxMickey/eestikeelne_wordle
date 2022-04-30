@@ -308,8 +308,8 @@ Public Class formGame
 
 
         'Mängu andmete sisestamine ajaloosse andmebaasis
-        data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida, game.gameScore)
-
+        'data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida, game.gameScore)
+        data.insertHistory(data.getStat("m2ngude_arv"), game.gameScore, game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida)
         enableAllTextBoxes()
 
         'Uue formi avamine

@@ -7,7 +7,7 @@ Public Class CDatabase
 
     'Mängu andmete lisamine ajaloo tabelisse andmebaasis
     'input = kõik ajaloo tabelis olevad andmete tulbad
-    Private Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String, value7 As Integer) Implements IDatabase.insertHistory
+    Private Sub insertHistory(value1 As Integer, value2 As Integer, value3 As String, value4 As Integer, value5 As String, value6 As String, value7 As String) Implements IDatabase.insertHistory
 
 
         Dim SQLconnection As New SQLite.SQLiteConnection()
@@ -18,7 +18,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ", " & value7 & ")"
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & "," & value2 & ", '" & value3 & "', " & value4 & ", '" & value5 & "', '" & value6 & "', '" & value7 & "')"
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
 
