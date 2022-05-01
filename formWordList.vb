@@ -97,7 +97,6 @@
         colors = New CGraphics
 
         Label1.ForeColor = colors.lblColor
-        Label2.ForeColor = colors.lblColor
         rbtnLihtne.ForeColor = colors.lblColor
         rbtnTavaline.ForeColor = colors.lblColor
         rbtnRaske.ForeColor = colors.lblColor
