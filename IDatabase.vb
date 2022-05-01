@@ -20,7 +20,7 @@
     Sub importCSV(fileName As String, letters As Integer)
     Sub deleteTable(tableName As String)
     Sub exportJSON()
-    Sub exportCSV()
+    Sub exportCSV(delimiter As String, textQualifier As String)
 
 
 
