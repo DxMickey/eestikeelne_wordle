@@ -397,17 +397,11 @@ Public Class CDatabase
 
         data.delimiter = If(delimiter = "", ":", delimiter)
         data.textQualifier = If(textQualifier = "", "", textQualifier)
-
         Try
             data.setFileToSave()
-            data.saveDataToCsv(andmed, appendData:=True)
+            data.saveDataToCsv(andmed, append)
         Catch ex As Exception
             Console.WriteLine(ex)
         End Try
     End Sub
-    'Dim text(1, 1) As String
-    'Text(0, 0) = "fuck"
-    'Text(0, 1) = "fuck2"
-    'Text(1, 0) = "tere"
-    'Text(1, 1) = "tere2"
 End Class

@@ -30,8 +30,9 @@
     End Sub
 
     Private Sub btnExportCSV_Click(sender As Object, e As EventArgs) Handles btnExportCSV.Click
-        Dim data As IDatabase
-        data = New CDatabase
-        data.exportCSV(", ", """", False)
+        'Dim data As IDatabase
+        'Data = New CDatabase
+        'Data.exportCSV(", ", """", False)
+        formExportCSV.Show()
     End Sub
 End Class
