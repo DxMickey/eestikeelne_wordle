@@ -26,7 +26,11 @@
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
 
-        data.exportJSON()
+        saveDialog1.Filter = "JSON|*.json"
+        saveDialog1.Title = "Salvesta JSON fail"
+        saveDialog1.ShowDialog()
+
+        data.exportJSON(saveDialog1.FileName)
     End Sub
 
     Private Sub btnExportCSV_Click(sender As Object, e As EventArgs) Handles btnExportCSV.Click

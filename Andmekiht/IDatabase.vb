@@ -21,7 +21,7 @@
     Sub setItem(tableName As String, itemName As String, item As UInteger)
     Sub importCSV(fileName As String, letters As Integer)
     Sub deleteTable(tableName As String)
-    Sub exportJSON()
+    Sub exportJSON(location As String)
     Sub updateWordList(tableName As String)
     Function getAchievementArray() As Integer()
     Sub setAchievement(id As Integer, Optional setBit As Integer = 1)

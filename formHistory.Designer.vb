@@ -28,6 +28,7 @@ Partial Class formHistory
         Me.btnExport = New System.Windows.Forms.Button()
         Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         Me.btnExportCSV = New System.Windows.Forms.Button()
+        Me.saveDialog1 = New System.Windows.Forms.SaveFileDialog()
         CType(Me.dtgDatagrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -104,4 +105,5 @@ Partial Class formHistory
     Friend WithEvents btnExport As Button
     Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
     Friend WithEvents btnExportCSV As Button
+    Friend WithEvents saveDialog1 As SaveFileDialog
 End Class

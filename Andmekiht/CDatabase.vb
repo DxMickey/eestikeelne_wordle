@@ -396,7 +396,7 @@ Public Class CDatabase
     ' formHistory on nupp 'Ekspordi JSON', mida see funktsioon siis teeb
     ' kood on suurem osa kopeeritud funktsioonist getHistory
     ' ainult l6pus muudetud mida tabeliga tehakse
-    Private Sub exportJSON() Implements IDatabase.exportJSON
+    Private Sub exportJSON(location As String) Implements IDatabase.exportJSON
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -414,12 +414,10 @@ Public Class CDatabase
         tabel.Load(SQLite_Data_Reader)
         Dim JSONtabel = JsonConvert.SerializeObject(tabel, Formatting.Indented)
 
-        If (My.Computer.FileSystem.FileExists(Application.StartupPath() & "\export.json")) Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\export.json")
-            My.Computer.FileSystem.WriteAllText(Application.StartupPath() & "\export.json", JSONtabel, True)
-        Else
-            My.Computer.FileSystem.WriteAllText(Application.StartupPath() & "\export.json", JSONtabel, True)
+        If location <> Nothing Then
+            My.Computer.FileSystem.WriteAllText(location, JSONtabel, True)
         End If
+
         SQLconnection.Close()
     End Sub
 
