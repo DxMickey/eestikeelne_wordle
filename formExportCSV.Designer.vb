@@ -29,6 +29,8 @@ Partial Class formExportCSV
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnExport = New System.Windows.Forms.Button()
+        Me.cbSave = New System.Windows.Forms.CheckBox()
+        Me.lblSavePath = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtDelimiter
@@ -87,18 +89,41 @@ Partial Class formExportCSV
         '
         'btnExport
         '
-        Me.btnExport.Location = New System.Drawing.Point(125, 251)
+        Me.btnExport.Location = New System.Drawing.Point(125, 278)
         Me.btnExport.Name = "btnExport"
         Me.btnExport.Size = New System.Drawing.Size(75, 23)
         Me.btnExport.TabIndex = 6
         Me.btnExport.Text = "Ekspordi"
         Me.btnExport.UseVisualStyleBackColor = True
         '
+        'cbSave
+        '
+        Me.cbSave.AutoSize = True
+        Me.cbSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.cbSave.Location = New System.Drawing.Point(28, 224)
+        Me.cbSave.Name = "cbSave"
+        Me.cbSave.Size = New System.Drawing.Size(161, 21)
+        Me.cbSave.TabIndex = 7
+        Me.cbSave.Text = "Jäta meelde faili valik"
+        Me.cbSave.UseVisualStyleBackColor = True
+        '
+        'lblSavePath
+        '
+        Me.lblSavePath.AutoSize = True
+        Me.lblSavePath.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.lblSavePath.Location = New System.Drawing.Point(12, 248)
+        Me.lblSavePath.Name = "lblSavePath"
+        Me.lblSavePath.Size = New System.Drawing.Size(58, 13)
+        Me.lblSavePath.TabIndex = 8
+        Me.lblSavePath.Text = "Valitud fail:"
+        '
         'formExportCSV
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(320, 322)
+        Me.Controls.Add(Me.lblSavePath)
+        Me.Controls.Add(Me.cbSave)
         Me.Controls.Add(Me.btnExport)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -107,6 +132,7 @@ Partial Class formExportCSV
         Me.Controls.Add(Me.txtTextQualifier)
         Me.Controls.Add(Me.txtDelimiter)
         Me.Name = "formExportCSV"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CSV Eksportimise seaded"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -120,4 +146,6 @@ Partial Class formExportCSV
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnExport As Button
+    Friend WithEvents cbSave As CheckBox
+    Friend WithEvents lblSavePath As Label
 End Class

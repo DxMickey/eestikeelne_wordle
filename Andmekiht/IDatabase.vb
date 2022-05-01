@@ -27,7 +27,7 @@
     Sub setAchievement(id As Integer, Optional setBit As Integer = 1)
     Function getAchievementData(ID As Integer)
 
-    Sub exportCSV(delimiter As String, textQualifier As String, append As Boolean)
+    Sub exportCSV(delimiter As String, textQualifier As String, append As Boolean, save As Boolean)
 
 
 

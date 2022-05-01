@@ -558,7 +558,7 @@ Public Class CDatabase
 
         SQLconnection.Close()
     End Sub
-    Private Sub exportCSV(delimiter As String, textQualifier As String, append As Boolean) Implements IDatabase.exportCSV
+    Private Sub exportCSV(delimiter As String, textQualifier As String, append As Boolean, save As Boolean) Implements IDatabase.exportCSV
         Dim data As CSVExporterDNF.IExporter
         data = New CSVExporterDNF.CExporter
 
@@ -572,12 +572,26 @@ Public Class CDatabase
 
         data.delimiter = If(delimiter = "", ":", delimiter)
         data.textQualifier = If(textQualifier = "", "", textQualifier)
+
+
+
+        Dim savePathOld As String = getItem("miscData", "savePath")
+        Dim savePath As String = ""
         Try
-            data.setFileToSave()
+            If save = False Or savePathOld = "none" Then
+                savePath = data.setFileToSave()
+                setItem("miscData", "savePath", savePath)
+            Else
+                data.GetType().GetField("sFileToSave", System.Reflection.BindingFlags.NonPublic Or System.Reflection.BindingFlags.Instance).SetValue(data, savePathOld)
+            End If
             data.saveDataToCsv(andmed, append)
         Catch ex As Exception
             Console.WriteLine(ex)
         End Try
+
+        If save = False Then
+            setItem("miscData", "savePath", "none")
+        End If
     End Sub
 End Class
 

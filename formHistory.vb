@@ -35,6 +35,7 @@
         colors = New CGraphics
 
         newForm.BackColor = colors.backColor
+
         newForm.Show()
     End Sub
 End Class
