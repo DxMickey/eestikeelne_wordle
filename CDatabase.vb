@@ -381,25 +381,29 @@ Public Class CDatabase
         End If
     End Sub
 
+    'Ajaloo formis nupp exportida CSV'ga, mis kutsub selle funktsiooni
+    'Sisend puudub ja väljundiks on omalt poolt valitud koht andmete salvestamiseks
     Private Sub exportCSV() Implements IDatabase.exportCSV
-        Dim data2 As CSVExporterDNF.IExporter
-        data2 = New CSVExporterDNF.CExporter
+        Dim data As CSVExporterDNF.IExporter
+        data = New CSVExporterDNF.CExporter
 
-        Dim Numbers(11) As Integer
-        Numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-        Dim miscData() As Object = {"Hello World", 12D, 16UI, "A"c}
-        Dim text() As String = {"Hello World", "A"}
+        Dim tabel As New DataTable
+        tabel = getHistory()
 
+        '(VBForums, GreyGuru) https://www.vbforums.com/showthread.php?878825-RESOLVED-Convert-DataTable-to-Array
+        Dim rws As Integer = tabel.Rows.Count, flds As Integer = tabel.Columns.Count
+        Dim andmed(rws - 1, flds - 1) As Object
+        Array.ForEach(Enumerable.Range(0, flds).ToArray, Sub(x) Array.ForEach(Enumerable.Range(0, rws).ToArray, Sub(y) andmed(y, x) = tabel.Rows(y).Item(x)))
         Try
-            data2.setFileToSave()
-            data2.saveDataToCsv(miscData)
+            data.setFileToSave()
+            data.saveDataToCsv(andmed)
         Catch ex As Exception
             Console.WriteLine(ex)
         End Try
-
-
-
-
     End Sub
-
+    'Dim text(1, 1) As String
+    'Text(0, 0) = "fuck"
+    'Text(0, 1) = "fuck2"
+    'Text(1, 0) = "tere"
+    'Text(1, 1) = "tere2"
 End Class
