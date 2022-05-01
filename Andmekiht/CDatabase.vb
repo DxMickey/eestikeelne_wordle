@@ -164,21 +164,21 @@ Public Class CDatabase
         Dim number As Integer = 0
 
         If game.gameMode = "Kerge" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "none" Then
-                millineList = getItem("miscData", "customEasy")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "no" Then
+                millineList = "customEasy"
             Else
                 millineList = "sonadeListEasy"
             End If
 
         ElseIf game.gameMode = "Tavaline" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "none" Then
-                millineList = getItem("miscData", "customNormal")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "no" Then
+                millineList = "customNormal"
             Else
                 millineList = "sonadeList"
             End If
         Else
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "none" Then
-                millineList = getItem("miscData", "customHard")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "no" Then
+                millineList = "customHard"
             Else
                 millineList = "sonadeListHard"
             End If
@@ -269,21 +269,21 @@ Public Class CDatabase
         Dim millineList As String
 
         If game.gameMode = "Kerge" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "none" Then
-                millineList = getItem("miscData", "customEasy")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "no" Then
+                millineList = "customEasy"
             Else
                 millineList = "sonadeListEasy"
             End If
 
         ElseIf game.gameMode = "Tavaline" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "none" Then
-                millineList = getItem("miscData", "customNormal")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "no" Then
+                millineList = "customNormal"
             Else
                 millineList = "sonadeList"
             End If
         Else
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "none" Then
-                millineList = getItem("miscData", "customHard")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "no" Then
+                millineList = "customHard"
             Else
                 millineList = "sonadeListHard"
             End If
@@ -307,34 +307,71 @@ Public Class CDatabase
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
-        Dim fileNameCSV As String = fileName & ".csv"
-
         SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
         SQLconnection.Open()
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & fileName & "'"
+        'SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & fileName & "'"
+        'SQLcommand.ExecuteNonQuery()
+
+        Dim tableName As String = ""
+
+        If letters = 4 Then
+            tableName = "customEasy"
+
+        ElseIf letters = 5 Then
+            tableName = "customNormal"
+        ElseIf letters = 6 Then
+            tableName = "customHard"
+        End If
+
+        SQLcommand.CommandText = "CREATE TABLE '" & tableName & "'(sona STRING)"
         SQLcommand.ExecuteNonQuery()
 
-        SQLcommand.CommandText = "CREATE TABLE '" & fileName & "'(sona STRING)"
-        SQLcommand.ExecuteNonQuery()
-
-        Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(fileNameCSV)
+        Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(fileName)
         Dim line As String
+
+        Dim count As Integer = 0
         Do
             line = reader.ReadLine
 
             If line <> Nothing Then
 
                 If line.Length = letters Then
-                    SQLcommand.CommandText = "INSERT INTO '" & fileName & "' VALUES('" & line & "')"
+                    count = 1
+                    SQLcommand.CommandText = "INSERT INTO '" & tableName & "' VALUES('" & line & "')"
                     SQLcommand.ExecuteNonQuery()
                 End If
             End If
 
 
+
+
         Loop Until line Is Nothing
+
+        If count = 1 Then
+            If letters = 4 Then
+                setItem("miscData", "customEasy", "yes")
+            End If
+            If letters = 5 Then
+                setItem("miscData", "customNormal", "yes")
+            End If
+            If letters = 5 Then
+                setItem("miscData", "customHard", "yes")
+            End If
+        Else
+            If letters = 4 Then
+                setItem("miscData", "customEasy", "no")
+            End If
+            If letters = 5 Then
+                setItem("miscData", "customNormal", "no")
+            End If
+            If letters = 5 Then
+                setItem("miscData", "customHard", "no")
+            End If
+
+        End If
 
         SQLconnection.Close()
     End Sub

@@ -32,6 +32,7 @@ Partial Class formWordList
         Me.rbtnRaske = New System.Windows.Forms.RadioButton()
         Me.btnOnOff = New System.Windows.Forms.Button()
         Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
+        Me.openDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SuspendLayout()
         '
         'btnBack
@@ -158,4 +159,5 @@ Partial Class formWordList
     Friend WithEvents rbtnRaske As RadioButton
     Friend WithEvents btnOnOff As Button
     Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
+    Friend WithEvents openDialog1 As OpenFileDialog
 End Class
