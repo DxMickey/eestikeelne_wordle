@@ -396,6 +396,7 @@ Public Class CDatabase
         Array.ForEach(Enumerable.Range(0, flds).ToArray, Sub(x) Array.ForEach(Enumerable.Range(0, rws).ToArray, Sub(y) andmed(y, x) = tabel.Rows(y).Item(x)))
         Try
             data.setFileToSave()
+            data.delimiter = ", "
             data.saveDataToCsv(andmed)
         Catch ex As Exception
             Console.WriteLine(ex)
