@@ -24,7 +24,6 @@ Partial Class formGame
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.txtDebug = New System.Windows.Forms.TextBox()
-        Me.txtDebug2 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.lblTimeText = New System.Windows.Forms.Label()
@@ -104,19 +103,11 @@ Partial Class formGame
         '
         'txtDebug
         '
-        Me.txtDebug.Location = New System.Drawing.Point(225, 62)
+        Me.txtDebug.Location = New System.Drawing.Point(12, 58)
         Me.txtDebug.Name = "txtDebug"
         Me.txtDebug.ReadOnly = True
-        Me.txtDebug.Size = New System.Drawing.Size(316, 20)
+        Me.txtDebug.Size = New System.Drawing.Size(78, 20)
         Me.txtDebug.TabIndex = 62
-        '
-        'txtDebug2
-        '
-        Me.txtDebug2.Location = New System.Drawing.Point(276, 88)
-        Me.txtDebug2.Name = "txtDebug2"
-        Me.txtDebug2.ReadOnly = True
-        Me.txtDebug2.Size = New System.Drawing.Size(233, 20)
-        Me.txtDebug2.TabIndex = 63
         '
         'Timer1
         '
@@ -130,7 +121,7 @@ Partial Class formGame
         '
         Me.lblTimeText.AutoSize = True
         Me.lblTimeText.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.lblTimeText.Location = New System.Drawing.Point(12, 9)
+        Me.lblTimeText.Location = New System.Drawing.Point(467, 9)
         Me.lblTimeText.Name = "lblTimeText"
         Me.lblTimeText.Size = New System.Drawing.Size(173, 31)
         Me.lblTimeText.TabIndex = 70
@@ -140,7 +131,7 @@ Partial Class formGame
         '
         Me.lblTimeLeft.AutoSize = True
         Me.lblTimeLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.lblTimeLeft.Location = New System.Drawing.Point(176, 9)
+        Me.lblTimeLeft.Location = New System.Drawing.Point(631, 9)
         Me.lblTimeLeft.Name = "lblTimeLeft"
         Me.lblTimeLeft.Size = New System.Drawing.Size(29, 31)
         Me.lblTimeLeft.TabIndex = 71
@@ -1065,7 +1056,7 @@ Partial Class formGame
         'UcMusicPlayer1
         '
         Me.UcMusicPlayer1.Location = New System.Drawing.Point(12, 723)
-        Me.UcMusicPlayer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.UcMusicPlayer1.Margin = New System.Windows.Forms.Padding(2)
         Me.UcMusicPlayer1.Name = "UcMusicPlayer1"
         Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
         Me.UcMusicPlayer1.TabIndex = 143
@@ -1074,7 +1065,7 @@ Partial Class formGame
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(445, 9)
+        Me.Label1.Location = New System.Drawing.Point(11, 9)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(110, 37)
@@ -1085,7 +1076,7 @@ Partial Class formGame
         '
         Me.lblScore.AutoSize = True
         Me.lblScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblScore.Location = New System.Drawing.Point(552, 9)
+        Me.lblScore.Location = New System.Drawing.Point(118, 9)
         Me.lblScore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblScore.Name = "lblScore"
         Me.lblScore.Size = New System.Drawing.Size(35, 37)
@@ -1170,7 +1161,6 @@ Partial Class formGame
         Me.Controls.Add(Me.lblRida1Kast1)
         Me.Controls.Add(Me.lblTimeLeft)
         Me.Controls.Add(Me.lblTimeText)
-        Me.Controls.Add(Me.txtDebug2)
         Me.Controls.Add(Me.txtDebug)
         Me.Name = "formGame"
         Me.Text = "Form1"
@@ -1179,7 +1169,6 @@ Partial Class formGame
 
     End Sub
     Friend WithEvents txtDebug As TextBox
-    Friend WithEvents txtDebug2 As TextBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents lblTimeText As Label
