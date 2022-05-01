@@ -32,10 +32,10 @@ Partial Class UCNotification
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
         Me.lblTitle.Location = New System.Drawing.Point(3, 2)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(61, 24)
+        Me.lblTitle.Size = New System.Drawing.Size(66, 24)
         Me.lblTitle.TabIndex = 1
         Me.lblTitle.Text = "TITLE"
         '
@@ -45,13 +45,12 @@ Partial Class UCNotification
         '
         'btnClose
         '
-        Me.btnClose.BackColor = System.Drawing.Color.DarkRed
-        Me.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.btnClose.Location = New System.Drawing.Point(434, 3)
+        Me.btnClose.BackColor = System.Drawing.Color.Red
+        Me.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.btnClose.Location = New System.Drawing.Point(405, 3)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(22, 23)
+        Me.btnClose.Size = New System.Drawing.Size(25, 23)
         Me.btnClose.TabIndex = 2
         Me.btnClose.Text = "X"
         Me.btnClose.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -80,7 +79,7 @@ Partial Class UCNotification
         Me.Controls.Add(Me.lblTitle)
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Name = "UCNotification"
-        Me.Size = New System.Drawing.Size(459, 76)
+        Me.Size = New System.Drawing.Size(433, 76)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

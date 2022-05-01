@@ -75,10 +75,15 @@
         Me.newAchievement = False
         _acArray = data.getAchievementArray()
 
-        checkForTimePlayedAchievements()
+        'Saavutuste kontroll
+        checkForWordsGuessedAchievements()
         If Not newAchievement Then
             checkForGamesPlayedAchievements()
         End If
+        If Not newAchievement Then
+            checkForTimePlayedAchievements()
+        End If
+
 
     End Sub
 
@@ -129,6 +134,24 @@
                 Exit For
             End If
         Next
+    End Sub
+    Private Sub checkForWordsGuessedAchievements()
+        Dim nrToCheck = {1, 5, 10, 20, 50, 100, 200, 300, 400, 500}
+        Dim ids = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
+        For i = 0 To nrToCheck.Length - 1
+            Dim hrs = _wordsGuessed  'debuggimiseks ei saa andmebaasis aega muuta, niiet tuleb siit muuta.
+            If hrs >= nrToCheck(i) And _acArray(ids(i) - 1) <= 0 Then
+                Dim data As Andmekiht.IDatabase
+                data = New Andmekiht.CDatabase
+                Dim h = data.getAchievementData(ids(i))
+                data.setAchievement(ids(i))
+                text = h(1)
+                title = h(0)
+                newAchievement = True
+                Exit For
+            End If
+        Next
+
     End Sub
     Private Sub resetAchievements()
         'saab nullida kõik saavutused. Kasuta ainult debuggimiseks.

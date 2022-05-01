@@ -50,7 +50,7 @@ Public Class CNotification
         _imagepath = imgpath
         _width = parentElement.Size.Width
         _height = 60
-        _size.Width = _width + 20
+        _size.Width = _width
         _size.Height = _height
         Dim textBoxWidthPercentage = 0.8 '80% of the width of the window
         Dim tbSize As New Size
@@ -66,7 +66,7 @@ Public Class CNotification
         n.Location = New System.Drawing.Point(0, 0)
         n.timeOut = timeOut
 
-        n.btnClose.Location = New System.Drawing.Point(_width - 45, 3)
+        n.btnClose.Location = New System.Drawing.Point(_width - 30, 3)
 
         'Varvide seadmine
         n.BackColor = _backColor
