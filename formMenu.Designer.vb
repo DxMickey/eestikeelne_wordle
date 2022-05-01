@@ -35,6 +35,7 @@ Partial Class formMenu
         Me.btnWordList = New System.Windows.Forms.Button()
         Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnCSV = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnPlay
@@ -143,11 +144,21 @@ Partial Class formMenu
         Me.btnUpdate.Text = "Otsi uuendusi"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
+        'btnCSV
+        '
+        Me.btnCSV.Location = New System.Drawing.Point(292, 488)
+        Me.btnCSV.Name = "btnCSV"
+        Me.btnCSV.Size = New System.Drawing.Size(75, 23)
+        Me.btnCSV.TabIndex = 9
+        Me.btnCSV.Text = "CSV Eksport"
+        Me.btnCSV.UseVisualStyleBackColor = True
+        '
         'formMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.btnCSV)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnWordList)
@@ -181,4 +192,5 @@ Partial Class formMenu
     Friend WithEvents btnWordList As Button
     Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
     Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnCSV As Button
 End Class
