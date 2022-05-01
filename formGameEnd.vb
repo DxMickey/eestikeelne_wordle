@@ -43,6 +43,8 @@ Public Class formGameEnd
         Dim time As ITimeLimit
         time = New CTimeLimit
 
+        cmbLanguage.SelectedIndex = 0
+
         If time.timeState = "On" And time.timePlay <= 0 Then
             btbPlayAgain.Enabled = False
         Else
@@ -66,16 +68,6 @@ Public Class formGameEnd
         ' End If
 
 
-
-        'Tõlkekasti keelte valiku lisamine
-        cmbLanguage.Items.Add("en")
-        cmbLanguage.Items.Add("ru")
-        cmbLanguage.Items.Add("fi")
-        cmbLanguage.Items.Add("fr")
-        cmbLanguage.Items.Add("de")
-        cmbLanguage.Items.Add("it")
-        cmbLanguage.Items.Add("es")
-
         'Võidu või kaotuse teksti valimine
         If game.winOrLose = 1 Then
             lblResult.ForeColor = colors.lblColor
@@ -85,16 +77,13 @@ Public Class formGameEnd
             lblResult.Text = "Sa ei suutnud sõna ära arvata!"
         End If
 
-        'Vaheta labelite värvid
-        lblSona.ForeColor = colors.lblColor
+
         lblBestScore.ForeColor = colors.lblColor
         lblBestScoreName.ForeColor = colors.lblColor
         lblGameScore.ForeColor = colors.lblColor
         lblScoreName.ForeColor = colors.lblColor
         lblNewHighscore.ForeColor = colors.lblColor
 
-        'Mängu sõna
-        lblSona.Text = game.strSona
 
         'Sõna tähenduse saamine
         Dim sonaTahendus As SonaTahendus.ISonaTahendus
@@ -146,7 +135,7 @@ Public Class formGameEnd
             Dim result As String = response.TranslatedText
 
             If String.Equals(result, game.strSona) Then
-                txtTranslation.Text = "Puudub"
+                txtTranslation.Text = "Puudub või sama"
             Else
                 txtTranslation.Text = result
             End If
@@ -158,9 +147,9 @@ Public Class formGameEnd
         TranslateWord()
     End Sub
 
+    Private Sub UcSonaTahendus1_Load(sender As Object, e As EventArgs) Handles UcSonaTahendus1.Load
 
-
-
+    End Sub
 
 
 End Class
