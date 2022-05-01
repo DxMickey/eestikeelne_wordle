@@ -47,6 +47,7 @@ Partial Class formExportCSV
         '
         'cmbAppend
         '
+        Me.cmbAppend.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbAppend.FormattingEnabled = True
         Me.cmbAppend.Items.AddRange(New Object() {"Kirjuta üle", "Lisa faili lõppu"})
         Me.cmbAppend.Location = New System.Drawing.Point(28, 191)
@@ -62,7 +63,7 @@ Partial Class formExportCSV
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(236, 17)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Määra väljade eraldaja. Vaikimisi „:““."
+        Me.Label1.Text = "Määra väljade eraldaja. Vaikimisi „:""."
         '
         'Label2
         '

@@ -5,4 +5,8 @@
         Dim append = If(cmbAppend.SelectedItem = "Kirjuta üle", False, True)
         data.exportCSV(txtDelimiter.Text, txtTextQualifier.Text, append)
     End Sub
+
+    Private Sub formExportCSV_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cmbAppend.SelectedItem = "Kirjuta üle"
+    End Sub
 End Class
