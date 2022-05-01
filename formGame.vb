@@ -314,6 +314,7 @@ Public Class formGame
         data.insertHistory(data.getStat("m2ngude_arv"), game.gameScore, game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida)
         enableAllTextBoxes()
 
+        Me.Hide()
         'Uue formi avamine
         Dim newForm As New formGameEnd
         Dim colors As IGraphics

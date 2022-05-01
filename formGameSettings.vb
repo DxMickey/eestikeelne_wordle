@@ -40,7 +40,7 @@
         End If
 
         game.gameMode = value1
-
+        Me.Hide()
         Dim newForm As New formGame
         Dim colors As IGraphics
         colors = New CGraphics
