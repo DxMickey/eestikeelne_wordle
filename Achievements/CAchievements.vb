@@ -75,15 +75,15 @@
         Me.newAchievement = False
         _acArray = data.getAchievementArray()
 
-        checkForGamesPlayedAchievements()
+        checkForTimePlayedAchievements()
+        If Not newAchievement Then
+            checkForGamesPlayedAchievements()
+        End If
 
     End Sub
 
 
-    Public Function setAchievements() As Object
-        'vaata mis achievmente saadi. Lisa andmebaasi,kui midagi uut
-        Throw New NotImplementedException()
-    End Function
+
     Private Function getGamesPlayed(db As Andmekiht.IDatabase)
         'get games played from db
         Dim data As New DataTable
@@ -111,7 +111,26 @@
             End If
         Next
     End Sub
-    Public Sub resetAchievements()
+    Private Sub checkForTimePlayedAchievements()
+        'Kontrollib, mitu tundi mängitud ja kas see on saavutus
+        Dim nrToCheck = {1, 10, 30}
+        Dim ids = {7, 8, 9}
+
+        For i = 0 To nrToCheck.Length - 1
+            Dim hrs = _timePlayed / 3600  'debuggimiseks ei saa andmebaasis aega muuta, niiet tuleb siit muuta.
+            If hrs >= nrToCheck(i) And _acArray(ids(i) - 1) <= 0 Then
+                Dim data As Andmekiht.IDatabase
+                data = New Andmekiht.CDatabase
+                Dim h = data.getAchievementData(ids(i))
+                data.setAchievement(ids(i))
+                text = h(1)
+                title = h(0)
+                newAchievement = True
+                Exit For
+            End If
+        Next
+    End Sub
+    Private Sub resetAchievements()
         'saab nullida kõik saavutused. Kasuta ainult debuggimiseks.
         'tuleb kutsuda peale seda, kui _acArray on väärtuse saanud
         Dim data As Andmekiht.IDatabase
