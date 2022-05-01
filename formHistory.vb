@@ -28,4 +28,13 @@
 
         data.exportJSON()
     End Sub
+
+    Private Sub btnExportCSV_Click(sender As Object, e As EventArgs) Handles btnExportCSV.Click
+        Dim newForm As New formExportCSV
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        newForm.BackColor = colors.backColor
+        newForm.Show()
+    End Sub
 End Class

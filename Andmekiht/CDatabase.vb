@@ -521,5 +521,26 @@ Public Class CDatabase
 
         SQLconnection.Close()
     End Sub
+    Private Sub exportCSV(delimiter As String, textQualifier As String, append As Boolean) Implements IDatabase.exportCSV
+        Dim data As CSVExporterDNF.IExporter
+        data = New CSVExporterDNF.CExporter
+
+        Dim tabel As New DataTable
+        tabel = getHistory()
+
+        '(VBForums, GreyGuru) https://www.vbforums.com/showthread.php?878825-RESOLVED-Convert-DataTable-to-Array
+        Dim rws As Integer = tabel.Rows.Count, flds As Integer = tabel.Columns.Count
+        Dim andmed(rws - 1, flds - 1) As Object
+        Array.ForEach(Enumerable.Range(0, flds).ToArray, Sub(x) Array.ForEach(Enumerable.Range(0, rws).ToArray, Sub(y) andmed(y, x) = tabel.Rows(y).Item(x)))
+
+        data.delimiter = If(delimiter = "", ":", delimiter)
+        data.textQualifier = If(textQualifier = "", "", textQualifier)
+        Try
+            data.setFileToSave()
+            data.saveDataToCsv(andmed, append)
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+    End Sub
 End Class
 

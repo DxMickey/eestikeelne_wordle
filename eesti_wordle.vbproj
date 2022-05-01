@@ -270,6 +270,12 @@
   <ItemGroup>
     <Compile Include="CGraphics.vb" />
     <Compile Include="CTimeLimit.vb" />
+    <Compile Include="formExportCSV.Designer.vb">
+      <DependentUpon>formExportCSV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formExportCSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formWordList.Designer.vb">
       <DependentUpon>formWordList.vb</DependentUpon>
     </Compile>
@@ -351,6 +357,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="formExportCSV.resx">
+      <DependentUpon>formExportCSV.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formWordList.resx">
       <DependentUpon>formWordList.vb</DependentUpon>
     </EmbeddedResource>
