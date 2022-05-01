@@ -11,6 +11,7 @@ Public Class formGame
         'Salvesta vajutatud nupu ascii kood muutujasse lastLetter
         game.lastLetter = Asc(e.KeyChar)
 
+
         gameEngine()
 
     End Sub
@@ -208,6 +209,9 @@ Public Class formGame
         Dim colors As IGraphics
         colors = New CGraphics
 
+        'Debug sõna väärtuse peitmine
+        txtDebug.Visible = False
+
         'Muuda labelite värvi
         lblTimeLeft.ForeColor = colors.lblColor
         lblTimeText.ForeColor = colors.lblColor
@@ -234,8 +238,6 @@ Public Class formGame
         'Kuupäeva kontrollimine, kui mängitakse mitte piiramatut versiooni siis kui uus ja vana kuupäev on samad, tuleb vana sõna uuesti
         Dim uusKuupaev As String = DateTime.Today.ToShortDateString()
         Dim vanaKuupaev As String = data.getItem("miscData", "kuupaev")
-
-        txtDebug2.Text = data.howManyWords()
 
         If game.kasPiiramatu = False Then
 
@@ -423,6 +425,11 @@ Public Class formGame
 
     End Sub
 
+    Private Sub formGame_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        'F6 klahvi vajutusel muudetakse debugi sõna väärtus nähtavaks
+        If e.KeyCode = Keys.F6 Then
+            txtDebug.Visible = True
+        End If
 
-
+    End Sub
 End Class
