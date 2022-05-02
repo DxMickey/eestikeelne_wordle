@@ -37,8 +37,12 @@ Public Class CSonaTahendus
             htmlContent.LoadHtml(str)
             Dim dblQuote = """"
             'Valib saadud veebilehelt õige koha. Kasutab Xpath-i
+
             Dim span = htmlContent.DocumentNode.SelectNodes("//span[contains(@class, " &
-                                                            dblQuote & "homonym-intro d-block" & dblQuote & ")]")
+                                                          dblQuote & "homonym-intro d-block" & dblQuote & ")]")
+            If span Is Nothing Then
+                Return "Ei suutnud tähendust leida"
+            End If
             strOutput = span(0).InnerText
 
         Catch ex As Exception
