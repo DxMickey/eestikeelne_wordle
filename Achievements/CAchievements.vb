@@ -1,6 +1,8 @@
 ﻿Public Class CAchievements
     Implements IAchievements
 
+
+    'Muutujad, mida New() väärtustab. 
     Private _gamesPlayed = vbNull
     Private _timePlayed = vbNull
     Private _avgGuessTime = vbNull
@@ -14,6 +16,7 @@
     Private _text = ""
     Private _title = ""
 
+    'Property, mida kontrollida, et näha kas uus saavutus
     Public Property newAchievement As Boolean Implements IAchievements.newAchievement
         Get
             Return _newAchievement
@@ -22,7 +25,7 @@
             _newAchievement = value
         End Set
     End Property
-
+    'text propertyst saab saavutusega seotud teksti. Tühi string, kui uut saavutust pole
     Public Property text As String Implements IAchievements.text
         Get
             Return _text
@@ -31,7 +34,7 @@
             _text = value
         End Set
     End Property
-
+    'title - saavutuse pealkiri. Tühi string, kui uut saavutust pole
     Public Property title As String Implements IAchievements.title
         Get
             Return _title
