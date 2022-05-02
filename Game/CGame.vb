@@ -230,7 +230,6 @@
 
         ArvatudSona = Nothing
 
-
         If oldArvatud.Length <> 0 Then
             ArvatudSona = oldArvatud.Substring(0, oldArvatud.Length - 1)
         End If
@@ -244,8 +243,6 @@
                 redLettersHolder = redLetters.Substring(0, redLetters.Length - 1)
             End If
         End If
-
-
 
     End Sub
 

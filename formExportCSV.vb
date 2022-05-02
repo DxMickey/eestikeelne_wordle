@@ -24,7 +24,6 @@
         Dim colors As IGraphics
         colors = New CGraphics
 
-
         cmbAppend.SelectedItem = "Kirjuta üle"
         Label1.ForeColor = colors.lblColor
         Label2.ForeColor = colors.lblColor

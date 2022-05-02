@@ -1,15 +1,10 @@
 ﻿Public Class formTimeLimit
 
-
-
-
-
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         Dim time As ITimeLimit
         time = New CTimeLimit
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
-
 
         'Vastavalt sellele, millised väljad on näha, valitakse millised väljad nähtavale tuua ja millised peita nupule vajutusel
         If txtNewPass1.Visible = True Then
@@ -47,8 +42,6 @@
             End If
         ElseIf txtTimePlay.Visible = True Then
 
-
-
             'Kontroll, kas sisestatud väärtused ei ole tühjad ning on numbrilised
             If txtTimePlay.Text <> Nothing And txtTimeWait.Text <> Nothing And IsNumeric(txtTimePlay.Text) And IsNumeric(txtTimeWait.Text) Then
                 'Väärtuse teisendamine tundideks ja minutiteks kui need on kasutaja poolt valitud
@@ -60,7 +53,6 @@
                     time.timePlay = txtTimePlay.Text * 3600
                 End If
 
-
                 'Väärtuse teisendamine tundideks ja minutiteks kui need on kasutaja poolt valitud
                 If cmbWaitTime.SelectedIndex = 0 Then
                     time.timeWait = txtTimeWait.Text
@@ -69,8 +61,6 @@
                 ElseIf cmbWaitTime.SelectedIndex = 2 Then
                     time.timeWait = txtTimeWait.Text * 3600
                 End If
-
-
 
                 'Väärtuste salvestamine andmebaasi
                 data.setItem("time", "timePlay", time.timePlay)
@@ -93,7 +83,6 @@
         Dim colors As IGraphics
         colors = New CGraphics
 
-
         btnOnOff.Visible = False
 
         'Labelite värvide seadistamine
@@ -112,7 +101,6 @@
         cmbWaitTime.SelectedIndex = 0
         lblTimePlayNow.Text = "Väärtus hetkel:" & data.getItem("time", "timePlay") & " sekundit"
         lblTimeWaitNow.Text = "Väärtus hetkel:" & data.getItem("time", "timeWait") & " sekundit"
-
 
         If time.timeState = "On" Then
             btnOnOff.Text = "Lülita välja"
@@ -145,7 +133,6 @@
         newForm.Location = New Point(0, 0)
         newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
 
-
         newForm.Show()
         Me.Close()
     End Sub
@@ -175,8 +162,6 @@
         time.timeWait = data.getItem("time", "timeWait")
         data.setItem("time", "timeWaitCurrent", time.timeWait)
         data.setItem("time", "timePlayCurrent", time.timePlay)
-
-
 
     End Sub
 

@@ -9,7 +9,6 @@ Public Class CDatabase
     'input = kõik ajaloo tabelis olevad andmete tulbad
     Private Sub insertHistory(value1 As Integer, value2 As Integer, value3 As String, value4 As Integer, value5 As String, value6 As String, value7 As String) Implements IDatabase.insertHistory
 
-
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -18,7 +17,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & "," & value2 & ", '" & value3 & "', " & value4 & ", '" & value5 & "', '" & value6 & "', '" & value7 & "')"
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & "," & value2 & ",        '" & value3 & "', " & value4 & ", '" & value5 & "', '" & value6 & "', '" & value7 & "')"
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
 
@@ -60,7 +59,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "Select Count(rowid) FROM '" & millineList & "'"
+        SQLcommand.CommandText = "Select Count(rowid) FROM        '" & millineList & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
 
@@ -79,7 +78,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = '" & item & "'"
+        SQLcommand.CommandText = "UPDATE " & tableName & " Set " & itemName & " =        '" & item & "'"
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -95,7 +94,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & ""
+        SQLcommand.CommandText = "UPDATE " & tableName & " Set " & itemName & " = " & item & ""
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -111,7 +110,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & ""
+        SQLcommand.CommandText = "UPDATE " & tableName & " Set " & itemName & " = " & item & ""
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -190,7 +189,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "Select rowid FROM '" & millineList & "' WHERE sona = '" & LCase(value) & "'"
+        SQLcommand.CommandText = "Select rowid FROM        '" & millineList & "' WHERE sona = '" & LCase(value) & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
         If sqlResponse = 0 Then
@@ -199,9 +198,7 @@ Public Class CDatabase
             Return 1
         End If
 
-
     End Function
-
 
     'Ajaloo uuendamine gameHistory viewist
     'output = tabel, kuhu on laetud gameHistory
@@ -227,11 +224,11 @@ Public Class CDatabase
     End Function
     Private Function Transpose(ByVal table As DataTable) As DataTable
         Dim flippedTable As New DataTable
-        'creates as many columns as rows in source table
+        'creates        as many columns as rows in source table
         flippedTable.Columns.AddRange(
         table.Select.Select(
-            Function(dr) New DataColumn("col" & table.Rows.IndexOf(dr), GetType(Object))
-            ).ToArray)
+        Function(dr) New DataColumn("col" & table.Rows.IndexOf(dr), GetType(Object))
+        ).ToArray)
         'iterates columns in source table
         For Each dc As DataColumn In table.Columns
             'get array of values of column in each row and add as new row in target table
@@ -326,7 +323,7 @@ Public Class CDatabase
             tableName = "customHard"
         End If
 
-        SQLcommand.CommandText = "CREATE TABLE '" & tableName & "'(sona STRING)"
+        SQLcommand.CommandText = "CREATE TABLE        '" & tableName & "'(sona STRING)"
         SQLcommand.ExecuteNonQuery()
 
         Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(fileName)
@@ -340,13 +337,10 @@ Public Class CDatabase
 
                 If line.Length = letters Then
                     count = 1
-                    SQLcommand.CommandText = "INSERT INTO '" & tableName & "' VALUES('" & line & "')"
+                    SQLcommand.CommandText = "INSERT INTO        '" & tableName & "' VALUES('" & line & "')"
                     SQLcommand.ExecuteNonQuery()
                 End If
             End If
-
-
-
 
         Loop Until line Is Nothing
 
@@ -387,7 +381,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & tableName & "'"
+        SQLcommand.CommandText = "DROP TABLE If EXISTS        '" & tableName & "'"
         SQLcommand.ExecuteNonQuery()
 
         SQLconnection.Close()
@@ -460,7 +454,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE achievements SET isDone = " & setBit & " WHERE ID = " & id
+        SQLcommand.CommandText = "UPDATE achievements Set isDone = " & setBit & " WHERE ID = " & id
         Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
         SQLite_Data_Reader = SQLcommand.ExecuteReader
         SQLconnection.Close()
@@ -480,8 +474,8 @@ Public Class CDatabase
         Dim tabel As New DataTable
         tabel.Load(queryRes)
         Dim title = tabel.Rows(0).ItemArray(0)
-        Dim text = tabel.Rows(0).ItemArray(1)
-        Dim h = {title, text}
+        Dim Text = tabel.Rows(0).ItemArray(1)
+        Dim h = {title, Text}
         SQLconnection.Close()
         Return h
     End Function
@@ -492,19 +486,17 @@ Public Class CDatabase
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
-
         SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
         SQLconnection.Open()
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT Count(rowid) FROM '" & listName & "'"
+        SQLcommand.CommandText = "SELECT Count(rowid) FROM        '" & listName & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
 
         Return sqlResponse
     End Function
-
 
     'Funktsioon sõnade arvu saamiseks soovitud failis
     'Input = Faili nimi mille sõnade arvu soovitakse
@@ -522,7 +514,6 @@ Public Class CDatabase
         Loop Until line Is Nothing
         reader.Close()
 
-
         Return count
     End Function
 
@@ -537,10 +528,10 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & tableName & "'"
+        SQLcommand.CommandText = "DROP TABLE If EXISTS        '" & tableName & "'"
         SQLcommand.ExecuteNonQuery()
 
-        SQLcommand.CommandText = "CREATE TABLE '" & tableName & "'(sona STRING)"
+        SQLcommand.CommandText = "CREATE TABLE        '" & tableName & "'(sona STRING)"
         SQLcommand.ExecuteNonQuery()
 
         Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(tableName & ".csv")
@@ -548,7 +539,7 @@ Public Class CDatabase
         Do
             line = reader.ReadLine
 
-            SQLcommand.CommandText = "INSERT INTO '" & tableName & "' VALUES('" & line & "')"
+            SQLcommand.CommandText = "INSERT INTO        '" & tableName & "' VALUES('" & line & "')"
             SQLcommand.ExecuteNonQuery()
 
         Loop Until line Is Nothing
@@ -570,8 +561,6 @@ Public Class CDatabase
 
         data.delimiter = If(delimiter = "", ":", delimiter)
         data.textQualifier = If(textQualifier = "", "", textQualifier)
-
-
 
         Dim savePathOld As String = getItem("miscData", "savePath")
         Dim savePath As String = ""
@@ -596,4 +585,3 @@ Public Class CDatabase
         End If
     End Sub
 End Class
-

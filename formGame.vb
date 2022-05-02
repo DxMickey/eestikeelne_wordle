@@ -34,7 +34,6 @@ Public Class formGame
 
         End If
 
-
         'Kui letterCheck tagastab True ja Kasti arv pole max kasti arv
         If game.letterCheck(game.lastLetter) And game.intKast <> game.maxKast Then
 
@@ -57,10 +56,7 @@ Public Class formGame
         'Kui vajutatud nupp on Enter ja Kasti number on maksimaalne
         If game.lastLetter = 13 And game.intKast = game.maxKast Then
 
-
             If data.isWordInList(game.ArvatudSona) > 0 Then
-
-
 
                 'Kui sõna on arvatud, või read on otsa saanud, lõpeta mäng
                 If game.gameOver() = True Then
@@ -252,7 +248,6 @@ Public Class formGame
 
         End If
 
-
         'Debugi jaoks arvatava sõna lisamine tekstiväljale, tekstivälja on võimalik nähtavale tuua F6 klahviga
         txtDebug.Text = game.strSona
         Timer1.Enabled = True
@@ -306,8 +301,6 @@ Public Class formGame
             data.setItem("time", "timePlayCurrent", time.timePlay)
         End If
 
-
-
         'Mängu andmete sisestamine ajaloosse andmebaasis
         'data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida, game.gameScore)
         data.insertHistory(data.getStat("m2ngude_arv"), game.gameScore, game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida)
@@ -325,7 +318,6 @@ Public Class formGame
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
-
 
         newForm.Show()
         Me.Close()
@@ -446,7 +438,6 @@ Public Class formGame
             newForm.StartPosition = FormStartPosition.Manual
             newForm.Location = New Point(0, 0)
             newForm.BackColor = colors.backColor
-
 
             newForm.Show()
             Me.Close()

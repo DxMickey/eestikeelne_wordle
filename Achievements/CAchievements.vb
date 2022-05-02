@@ -23,7 +23,7 @@
         End Set
     End Property
 
-    Public Property text As String Implements IAchievements.text
+    Public Property Text As String Implements IAchievements.text
         Get
             Return _text
         End Get
@@ -40,9 +40,6 @@
             _title = value
         End Set
     End Property
-
-
-
 
     Public Sub New()
         'Uue klass instantsi puhul võetakse andmekihist statistika
@@ -79,7 +76,6 @@
 
     End Sub
 
-
     Public Function setAchievements() As Object
         'vaata mis achievmente saadi. Lisa andmebaasi,kui midagi uut
         Throw New NotImplementedException()
@@ -95,16 +91,16 @@
     Private Sub checkForGamesPlayedAchievements()
         'Kontrollib saavutusi, kus teatud mangude arv vaja saada
         'Valib esimese, seega kui 350 mängu tehtud, aga saavutusi pole, siis tuleb esimesena 10, siis 20 jne
-        Dim nrToCheck = {10, 20, 50, 100, 200, 500} 'arvud, kus saavutused
-        Dim ids = {1, 2, 3, 4, 5, 6} 'nende saavutuste id-d
+        Dim nrToCheck = {10, 20, 50, 100, 200, 500}        'arvud, kus saavutused
+        Dim ids = {1, 2, 3, 4, 5, 6}        'nende saavutuste id-d
         For i = 0 To nrToCheck.Length - 1
             'Kui mangud arv on suurem voi vordne, ja see saavutus pole juba tehtud
             If _gamesPlayed >= nrToCheck(i) And _acArray(i) <= 0 Then
                 Dim data As Andmekiht.IDatabase
                 data = New Andmekiht.CDatabase
                 Dim h = data.getAchievementData(ids(i))
-                data.setAchievement(ids(i)) 'pmst i  + 1
-                text = h(1)
+                data.setAchievement(ids(i))        'pmst i  + 1
+                Text = h(1)
                 title = h(0)
                 newAchievement = True
                 Exit For

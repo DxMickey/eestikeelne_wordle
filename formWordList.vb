@@ -1,6 +1,5 @@
 ﻿Public Class formWordList
 
-
     '"Sisesta" nupu vajutamisel
     Private Sub btnSisesta_Click(sender As Object, e As EventArgs) Handles btnSisesta.Click
         Dim data As Andmekiht.IDatabase
@@ -9,7 +8,6 @@
         openDialog1.Filter = "CSV|*.csv"
         openDialog1.Title = "Vali CSV fail"
         openDialog1.ShowDialog()
-
 
         Dim location As String = openDialog1.FileName
 
@@ -22,7 +20,6 @@
                 data.deleteTable("customEasy")
                 data.importCSV(location, 4)
 
-
                 'Kui on valitud 5-täheliste sõnade checkbox
             ElseIf rbtnTavaline.Checked Then
 
@@ -30,16 +27,12 @@
                 data.deleteTable("customNormal")
                 data.importCSV(location, 5)
 
-
-
                 'Kui on valitud 6-täheliste sõnade checkbox
             ElseIf rbtnRaske.Checked Then
 
                 'Eelmise kasutaja sõnade tabeli kustutamine andmebaasist ja uude tabelisse uute sõnade sisestamine csv failist
                 data.deleteTable("customHard")
                 data.importCSV(location, 6)
-
-
 
             End If
         Else
@@ -88,7 +81,6 @@
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub
@@ -102,6 +94,5 @@
         rbtnTavaline.ForeColor = colors.lblColor
         rbtnRaske.ForeColor = colors.lblColor
     End Sub
-
 
 End Class

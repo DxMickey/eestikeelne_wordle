@@ -13,7 +13,6 @@ Public Class formGameEnd
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub
@@ -29,7 +28,6 @@ Public Class formGameEnd
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
-
 
         newForm.Show()
         Me.Close()
@@ -71,13 +69,11 @@ Public Class formGameEnd
             lblResult.Text = "Sa ei suutnud sõna ära arvata!"
         End If
 
-
         lblBestScore.ForeColor = colors.lblColor
         lblBestScoreName.ForeColor = colors.lblColor
         lblGameScore.ForeColor = colors.lblColor
         lblScoreName.ForeColor = colors.lblColor
         lblNewHighscore.ForeColor = colors.lblColor
-
 
         'Sõna tähenduse saamine
         Dim sonaTahendus As SonaTahendus.ISonaTahendus
@@ -87,21 +83,19 @@ Public Class formGameEnd
         Dim tahendus = sonaTahendus.getSonaTahendus(game.strSona)
         UcSonaTahendus1.setWordTexts(game.strSona, tahendus)
 
-
         'Mängu skoor
         lblGameScore.Text = game.gameScore
         lblBestScore.Text = data.getStat("suurim_skoor")
         'Nulli skoor uue mängu jaoks
         game.gameScore = Nothing
 
-
         'Achievement chechker
-        Dim ac As AchievementChecker.IAchievements 'ei tea miks achievementchecker mitte achievements
+        Dim ac As AchievementChecker.IAchievements        'ei tea miks achievementchecker mitte achievements
         ac = New AchievementChecker.CAchievements
         'massiiv, kus title ja kirjeldus
 
         'NotificationAchievemen
-        'if achievements siis 
+        'if achievements siis
         If ac.newAchievement Then
             Dim notif As Notification.INotification
             notif = New Notification.CNotification
@@ -109,7 +103,6 @@ Public Class formGameEnd
             notif.backColor = colors.backColor
             notif.showNotif(Me, ac.text, ac.title)
         End If
-
 
     End Sub
 
@@ -145,6 +138,5 @@ Public Class formGameEnd
     Private Sub UcSonaTahendus1_Load(sender As Object, e As EventArgs) Handles UcSonaTahendus1.Load
 
     End Sub
-
 
 End Class

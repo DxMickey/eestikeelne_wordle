@@ -55,7 +55,6 @@
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub
@@ -130,9 +129,6 @@
         tryColor()
     End Sub
 
-
-
-
     'Kontrolli, kas sistestatud värv jääb vahemikku 255
     'Kui jah, tagasta 1, kui ei, tagasta 0
     Private Function checkColors(ByVal red As UInteger, ByVal green As UInteger, ByVal blue As UInteger)
@@ -144,12 +140,11 @@
         End If
     End Function
 
-
     'Algsed akna väärtused, peida vea label
     Private Sub baseSettings()
         Dim colors As IGraphics
         colors = New CGraphics
-        'Dim data As Andmekiht.IDatabase
+        'Dim data       As Andmekiht.IDatabase
         'data = New Andmekiht.CDatabase
 
         changeLabels(colors.lblColor)
@@ -164,7 +159,6 @@
         txtGreen.Text = colors.green
         txtBlue.Text = colors.blue
     End Sub
-
 
     'Kontrolli, kas sisestatud väärtused on numbrilised
     'kui jah, siis tagasta 1, kui ei siis 0
@@ -191,7 +185,6 @@
         data.setItem("miscData", "blue", blue)
 
     End Sub
-
 
     Private Sub tryColor()
         Dim red, green, blue As UInteger
@@ -241,7 +234,7 @@
         Dim colors As IGraphics
         colors = New CGraphics
         If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
-            Or (colors.blue > 175 Or colors.blue < 80) Then
+           Or (colors.blue > 175 Or colors.blue < 80) Then
             colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
         Else
             colors.lblColor = Color.FromArgb(255, 255 - (colors.red - 70), 255 - (colors.green - 70), 255 - (colors.blue - 70))

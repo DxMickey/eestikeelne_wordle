@@ -29,11 +29,4 @@
 
     Sub exportCSV(delimiter As String, textQualifier As String, append As Boolean, save As Boolean)
 
-
-
-
-
-
-
-
 End Interface

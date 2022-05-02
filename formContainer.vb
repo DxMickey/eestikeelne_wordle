@@ -19,9 +19,7 @@
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
 
-
         newForm.Show()
-
 
     End Sub
 End Class

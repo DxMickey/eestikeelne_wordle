@@ -19,7 +19,6 @@ Public Class formMenu
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub
@@ -35,7 +34,6 @@ Public Class formMenu
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
-
 
         newForm.Show()
         Me.Close()
@@ -53,11 +51,9 @@ Public Class formMenu
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub
-
 
     Private Sub btnClassic_Click(sender As Object, e As EventArgs) Handles btnClassic.Click
         Dim game As Game.IGame
@@ -80,11 +76,9 @@ Public Class formMenu
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub
-
 
     Private Sub btnGraphics_Click(sender As Object, e As EventArgs) Handles btnGraphics.Click
         Dim newForm As New formGraphics
@@ -97,7 +91,6 @@ Public Class formMenu
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
-
 
         newForm.Show()
         Me.Close()
@@ -115,14 +108,12 @@ Public Class formMenu
         Label1.ForeColor = colors.lblColor
     End Sub
 
-
     'Saab sätestatud taustavärvi RGB
     Private Sub getColor()
         Dim colors As IGraphics
         colors = New CGraphics
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
-
 
         'Kui värvid väärtustamata, proovi saada need failist
         If colors.red = Nothing Or colors.green = Nothing Or colors.blue = Nothing Then
@@ -147,7 +138,6 @@ Public Class formMenu
         newForm.Location = New Point(0, 0)
         newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
 
-
         newForm.Show()
         Me.Close()
     End Sub
@@ -167,7 +157,6 @@ Public Class formMenu
             data.setItem("time", "timeWaitCurrent", time.timeWait)
             data.setItem("time", "timePlayCurrent", time.timePlay)
 
-
             lblTimer.Visible = False
             Timer1.Enabled = False
         Else
@@ -178,10 +167,6 @@ Public Class formMenu
 
         End If
 
-
-
-
-
     End Sub
 
     Private Sub formMenu_Shown(sender As Object, e As EventArgs) Handles Me.Shown
@@ -191,7 +176,6 @@ Public Class formMenu
         colors = New CGraphics
 
         lblTimer.ForeColor = colors.lblColor
-
 
         If time.timePlay <= 0 And time.timeState = "On" Then
             Timer1.Enabled = True
@@ -213,18 +197,15 @@ Public Class formMenu
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub
-
-
 
     Private Sub setLblColor()
         Dim colors As IGraphics
         colors = New CGraphics
         If (colors.red > 175 Or colors.red < 80) Or (colors.green > 175 Or colors.green < 80) _
-            Or (colors.blue > 175 Or colors.blue < 80) Then
+           Or (colors.blue > 175 Or colors.blue < 80) Then
             colors.lblColor = Color.FromArgb(255, 255 - colors.red, 255 - colors.green, 255 - colors.blue)
         Else
             colors.lblColor = Color.FromArgb(255, 255 - (colors.red + 70), 255 - (colors.green + 70), 255 - (colors.blue + 70))
@@ -260,7 +241,7 @@ Public Class formMenu
             If data.fileCountWords("sonadeListEasy.csv") <> data.listCountWords("sonadeListEasy") Or data.fileCountWords("sonadeList.csv") <> data.listCountWords("sonadeList") Or data.fileCountWords("sonadeListHard.csv") <> data.listCountWords("sonadeListHard") Then
                 Cursor = Cursors.Default
                 'Kasutajale valiku andmine, kas ta soovib uuendada
-                Dim tulemus As DialogResult = MessageBox.Show("Uuendus on olemas. Kas te soovite uuendada sõnu?", "Uuendus", MessageBoxButtons.YesNo)
+                Dim tulemus As DialogResult = MessageBox.Show("Uuendus On olemas. Kas te soovite uuendada sõnu?", "Uuendus", MessageBoxButtons.YesNo)
                 If tulemus = DialogResult.Yes Then
                     Cursor = Cursors.WaitCursor
                     'Sõnade asendamine vastavas sõnadelistis andmebaasis, kui sõnade hulk erineb
@@ -291,10 +272,7 @@ Public Class formMenu
 
             End If
 
-
         End If
     End Sub
 
-
 End Class
-
