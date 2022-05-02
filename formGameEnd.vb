@@ -1,7 +1,7 @@
 ﻿Imports Google.Cloud.Translation.V2
 
 Public Class formGameEnd
-    Private Sub btbPlayAgain_Click(sender As Object, e As EventArgs) Handles btbPlayAgain.Click
+    Private Sub btbPlayAgain_Click(sender As Object, e As EventArgs) Handles btnPlayAgain.Click
         Dim newForm As New formGame
         Dim colors As IGraphics
         colors = New CGraphics
@@ -46,9 +46,10 @@ Public Class formGameEnd
         cmbLanguage.SelectedIndex = 0
 
         If time.timeState = "On" And time.timePlay <= 0 Then
-            btbPlayAgain.Enabled = False
+            btnPlayAgain.Enabled = False
+            btnPlayAgain.Visible = False
         Else
-            btbPlayAgain.Enabled = True
+            btnPlayAgain.Enabled = True
         End If
 
         Dim colors As IGraphics
@@ -60,13 +61,6 @@ Public Class formGameEnd
         Dim averageScore As Integer = 0
         Dim firstGameIndex As Integer = data.getItemInt("gameHistory", "mitmesMäng")
         lblNewHighscore.Visible = False
-
-        'Leia suurim skoor, kui uus skoor on suurem kui vana, siis uuenda
-        'If tempHighScore < game.gameScore Then
-        'data.setScoreItem("suurim_skoor", game.gameScore)
-        'lblNewHighscore.Visible = True
-        ' End If
-
 
         'Võidu või kaotuse teksti valimine
         If game.winOrLose = 1 Then
@@ -134,6 +128,7 @@ Public Class formGameEnd
             Dim response = TClient.TranslateText(game.strSona, cmbLanguage.SelectedItem, "et")
             Dim result As String = response.TranslatedText
 
+            'Kui tagastatud sõna on sama, mis sisse antud sõna, tähendab see, et tõlget ei leitud või sõna on tõlkes samasugune
             If String.Equals(result, game.strSona) Then
                 txtTranslation.Text = "Puudub või sama"
             Else

@@ -63,6 +63,8 @@
 
         game.kasTimed = False
         updateVisibility(True)
+        lblGameMode.Visible = False
+        lblDifficulty.Visible = True
     End Sub
 
     Private Sub btnTimed_Click(sender As Object, e As EventArgs) Handles btnTimed.Click
@@ -71,6 +73,8 @@
 
         game.kasTimed = True
         updateVisibility(True)
+        lblGameMode.Visible = False
+        lblDifficulty.Visible = True
     End Sub
 
     Private Sub updateVisibility(ByVal value As Boolean)
@@ -90,6 +94,11 @@
     End Sub
 
     Private Sub formGameSettings_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        lblGameMode.ForeColor = colors.lblColor
+        lblDifficulty.ForeColor = colors.lblColor
         updateVisibility(False)
     End Sub
 End Class

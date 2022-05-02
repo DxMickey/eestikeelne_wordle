@@ -237,29 +237,33 @@ Public Class formMenu
         Dim utils As Utils.IUtils
         utils = New Utils.CUtils
 
-
+        'Interneti ühenduse kontrollimine
         If utils.isNetworkConnection() = False Then
             MessageBox.Show("Internet puudub")
         Else
 
             Dim client As New WebClient
             Dim saveFile As New SaveFileDialog
+            'Cloudis olevate sõnalistide asukohad
             Dim fileUrl1 As String = "https://docs.google.com/uc?export=download&id=1BEwFvCp8TXU1tqlo9cJccKilIWvg_lTM"
             Dim fileUrl2 As String = "https://docs.google.com/uc?export=download&id=1tpY8m6-sEzLla8l160oSGyFPvlkCJQFm"
             Dim fileUrl3 As String = "https://docs.google.com/uc?export=download&id=1dR14DNVom_LtZkZAyNmrIDb9XdwO6RPy"
             MessageBox.Show("Uuenduse kontrollimine võib võtta mõne hetke!")
             Cursor = Cursors.WaitCursor
 
+            'Cloudis olevad sõnalistid laetakse alla
             client.DownloadFile(New Uri(fileUrl1), "sonadeListEasy.csv")
             client.DownloadFile(New Uri(fileUrl2), "sonadeList.csv")
             client.DownloadFile(New Uri(fileUrl3), "sonadeListHard.csv")
 
+            'Kontrollimine, kas alla laetud sõnalistides on erinev hulk sõnu võrreldes andmebaasis olevatega, kui on erinev tähendab, et on erinev versioon ja uuendus on olemas.
             If data.fileCountWords("sonadeListEasy.csv") <> data.listCountWords("sonadeListEasy") Or data.fileCountWords("sonadeList.csv") <> data.listCountWords("sonadeList") Or data.fileCountWords("sonadeListHard.csv") <> data.listCountWords("sonadeListHard") Then
                 Cursor = Cursors.Default
+                'Kasutajale valiku andmine, kas ta soovib uuendada
                 Dim tulemus As DialogResult = MessageBox.Show("Uuendus on olemas. Kas te soovite uuendada sõnu?", "Uuendus", MessageBoxButtons.YesNo)
-                ' MsgBox("Uuendus on olemas. Kas te soovite uuendada sõnu?", MsgBoxStyle.YesNo, "Uuendus")
                 If tulemus = DialogResult.Yes Then
                     Cursor = Cursors.WaitCursor
+                    'Sõnade asendamine vastavas sõnadelistis andmebaasis, kui sõnade hulk erineb
                     If data.fileCountWords("sonadeListEasy.csv") <> data.listCountWords("sonadeListEasy") Then
                         data.updateWordList("sonadeListEasy")
                     End If
@@ -270,6 +274,7 @@ Public Class formMenu
                         data.updateWordList("sonadeListHard")
                     End If
 
+                    'Allalaaditud sõnalistide kustutamine
                     My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeListEasy.csv")
                     My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeList.csv")
                     My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeListHard.csv")

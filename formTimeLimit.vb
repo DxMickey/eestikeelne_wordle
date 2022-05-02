@@ -11,7 +11,7 @@
         data = New Andmekiht.CDatabase
 
 
-
+        'Vastavalt sellele, millised väljad on näha, valitakse millised väljad nähtavale tuua ja millised peita nupule vajutusel
         If txtNewPass1.Visible = True Then
             If txtNewPass1.Text = txtNewPass2.Text Then
                 time.password = txtNewPass1.Text
@@ -49,8 +49,9 @@
 
 
 
-
+            'Kontroll, kas sisestatud väärtused ei ole tühjad ning on numbrilised
             If txtTimePlay.Text <> Nothing And txtTimeWait.Text <> Nothing And IsNumeric(txtTimePlay.Text) And IsNumeric(txtTimeWait.Text) Then
+                'Väärtuse teisendamine tundideks ja minutiteks kui need on kasutaja poolt valitud
                 If cmbTimePlay.SelectedIndex = 0 Then
                     time.timePlay = txtTimePlay.Text
                 ElseIf cmbTimePlay.SelectedIndex = 1 Then
@@ -60,7 +61,7 @@
                 End If
 
 
-
+                'Väärtuse teisendamine tundideks ja minutiteks kui need on kasutaja poolt valitud
                 If cmbWaitTime.SelectedIndex = 0 Then
                     time.timeWait = txtTimeWait.Text
                 ElseIf cmbWaitTime.SelectedIndex = 1 Then
@@ -71,7 +72,7 @@
 
 
 
-
+                'Väärtuste salvestamine andmebaasi
                 data.setItem("time", "timePlay", time.timePlay)
                 data.setItem("time", "timeWait", time.timeWait)
 
@@ -95,6 +96,7 @@
 
         btnOnOff.Visible = False
 
+        'Labelite värvide seadistamine
         lblNewPass1.ForeColor = colors.lblColor
         lblNewPass2.ForeColor = colors.lblColor
         lblPass.ForeColor = colors.lblColor
@@ -118,6 +120,8 @@
             btnOnOff.Text = "Lülita sisse"
         End If
 
+        'Kui andmebaasis pole passwordi, tähendab see, et kasutaja pole varem parooli sisestanud
+        'ning ette kuvatakse uue parooli sisestamise väljad
         If time.password = "none" Then
             txtNewPass1.Visible = True
             txtNewPass2.Visible = True
@@ -151,6 +155,7 @@
         time = New CTimeLimit
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
+        'Ajalimiidi sisse ja välja lülitamine
         If btnOnOff.Text = "Lülita sisse" Then
             If time.timeWait <= 0 Or time.timePlay <= 0 Then
                 MessageBox.Show("Väärtused peavad olema nullist suuremad")

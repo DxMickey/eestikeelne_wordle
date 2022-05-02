@@ -23,7 +23,7 @@ Partial Class formGameEnd
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblResult = New System.Windows.Forms.Label()
-        Me.btbPlayAgain = New System.Windows.Forms.Button()
+        Me.btnPlayAgain = New System.Windows.Forms.Button()
         Me.btbToMenu = New System.Windows.Forms.Button()
         Me.txtTranslation = New System.Windows.Forms.TextBox()
         Me.btnTranslate = New System.Windows.Forms.Button()
@@ -47,14 +47,14 @@ Partial Class formGameEnd
         Me.lblResult.TabIndex = 0
         Me.lblResult.Text = "SÕNA ARVATUD!"
         '
-        'btbPlayAgain
+        'btnPlayAgain
         '
-        Me.btbPlayAgain.Location = New System.Drawing.Point(284, 566)
-        Me.btbPlayAgain.Name = "btbPlayAgain"
-        Me.btbPlayAgain.Size = New System.Drawing.Size(110, 25)
-        Me.btbPlayAgain.TabIndex = 1
-        Me.btbPlayAgain.Text = "Mängi uuesti"
-        Me.btbPlayAgain.UseVisualStyleBackColor = True
+        Me.btnPlayAgain.Location = New System.Drawing.Point(284, 566)
+        Me.btnPlayAgain.Name = "btnPlayAgain"
+        Me.btnPlayAgain.Size = New System.Drawing.Size(110, 25)
+        Me.btnPlayAgain.TabIndex = 1
+        Me.btnPlayAgain.Text = "Mängi uuesti"
+        Me.btnPlayAgain.UseVisualStyleBackColor = True
         '
         'btbToMenu
         '
@@ -179,7 +179,7 @@ Partial Class formGameEnd
         Me.Controls.Add(Me.btnTranslate)
         Me.Controls.Add(Me.txtTranslation)
         Me.Controls.Add(Me.btbToMenu)
-        Me.Controls.Add(Me.btbPlayAgain)
+        Me.Controls.Add(Me.btnPlayAgain)
         Me.Controls.Add(Me.lblResult)
         Me.Name = "formGameEnd"
         Me.Text = "Form1"
@@ -189,7 +189,7 @@ Partial Class formGameEnd
     End Sub
 
     Friend WithEvents lblResult As Label
-    Friend WithEvents btbPlayAgain As Button
+    Friend WithEvents btnPlayAgain As Button
     Friend WithEvents btbToMenu As Button
     Friend WithEvents txtTranslation As TextBox
     Friend WithEvents btnTranslate As Button

@@ -576,10 +576,13 @@ Public Class CDatabase
         Dim savePathOld As String = getItem("miscData", "savePath")
         Dim savePath As String = ""
         Try
+            'Kui save on False ehk kasutaja pole valinud, et soovib salvestada faili asukohta või andmebaasis pole ühtegi asukohta salvestatud
+            'siis lastakse kasutajal valida uus faili asukoht ja see salvestatakse andmebaasi
             If save = False Or savePathOld = "none" Then
                 savePath = data.setFileToSave()
                 setItem("miscData", "savePath", savePath)
             Else
+                'https://stackoverflow.com/questions/15786112/change-value-of-a-private-member-of-a-class/15786257#15786257
                 data.GetType().GetField("sFileToSave", System.Reflection.BindingFlags.NonPublic Or System.Reflection.BindingFlags.Instance).SetValue(data, savePathOld)
             End If
             data.saveDataToCsv(andmed, append)
@@ -587,6 +590,7 @@ Public Class CDatabase
             Console.WriteLine(ex)
         End Try
 
+        'Kui kasutaja ei soovi salvestada faili asukohta, ehk Save on False, võib andmebaasist asukoha ära kustutada
         If save = False Then
             setItem("miscData", "savePath", "none")
         End If

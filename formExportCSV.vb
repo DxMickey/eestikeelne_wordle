@@ -10,6 +10,7 @@
         End If
 
         Dim savePath = data.getItem("miscData", "savePath")
+        'Kui andmebaasist saadud väärtus savePath ei ole "none", siis kuvatakse label mis näitab savePath väärtust
         If savePath <> "none" Then
             lblSavePath.Text = "Valitud fail:" & savePath
             lblSavePath.Visible = True

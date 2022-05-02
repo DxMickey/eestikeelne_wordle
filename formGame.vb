@@ -11,7 +11,6 @@ Public Class formGame
         'Salvesta vajutatud nupu ascii kood muutujasse lastLetter
         game.lastLetter = Asc(e.KeyChar)
 
-
         gameEngine()
 
     End Sub
@@ -254,7 +253,7 @@ Public Class formGame
         End If
 
 
-
+        'Debugi jaoks arvatava sõna lisamine tekstiväljale, tekstivälja on võimalik nähtavale tuua F6 klahviga
         txtDebug.Text = game.strSona
         Timer1.Enabled = True
         If game.kasTimed Then

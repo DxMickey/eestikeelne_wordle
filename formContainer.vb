@@ -7,6 +7,7 @@
         Dim newForm As New formMenu
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
 
+        'Ajalimiidi väärtuste saamine andmebaasist
         time.password = data.getItem("miscData", "parool")
         time.timeState = data.getItem("time", "timeState")
         time.timePlay = data.getItem("time", "timePlayCurrent")
