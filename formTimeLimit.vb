@@ -66,8 +66,8 @@
                 data.setItem("time", "timePlay", time.timePlay)
                 data.setItem("time", "timeWait", time.timeWait)
 
-                lblTimePlayNow.Text = "Väärtus hetkel:" & time.timePlay
-                lblTimeWaitNow.Text = "Väärtus hetkel:" & time.timeWait
+                lblTimePlayNow.Text = "Väärtus hetkel:" & time.timePlay & " sekundit"
+                lblTimeWaitNow.Text = "Väärtus hetkel:" & time.timeWait & " sekundit"
             Else
                 MessageBox.Show("Väärtused peavad olema numbrilised ja ei tohi olla tühjad")
             End If

@@ -174,7 +174,10 @@ Public Class formMenu
         time = New CTimeLimit
         Dim colors As IGraphics
         colors = New CGraphics
+        Dim game As Game.IGame
+        game = New Game.CGame
 
+        game.gameScore = Nothing
         lblTimer.ForeColor = colors.lblColor
 
         If time.timePlay <= 0 And time.timeState = "On" Then
@@ -255,10 +258,7 @@ Public Class formMenu
                         data.updateWordList("sonadeListHard")
                     End If
 
-                    'Allalaaditud sõnalistide kustutamine
-                    My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeListEasy.csv")
-                    My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeList.csv")
-                    My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeListHard.csv")
+
 
                     Cursor = Cursors.Default
                     MessageBox.Show("Uuendus lõpetatud")
@@ -271,6 +271,11 @@ Public Class formMenu
                 MessageBox.Show("Uuendust ei ole!")
 
             End If
+
+            'Allalaaditud sõnalistide kustutamine
+            My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeListEasy.csv")
+            My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeList.csv")
+            My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\sonadeListHard.csv")
 
         End If
     End Sub
