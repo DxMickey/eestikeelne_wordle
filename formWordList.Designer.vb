@@ -35,9 +35,10 @@ Partial Class formWordList
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(311, 587)
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.btnBack.Location = New System.Drawing.Point(288, 604)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(75, 23)
+        Me.btnBack.Size = New System.Drawing.Size(128, 48)
         Me.btnBack.TabIndex = 0
         Me.btnBack.Text = "Tagasi"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -100,8 +101,8 @@ Partial Class formWordList
         '
         'btnOnOff
         '
-        Me.btnOnOff.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnOnOff.Location = New System.Drawing.Point(288, 386)
+        Me.btnOnOff.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnOnOff.Location = New System.Drawing.Point(288, 361)
         Me.btnOnOff.Name = "btnOnOff"
         Me.btnOnOff.Size = New System.Drawing.Size(128, 38)
         Me.btnOnOff.TabIndex = 12
