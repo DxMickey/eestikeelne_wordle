@@ -1,5 +1,6 @@
 ﻿Public Class formWordList
 
+
     '"Sisesta" nupu vajutamisel
     Private Sub btnSisesta_Click(sender As Object, e As EventArgs) Handles btnSisesta.Click
         Dim data As Andmekiht.IDatabase
@@ -101,5 +102,6 @@
         rbtnTavaline.ForeColor = colors.lblColor
         rbtnRaske.ForeColor = colors.lblColor
     End Sub
+
 
 End Class
