@@ -134,11 +134,11 @@ Partial Class formGraphics
         '
         'btnBack
         '
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.btnBack.Location = New System.Drawing.Point(25, 25)
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!)
+        Me.btnBack.Location = New System.Drawing.Point(294, 636)
         Me.btnBack.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(90, 32)
+        Me.btnBack.Size = New System.Drawing.Size(109, 40)
         Me.btnBack.TabIndex = 10
         Me.btnBack.Text = "Tagasi"
         Me.btnBack.UseVisualStyleBackColor = True
