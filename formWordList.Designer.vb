@@ -45,17 +45,18 @@ Partial Class formWordList
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(256, 157)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.Label1.Location = New System.Drawing.Point(213, 152)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(174, 13)
+        Me.Label1.Size = New System.Drawing.Size(282, 20)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Millist sõnade listi soovid sisestada?"
         '
         'btnSisesta
         '
-        Me.btnSisesta.Location = New System.Drawing.Point(299, 276)
+        Me.btnSisesta.Location = New System.Drawing.Point(288, 277)
         Me.btnSisesta.Name = "btnSisesta"
-        Me.btnSisesta.Size = New System.Drawing.Size(100, 34)
+        Me.btnSisesta.Size = New System.Drawing.Size(128, 54)
         Me.btnSisesta.TabIndex = 7
         Me.btnSisesta.Text = "Vali CSV fail"
         Me.btnSisesta.UseVisualStyleBackColor = True
@@ -63,9 +64,10 @@ Partial Class formWordList
         'rbtnLihtne
         '
         Me.rbtnLihtne.AutoSize = True
-        Me.rbtnLihtne.Location = New System.Drawing.Point(299, 185)
+        Me.rbtnLihtne.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.rbtnLihtne.Location = New System.Drawing.Point(288, 187)
         Me.rbtnLihtne.Name = "rbtnLihtne"
-        Me.rbtnLihtne.Size = New System.Drawing.Size(108, 17)
+        Me.rbtnLihtne.Size = New System.Drawing.Size(159, 24)
         Me.rbtnLihtne.TabIndex = 9
         Me.rbtnLihtne.TabStop = True
         Me.rbtnLihtne.Text = "4-tähelised sõnad"
@@ -74,9 +76,10 @@ Partial Class formWordList
         'rbtnTavaline
         '
         Me.rbtnTavaline.AutoSize = True
-        Me.rbtnTavaline.Location = New System.Drawing.Point(299, 208)
+        Me.rbtnTavaline.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.rbtnTavaline.Location = New System.Drawing.Point(288, 210)
         Me.rbtnTavaline.Name = "rbtnTavaline"
-        Me.rbtnTavaline.Size = New System.Drawing.Size(108, 17)
+        Me.rbtnTavaline.Size = New System.Drawing.Size(159, 24)
         Me.rbtnTavaline.TabIndex = 10
         Me.rbtnTavaline.TabStop = True
         Me.rbtnTavaline.Text = "5-tähelised sõnad"
@@ -85,9 +88,10 @@ Partial Class formWordList
         'rbtnRaske
         '
         Me.rbtnRaske.AutoSize = True
-        Me.rbtnRaske.Location = New System.Drawing.Point(299, 231)
+        Me.rbtnRaske.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.rbtnRaske.Location = New System.Drawing.Point(288, 233)
         Me.rbtnRaske.Name = "rbtnRaske"
-        Me.rbtnRaske.Size = New System.Drawing.Size(108, 17)
+        Me.rbtnRaske.Size = New System.Drawing.Size(159, 24)
         Me.rbtnRaske.TabIndex = 11
         Me.rbtnRaske.TabStop = True
         Me.rbtnRaske.Text = "6-tähelised sõnad"
@@ -95,9 +99,9 @@ Partial Class formWordList
         '
         'btnOnOff
         '
-        Me.btnOnOff.Location = New System.Drawing.Point(311, 357)
+        Me.btnOnOff.Location = New System.Drawing.Point(288, 386)
         Me.btnOnOff.Name = "btnOnOff"
-        Me.btnOnOff.Size = New System.Drawing.Size(75, 23)
+        Me.btnOnOff.Size = New System.Drawing.Size(128, 38)
         Me.btnOnOff.TabIndex = 12
         Me.btnOnOff.Text = "Lülita sisse"
         Me.btnOnOff.UseVisualStyleBackColor = True

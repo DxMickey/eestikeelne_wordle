@@ -44,9 +44,10 @@ Partial Class formStatistika
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(273, 510)
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.btnBack.Location = New System.Drawing.Point(275, 636)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(75, 23)
+        Me.btnBack.Size = New System.Drawing.Size(131, 53)
         Me.btnBack.TabIndex = 0
         Me.btnBack.Text = "Tagasi"
         Me.btnBack.UseVisualStyleBackColor = True

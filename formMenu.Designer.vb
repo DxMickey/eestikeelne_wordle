@@ -39,6 +39,7 @@ Partial Class formMenu
         '
         'btnPlay
         '
+        Me.btnPlay.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
         Me.btnPlay.Location = New System.Drawing.Point(361, 253)
         Me.btnPlay.Name = "btnPlay"
         Me.btnPlay.Size = New System.Drawing.Size(146, 52)
@@ -48,6 +49,7 @@ Partial Class formMenu
         '
         'btnHistory
         '
+        Me.btnHistory.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
         Me.btnHistory.Location = New System.Drawing.Point(291, 376)
         Me.btnHistory.Name = "btnHistory"
         Me.btnHistory.Size = New System.Drawing.Size(110, 41)
@@ -57,6 +59,7 @@ Partial Class formMenu
         '
         'btnStats
         '
+        Me.btnStats.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
         Me.btnStats.Location = New System.Drawing.Point(291, 329)
         Me.btnStats.Name = "btnStats"
         Me.btnStats.Size = New System.Drawing.Size(110, 41)
@@ -76,6 +79,7 @@ Partial Class formMenu
         '
         'btnClassic
         '
+        Me.btnClassic.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
         Me.btnClassic.Location = New System.Drawing.Point(189, 253)
         Me.btnClassic.Margin = New System.Windows.Forms.Padding(2)
         Me.btnClassic.Name = "btnClassic"
@@ -86,6 +90,7 @@ Partial Class formMenu
         '
         'btnGraphics
         '
+        Me.btnGraphics.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
         Me.btnGraphics.Location = New System.Drawing.Point(291, 422)
         Me.btnGraphics.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGraphics.Name = "btnGraphics"
@@ -96,7 +101,8 @@ Partial Class formMenu
         '
         'btnTimeLimit
         '
-        Me.btnTimeLimit.Location = New System.Drawing.Point(291, 515)
+        Me.btnTimeLimit.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.btnTimeLimit.Location = New System.Drawing.Point(291, 468)
         Me.btnTimeLimit.Name = "btnTimeLimit"
         Me.btnTimeLimit.Size = New System.Drawing.Size(110, 41)
         Me.btnTimeLimit.TabIndex = 5
@@ -120,9 +126,10 @@ Partial Class formMenu
         '
         'btnWordList
         '
-        Me.btnWordList.Location = New System.Drawing.Point(291, 468)
+        Me.btnWordList.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.btnWordList.Location = New System.Drawing.Point(279, 515)
         Me.btnWordList.Name = "btnWordList"
-        Me.btnWordList.Size = New System.Drawing.Size(110, 41)
+        Me.btnWordList.Size = New System.Drawing.Size(131, 74)
         Me.btnWordList.TabIndex = 7
         Me.btnWordList.Text = "Enda sõnade list"
         Me.btnWordList.UseVisualStyleBackColor = True
@@ -136,9 +143,10 @@ Partial Class formMenu
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(291, 582)
+        Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.btnUpdate.Location = New System.Drawing.Point(270, 595)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(110, 41)
+        Me.btnUpdate.Size = New System.Drawing.Size(152, 41)
         Me.btnUpdate.TabIndex = 8
         Me.btnUpdate.Text = "Otsi uuendusi"
         Me.btnUpdate.UseVisualStyleBackColor = True

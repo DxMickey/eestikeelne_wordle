@@ -89,9 +89,10 @@ Partial Class formExportCSV
         '
         'btnExport
         '
-        Me.btnExport.Location = New System.Drawing.Point(125, 278)
+        Me.btnExport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnExport.Location = New System.Drawing.Point(113, 262)
         Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(75, 23)
+        Me.btnExport.Size = New System.Drawing.Size(103, 36)
         Me.btnExport.TabIndex = 6
         Me.btnExport.Text = "Ekspordi"
         Me.btnExport.UseVisualStyleBackColor = True

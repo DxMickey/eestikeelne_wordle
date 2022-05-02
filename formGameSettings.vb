@@ -100,4 +100,20 @@
         lblDifficulty.ForeColor = colors.lblColor
         updateVisibility(False)
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim newForm As New formMenu
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        newForm.TopLevel = False
+        newForm.Parent = formContainer
+        newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        newForm.StartPosition = FormStartPosition.Manual
+        newForm.Location = New Point(0, 0)
+        newForm.BackColor = colors.backColor
+
+        newForm.Show()
+        Me.Close()
+    End Sub
 End Class

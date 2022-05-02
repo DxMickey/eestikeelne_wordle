@@ -49,18 +49,20 @@ Partial Class formGameEnd
         '
         'btnPlayAgain
         '
-        Me.btnPlayAgain.Location = New System.Drawing.Point(284, 566)
+        Me.btnPlayAgain.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!)
+        Me.btnPlayAgain.Location = New System.Drawing.Point(284, 548)
         Me.btnPlayAgain.Name = "btnPlayAgain"
-        Me.btnPlayAgain.Size = New System.Drawing.Size(110, 25)
+        Me.btnPlayAgain.Size = New System.Drawing.Size(110, 53)
         Me.btnPlayAgain.TabIndex = 1
         Me.btnPlayAgain.Text = "Mängi uuesti"
         Me.btnPlayAgain.UseVisualStyleBackColor = True
         '
         'btbToMenu
         '
-        Me.btbToMenu.Location = New System.Drawing.Point(284, 607)
+        Me.btbToMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!)
+        Me.btbToMenu.Location = New System.Drawing.Point(284, 617)
         Me.btbToMenu.Name = "btbToMenu"
-        Me.btbToMenu.Size = New System.Drawing.Size(110, 25)
+        Me.btbToMenu.Size = New System.Drawing.Size(110, 41)
         Me.btbToMenu.TabIndex = 2
         Me.btbToMenu.Text = "Menüüsse"
         Me.btbToMenu.UseVisualStyleBackColor = True

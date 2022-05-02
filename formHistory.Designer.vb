@@ -49,18 +49,20 @@ Partial Class formHistory
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(287, 706)
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.btnBack.Location = New System.Drawing.Point(260, 696)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(75, 23)
+        Me.btnBack.Size = New System.Drawing.Size(136, 42)
         Me.btnBack.TabIndex = 2
         Me.btnBack.Text = "Tagasi"
         Me.btnBack.UseVisualStyleBackColor = True
         '
         'btnExport
         '
-        Me.btnExport.Location = New System.Drawing.Point(552, 706)
+        Me.btnExport.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnExport.Location = New System.Drawing.Point(552, 696)
         Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(95, 23)
+        Me.btnExport.Size = New System.Drawing.Size(120, 42)
         Me.btnExport.TabIndex = 3
         Me.btnExport.Text = "Ekspordi JSON"
         Me.btnExport.UseVisualStyleBackColor = True
@@ -74,9 +76,10 @@ Partial Class formHistory
         '
         'btnExportCSV
         '
-        Me.btnExportCSV.Location = New System.Drawing.Point(451, 706)
+        Me.btnExportCSV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnExportCSV.Location = New System.Drawing.Point(424, 696)
         Me.btnExportCSV.Name = "btnExportCSV"
-        Me.btnExportCSV.Size = New System.Drawing.Size(95, 23)
+        Me.btnExportCSV.Size = New System.Drawing.Size(122, 42)
         Me.btnExportCSV.TabIndex = 5
         Me.btnExportCSV.Text = "Ekspordi CSV"
         Me.btnExportCSV.UseVisualStyleBackColor = True

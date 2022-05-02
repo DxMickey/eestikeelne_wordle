@@ -118,9 +118,10 @@ Partial Class formTimeLimit
         '
         'btnEnter
         '
-        Me.btnEnter.Location = New System.Drawing.Point(299, 366)
+        Me.btnEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.btnEnter.Location = New System.Drawing.Point(285, 385)
         Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(75, 23)
+        Me.btnEnter.Size = New System.Drawing.Size(101, 44)
         Me.btnEnter.TabIndex = 8
         Me.btnEnter.Text = "Sisesta"
         Me.btnEnter.UseVisualStyleBackColor = True
@@ -146,18 +147,20 @@ Partial Class formTimeLimit
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(299, 499)
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.btnBack.Location = New System.Drawing.Point(286, 591)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(75, 23)
+        Me.btnBack.Size = New System.Drawing.Size(100, 38)
         Me.btnBack.TabIndex = 11
         Me.btnBack.Text = "Tagasi"
         Me.btnBack.UseVisualStyleBackColor = True
         '
         'btnOnOff
         '
-        Me.btnOnOff.Location = New System.Drawing.Point(299, 447)
+        Me.btnOnOff.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnOnOff.Location = New System.Drawing.Point(285, 459)
         Me.btnOnOff.Name = "btnOnOff"
-        Me.btnOnOff.Size = New System.Drawing.Size(75, 23)
+        Me.btnOnOff.Size = New System.Drawing.Size(101, 49)
         Me.btnOnOff.TabIndex = 12
         Me.btnOnOff.Text = "Lülita sisse"
         Me.btnOnOff.UseVisualStyleBackColor = True

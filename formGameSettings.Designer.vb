@@ -31,10 +31,12 @@ Partial Class formGameSettings
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblGameMode = New System.Windows.Forms.Label()
         Me.lblDifficulty = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnEasy
         '
+        Me.btnEasy.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
         Me.btnEasy.Location = New System.Drawing.Point(154, 366)
         Me.btnEasy.Name = "btnEasy"
         Me.btnEasy.Size = New System.Drawing.Size(121, 49)
@@ -44,6 +46,7 @@ Partial Class formGameSettings
         '
         'btnNormal
         '
+        Me.btnNormal.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
         Me.btnNormal.Location = New System.Drawing.Point(284, 367)
         Me.btnNormal.Name = "btnNormal"
         Me.btnNormal.Size = New System.Drawing.Size(121, 48)
@@ -53,6 +56,7 @@ Partial Class formGameSettings
         '
         'btnHard
         '
+        Me.btnHard.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
         Me.btnHard.Location = New System.Drawing.Point(411, 367)
         Me.btnHard.Name = "btnHard"
         Me.btnHard.Size = New System.Drawing.Size(121, 50)
@@ -62,18 +66,20 @@ Partial Class formGameSettings
         '
         'btnNoTime
         '
-        Me.btnNoTime.Location = New System.Drawing.Point(238, 311)
+        Me.btnNoTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.btnNoTime.Location = New System.Drawing.Point(209, 302)
         Me.btnNoTime.Name = "btnNoTime"
-        Me.btnNoTime.Size = New System.Drawing.Size(85, 49)
+        Me.btnNoTime.Size = New System.Drawing.Size(114, 58)
         Me.btnNoTime.TabIndex = 3
         Me.btnNoTime.Text = "Ilma ajata"
         Me.btnNoTime.UseVisualStyleBackColor = True
         '
         'btnTimed
         '
-        Me.btnTimed.Location = New System.Drawing.Point(362, 312)
+        Me.btnTimed.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.btnTimed.Location = New System.Drawing.Point(362, 302)
         Me.btnTimed.Name = "btnTimed"
-        Me.btnTimed.Size = New System.Drawing.Size(89, 49)
+        Me.btnTimed.Size = New System.Drawing.Size(119, 59)
         Me.btnTimed.TabIndex = 4
         Me.btnTimed.Text = "Ajaline"
         Me.btnTimed.UseVisualStyleBackColor = True
@@ -114,11 +120,22 @@ Partial Class formGameSettings
         Me.lblDifficulty.Text = "Vali mängu raskusaste"
         Me.lblDifficulty.Visible = False
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.Button1.Location = New System.Drawing.Point(284, 625)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(121, 41)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Tagasi"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'formGameSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblDifficulty)
         Me.Controls.Add(Me.lblGameMode)
         Me.Controls.Add(Me.Label1)
@@ -144,4 +161,5 @@ Partial Class formGameSettings
     Friend WithEvents Label1 As Label
     Friend WithEvents lblGameMode As Label
     Friend WithEvents lblDifficulty As Label
+    Friend WithEvents Button1 As Button
 End Class
