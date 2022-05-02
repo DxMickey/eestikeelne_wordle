@@ -157,7 +157,7 @@ Public Class formGameEnd
         TranslateWord()
     End Sub
     Private Async Sub getSonaTahendus(sona)
-        'Tekitab asünkroonselt veebist saadud tähenduse, et vähendada laadimisaega
+        'Tekitab asünkroonselt veebist saadud tähenduse formile , et vähendada laadimisaega
         Dim sonaTahendus As SonaTahendus.ISonaTahendus
         sonaTahendus = New SonaTahendus.CSonaTahendus
         Try
