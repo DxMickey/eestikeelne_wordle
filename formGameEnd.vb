@@ -97,12 +97,11 @@ Public Class formGameEnd
         lblSona.Text = game.strSona
 
         'Sõna tähenduse saamine
-        Dim sonaTahendus As SonaTahendus.ISonaTahendus
-        sonaTahendus = New SonaTahendus.CSonaTahendus
         UcSonaTahendus1._backColor = colors.backColor
         UcSonaTahendus1._textColor = colors.lblColor
-        Dim tahendus = sonaTahendus.getSonaTahendus(game.strSona)
-        UcSonaTahendus1.setWordTexts(game.strSona, tahendus)
+        UcSonaTahendus1.setWordTexts("", "") 'uuendab värvid ja seab tiitle/teksti tühjaks
+        'Asynkroonselt sõna tähenduse veebist toomine
+        getSonaTahendus(game.strSona)
 
 
         'Mängu skoor
@@ -157,7 +156,18 @@ Public Class formGameEnd
     Private Sub btnTranslate_Click(sender As Object, e As EventArgs) Handles btnTranslate.Click
         TranslateWord()
     End Sub
+    Private Async Sub getSonaTahendus(sona)
+        'Tekitab asünkroonselt veebist saadud tähenduse, et vähendada laadimisaega
+        Dim sonaTahendus As SonaTahendus.ISonaTahendus
+        sonaTahendus = New SonaTahendus.CSonaTahendus
+        Try
+            Dim tahendus = Await sonaTahendus.getSonaTahendusAsync(sona)
+            UcSonaTahendus1.setWordTexts(sona, tahendus)
+        Catch ex As Exception
+            UcSonaTahendus1.setWordTexts(sona, "Midagi läks valesti :(")
+        End Try
 
+    End Sub
 
 
 

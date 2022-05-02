@@ -1,3 +1,3 @@
 ﻿Public Interface ISonaTahendus
-    Function getSonaTahendus(ByRef sona As String)
+    Function getSonaTahendusAsync(ByRef sona As String)
 End Interface
