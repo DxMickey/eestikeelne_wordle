@@ -25,7 +25,6 @@
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub

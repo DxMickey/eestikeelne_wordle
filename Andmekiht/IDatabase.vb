@@ -6,7 +6,7 @@
 
     Function getHistory()
 
-    Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String, value7 As Integer)
+    Sub insertHistory(value1 As Integer, value2 As Integer, value3 As String, value4 As Integer, value5 As String, value6 As String, value7 As String)
 
     Function isWordInList(value As String)
 
@@ -21,19 +21,12 @@
     Sub setItem(tableName As String, itemName As String, item As UInteger)
     Sub importCSV(fileName As String, letters As Integer)
     Sub deleteTable(tableName As String)
-    Sub exportJSON()
+    Sub exportJSON(location As String)
     Sub updateWordList(tableName As String)
     Function getAchievementArray() As Integer()
     Sub setAchievement(id As Integer, Optional setBit As Integer = 1)
     Function getAchievementData(ID As Integer)
 
-
-
-
-
-
-
-
-
+    Sub exportCSV(delimiter As String, textQualifier As String, append As Boolean, save As Boolean)
 
 End Interface

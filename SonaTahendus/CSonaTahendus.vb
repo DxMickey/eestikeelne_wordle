@@ -40,6 +40,7 @@ Public Class CSonaTahendus
             Dim span = htmlContent.DocumentNode.SelectNodes("//span[contains(@class, " &
                                                             dblQuote & "homonym-intro d-block" & dblQuote & ")]")
             strOutput = span(0).InnerText
+
         Catch ex As Exception
             Return "Ei suutnud tähendust leida"
         End Try

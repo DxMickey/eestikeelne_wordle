@@ -27,6 +27,8 @@ Partial Class formHistory
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExport = New System.Windows.Forms.Button()
         Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
+        Me.btnExportCSV = New System.Windows.Forms.Button()
+        Me.saveDialog1 = New System.Windows.Forms.SaveFileDialog()
         CType(Me.dtgDatagrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -70,11 +72,21 @@ Partial Class formHistory
         Me.UcMusicPlayer1.Size = New System.Drawing.Size(58, 26)
         Me.UcMusicPlayer1.TabIndex = 4
         '
+        'btnExportCSV
+        '
+        Me.btnExportCSV.Location = New System.Drawing.Point(451, 706)
+        Me.btnExportCSV.Name = "btnExportCSV"
+        Me.btnExportCSV.Size = New System.Drawing.Size(95, 23)
+        Me.btnExportCSV.TabIndex = 5
+        Me.btnExportCSV.Text = "Ekspordi CSV"
+        Me.btnExportCSV.UseVisualStyleBackColor = True
+        '
         'formHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.btnExportCSV)
         Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.btnExport)
         Me.Controls.Add(Me.btnBack)
@@ -92,4 +104,6 @@ Partial Class formHistory
     Friend WithEvents btnBack As Button
     Friend WithEvents btnExport As Button
     Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
+    Friend WithEvents btnExportCSV As Button
+    Friend WithEvents saveDialog1 As SaveFileDialog
 End Class

@@ -230,7 +230,6 @@
 
         ArvatudSona = Nothing
 
-
         If oldArvatud.Length <> 0 Then
             ArvatudSona = oldArvatud.Substring(0, oldArvatud.Length - 1)
         End If
@@ -244,8 +243,6 @@
                 redLettersHolder = redLetters.Substring(0, redLetters.Length - 1)
             End If
         End If
-
-
 
     End Sub
 
@@ -329,16 +326,6 @@
         'Kontrollimine kas viimase vajutatud klahvi ascii kood vastab korrektsete klahvide koodiga.
         If value >= 65 And value <= 90 Or value >= 97 And value <= 122 Or value = 196 Or value = 213 Or value = 214 Or value = 220 Or value = 228 Or value = 245 Or value = 246 Or value = 252 Then
             letterIsCorrect = True
-        End If
-
-        'Punaste tähtede kontrollimine, kui on punane täht, siis pole korrektne klahv. AINULT RASKE RASKUSASTME AJAL AKTIIVNE
-        If intRidaSymbol > 1 And gameMode = "Raske" Then
-
-            For i = 0 To Len(strRedLetters) - 1
-                If UCase(Chr(value)) = strRedLetters(i) Then
-                    letterIsCorrect = False
-                End If
-            Next
         End If
 
         Return letterIsCorrect

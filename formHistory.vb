@@ -17,7 +17,6 @@
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub
@@ -26,6 +25,20 @@
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
 
-        data.exportJSON()
+        saveDialog1.Filter = "JSON|*.json"
+        saveDialog1.Title = "Salvesta JSON fail"
+        saveDialog1.ShowDialog()
+
+        data.exportJSON(saveDialog1.FileName)
+    End Sub
+
+    Private Sub btnExportCSV_Click(sender As Object, e As EventArgs) Handles btnExportCSV.Click
+        Dim newForm As New formExportCSV
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        newForm.BackColor = colors.backColor
+
+        newForm.Show()
     End Sub
 End Class

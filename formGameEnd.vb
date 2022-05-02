@@ -1,7 +1,7 @@
 ﻿Imports Google.Cloud.Translation.V2
 
 Public Class formGameEnd
-    Private Sub btbPlayAgain_Click(sender As Object, e As EventArgs) Handles btbPlayAgain.Click
+    Private Sub btbPlayAgain_Click(sender As Object, e As EventArgs) Handles btnPlayAgain.Click
         Dim newForm As New formGame
         Dim colors As IGraphics
         colors = New CGraphics
@@ -12,7 +12,6 @@ Public Class formGameEnd
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
-
 
         newForm.Show()
         Me.Close()
@@ -30,7 +29,6 @@ Public Class formGameEnd
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub
@@ -43,10 +41,13 @@ Public Class formGameEnd
         Dim time As ITimeLimit
         time = New CTimeLimit
 
+        cmbLanguage.SelectedIndex = 0
+
         If time.timeState = "On" And time.timePlay <= 0 Then
-            btbPlayAgain.Enabled = False
+            btnPlayAgain.Enabled = False
+            btnPlayAgain.Visible = False
         Else
-            btbPlayAgain.Enabled = True
+            btnPlayAgain.Enabled = True
         End If
 
         Dim colors As IGraphics
@@ -59,23 +60,6 @@ Public Class formGameEnd
         Dim firstGameIndex As Integer = data.getItemInt("gameHistory", "mitmesMäng")
         lblNewHighscore.Visible = False
 
-        'Leia suurim skoor, kui uus skoor on suurem kui vana, siis uuenda
-        'If tempHighScore < game.gameScore Then
-        'data.setScoreItem("suurim_skoor", game.gameScore)
-        'lblNewHighscore.Visible = True
-        ' End If
-
-
-
-        'Tõlkekasti keelte valiku lisamine
-        cmbLanguage.Items.Add("en")
-        cmbLanguage.Items.Add("ru")
-        cmbLanguage.Items.Add("fi")
-        cmbLanguage.Items.Add("fr")
-        cmbLanguage.Items.Add("de")
-        cmbLanguage.Items.Add("it")
-        cmbLanguage.Items.Add("es")
-
         'Võidu või kaotuse teksti valimine
         If game.winOrLose = 1 Then
             lblResult.ForeColor = colors.lblColor
@@ -85,16 +69,11 @@ Public Class formGameEnd
             lblResult.Text = "Sa ei suutnud sõna ära arvata!"
         End If
 
-        'Vaheta labelite värvid
-        lblSona.ForeColor = colors.lblColor
         lblBestScore.ForeColor = colors.lblColor
         lblBestScoreName.ForeColor = colors.lblColor
         lblGameScore.ForeColor = colors.lblColor
         lblScoreName.ForeColor = colors.lblColor
         lblNewHighscore.ForeColor = colors.lblColor
-
-        'Mängu sõna
-        lblSona.Text = game.strSona
 
         'Sõna tähenduse saamine
         UcSonaTahendus1._backColor = colors.backColor
@@ -103,21 +82,19 @@ Public Class formGameEnd
         'Asynkroonselt sõna tähenduse veebist toomine
         getSonaTahendus(game.strSona)
 
-
         'Mängu skoor
         lblGameScore.Text = game.gameScore
         lblBestScore.Text = data.getStat("suurim_skoor")
         'Nulli skoor uue mängu jaoks
         game.gameScore = Nothing
 
-
         'Achievement chechker
-        Dim ac As AchievementChecker.IAchievements 'ei tea miks achievementchecker mitte achievements
+        Dim ac As AchievementChecker.IAchievements        'ei tea miks achievementchecker mitte achievements
         ac = New AchievementChecker.CAchievements
         'massiiv, kus title ja kirjeldus
 
         'NotificationAchievemen
-        'if achievements siis 
+        'if achievements siis
         If ac.newAchievement Then
             Dim notif As Notification.INotification
             notif = New Notification.CNotification
@@ -125,7 +102,6 @@ Public Class formGameEnd
             notif.backColor = colors.backColor
             notif.showNotif(Me, ac.text, ac.title)
         End If
-
 
     End Sub
 
@@ -144,8 +120,9 @@ Public Class formGameEnd
             Dim response = TClient.TranslateText(game.strSona, cmbLanguage.SelectedItem, "et")
             Dim result As String = response.TranslatedText
 
+            'Kui tagastatud sõna on sama, mis sisse antud sõna, tähendab see, et tõlget ei leitud või sõna on tõlkes samasugune
             If String.Equals(result, game.strSona) Then
-                txtTranslation.Text = "Puudub"
+                txtTranslation.Text = "Puudub või sama"
             Else
                 txtTranslation.Text = result
             End If

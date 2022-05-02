@@ -34,7 +34,6 @@ Public Class formGame
 
         End If
 
-
         'Kui letterCheck tagastab True ja Kasti arv pole max kasti arv
         If game.letterCheck(game.lastLetter) And game.intKast <> game.maxKast Then
 
@@ -57,10 +56,7 @@ Public Class formGame
         'Kui vajutatud nupp on Enter ja Kasti number on maksimaalne
         If game.lastLetter = 13 And game.intKast = game.maxKast Then
 
-
             If data.isWordInList(game.ArvatudSona) > 0 Then
-
-
 
                 'Kui sõna on arvatud, või read on otsa saanud, lõpeta mäng
                 If game.gameOver() = True Then
@@ -208,6 +204,9 @@ Public Class formGame
         Dim colors As IGraphics
         colors = New CGraphics
 
+        'Debug sõna väärtuse peitmine
+        txtDebug.Visible = False
+
         'Muuda labelite värvi
         lblTimeLeft.ForeColor = colors.lblColor
         lblTimeText.ForeColor = colors.lblColor
@@ -235,8 +234,6 @@ Public Class formGame
         Dim uusKuupaev As String = DateTime.Today.ToShortDateString()
         Dim vanaKuupaev As String = data.getItem("miscData", "kuupaev")
 
-        txtDebug2.Text = data.howManyWords()
-
         If game.kasPiiramatu = False Then
 
             game.strSona = data.getItem("miscData", "dailySona")
@@ -251,8 +248,7 @@ Public Class formGame
 
         End If
 
-
-
+        'Debugi jaoks arvatava sõna lisamine tekstiväljale, tekstivälja on võimalik nähtavale tuua F6 klahviga
         txtDebug.Text = game.strSona
         Timer1.Enabled = True
         If game.kasTimed Then
@@ -305,13 +301,12 @@ Public Class formGame
             data.setItem("time", "timePlayCurrent", time.timePlay)
         End If
 
-
-
         'Mängu andmete sisestamine ajaloosse andmebaasis
-        data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida, game.gameScore)
-
+        'data.insertHistory(data.getStat("m2ngude_arv"), game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida, game.gameScore)
+        data.insertHistory(data.getStat("m2ngude_arv"), game.gameScore, game.gameMode, game.kestvus, game.strSona, kasArvatud, game.intRida)
         enableAllTextBoxes()
 
+        Me.Hide()
         'Uue formi avamine
         Dim newForm As New formGameEnd
         Dim colors As IGraphics
@@ -323,7 +318,6 @@ Public Class formGame
         newForm.StartPosition = FormStartPosition.Manual
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
-
 
         newForm.Show()
         Me.Close()
@@ -423,6 +417,30 @@ Public Class formGame
 
     End Sub
 
+    Private Sub formGame_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        'F6 klahvi vajutusel muudetakse debugi sõna väärtus nähtavaks
+        If e.KeyCode = Keys.F6 Then
+            txtDebug.Visible = True
+        End If
 
+    End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim tulemus As DialogResult = MessageBox.Show("Kas olete kindel, et soovide mängust lahkuda?", "Kinnitus", MessageBoxButtons.YesNo)
+        If tulemus = DialogResult.Yes Then
+            Dim newForm As New formMenu
+            Dim colors As IGraphics
+            colors = New CGraphics
+
+            newForm.TopLevel = False
+            newForm.Parent = formContainer
+            newForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            newForm.StartPosition = FormStartPosition.Manual
+            newForm.Location = New Point(0, 0)
+            newForm.BackColor = colors.backColor
+
+            newForm.Show()
+            Me.Close()
+        End If
+    End Sub
 End Class

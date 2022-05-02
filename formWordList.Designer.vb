@@ -24,19 +24,18 @@ Partial Class formWordList
     Private Sub InitializeComponent()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtCSVName = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnSisesta = New System.Windows.Forms.Button()
         Me.rbtnLihtne = New System.Windows.Forms.RadioButton()
         Me.rbtnTavaline = New System.Windows.Forms.RadioButton()
         Me.rbtnRaske = New System.Windows.Forms.RadioButton()
         Me.btnOnOff = New System.Windows.Forms.Button()
         Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
+        Me.openDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SuspendLayout()
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(299, 587)
+        Me.btnBack.Location = New System.Drawing.Point(311, 587)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(75, 23)
         Me.btnBack.TabIndex = 0
@@ -52,29 +51,13 @@ Partial Class formWordList
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Millist sõnade listi soovid sisestada?"
         '
-        'txtCSVName
-        '
-        Me.txtCSVName.Location = New System.Drawing.Point(283, 292)
-        Me.txtCSVName.Name = "txtCSVName"
-        Me.txtCSVName.Size = New System.Drawing.Size(100, 20)
-        Me.txtCSVName.TabIndex = 5
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(207, 295)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 13)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "CSV faili nimi:"
-        '
         'btnSisesta
         '
-        Me.btnSisesta.Location = New System.Drawing.Point(299, 353)
+        Me.btnSisesta.Location = New System.Drawing.Point(299, 276)
         Me.btnSisesta.Name = "btnSisesta"
-        Me.btnSisesta.Size = New System.Drawing.Size(75, 23)
+        Me.btnSisesta.Size = New System.Drawing.Size(100, 34)
         Me.btnSisesta.TabIndex = 7
-        Me.btnSisesta.Text = "Sisesta"
+        Me.btnSisesta.Text = "Vali CSV fail"
         Me.btnSisesta.UseVisualStyleBackColor = True
         '
         'rbtnLihtne
@@ -112,7 +95,7 @@ Partial Class formWordList
         '
         'btnOnOff
         '
-        Me.btnOnOff.Location = New System.Drawing.Point(299, 450)
+        Me.btnOnOff.Location = New System.Drawing.Point(311, 357)
         Me.btnOnOff.Name = "btnOnOff"
         Me.btnOnOff.Size = New System.Drawing.Size(75, 23)
         Me.btnOnOff.TabIndex = 12
@@ -137,8 +120,6 @@ Partial Class formWordList
         Me.Controls.Add(Me.rbtnTavaline)
         Me.Controls.Add(Me.rbtnLihtne)
         Me.Controls.Add(Me.btnSisesta)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtCSVName)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnBack)
         Me.Name = "formWordList"
@@ -150,12 +131,11 @@ Partial Class formWordList
 
     Friend WithEvents btnBack As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtCSVName As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents btnSisesta As Button
     Friend WithEvents rbtnLihtne As RadioButton
     Friend WithEvents rbtnTavaline As RadioButton
     Friend WithEvents rbtnRaske As RadioButton
     Friend WithEvents btnOnOff As Button
     Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
+    Friend WithEvents openDialog1 As OpenFileDialog
 End Class

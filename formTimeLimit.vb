@@ -1,17 +1,12 @@
 ﻿Public Class formTimeLimit
 
-
-
-
-
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         Dim time As ITimeLimit
         time = New CTimeLimit
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
 
-
-
+        'Vastavalt sellele, millised väljad on näha, valitakse millised väljad nähtavale tuua ja millised peita nupule vajutusel
         If txtNewPass1.Visible = True Then
             If txtNewPass1.Text = txtNewPass2.Text Then
                 time.password = txtNewPass1.Text
@@ -47,10 +42,9 @@
             End If
         ElseIf txtTimePlay.Visible = True Then
 
-
-
-
+            'Kontroll, kas sisestatud väärtused ei ole tühjad ning on numbrilised
             If txtTimePlay.Text <> Nothing And txtTimeWait.Text <> Nothing And IsNumeric(txtTimePlay.Text) And IsNumeric(txtTimeWait.Text) Then
+                'Väärtuse teisendamine tundideks ja minutiteks kui need on kasutaja poolt valitud
                 If cmbTimePlay.SelectedIndex = 0 Then
                     time.timePlay = txtTimePlay.Text
                 ElseIf cmbTimePlay.SelectedIndex = 1 Then
@@ -59,8 +53,7 @@
                     time.timePlay = txtTimePlay.Text * 3600
                 End If
 
-
-
+                'Väärtuse teisendamine tundideks ja minutiteks kui need on kasutaja poolt valitud
                 If cmbWaitTime.SelectedIndex = 0 Then
                     time.timeWait = txtTimeWait.Text
                 ElseIf cmbWaitTime.SelectedIndex = 1 Then
@@ -69,9 +62,7 @@
                     time.timeWait = txtTimeWait.Text * 3600
                 End If
 
-
-
-
+                'Väärtuste salvestamine andmebaasi
                 data.setItem("time", "timePlay", time.timePlay)
                 data.setItem("time", "timeWait", time.timeWait)
 
@@ -89,9 +80,19 @@
         time = New CTimeLimit
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
+        Dim colors As IGraphics
+        colors = New CGraphics
 
         btnOnOff.Visible = False
 
+        'Labelite värvide seadistamine
+        lblNewPass1.ForeColor = colors.lblColor
+        lblNewPass2.ForeColor = colors.lblColor
+        lblPass.ForeColor = colors.lblColor
+        lblTimePlay.ForeColor = colors.lblColor
+        lblTimePlayNow.ForeColor = colors.lblColor
+        lblTimeWait.ForeColor = colors.lblColor
+        lblTimeWaitNow.ForeColor = colors.lblColor
         lblTimePlayNow.Visible = False
         lblTimeWaitNow.Visible = False
         cmbTimePlay.Visible = False
@@ -101,14 +102,15 @@
         lblTimePlayNow.Text = "Väärtus hetkel:" & data.getItem("time", "timePlay") & " sekundit"
         lblTimeWaitNow.Text = "Väärtus hetkel:" & data.getItem("time", "timeWait") & " sekundit"
 
-
         If time.timeState = "On" Then
             btnOnOff.Text = "Lülita välja"
         Else
             btnOnOff.Text = "Lülita sisse"
         End If
 
-        If time.password = "Puudub" Then
+        'Kui andmebaasis pole passwordi, tähendab see, et kasutaja pole varem parooli sisestanud
+        'ning ette kuvatakse uue parooli sisestamise väljad
+        If time.password = "none" Then
             txtNewPass1.Visible = True
             txtNewPass2.Visible = True
             lblNewPass1.Visible = True
@@ -131,7 +133,6 @@
         newForm.Location = New Point(0, 0)
         newForm.BackColor = Color.FromArgb(255, colors.red, colors.green, colors.blue)
 
-
         newForm.Show()
         Me.Close()
     End Sub
@@ -141,6 +142,7 @@
         time = New CTimeLimit
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
+        'Ajalimiidi sisse ja välja lülitamine
         If btnOnOff.Text = "Lülita sisse" Then
             If time.timeWait <= 0 Or time.timePlay <= 0 Then
                 MessageBox.Show("Väärtused peavad olema nullist suuremad")
@@ -161,9 +163,6 @@
         data.setItem("time", "timeWaitCurrent", time.timeWait)
         data.setItem("time", "timePlayCurrent", time.timePlay)
 
-
-
     End Sub
-
 
 End Class

@@ -7,8 +7,7 @@ Public Class CDatabase
 
     'Mängu andmete lisamine ajaloo tabelisse andmebaasis
     'input = kõik ajaloo tabelis olevad andmete tulbad
-    Private Sub insertHistory(value1 As Integer, value2 As String, value3 As Integer, value4 As String, value5 As String, value6 As String, value7 As Integer) Implements IDatabase.insertHistory
-
+    Private Sub insertHistory(value1 As Integer, value2 As Integer, value3 As String, value4 As Integer, value5 As String, value6 As String, value7 As String) Implements IDatabase.insertHistory
 
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
@@ -18,7 +17,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & ",'" & value2 & "', " & value3 & ", '" & value4 & "', '" & value5 & "', " & value6 & ", " & value7 & ")"
+        SQLcommand.CommandText = "INSERT INTO gameHistory VALUES(" & value1 & "," & value2 & ",        '" & value3 & "', " & value4 & ", '" & value5 & "', '" & value6 & "', '" & value7 & "')"
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
 
@@ -60,7 +59,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "Select Count(rowid) FROM '" & millineList & "'"
+        SQLcommand.CommandText = "Select Count(rowid) FROM        '" & millineList & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
 
@@ -79,7 +78,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = '" & item & "'"
+        SQLcommand.CommandText = "UPDATE " & tableName & " Set " & itemName & " =        '" & item & "'"
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -95,7 +94,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & ""
+        SQLcommand.CommandText = "UPDATE " & tableName & " Set " & itemName & " = " & item & ""
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -111,7 +110,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE " & tableName & " SET " & itemName & " = " & item & ""
+        SQLcommand.CommandText = "UPDATE " & tableName & " Set " & itemName & " = " & item & ""
         SQLcommand.ExecuteNonQuery()
         SQLconnection.Close()
     End Sub
@@ -164,21 +163,21 @@ Public Class CDatabase
         Dim number As Integer = 0
 
         If game.gameMode = "Kerge" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "none" Then
-                millineList = getItem("miscData", "customEasy")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "no" Then
+                millineList = "customEasy"
             Else
                 millineList = "sonadeListEasy"
             End If
 
         ElseIf game.gameMode = "Tavaline" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "none" Then
-                millineList = getItem("miscData", "customNormal")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "no" Then
+                millineList = "customNormal"
             Else
                 millineList = "sonadeList"
             End If
         Else
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "none" Then
-                millineList = getItem("miscData", "customHard")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "no" Then
+                millineList = "customHard"
             Else
                 millineList = "sonadeListHard"
             End If
@@ -190,7 +189,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "Select rowid FROM '" & millineList & "' WHERE sona = '" & LCase(value) & "'"
+        SQLcommand.CommandText = "Select rowid FROM        '" & millineList & "' WHERE sona = '" & LCase(value) & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
         If sqlResponse = 0 Then
@@ -199,9 +198,7 @@ Public Class CDatabase
             Return 1
         End If
 
-
     End Function
-
 
     'Ajaloo uuendamine gameHistory viewist
     'output = tabel, kuhu on laetud gameHistory
@@ -227,11 +224,11 @@ Public Class CDatabase
     End Function
     Private Function Transpose(ByVal table As DataTable) As DataTable
         Dim flippedTable As New DataTable
-        'creates as many columns as rows in source table
+        'creates        as many columns as rows in source table
         flippedTable.Columns.AddRange(
         table.Select.Select(
-            Function(dr) New DataColumn("col" & table.Rows.IndexOf(dr), GetType(Object))
-            ).ToArray)
+        Function(dr) New DataColumn("col" & table.Rows.IndexOf(dr), GetType(Object))
+        ).ToArray)
         'iterates columns in source table
         For Each dc As DataColumn In table.Columns
             'get array of values of column in each row and add as new row in target table
@@ -269,21 +266,21 @@ Public Class CDatabase
         Dim millineList As String
 
         If game.gameMode = "Kerge" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "none" Then
-                millineList = getItem("miscData", "customEasy")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customEasy") <> "no" Then
+                millineList = "customEasy"
             Else
                 millineList = "sonadeListEasy"
             End If
 
         ElseIf game.gameMode = "Tavaline" Then
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "none" Then
-                millineList = getItem("miscData", "customNormal")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customNormal") <> "no" Then
+                millineList = "customNormal"
             Else
                 millineList = "sonadeList"
             End If
         Else
-            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "none" Then
-                millineList = getItem("miscData", "customHard")
+            If getItem("miscData", "customListState") = "on" And getItem("miscData", "customHard") <> "no" Then
+                millineList = "customHard"
             Else
                 millineList = "sonadeListHard"
             End If
@@ -307,34 +304,68 @@ Public Class CDatabase
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
-        Dim fileNameCSV As String = fileName & ".csv"
-
         SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
         SQLconnection.Open()
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & fileName & "'"
+        'SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & fileName & "'"
+        'SQLcommand.ExecuteNonQuery()
+
+        Dim tableName As String = ""
+
+        If letters = 4 Then
+            tableName = "customEasy"
+
+        ElseIf letters = 5 Then
+            tableName = "customNormal"
+        ElseIf letters = 6 Then
+            tableName = "customHard"
+        End If
+
+        SQLcommand.CommandText = "CREATE TABLE        '" & tableName & "'(sona STRING)"
         SQLcommand.ExecuteNonQuery()
 
-        SQLcommand.CommandText = "CREATE TABLE '" & fileName & "'(sona STRING)"
-        SQLcommand.ExecuteNonQuery()
-
-        Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(fileNameCSV)
+        Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(fileName)
         Dim line As String
+
+        Dim count As Integer = 0
         Do
             line = reader.ReadLine
 
             If line <> Nothing Then
 
                 If line.Length = letters Then
-                    SQLcommand.CommandText = "INSERT INTO '" & fileName & "' VALUES('" & line & "')"
+                    count = 1
+                    SQLcommand.CommandText = "INSERT INTO        '" & tableName & "' VALUES('" & line & "')"
                     SQLcommand.ExecuteNonQuery()
                 End If
             End If
 
-
         Loop Until line Is Nothing
+
+        If count = 1 Then
+            If letters = 4 Then
+                setItem("miscData", "customEasy", "yes")
+            End If
+            If letters = 5 Then
+                setItem("miscData", "customNormal", "yes")
+            End If
+            If letters = 5 Then
+                setItem("miscData", "customHard", "yes")
+            End If
+        Else
+            If letters = 4 Then
+                setItem("miscData", "customEasy", "no")
+            End If
+            If letters = 5 Then
+                setItem("miscData", "customNormal", "no")
+            End If
+            If letters = 5 Then
+                setItem("miscData", "customHard", "no")
+            End If
+
+        End If
 
         SQLconnection.Close()
     End Sub
@@ -350,7 +381,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & tableName & "'"
+        SQLcommand.CommandText = "DROP TABLE If EXISTS        '" & tableName & "'"
         SQLcommand.ExecuteNonQuery()
 
         SQLconnection.Close()
@@ -359,7 +390,7 @@ Public Class CDatabase
     ' formHistory on nupp 'Ekspordi JSON', mida see funktsioon siis teeb
     ' kood on suurem osa kopeeritud funktsioonist getHistory
     ' ainult l6pus muudetud mida tabeliga tehakse
-    Private Sub exportJSON() Implements IDatabase.exportJSON
+    Private Sub exportJSON(location As String) Implements IDatabase.exportJSON
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
@@ -377,12 +408,10 @@ Public Class CDatabase
         tabel.Load(SQLite_Data_Reader)
         Dim JSONtabel = JsonConvert.SerializeObject(tabel, Formatting.Indented)
 
-        If (My.Computer.FileSystem.FileExists(Application.StartupPath() & "\export.json")) Then
-            My.Computer.FileSystem.DeleteFile(Application.StartupPath() & "\export.json")
-            My.Computer.FileSystem.WriteAllText(Application.StartupPath() & "\export.json", JSONtabel, True)
-        Else
-            My.Computer.FileSystem.WriteAllText(Application.StartupPath() & "\export.json", JSONtabel, True)
+        If location <> Nothing Then
+            My.Computer.FileSystem.WriteAllText(location, JSONtabel, True)
         End If
+
         SQLconnection.Close()
     End Sub
 
@@ -425,7 +454,7 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "UPDATE achievements SET isDone = " & setBit & " WHERE ID = " & id
+        SQLcommand.CommandText = "UPDATE achievements Set isDone = " & setBit & " WHERE ID = " & id
         Dim SQLite_Data_Reader As SQLite.SQLiteDataReader
         SQLite_Data_Reader = SQLcommand.ExecuteReader
         SQLconnection.Close()
@@ -445,8 +474,8 @@ Public Class CDatabase
         Dim tabel As New DataTable
         tabel.Load(queryRes)
         Dim title = tabel.Rows(0).ItemArray(0)
-        Dim text = tabel.Rows(0).ItemArray(1)
-        Dim h = {title, text}
+        Dim Text = tabel.Rows(0).ItemArray(1)
+        Dim h = {title, Text}
         SQLconnection.Close()
         Return h
     End Function
@@ -457,19 +486,17 @@ Public Class CDatabase
         Dim SQLconnection As New SQLite.SQLiteConnection()
         Dim SQLcommand As SQLite.SQLiteCommand
 
-
         SQLconnection.ConnectionString = "Data Source=" & Application.StartupPath() & "\wordleDB.db"
         SQLconnection.Open()
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "SELECT Count(rowid) FROM '" & listName & "'"
+        SQLcommand.CommandText = "SELECT Count(rowid) FROM        '" & listName & "'"
         Dim sqlResponse As Integer = SQLcommand.ExecuteScalar()
         SQLconnection.Close()
 
         Return sqlResponse
     End Function
-
 
     'Funktsioon sõnade arvu saamiseks soovitud failis
     'Input = Faili nimi mille sõnade arvu soovitakse
@@ -487,7 +514,6 @@ Public Class CDatabase
         Loop Until line Is Nothing
         reader.Close()
 
-
         Return count
     End Function
 
@@ -502,10 +528,10 @@ Public Class CDatabase
 
         SQLcommand = SQLconnection.CreateCommand
 
-        SQLcommand.CommandText = "DROP TABLE IF EXISTS '" & tableName & "'"
+        SQLcommand.CommandText = "DROP TABLE If EXISTS        '" & tableName & "'"
         SQLcommand.ExecuteNonQuery()
 
-        SQLcommand.CommandText = "CREATE TABLE '" & tableName & "'(sona STRING)"
+        SQLcommand.CommandText = "CREATE TABLE        '" & tableName & "'(sona STRING)"
         SQLcommand.ExecuteNonQuery()
 
         Dim reader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(tableName & ".csv")
@@ -513,7 +539,7 @@ Public Class CDatabase
         Do
             line = reader.ReadLine
 
-            SQLcommand.CommandText = "INSERT INTO '" & tableName & "' VALUES('" & line & "')"
+            SQLcommand.CommandText = "INSERT INTO        '" & tableName & "' VALUES('" & line & "')"
             SQLcommand.ExecuteNonQuery()
 
         Loop Until line Is Nothing
@@ -521,5 +547,41 @@ Public Class CDatabase
 
         SQLconnection.Close()
     End Sub
-End Class
+    Private Sub exportCSV(delimiter As String, textQualifier As String, append As Boolean, save As Boolean) Implements IDatabase.exportCSV
+        Dim data As CSVExporterDNF.IExporter
+        data = New CSVExporterDNF.CExporter
 
+        Dim tabel As New DataTable
+        tabel = getHistory()
+
+        '(VBForums, GreyGuru) https://www.vbforums.com/showthread.php?878825-RESOLVED-Convert-DataTable-to-Array
+        Dim rws As Integer = tabel.Rows.Count, flds As Integer = tabel.Columns.Count
+        Dim andmed(rws - 1, flds - 1) As Object
+        Array.ForEach(Enumerable.Range(0, flds).ToArray, Sub(x) Array.ForEach(Enumerable.Range(0, rws).ToArray, Sub(y) andmed(y, x) = tabel.Rows(y).Item(x)))
+
+        data.delimiter = If(delimiter = "", ":", delimiter)
+        data.textQualifier = If(textQualifier = "", "", textQualifier)
+
+        Dim savePathOld As String = getItem("miscData", "savePath")
+        Dim savePath As String = ""
+        Try
+            'Kui save on False ehk kasutaja pole valinud, et soovib salvestada faili asukohta või andmebaasis pole ühtegi asukohta salvestatud
+            'siis lastakse kasutajal valida uus faili asukoht ja see salvestatakse andmebaasi
+            If save = False Or savePathOld = "none" Then
+                savePath = data.setFileToSave()
+                setItem("miscData", "savePath", savePath)
+            Else
+                'https://stackoverflow.com/questions/15786112/change-value-of-a-private-member-of-a-class/15786257#15786257
+                data.GetType().GetField("sFileToSave", System.Reflection.BindingFlags.NonPublic Or System.Reflection.BindingFlags.Instance).SetValue(data, savePathOld)
+            End If
+            data.saveDataToCsv(andmed, append)
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        'Kui kasutaja ei soovi salvestada faili asukohta, ehk Save on False, võib andmebaasist asukoha ära kustutada
+        If save = False Then
+            setItem("miscData", "savePath", "none")
+        End If
+    End Sub
+End Class

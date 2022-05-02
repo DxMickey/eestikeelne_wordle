@@ -40,7 +40,7 @@
         End If
 
         game.gameMode = value1
-
+        Me.Hide()
         Dim newForm As New formGame
         Dim colors As IGraphics
         colors = New CGraphics
@@ -52,7 +52,6 @@
         newForm.Location = New Point(0, 0)
         newForm.BackColor = colors.backColor
 
-
         newForm.Show()
         Me.Close()
     End Sub
@@ -63,6 +62,8 @@
 
         game.kasTimed = False
         updateVisibility(True)
+        lblGameMode.Visible = False
+        lblDifficulty.Visible = True
     End Sub
 
     Private Sub btnTimed_Click(sender As Object, e As EventArgs) Handles btnTimed.Click
@@ -71,6 +72,8 @@
 
         game.kasTimed = True
         updateVisibility(True)
+        lblGameMode.Visible = False
+        lblDifficulty.Visible = True
     End Sub
 
     Private Sub updateVisibility(ByVal value As Boolean)
@@ -90,6 +93,11 @@
     End Sub
 
     Private Sub formGameSettings_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        lblGameMode.ForeColor = colors.lblColor
+        lblDifficulty.ForeColor = colors.lblColor
         updateVisibility(False)
     End Sub
 End Class

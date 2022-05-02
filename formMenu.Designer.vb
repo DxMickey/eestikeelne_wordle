@@ -39,27 +39,27 @@ Partial Class formMenu
         '
         'btnPlay
         '
-        Me.btnPlay.Location = New System.Drawing.Point(352, 251)
+        Me.btnPlay.Location = New System.Drawing.Point(361, 253)
         Me.btnPlay.Name = "btnPlay"
-        Me.btnPlay.Size = New System.Drawing.Size(75, 23)
+        Me.btnPlay.Size = New System.Drawing.Size(146, 52)
         Me.btnPlay.TabIndex = 0
         Me.btnPlay.Text = "Piiramatu"
         Me.btnPlay.UseVisualStyleBackColor = True
         '
         'btnHistory
         '
-        Me.btnHistory.Location = New System.Drawing.Point(292, 372)
+        Me.btnHistory.Location = New System.Drawing.Point(291, 376)
         Me.btnHistory.Name = "btnHistory"
-        Me.btnHistory.Size = New System.Drawing.Size(75, 23)
+        Me.btnHistory.Size = New System.Drawing.Size(110, 41)
         Me.btnHistory.TabIndex = 1
         Me.btnHistory.Text = "Ajalugu"
         Me.btnHistory.UseVisualStyleBackColor = True
         '
         'btnStats
         '
-        Me.btnStats.Location = New System.Drawing.Point(292, 331)
+        Me.btnStats.Location = New System.Drawing.Point(291, 329)
         Me.btnStats.Name = "btnStats"
-        Me.btnStats.Size = New System.Drawing.Size(75, 23)
+        Me.btnStats.Size = New System.Drawing.Size(110, 41)
         Me.btnStats.TabIndex = 2
         Me.btnStats.Text = "Statistika"
         Me.btnStats.UseVisualStyleBackColor = True
@@ -67,38 +67,38 @@ Partial Class formMenu
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Stencil", 40.75!)
-        Me.Label1.Location = New System.Drawing.Point(36, 57)
+        Me.Label1.Font = New System.Drawing.Font("Stencil", 42.75!)
+        Me.Label1.Location = New System.Drawing.Point(27, 96)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(609, 65)
+        Me.Label1.Size = New System.Drawing.Size(630, 68)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Eestikeelne Wordle"
         '
         'btnClassic
         '
-        Me.btnClassic.Location = New System.Drawing.Point(232, 251)
+        Me.btnClassic.Location = New System.Drawing.Point(189, 253)
         Me.btnClassic.Margin = New System.Windows.Forms.Padding(2)
         Me.btnClassic.Name = "btnClassic"
-        Me.btnClassic.Size = New System.Drawing.Size(75, 23)
+        Me.btnClassic.Size = New System.Drawing.Size(146, 52)
         Me.btnClassic.TabIndex = 4
         Me.btnClassic.Text = "Klassikaline"
         Me.btnClassic.UseVisualStyleBackColor = True
         '
         'btnGraphics
         '
-        Me.btnGraphics.Location = New System.Drawing.Point(292, 290)
+        Me.btnGraphics.Location = New System.Drawing.Point(291, 422)
         Me.btnGraphics.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGraphics.Name = "btnGraphics"
-        Me.btnGraphics.Size = New System.Drawing.Size(75, 23)
+        Me.btnGraphics.Size = New System.Drawing.Size(110, 41)
         Me.btnGraphics.TabIndex = 4
         Me.btnGraphics.Text = "Kujundus"
         Me.btnGraphics.UseVisualStyleBackColor = True
         '
         'btnTimeLimit
         '
-        Me.btnTimeLimit.Location = New System.Drawing.Point(292, 430)
+        Me.btnTimeLimit.Location = New System.Drawing.Point(291, 515)
         Me.btnTimeLimit.Name = "btnTimeLimit"
-        Me.btnTimeLimit.Size = New System.Drawing.Size(75, 23)
+        Me.btnTimeLimit.Size = New System.Drawing.Size(110, 41)
         Me.btnTimeLimit.TabIndex = 5
         Me.btnTimeLimit.Text = "Ajalimiit"
         Me.btnTimeLimit.UseVisualStyleBackColor = True
@@ -111,7 +111,7 @@ Partial Class formMenu
         '
         Me.lblTimer.AutoSize = True
         Me.lblTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.lblTimer.Location = New System.Drawing.Point(52, 562)
+        Me.lblTimer.Location = New System.Drawing.Point(55, 640)
         Me.lblTimer.Name = "lblTimer"
         Me.lblTimer.Size = New System.Drawing.Size(18, 20)
         Me.lblTimer.TabIndex = 6
@@ -120,9 +120,9 @@ Partial Class formMenu
         '
         'btnWordList
         '
-        Me.btnWordList.Location = New System.Drawing.Point(274, 401)
+        Me.btnWordList.Location = New System.Drawing.Point(291, 468)
         Me.btnWordList.Name = "btnWordList"
-        Me.btnWordList.Size = New System.Drawing.Size(109, 23)
+        Me.btnWordList.Size = New System.Drawing.Size(110, 41)
         Me.btnWordList.TabIndex = 7
         Me.btnWordList.Text = "Enda sõnade list"
         Me.btnWordList.UseVisualStyleBackColor = True
@@ -136,9 +136,9 @@ Partial Class formMenu
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(274, 459)
+        Me.btnUpdate.Location = New System.Drawing.Point(291, 582)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(109, 23)
+        Me.btnUpdate.Size = New System.Drawing.Size(110, 41)
         Me.btnUpdate.TabIndex = 8
         Me.btnUpdate.Text = "Otsi uuendusi"
         Me.btnUpdate.UseVisualStyleBackColor = True

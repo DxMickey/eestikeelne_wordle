@@ -23,9 +23,8 @@ Partial Class formGameEnd
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblResult = New System.Windows.Forms.Label()
-        Me.btbPlayAgain = New System.Windows.Forms.Button()
+        Me.btnPlayAgain = New System.Windows.Forms.Button()
         Me.btbToMenu = New System.Windows.Forms.Button()
-        Me.lblSona = New System.Windows.Forms.Label()
         Me.txtTranslation = New System.Windows.Forms.TextBox()
         Me.btnTranslate = New System.Windows.Forms.Button()
         Me.cmbLanguage = New System.Windows.Forms.ComboBox()
@@ -41,51 +40,41 @@ Partial Class formGameEnd
         'lblResult
         '
         Me.lblResult.AutoSize = True
-        Me.lblResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
-        Me.lblResult.Location = New System.Drawing.Point(232, 180)
+        Me.lblResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
+        Me.lblResult.Location = New System.Drawing.Point(210, 248)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(192, 25)
+        Me.lblResult.Size = New System.Drawing.Size(237, 31)
         Me.lblResult.TabIndex = 0
-        Me.lblResult.Text = "WORD GUESSED!"
+        Me.lblResult.Text = "SÕNA ARVATUD!"
         '
-        'btbPlayAgain
+        'btnPlayAgain
         '
-        Me.btbPlayAgain.Location = New System.Drawing.Point(284, 366)
-        Me.btbPlayAgain.Name = "btbPlayAgain"
-        Me.btbPlayAgain.Size = New System.Drawing.Size(75, 23)
-        Me.btbPlayAgain.TabIndex = 1
-        Me.btbPlayAgain.Text = "Mängi uuesti"
-        Me.btbPlayAgain.UseVisualStyleBackColor = True
+        Me.btnPlayAgain.Location = New System.Drawing.Point(284, 566)
+        Me.btnPlayAgain.Name = "btnPlayAgain"
+        Me.btnPlayAgain.Size = New System.Drawing.Size(110, 25)
+        Me.btnPlayAgain.TabIndex = 1
+        Me.btnPlayAgain.Text = "Mängi uuesti"
+        Me.btnPlayAgain.UseVisualStyleBackColor = True
         '
         'btbToMenu
         '
-        Me.btbToMenu.Location = New System.Drawing.Point(284, 414)
+        Me.btbToMenu.Location = New System.Drawing.Point(284, 607)
         Me.btbToMenu.Name = "btbToMenu"
-        Me.btbToMenu.Size = New System.Drawing.Size(75, 23)
+        Me.btbToMenu.Size = New System.Drawing.Size(110, 25)
         Me.btbToMenu.TabIndex = 2
         Me.btbToMenu.Text = "Menüüsse"
         Me.btbToMenu.UseVisualStyleBackColor = True
         '
-        'lblSona
-        '
-        Me.lblSona.AutoSize = True
-        Me.lblSona.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.25!)
-        Me.lblSona.Location = New System.Drawing.Point(284, 228)
-        Me.lblSona.Name = "lblSona"
-        Me.lblSona.Size = New System.Drawing.Size(77, 26)
-        Me.lblSona.TabIndex = 3
-        Me.lblSona.Text = "Label1"
-        '
         'txtTranslation
         '
-        Me.txtTranslation.Location = New System.Drawing.Point(365, 298)
+        Me.txtTranslation.Location = New System.Drawing.Point(384, 468)
         Me.txtTranslation.Name = "txtTranslation"
         Me.txtTranslation.Size = New System.Drawing.Size(100, 20)
         Me.txtTranslation.TabIndex = 4
         '
         'btnTranslate
         '
-        Me.btnTranslate.Location = New System.Drawing.Point(284, 296)
+        Me.btnTranslate.Location = New System.Drawing.Point(303, 466)
         Me.btnTranslate.Name = "btnTranslate"
         Me.btnTranslate.Size = New System.Drawing.Size(75, 23)
         Me.btnTranslate.TabIndex = 5
@@ -95,7 +84,8 @@ Partial Class formGameEnd
         'cmbLanguage
         '
         Me.cmbLanguage.FormattingEnabled = True
-        Me.cmbLanguage.Location = New System.Drawing.Point(157, 297)
+        Me.cmbLanguage.Items.AddRange(New Object() {"en", "ru", "fi", "fr", "de", "it", "es"})
+        Me.cmbLanguage.Location = New System.Drawing.Point(176, 467)
         Me.cmbLanguage.Name = "cmbLanguage"
         Me.cmbLanguage.Size = New System.Drawing.Size(121, 21)
         Me.cmbLanguage.TabIndex = 6
@@ -112,18 +102,18 @@ Partial Class formGameEnd
         '
         Me.lblScoreName.AutoSize = True
         Me.lblScoreName.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblScoreName.Location = New System.Drawing.Point(479, 367)
+        Me.lblScoreName.Location = New System.Drawing.Point(221, 87)
         Me.lblScoreName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblScoreName.Name = "lblScoreName"
-        Me.lblScoreName.Size = New System.Drawing.Size(102, 36)
+        Me.lblScoreName.Size = New System.Drawing.Size(182, 36)
         Me.lblScoreName.TabIndex = 7
-        Me.lblScoreName.Text = "Skoor:"
+        Me.lblScoreName.Text = "Skoor          :"
         '
         'lblGameScore
         '
         Me.lblGameScore.AutoSize = True
         Me.lblGameScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGameScore.Location = New System.Drawing.Point(575, 367)
+        Me.lblGameScore.Location = New System.Drawing.Point(392, 89)
         Me.lblGameScore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblGameScore.Name = "lblGameScore"
         Me.lblGameScore.Size = New System.Drawing.Size(32, 36)
@@ -134,7 +124,7 @@ Partial Class formGameEnd
         '
         Me.lblBestScoreName.AutoSize = True
         Me.lblBestScoreName.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBestScoreName.Location = New System.Drawing.Point(405, 401)
+        Me.lblBestScoreName.Location = New System.Drawing.Point(222, 123)
         Me.lblBestScoreName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblBestScoreName.Name = "lblBestScoreName"
         Me.lblBestScoreName.Size = New System.Drawing.Size(181, 36)
@@ -145,7 +135,7 @@ Partial Class formGameEnd
         '
         Me.lblBestScore.AutoSize = True
         Me.lblBestScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBestScore.Location = New System.Drawing.Point(575, 401)
+        Me.lblBestScore.Location = New System.Drawing.Point(392, 123)
         Me.lblBestScore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblBestScore.Name = "lblBestScore"
         Me.lblBestScore.Size = New System.Drawing.Size(32, 36)
@@ -156,7 +146,7 @@ Partial Class formGameEnd
         '
         Me.lblNewHighscore.AutoSize = True
         Me.lblNewHighscore.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNewHighscore.Location = New System.Drawing.Point(206, 138)
+        Me.lblNewHighscore.Location = New System.Drawing.Point(210, 47)
         Me.lblNewHighscore.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNewHighscore.Name = "lblNewHighscore"
         Me.lblNewHighscore.Size = New System.Drawing.Size(250, 31)
@@ -167,7 +157,7 @@ Partial Class formGameEnd
         '
         Me.UcSonaTahendus1._backColor = System.Drawing.Color.White
         Me.UcSonaTahendus1._textColor = System.Drawing.Color.Black
-        Me.UcSonaTahendus1.Location = New System.Drawing.Point(126, 494)
+        Me.UcSonaTahendus1.Location = New System.Drawing.Point(128, 281)
         Me.UcSonaTahendus1.Margin = New System.Windows.Forms.Padding(2)
         Me.UcSonaTahendus1.Name = "UcSonaTahendus1"
         Me.UcSonaTahendus1.Size = New System.Drawing.Size(407, 156)
@@ -188,9 +178,8 @@ Partial Class formGameEnd
         Me.Controls.Add(Me.cmbLanguage)
         Me.Controls.Add(Me.btnTranslate)
         Me.Controls.Add(Me.txtTranslation)
-        Me.Controls.Add(Me.lblSona)
         Me.Controls.Add(Me.btbToMenu)
-        Me.Controls.Add(Me.btbPlayAgain)
+        Me.Controls.Add(Me.btnPlayAgain)
         Me.Controls.Add(Me.lblResult)
         Me.Name = "formGameEnd"
         Me.Text = "Form1"
@@ -200,9 +189,8 @@ Partial Class formGameEnd
     End Sub
 
     Friend WithEvents lblResult As Label
-    Friend WithEvents btbPlayAgain As Button
+    Friend WithEvents btnPlayAgain As Button
     Friend WithEvents btbToMenu As Button
-    Friend WithEvents lblSona As Label
     Friend WithEvents txtTranslation As TextBox
     Friend WithEvents btnTranslate As Button
     Friend WithEvents cmbLanguage As ComboBox
