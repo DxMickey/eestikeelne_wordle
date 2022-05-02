@@ -73,7 +73,7 @@ Public Class CNotification
         n.ForeColor = _textColor
         n.RichTextBox1.BackColor = _backColor
         n.RichTextBox1.ForeColor = _textColor
-
+        n.btnClose.ForeColor = Color.Black
         'timeout alustab
         n.Timer1.Start()
 
