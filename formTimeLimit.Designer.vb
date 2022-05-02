@@ -45,16 +45,17 @@ Partial Class formTimeLimit
         'lblNewPass1
         '
         Me.lblNewPass1.AutoSize = True
-        Me.lblNewPass1.Location = New System.Drawing.Point(174, 308)
+        Me.lblNewPass1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.lblNewPass1.Location = New System.Drawing.Point(127, 306)
         Me.lblNewPass1.Name = "lblNewPass1"
-        Me.lblNewPass1.Size = New System.Drawing.Size(109, 13)
+        Me.lblNewPass1.Size = New System.Drawing.Size(153, 18)
         Me.lblNewPass1.TabIndex = 0
         Me.lblNewPass1.Text = "Sisesta uus salasõna:"
         Me.lblNewPass1.Visible = False
         '
         'txtNewPass1
         '
-        Me.txtNewPass1.Location = New System.Drawing.Point(286, 305)
+        Me.txtNewPass1.Location = New System.Drawing.Point(286, 312)
         Me.txtNewPass1.Name = "txtNewPass1"
         Me.txtNewPass1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtNewPass1.Size = New System.Drawing.Size(100, 20)
@@ -63,7 +64,7 @@ Partial Class formTimeLimit
         '
         'txtNewPass2
         '
-        Me.txtNewPass2.Location = New System.Drawing.Point(286, 331)
+        Me.txtNewPass2.Location = New System.Drawing.Point(286, 338)
         Me.txtNewPass2.Name = "txtNewPass2"
         Me.txtNewPass2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtNewPass2.Size = New System.Drawing.Size(100, 20)
@@ -73,16 +74,17 @@ Partial Class formTimeLimit
         'lblNewPass2
         '
         Me.lblNewPass2.AutoSize = True
-        Me.lblNewPass2.Location = New System.Drawing.Point(143, 334)
+        Me.lblNewPass2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.lblNewPass2.Location = New System.Drawing.Point(83, 343)
         Me.lblNewPass2.Name = "lblNewPass2"
-        Me.lblNewPass2.Size = New System.Drawing.Size(140, 13)
+        Me.lblNewPass2.Size = New System.Drawing.Size(196, 18)
         Me.lblNewPass2.TabIndex = 2
         Me.lblNewPass2.Text = "Sisesta uus salasõna uuesti:"
         Me.lblNewPass2.Visible = False
         '
         'txtTimeWait
         '
-        Me.txtTimeWait.Location = New System.Drawing.Point(285, 334)
+        Me.txtTimeWait.Location = New System.Drawing.Point(285, 341)
         Me.txtTimeWait.Name = "txtTimeWait"
         Me.txtTimeWait.Size = New System.Drawing.Size(100, 20)
         Me.txtTimeWait.TabIndex = 7
@@ -91,16 +93,17 @@ Partial Class formTimeLimit
         'lblTimeWait
         '
         Me.lblTimeWait.AutoSize = True
-        Me.lblTimeWait.Location = New System.Drawing.Point(174, 337)
+        Me.lblTimeWait.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.lblTimeWait.Location = New System.Drawing.Point(138, 343)
         Me.lblTimeWait.Name = "lblTimeWait"
-        Me.lblTimeWait.Size = New System.Drawing.Size(103, 13)
+        Me.lblTimeWait.Size = New System.Drawing.Size(141, 18)
         Me.lblTimeWait.TabIndex = 6
         Me.lblTimeWait.Text = "Kaua peab ootama :"
         Me.lblTimeWait.Visible = False
         '
         'txtTimePlay
         '
-        Me.txtTimePlay.Location = New System.Drawing.Point(286, 302)
+        Me.txtTimePlay.Location = New System.Drawing.Point(286, 309)
         Me.txtTimePlay.Name = "txtTimePlay"
         Me.txtTimePlay.Size = New System.Drawing.Size(100, 20)
         Me.txtTimePlay.TabIndex = 5
@@ -109,9 +112,10 @@ Partial Class formTimeLimit
         'lblTimePlay
         '
         Me.lblTimePlay.AutoSize = True
-        Me.lblTimePlay.Location = New System.Drawing.Point(172, 303)
+        Me.lblTimePlay.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.lblTimePlay.Location = New System.Drawing.Point(134, 306)
         Me.lblTimePlay.Name = "lblTimePlay"
-        Me.lblTimePlay.Size = New System.Drawing.Size(107, 13)
+        Me.lblTimePlay.Size = New System.Drawing.Size(146, 18)
         Me.lblTimePlay.TabIndex = 4
         Me.lblTimePlay.Text = "Kaua saab mängida :"
         Me.lblTimePlay.Visible = False
@@ -128,7 +132,7 @@ Partial Class formTimeLimit
         '
         'txtPass
         '
-        Me.txtPass.Location = New System.Drawing.Point(286, 318)
+        Me.txtPass.Location = New System.Drawing.Point(286, 325)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass.Size = New System.Drawing.Size(100, 20)
@@ -138,9 +142,10 @@ Partial Class formTimeLimit
         'lblPass
         '
         Me.lblPass.AutoSize = True
-        Me.lblPass.Location = New System.Drawing.Point(190, 321)
+        Me.lblPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.lblPass.Location = New System.Drawing.Point(155, 323)
         Me.lblPass.Name = "lblPass"
-        Me.lblPass.Size = New System.Drawing.Size(89, 13)
+        Me.lblPass.Size = New System.Drawing.Size(125, 18)
         Me.lblPass.TabIndex = 9
         Me.lblPass.Text = "Sisesta salasõna:"
         Me.lblPass.Visible = False
@@ -157,10 +162,10 @@ Partial Class formTimeLimit
         '
         'btnOnOff
         '
-        Me.btnOnOff.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.btnOnOff.Location = New System.Drawing.Point(285, 459)
+        Me.btnOnOff.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.btnOnOff.Location = New System.Drawing.Point(270, 462)
         Me.btnOnOff.Name = "btnOnOff"
-        Me.btnOnOff.Size = New System.Drawing.Size(101, 49)
+        Me.btnOnOff.Size = New System.Drawing.Size(132, 49)
         Me.btnOnOff.TabIndex = 12
         Me.btnOnOff.Text = "Lülita sisse"
         Me.btnOnOff.UseVisualStyleBackColor = True
@@ -168,18 +173,20 @@ Partial Class formTimeLimit
         'lblTimePlayNow
         '
         Me.lblTimePlayNow.AutoSize = True
-        Me.lblTimePlayNow.Location = New System.Drawing.Point(481, 305)
+        Me.lblTimePlayNow.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.lblTimePlayNow.Location = New System.Drawing.Point(481, 309)
         Me.lblTimePlayNow.Name = "lblTimePlayNow"
-        Me.lblTimePlayNow.Size = New System.Drawing.Size(78, 13)
+        Me.lblTimePlayNow.Size = New System.Drawing.Size(103, 17)
         Me.lblTimePlayNow.TabIndex = 15
         Me.lblTimePlayNow.Text = "Väärtus hetkel:"
         '
         'lblTimeWaitNow
         '
         Me.lblTimeWaitNow.AutoSize = True
-        Me.lblTimeWaitNow.Location = New System.Drawing.Point(481, 338)
+        Me.lblTimeWaitNow.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.lblTimeWaitNow.Location = New System.Drawing.Point(480, 344)
         Me.lblTimeWaitNow.Name = "lblTimeWaitNow"
-        Me.lblTimeWaitNow.Size = New System.Drawing.Size(78, 13)
+        Me.lblTimeWaitNow.Size = New System.Drawing.Size(103, 17)
         Me.lblTimeWaitNow.TabIndex = 16
         Me.lblTimeWaitNow.Text = "Väärtus hetkel:"
         '
@@ -195,7 +202,7 @@ Partial Class formTimeLimit
         Me.cmbTimePlay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbTimePlay.FormattingEnabled = True
         Me.cmbTimePlay.Items.AddRange(New Object() {"sekund", "minut", "tund"})
-        Me.cmbTimePlay.Location = New System.Drawing.Point(392, 300)
+        Me.cmbTimePlay.Location = New System.Drawing.Point(392, 307)
         Me.cmbTimePlay.Name = "cmbTimePlay"
         Me.cmbTimePlay.Size = New System.Drawing.Size(83, 21)
         Me.cmbTimePlay.TabIndex = 17
@@ -205,7 +212,7 @@ Partial Class formTimeLimit
         Me.cmbWaitTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbWaitTime.FormattingEnabled = True
         Me.cmbWaitTime.Items.AddRange(New Object() {"sekund", "minut", "tund"})
-        Me.cmbWaitTime.Location = New System.Drawing.Point(391, 335)
+        Me.cmbWaitTime.Location = New System.Drawing.Point(391, 342)
         Me.cmbWaitTime.Name = "cmbWaitTime"
         Me.cmbWaitTime.Size = New System.Drawing.Size(83, 21)
         Me.cmbWaitTime.TabIndex = 18

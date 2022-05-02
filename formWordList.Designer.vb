@@ -54,6 +54,7 @@ Partial Class formWordList
         '
         'btnSisesta
         '
+        Me.btnSisesta.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnSisesta.Location = New System.Drawing.Point(288, 277)
         Me.btnSisesta.Name = "btnSisesta"
         Me.btnSisesta.Size = New System.Drawing.Size(128, 54)
@@ -99,6 +100,7 @@ Partial Class formWordList
         '
         'btnOnOff
         '
+        Me.btnOnOff.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.btnOnOff.Location = New System.Drawing.Point(288, 386)
         Me.btnOnOff.Name = "btnOnOff"
         Me.btnOnOff.Size = New System.Drawing.Size(128, 38)
