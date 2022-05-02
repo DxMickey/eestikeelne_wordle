@@ -99,6 +99,7 @@ Partial Class formGame
         Me.UcMusicPlayer1 = New TaustaMuusika.UCMusicPlayer()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblScore = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtDebug
@@ -1084,11 +1085,21 @@ Partial Class formGame
         Me.lblScore.TabIndex = 144
         Me.lblScore.Text = "0"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(524, 723)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(136, 26)
+        Me.Button1.TabIndex = 145
+        Me.Button1.Text = "Tagasi menüüsse"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'formGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 761)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.UcMusicPlayer1)
         Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.Label1)
@@ -1245,4 +1256,5 @@ Partial Class formGame
     Friend WithEvents UcMusicPlayer1 As TaustaMuusika.UCMusicPlayer
     Friend WithEvents Label1 As Label
     Friend WithEvents lblScore As Label
+    Friend WithEvents Button1 As Button
 End Class

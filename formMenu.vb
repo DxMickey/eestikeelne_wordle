@@ -187,6 +187,11 @@ Public Class formMenu
     Private Sub formMenu_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dim time As ITimeLimit
         time = New CTimeLimit
+        Dim colors As IGraphics
+        colors = New CGraphics
+
+        lblTimer.ForeColor = colors.lblColor
+
 
         If time.timePlay <= 0 And time.timeState = "On" Then
             Timer1.Enabled = True

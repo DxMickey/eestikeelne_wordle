@@ -89,9 +89,19 @@
         time = New CTimeLimit
         Dim data As Andmekiht.IDatabase
         data = New Andmekiht.CDatabase
+        Dim colors As IGraphics
+        colors = New CGraphics
+
 
         btnOnOff.Visible = False
 
+        lblNewPass1.ForeColor = colors.lblColor
+        lblNewPass2.ForeColor = colors.lblColor
+        lblPass.ForeColor = colors.lblColor
+        lblTimePlay.ForeColor = colors.lblColor
+        lblTimePlayNow.ForeColor = colors.lblColor
+        lblTimeWait.ForeColor = colors.lblColor
+        lblTimeWaitNow.ForeColor = colors.lblColor
         lblTimePlayNow.Visible = False
         lblTimeWaitNow.Visible = False
         cmbTimePlay.Visible = False
@@ -108,7 +118,7 @@
             btnOnOff.Text = "Lülita sisse"
         End If
 
-        If time.password = "Puudub" Then
+        If time.password = "none" Then
             txtNewPass1.Visible = True
             txtNewPass2.Visible = True
             lblNewPass1.Visible = True

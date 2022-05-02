@@ -91,11 +91,11 @@ Partial Class formTimeLimit
         'lblTimeWait
         '
         Me.lblTimeWait.AutoSize = True
-        Me.lblTimeWait.Location = New System.Drawing.Point(165, 337)
+        Me.lblTimeWait.Location = New System.Drawing.Point(174, 337)
         Me.lblTimeWait.Name = "lblTimeWait"
-        Me.lblTimeWait.Size = New System.Drawing.Size(114, 13)
+        Me.lblTimeWait.Size = New System.Drawing.Size(103, 13)
         Me.lblTimeWait.TabIndex = 6
-        Me.lblTimeWait.Text = "Kaua peab ootama (s):"
+        Me.lblTimeWait.Text = "Kaua peab ootama :"
         Me.lblTimeWait.Visible = False
         '
         'txtTimePlay
@@ -109,11 +109,11 @@ Partial Class formTimeLimit
         'lblTimePlay
         '
         Me.lblTimePlay.AutoSize = True
-        Me.lblTimePlay.Location = New System.Drawing.Point(165, 302)
+        Me.lblTimePlay.Location = New System.Drawing.Point(172, 303)
         Me.lblTimePlay.Name = "lblTimePlay"
-        Me.lblTimePlay.Size = New System.Drawing.Size(118, 13)
+        Me.lblTimePlay.Size = New System.Drawing.Size(107, 13)
         Me.lblTimePlay.TabIndex = 4
-        Me.lblTimePlay.Text = "Kaua saab mängida (s):"
+        Me.lblTimePlay.Text = "Kaua saab mängida :"
         Me.lblTimePlay.Visible = False
         '
         'btnEnter
